@@ -1,22 +1,37 @@
 /**
  * Lightweight client-side store for the PackWise AI workflow.
- * Persists the analysis result so that downstream pages (Packaging Planner,
- * Packaging Preview, Cost & Sustainability) can read it without prop-drilling.
+ * Persists the analysis result so that downstream pages (Attachment Planner,
+ * Attachment Visualizer, Risk Assessment, Cost & Sustainability) can read it.
  */
 
 const KEY = "packwise_analysis";
 
+export interface AttachmentZone {
+  zone: string;
+  bodyRegion: string;
+  riskLevel: "low" | "medium" | "high";
+  recommendedMethod: string;
+}
+
 export interface AnalysisResult {
+  // Core identity
   productName: string;
   category: string;
   imageDataUrl: string | null;
   productType: string;
   dimensions: string;
-  accessories: string[];
-  complexityScore: number;
-  packagingCategory: string;
-  packagingRequirements: string[];
   analysedAt: string;
+
+  // Detected elements
+  accessories: string[];
+  bodyRegions: string[];
+  attachmentZones: AttachmentZone[];
+
+  // Risk & quality scores (0–100)
+  poseComplexityScore: number;
+  poseStabilityScore: number;
+  movementRiskScore: number;
+  accessoryLossRisk: number;
 }
 
 export const DEMO_RESULT: AnalysisResult = {
@@ -25,31 +40,45 @@ export const DEMO_RESULT: AnalysisResult = {
   imageDataUrl: null,
   productType: "Collectible Doll",
   dimensions: "28 × 8 × 5 cm",
-  accessories: ["Handbag", "Shoes", "Glasses", "Crown", "Dress Stand"],
-  complexityScore: 82,
-  packagingCategory: "Premium Window Display Box",
-  packagingRequirements: ["Transparent Window", "Shock Protection", "Accessory Compartments", "Foil Stamping"],
   analysedAt: new Date().toISOString(),
+
+  accessories: ["Handbag", "Shoes", "Glasses", "Crown", "Dress Stand"],
+  bodyRegions: ["Head / Hair", "Torso / Waist", "Right Arm", "Left Arm", "Right Leg", "Left Leg"],
+
+  attachmentZones: [
+    { zone: "Hair",        bodyRegion: "Head / Hair",   riskLevel: "medium", recommendedMethod: "Elastic Strap" },
+    { zone: "Waist",       bodyRegion: "Torso / Waist", riskLevel: "low",    recommendedMethod: "PET Support" },
+    { zone: "Right Wrist", bodyRegion: "Right Arm",     riskLevel: "high",   recommendedMethod: "EVA Strap" },
+    { zone: "Left Foot",   bodyRegion: "Left Leg",      riskLevel: "low",    recommendedMethod: "No Attachment Required" },
+  ],
+
+  poseComplexityScore: 82,
+  poseStabilityScore:  76,
+  movementRiskScore:   44,
+  accessoryLossRisk:   61,
 };
 
 export function saveAnalysis(result: AnalysisResult) {
-  try {
-    localStorage.setItem(KEY, JSON.stringify(result));
-  } catch {}
+  try { localStorage.setItem(KEY, JSON.stringify(result)); } catch {}
 }
 
 export function loadAnalysis(): AnalysisResult | null {
   try {
     const raw = localStorage.getItem(KEY);
     if (!raw) return null;
-    return JSON.parse(raw) as AnalysisResult;
-  } catch {
-    return null;
-  }
+    const parsed = JSON.parse(raw);
+    // Backward compatibility if user has old localStorage state
+    if (parsed.retentionZones && !parsed.attachmentZones) {
+      parsed.attachmentZones = parsed.retentionZones;
+    }
+    // Return null to reset if state is still invalid
+    if (!parsed.attachmentZones || !Array.isArray(parsed.attachmentZones)) {
+      return null;
+    }
+    return parsed as AnalysisResult;
+  } catch { return null; }
 }
 
 export function clearAnalysis() {
-  try {
-    localStorage.removeItem(KEY);
-  } catch {}
+  try { localStorage.removeItem(KEY); } catch {}
 }

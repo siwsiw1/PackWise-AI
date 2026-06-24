@@ -66,7 +66,7 @@ function LoginPage() {
               <div className="space-y-2">
                 <div className="flex items-center justify-between">
                   <Label htmlFor="password">Password</Label>
-                  <a href="#" className="text-xs font-medium text-primary hover:underline">Forgot password?</a>
+                  <button type="button" onClick={() => toast.info("Please contact the Administrator at admin@packwise.ai to reset your password or request a password change.")} className="text-xs font-medium text-primary hover:underline">Forgot password?</button>
                 </div>
                 <div className="relative">
                   <Input id="password" type={show ? "text" : "password"} placeholder="••••••••" value={password} onChange={(e) => setPassword(e.target.value)} required autoComplete="current-password" />
@@ -85,10 +85,7 @@ function LoginPage() {
               </Button>
             </form>
 
-            <p className="mt-6 text-center text-sm text-muted-foreground">
-              Don&apos;t have an account?{" "}
-              <Link to="/register" className="font-medium text-primary hover:underline">Create one</Link>
-            </p>
+
           </div>
         </div>
       </div>

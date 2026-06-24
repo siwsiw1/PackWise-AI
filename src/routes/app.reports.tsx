@@ -44,7 +44,7 @@ export const Route = createFileRoute("/app/reports")({
 });
 
 type ReportStatus = "completed" | "processing" | "draft";
-type ReportType = "analysis" | "recommendation" | "sustainability" | "cost";
+type ReportType = "analysis" | "attachment-plan" | "risk" | "sustainability" | "cost";
 
 interface Report {
   id: string;
@@ -61,116 +61,118 @@ interface Report {
 const REPORTS: Report[] = [
   {
     id: "RPT-2041",
-    name: "Glamour Doll – Sparkle Edition Full Analysis",
+    name: "Glamour Doll – Sparkle Edition — Full Attachment Analysis",
     type: "analysis",
     product: "Glamour Doll – Sparkle Edition",
     status: "completed",
     date: "Aug 21, 2025",
     size: "2.4 MB",
-    summary: "Complete AI packaging analysis covering product dimensions (28×8×5 cm), 5 detected accessories, and complexity score of 82/100. Packaging category: Premium Window Display Box.",
+    summary: "Complete AI attachment analysis. Pose complexity score 82/100. 4 attachment zones identified: Hair (medium risk), Waist (low), Right Wrist (high), Left Foot (no attachment required). Movement risk: 44/100. Accessory loss risk: 61/100.",
     insights: [
-      "Complexity score 82/100 — requires premium window display packaging",
+      "Pose complexity score 82/100 — 4 attachment zones identified",
+      "Right Wrist flagged as HIGH risk — EVA strap recommended",
       "5 accessories detected: Handbag, Shoes, Glasses, Crown, Dress Stand",
-      "Recommended: 35×15×8 cm window display box",
-      "92% packaging efficiency score achieved",
-      "18% material savings vs. baseline design",
+      "Glasses accessory at 81% predicted loss risk — blister support needed",
+      "Drop-test pass rate: 87% (Grade B+) with current attachment plan",
     ],
   },
   {
     id: "RPT-2040",
-    name: "Q3 Cost & Sustainability Review",
+    name: "Q3 Attachment Cost & Sustainability Review",
     type: "cost",
     product: "Multiple SKUs",
     status: "completed",
     date: "Aug 20, 2025",
     size: "1.8 MB",
-    summary: "Quarterly cost analysis across 12 active SKUs. Total packaging cost reduced to $1.83/unit (-32% vs Q1). Carbon footprint at 2.9 kg CO₂/1,000 units — 50% below 2023 baseline.",
+    summary: "Quarterly cost analysis across 12 active SKUs. Average attachment cost reduced to $0.38/unit. Carbon footprint from attachment materials: 2.9 kg CO₂/1,000 units — 50% below 2023 baseline.",
     insights: [
-      "Total cost per unit: $1.83 (down from $2.70)",
-      "Material cost: $1.24 — largest saving driver",
+      "Total attachment cost per unit: $0.38 (down from $0.71 in Q1)",
+      "EVA Straps now dominant material (36% of cost share)",
       "Carbon footprint: 2.9 kg CO₂ per 1,000 units",
-      "Sustainability score: 92/100 (+28 pts YoY)",
-      "Material waste reduction: 63% vs. previous design",
+      "Sustainability score: 78/100 (+22 pts YoY)",
+      "Labor time reduction: 31% vs. prior attachment methods",
     ],
   },
   {
     id: "RPT-2039",
-    name: "Action Hero Series 7 Packaging Recommendation",
-    type: "recommendation",
+    name: "Action Hero Series 7 — Attachment Plan",
+    type: "attachment-plan",
     product: "Action Hero Series 7",
     status: "completed",
     date: "Aug 19, 2025",
     size: "1.2 MB",
-    summary: "AI-generated packaging recommendation for Action Hero Series 7. Optimized blister-back configuration reduces volume by 11% while maintaining 5-star drop protection rating.",
+    summary: "AI-generated attachment plan for Action Hero Series 7. 3 attachment zones identified. PET support at waist and EVA strap at right shoulder reduce movement risk by 68%. Drop-test prediction: 91% pass rate.",
     insights: [
-      "Recommended: Blister-back retail card — reduces cost by $0.28/unit",
-      "Drop protection: 5-star rating maintained",
-      "Volume reduction: 11% vs. current solid box",
-      "Recyclability improved from 54 to 78/100",
-      "Estimated annual savings: $48,000 at current volume",
+      "3 attachment zones identified: Shoulder (high), Waist (medium), Feet (low)",
+      "Recommended: PET Support at waist + EVA strap at shoulder",
+      "Movement risk reduced: 78 → 24 (from high to low)",
+      "Drop-test prediction: 91% pass rate (Grade A)",
+      "Estimated annual savings: $38,000 at current production volume",
     ],
   },
   {
     id: "RPT-2038",
-    name: "August Sustainability Disclosure Report",
+    name: "August Sustainability Disclosure — Attachment Materials",
     type: "sustainability",
     product: "Full Portfolio",
     status: "completed",
     date: "Aug 18, 2025",
     size: "3.1 MB",
-    summary: "GRI-aligned sustainability report for August. Recyclable material usage at 86%, up from 64% in January. CO₂ savings of 2.1 tonnes vs. prior-year packaging across the portfolio.",
+    summary: "GRI-aligned sustainability report for August. Recyclable attachment material usage at 82%, up from 61% in January. CO₂ savings of 2.1 tonnes vs. prior-year attachment materials across the portfolio.",
     insights: [
-      "Recyclable materials: 86% (target: 90% by Dec 2025)",
-      "Renewable sources: 64% (target: 75%)",
-      "CO₂ savings vs PY: 2.1 tonnes",
-      "Plastic-free packs: 58% (target: 65%)",
+      "Recyclable attachment materials: 82% (target: 90% by Dec 2025)",
+      "Renewable material sources: 64% (target: 75%)",
+      "CO₂ savings vs prior year: 2.1 tonnes",
+      "Plastic-free attachment zones: 58% (target: 65%)",
       "GRI 301 Material compliance: PASS",
     ],
   },
   {
     id: "RPT-2037",
-    name: "Princess Castle Playset Analysis",
-    type: "analysis",
+    name: "Princess Castle Playset — Risk Assessment",
+    type: "risk",
     product: "Princess Castle Playset",
     status: "completed",
     date: "Aug 17, 2025",
     size: "2.0 MB",
-    summary: "Multi-component playset packaging analysis. High complexity score (78/100) due to 12 individual piece types. Recommended structured insert tray reduces assembly time by 34%.",
+    summary: "Risk assessment for Princess Castle Playset. High complexity (78/100) due to 12 component types. 6 attachment zones identified. Movement risk: 52/100. Cardboard supports recommended for small parts.",
     insights: [
-      "Complexity score: 78/100 — high-structure insert required",
-      "12 component types detected",
-      "Recommended: structured pulp insert tray",
-      "Assembly time reduction: 34%",
-      "Packaging efficiency: 88%",
+      "Pose complexity: 78/100 — 6 high-structure attachment zones required",
+      "12 component types — 4 flagged for accessory loss risk",
+      "Movement risk: 52/100 (Medium) — 2 high-risk zones",
+      "Recommended: Cardboard support tray for small parts",
+      "Drop-test prediction: 84% pass rate (Grade B+)",
     ],
   },
   {
     id: "RPT-2036",
-    name: "Fashion Doll Wardrobe Box Optimization",
-    type: "recommendation",
+    name: "Fashion Doll Wardrobe Box — Attachment Plan Draft",
+    type: "attachment-plan",
     product: "Fashion Doll Wardrobe Box",
     status: "draft",
     date: "Aug 22, 2025",
     size: "—",
-    summary: "Draft packaging recommendation in progress. Initial analysis shows potential for 22% volume reduction by redesigning wardrobe compartment orientation.",
+    summary: "Draft attachment plan in progress. Initial scan identifies 5 attachment zones. Right arm and left wrist at elevated pose angle — EVA strap provisionally recommended for both zones.",
     insights: [
       "Draft — not yet finalized",
-      "Early finding: 22% potential volume reduction",
-      "Wardrobe compartment reorientation proposed",
+      "5 attachment zones identified in initial scan",
+      "Right Arm and Left Wrist both flagged as medium risk",
     ],
   },
 ];
 
 const TYPE_ICONS: Record<ReportType, typeof FileText> = {
   analysis: Package,
-  recommendation: BarChart3,
+  "attachment-plan": BarChart3,
+  risk: X,
   sustainability: Leaf,
   cost: DollarSign,
 };
 
 const TYPE_LABELS: Record<ReportType, string> = {
-  analysis: "Product Analysis",
-  recommendation: "Recommendation",
+  analysis: "Pose Analysis",
+  "attachment-plan": "Attachment Plan",
+  risk: "Risk Assessment",
   sustainability: "Sustainability",
   cost: "Cost Analysis",
 };
@@ -310,7 +312,7 @@ function ReportsPage() {
 
       {/* Filter tabs */}
       <div className="flex gap-2 flex-wrap">
-        {(["all", "analysis", "recommendation", "sustainability", "cost"] as const).map((f) => (
+        {(["all", "analysis", "attachment-plan", "risk", "sustainability", "cost"] as const).map((f) => (
           <Button
             key={f}
             variant={filter === f ? "default" : "outline"}

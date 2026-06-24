@@ -9,8 +9,6 @@
 // Additionally, you should also exclude this file from your linter and/or formatter to prevent it from being checked or modified.
 
 import { Route as rootRouteImport } from './routes/__root'
-import { Route as RegisterRouteImport } from './routes/register'
-import { Route as PendingRouteImport } from './routes/pending'
 import { Route as LoginRouteImport } from './routes/login'
 import { Route as AppRouteImport } from './routes/app'
 import { Route as IndexRouteImport } from './routes/index'
@@ -18,25 +16,19 @@ import { Route as AppIndexRouteImport } from './routes/app.index'
 import { Route as AppUsersRouteImport } from './routes/app.users'
 import { Route as AppSystemSettingsRouteImport } from './routes/app.system-settings'
 import { Route as AppSustainabilityRouteImport } from './routes/app.sustainability'
+import { Route as AppSubmitApprovalRouteImport } from './routes/app.submit-approval'
 import { Route as AppSettingsRouteImport } from './routes/app.settings'
 import { Route as AppRolesRouteImport } from './routes/app.roles'
+import { Route as AppRiskAssessmentRouteImport } from './routes/app.risk-assessment'
 import { Route as AppReportsRouteImport } from './routes/app.reports'
 import { Route as AppProductAnalysisRouteImport } from './routes/app.product-analysis'
 import { Route as AppPackagingPreviewRouteImport } from './routes/app.packaging-preview'
 import { Route as AppPackagingPlannerRouteImport } from './routes/app.packaging-planner'
 import { Route as AppDashboardRouteImport } from './routes/app.dashboard'
 import { Route as AppCostAnalysisRouteImport } from './routes/app.cost-analysis'
+import { Route as AppApprovalsRouteImport } from './routes/app.approvals'
+import { Route as AppApprovalsIdRouteImport } from './routes/app.approvals.$id'
 
-const RegisterRoute = RegisterRouteImport.update({
-  id: '/register',
-  path: '/register',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const PendingRoute = PendingRouteImport.update({
-  id: '/pending',
-  path: '/pending',
-  getParentRoute: () => rootRouteImport,
-} as any)
 const LoginRoute = LoginRouteImport.update({
   id: '/login',
   path: '/login',
@@ -72,6 +64,11 @@ const AppSustainabilityRoute = AppSustainabilityRouteImport.update({
   path: '/sustainability',
   getParentRoute: () => AppRoute,
 } as any)
+const AppSubmitApprovalRoute = AppSubmitApprovalRouteImport.update({
+  id: '/submit-approval',
+  path: '/submit-approval',
+  getParentRoute: () => AppRoute,
+} as any)
 const AppSettingsRoute = AppSettingsRouteImport.update({
   id: '/settings',
   path: '/settings',
@@ -80,6 +77,11 @@ const AppSettingsRoute = AppSettingsRouteImport.update({
 const AppRolesRoute = AppRolesRouteImport.update({
   id: '/roles',
   path: '/roles',
+  getParentRoute: () => AppRoute,
+} as any)
+const AppRiskAssessmentRoute = AppRiskAssessmentRouteImport.update({
+  id: '/risk-assessment',
+  path: '/risk-assessment',
   getParentRoute: () => AppRoute,
 } as any)
 const AppReportsRoute = AppReportsRouteImport.update({
@@ -112,63 +114,79 @@ const AppCostAnalysisRoute = AppCostAnalysisRouteImport.update({
   path: '/cost-analysis',
   getParentRoute: () => AppRoute,
 } as any)
+const AppApprovalsRoute = AppApprovalsRouteImport.update({
+  id: '/approvals',
+  path: '/approvals',
+  getParentRoute: () => AppRoute,
+} as any)
+const AppApprovalsIdRoute = AppApprovalsIdRouteImport.update({
+  id: '/$id',
+  path: '/$id',
+  getParentRoute: () => AppApprovalsRoute,
+} as any)
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
   '/app': typeof AppRouteWithChildren
   '/login': typeof LoginRoute
-  '/pending': typeof PendingRoute
-  '/register': typeof RegisterRoute
+  '/app/approvals': typeof AppApprovalsRouteWithChildren
   '/app/cost-analysis': typeof AppCostAnalysisRoute
   '/app/dashboard': typeof AppDashboardRoute
   '/app/packaging-planner': typeof AppPackagingPlannerRoute
   '/app/packaging-preview': typeof AppPackagingPreviewRoute
   '/app/product-analysis': typeof AppProductAnalysisRoute
   '/app/reports': typeof AppReportsRoute
+  '/app/risk-assessment': typeof AppRiskAssessmentRoute
   '/app/roles': typeof AppRolesRoute
   '/app/settings': typeof AppSettingsRoute
+  '/app/submit-approval': typeof AppSubmitApprovalRoute
   '/app/sustainability': typeof AppSustainabilityRoute
   '/app/system-settings': typeof AppSystemSettingsRoute
   '/app/users': typeof AppUsersRoute
   '/app/': typeof AppIndexRoute
+  '/app/approvals/$id': typeof AppApprovalsIdRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
   '/login': typeof LoginRoute
-  '/pending': typeof PendingRoute
-  '/register': typeof RegisterRoute
+  '/app/approvals': typeof AppApprovalsRouteWithChildren
   '/app/cost-analysis': typeof AppCostAnalysisRoute
   '/app/dashboard': typeof AppDashboardRoute
   '/app/packaging-planner': typeof AppPackagingPlannerRoute
   '/app/packaging-preview': typeof AppPackagingPreviewRoute
   '/app/product-analysis': typeof AppProductAnalysisRoute
   '/app/reports': typeof AppReportsRoute
+  '/app/risk-assessment': typeof AppRiskAssessmentRoute
   '/app/roles': typeof AppRolesRoute
   '/app/settings': typeof AppSettingsRoute
+  '/app/submit-approval': typeof AppSubmitApprovalRoute
   '/app/sustainability': typeof AppSustainabilityRoute
   '/app/system-settings': typeof AppSystemSettingsRoute
   '/app/users': typeof AppUsersRoute
   '/app': typeof AppIndexRoute
+  '/app/approvals/$id': typeof AppApprovalsIdRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
   '/app': typeof AppRouteWithChildren
   '/login': typeof LoginRoute
-  '/pending': typeof PendingRoute
-  '/register': typeof RegisterRoute
+  '/app/approvals': typeof AppApprovalsRouteWithChildren
   '/app/cost-analysis': typeof AppCostAnalysisRoute
   '/app/dashboard': typeof AppDashboardRoute
   '/app/packaging-planner': typeof AppPackagingPlannerRoute
   '/app/packaging-preview': typeof AppPackagingPreviewRoute
   '/app/product-analysis': typeof AppProductAnalysisRoute
   '/app/reports': typeof AppReportsRoute
+  '/app/risk-assessment': typeof AppRiskAssessmentRoute
   '/app/roles': typeof AppRolesRoute
   '/app/settings': typeof AppSettingsRoute
+  '/app/submit-approval': typeof AppSubmitApprovalRoute
   '/app/sustainability': typeof AppSustainabilityRoute
   '/app/system-settings': typeof AppSystemSettingsRoute
   '/app/users': typeof AppUsersRoute
   '/app/': typeof AppIndexRoute
+  '/app/approvals/$id': typeof AppApprovalsIdRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
@@ -176,83 +194,73 @@ export interface FileRouteTypes {
     | '/'
     | '/app'
     | '/login'
-    | '/pending'
-    | '/register'
+    | '/app/approvals'
     | '/app/cost-analysis'
     | '/app/dashboard'
     | '/app/packaging-planner'
     | '/app/packaging-preview'
     | '/app/product-analysis'
     | '/app/reports'
+    | '/app/risk-assessment'
     | '/app/roles'
     | '/app/settings'
+    | '/app/submit-approval'
     | '/app/sustainability'
     | '/app/system-settings'
     | '/app/users'
     | '/app/'
+    | '/app/approvals/$id'
   fileRoutesByTo: FileRoutesByTo
   to:
     | '/'
     | '/login'
-    | '/pending'
-    | '/register'
+    | '/app/approvals'
     | '/app/cost-analysis'
     | '/app/dashboard'
     | '/app/packaging-planner'
     | '/app/packaging-preview'
     | '/app/product-analysis'
     | '/app/reports'
+    | '/app/risk-assessment'
     | '/app/roles'
     | '/app/settings'
+    | '/app/submit-approval'
     | '/app/sustainability'
     | '/app/system-settings'
     | '/app/users'
     | '/app'
+    | '/app/approvals/$id'
   id:
     | '__root__'
     | '/'
     | '/app'
     | '/login'
-    | '/pending'
-    | '/register'
+    | '/app/approvals'
     | '/app/cost-analysis'
     | '/app/dashboard'
     | '/app/packaging-planner'
     | '/app/packaging-preview'
     | '/app/product-analysis'
     | '/app/reports'
+    | '/app/risk-assessment'
     | '/app/roles'
     | '/app/settings'
+    | '/app/submit-approval'
     | '/app/sustainability'
     | '/app/system-settings'
     | '/app/users'
     | '/app/'
+    | '/app/approvals/$id'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
   AppRoute: typeof AppRouteWithChildren
   LoginRoute: typeof LoginRoute
-  PendingRoute: typeof PendingRoute
-  RegisterRoute: typeof RegisterRoute
 }
 
 declare module '@tanstack/react-router' {
   interface FileRoutesByPath {
-    '/register': {
-      id: '/register'
-      path: '/register'
-      fullPath: '/register'
-      preLoaderRoute: typeof RegisterRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/pending': {
-      id: '/pending'
-      path: '/pending'
-      fullPath: '/pending'
-      preLoaderRoute: typeof PendingRouteImport
-      parentRoute: typeof rootRouteImport
-    }
     '/login': {
       id: '/login'
       path: '/login'
@@ -302,6 +310,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof AppSustainabilityRouteImport
       parentRoute: typeof AppRoute
     }
+    '/app/submit-approval': {
+      id: '/app/submit-approval'
+      path: '/submit-approval'
+      fullPath: '/app/submit-approval'
+      preLoaderRoute: typeof AppSubmitApprovalRouteImport
+      parentRoute: typeof AppRoute
+    }
     '/app/settings': {
       id: '/app/settings'
       path: '/settings'
@@ -314,6 +329,13 @@ declare module '@tanstack/react-router' {
       path: '/roles'
       fullPath: '/app/roles'
       preLoaderRoute: typeof AppRolesRouteImport
+      parentRoute: typeof AppRoute
+    }
+    '/app/risk-assessment': {
+      id: '/app/risk-assessment'
+      path: '/risk-assessment'
+      fullPath: '/app/risk-assessment'
+      preLoaderRoute: typeof AppRiskAssessmentRouteImport
       parentRoute: typeof AppRoute
     }
     '/app/reports': {
@@ -358,18 +380,47 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof AppCostAnalysisRouteImport
       parentRoute: typeof AppRoute
     }
+    '/app/approvals': {
+      id: '/app/approvals'
+      path: '/approvals'
+      fullPath: '/app/approvals'
+      preLoaderRoute: typeof AppApprovalsRouteImport
+      parentRoute: typeof AppRoute
+    }
+    '/app/approvals/$id': {
+      id: '/app/approvals/$id'
+      path: '/$id'
+      fullPath: '/app/approvals/$id'
+      preLoaderRoute: typeof AppApprovalsIdRouteImport
+      parentRoute: typeof AppApprovalsRoute
+    }
   }
 }
 
+interface AppApprovalsRouteChildren {
+  AppApprovalsIdRoute: typeof AppApprovalsIdRoute
+}
+
+const AppApprovalsRouteChildren: AppApprovalsRouteChildren = {
+  AppApprovalsIdRoute: AppApprovalsIdRoute,
+}
+
+const AppApprovalsRouteWithChildren = AppApprovalsRoute._addFileChildren(
+  AppApprovalsRouteChildren,
+)
+
 interface AppRouteChildren {
+  AppApprovalsRoute: typeof AppApprovalsRouteWithChildren
   AppCostAnalysisRoute: typeof AppCostAnalysisRoute
   AppDashboardRoute: typeof AppDashboardRoute
   AppPackagingPlannerRoute: typeof AppPackagingPlannerRoute
   AppPackagingPreviewRoute: typeof AppPackagingPreviewRoute
   AppProductAnalysisRoute: typeof AppProductAnalysisRoute
   AppReportsRoute: typeof AppReportsRoute
+  AppRiskAssessmentRoute: typeof AppRiskAssessmentRoute
   AppRolesRoute: typeof AppRolesRoute
   AppSettingsRoute: typeof AppSettingsRoute
+  AppSubmitApprovalRoute: typeof AppSubmitApprovalRoute
   AppSustainabilityRoute: typeof AppSustainabilityRoute
   AppSystemSettingsRoute: typeof AppSystemSettingsRoute
   AppUsersRoute: typeof AppUsersRoute
@@ -377,14 +428,17 @@ interface AppRouteChildren {
 }
 
 const AppRouteChildren: AppRouteChildren = {
+  AppApprovalsRoute: AppApprovalsRouteWithChildren,
   AppCostAnalysisRoute: AppCostAnalysisRoute,
   AppDashboardRoute: AppDashboardRoute,
   AppPackagingPlannerRoute: AppPackagingPlannerRoute,
   AppPackagingPreviewRoute: AppPackagingPreviewRoute,
   AppProductAnalysisRoute: AppProductAnalysisRoute,
   AppReportsRoute: AppReportsRoute,
+  AppRiskAssessmentRoute: AppRiskAssessmentRoute,
   AppRolesRoute: AppRolesRoute,
   AppSettingsRoute: AppSettingsRoute,
+  AppSubmitApprovalRoute: AppSubmitApprovalRoute,
   AppSustainabilityRoute: AppSustainabilityRoute,
   AppSystemSettingsRoute: AppSystemSettingsRoute,
   AppUsersRoute: AppUsersRoute,
@@ -397,8 +451,6 @@ const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
   AppRoute: AppRouteWithChildren,
   LoginRoute: LoginRoute,
-  PendingRoute: PendingRoute,
-  RegisterRoute: RegisterRoute,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)
