@@ -26,9 +26,9 @@ export const Route = createFileRoute("/app/packaging-planner")({
 });
 
 const WORKFLOW_STEPS = [
-  { label: "Pose & Doll Analysis", active: false },
+  { label: "Product Input", active: false },
+  { label: "Analysis Results", active: false },
   { label: "Attachment Planner",    active: true  },
-  { label: "Attachment Visualizer", active: false },
   { label: "Risk Assessment",      active: false },
   { label: "Cost & Sustainability", active: false },
 ];
@@ -288,8 +288,8 @@ function AttachmentPlannerPage() {
             <Button variant="outline" size="sm" onClick={() => navigate({ to: "/app/product-analysis" })}>
               <ArrowLeft className="h-4 w-4" /> Back to Analysis
             </Button>
-            <Button size="sm" onClick={() => navigate({ to: "/app/packaging-preview" })}>
-              <Eye className="h-4 w-4" /> View Visualizer
+            <Button size="sm" onClick={() => navigate({ to: "/app/risk-assessment" })}>
+              Proceed to Risk Assessment <ChevronRight className="ml-2 h-4 w-4" />
             </Button>
           </>
         }
@@ -588,11 +588,11 @@ function AttachmentPlannerPage() {
       <Card className="border-[color:var(--primary)]/30 bg-[color:var(--primary-soft)]/50 shadow-none">
         <CardContent className="flex items-center justify-between gap-4 p-5">
           <div>
-            <p className="text-sm font-semibold">View the attachment layout visualization</p>
-            <p className="mt-0.5 text-xs text-muted-foreground">See attachment markers, zone details, and inside-box placement diagram.</p>
+            <p className="text-sm font-semibold">Proceed to Risk Assessment</p>
+            <p className="mt-0.5 text-xs text-muted-foreground">Analyze potential packaging risks and mitigations based on the plan.</p>
           </div>
-          <Button size="sm" onClick={() => navigate({ to: "/app/packaging-preview" })} className="shrink-0">
-            <Eye className="h-4 w-4" /> Attachment Visualizer <ChevronRight className="h-4 w-4" />
+          <Button size="sm" onClick={() => navigate({ to: "/app/risk-assessment" })} className="shrink-0">
+             Risk Assessment <ChevronRight className="ml-2 h-4 w-4" />
           </Button>
         </CardContent>
       </Card>

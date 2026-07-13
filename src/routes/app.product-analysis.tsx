@@ -19,10 +19,10 @@ export const Route = createFileRoute("/app/product-analysis")({
   component: ProductAnalysisPage,
 });
 
-const WORKFLOW_STEPS = [
-  { label: "Pose & Doll Analysis", active: true  },
+const getWorkflowSteps = (stage: string) => [
+  { label: "Product Input", active: stage === "form" || stage === "analysing" },
+  { label: "Analysis Results", active: stage === "results" },
   { label: "Attachment Planner",    active: false },
-  { label: "Attachment Visualizer", active: false },
   { label: "Risk Assessment",      active: false },
   { label: "Cost & Sustainability", active: false },
 ];
@@ -383,7 +383,7 @@ function ProductAnalysisPage() {
   if (stage === "results") return (
     <div className="space-y-6">
       <PageHeader title="Analysis Complete" description="Review the detected pose and YOLOv8 skeleton visualization." />
-      <WorkflowBar steps={WORKFLOW_STEPS} />
+      <WorkflowBar steps={getWorkflowSteps(stage)} />
       <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
          <Card className="border-border/70 shadow-none">
             <CardHeader><CardTitle className="text-base">Skeleton Pose Visualization</CardTitle></CardHeader>
@@ -474,7 +474,7 @@ function ProductAnalysisPage() {
   if (stage === "analysing") return (
     <div className="space-y-6">
       <PageHeader title="Computer Vision Inference" description="YOLOv8 is analyzing the image for strap locations..." />
-      <WorkflowBar steps={WORKFLOW_STEPS} />
+      <WorkflowBar steps={getWorkflowSteps(stage)} />
       <div className="flex min-h-[55vh] flex-col items-center justify-center gap-8">
         <div className="relative flex h-24 w-24 items-center justify-center rounded-full bg-[color:var(--primary-soft)]">
           <ScanLine className="h-10 w-10 animate-pulse text-primary" />
@@ -511,7 +511,7 @@ function ProductAnalysisPage() {
           </div>
         }
       />
-      <WorkflowBar steps={WORKFLOW_STEPS} />
+      <WorkflowBar steps={getWorkflowSteps(stage)} />
 
       <div className="grid gap-6 lg:grid-cols-5">
         <div className="space-y-5 lg:col-span-3">

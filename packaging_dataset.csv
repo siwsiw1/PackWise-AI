@@ -1,0 +1,1001 @@
+product_family,articulation,pose,product_weight_g,height_cm,complexity_score,stability_index,center_of_gravity,hair_length,dress_length,accessory_count,accessory_weight_g,fragility_score,attachment_needed,fragile_parts_count,movement_score,protection_score,packaging_complexity,overall_risk,recommended_head_strap,recommended_waist_strap,recommended_hand_strap,recommended_leg_strap,recommended_back_support,recommended_base_support,recommended_material,eco_score,relative_cost,recyclable
+Dreamtopia,Standard,Arms Open,123,30.0,7,5,Back,Long,Long,3,31.0,5,2,2,7,6,8,6.8,1,4,1,0,1,0,Virgin PET,52.0,1.0,Yes
+Dreamtopia,Standard,Walking,121,30.0,7,5,Back,Long,Short,3,38.0,7,3,1,8,5,8,7.0,1,4,1,2,1,1,Virgin PET,43.0,1.0,Yes
+Fashionistas,Standard,One Hand Up,117,29.0,3,8,Center,Short,Short,4,15.0,8,0,0,1,2,4,2.0,0,1,0,0,0,0,Recycled Cardboard + rPET,98.0,0.85,Yes
+Careers,Standard,Walking,120,29.0,5,7,Center,Long,Knee,0,0.0,0,0,1,5,1,5,3.6,0,1,0,1,0,0,rPET,86.0,1.1,Yes
+Dreamtopia,Standard,Walking,127,30.2,7,5,Back,Medium,Knee,3,34.0,9,2,0,8,4,8,6.6,1,4,1,2,1,1,Virgin PET,43.0,1.0,Yes
+Signature,Made to Move,Sitting,140,29.0,8,6,Center,Long,Short,0,0.0,0,0,1,5,1,9,4.4,0,3,0,0,0,0,rPET,84.0,1.1,Yes
+Extra,Curvy,One Hand Up,138,30.0,6,6,Center,Medium,Short,3,35.0,8,2,0,5,4,7,5.0,2,3,1,0,0,0,rPET,78.0,1.1,Yes
+Dreamtopia,Standard,Two Hands Up,133,30.0,7,5,Back,Medium,Knee,1,25.0,1,1,0,7,1,7,4.9,0,3,0,0,0,0,rPET,84.0,1.1,Yes
+Dreamtopia,Standard,Arms Open,124,30.0,7,5,Back,Long,Knee,2,20.0,4,1,1,7,3,7,5.6,0,3,0,0,0,0,rPET,84.0,1.1,Yes
+Careers,Standard,One Hand on Hip,119,29.0,5,7,Center,Long,Short,1,12.0,2,1,1,2,2,5,2.6,0,2,0,0,0,0,Recycled Cardboard + rPET,96.0,0.85,Yes
+Fashionistas,Standard,Arms Open,117,29.0,3,8,Center,Medium,Knee,1,6.0,1,0,0,2,0,3,1.5,0,1,0,0,0,0,Recycled Cardboard + rPET,98.0,0.85,Yes
+Extra,Curvy,One Leg Bent,134,30.2,6,6,Center,Short,Knee,4,46.0,6,2,0,6,5,7,5.8,1,3,1,1,0,0,rPET,78.0,1.1,Yes
+Fashionistas,Standard,Two Hands Up,118,29.0,3,8,Center,Short,Long,3,33.0,5,1,1,2,4,4,3.1,1,2,0,0,0,0,rPET,84.0,1.1,Yes
+Careers,Standard,One Leg Bent,130,29.0,5,7,Center,Medium,Knee,5,30.0,9,1,0,4,3,7,4.2,0,3,0,1,0,0,rPET,82.0,1.1,Yes
+Careers,Standard,One Hand on Hip,122,29.0,5,7,Center,Medium,Short,4,38.0,6,2,0,3,4,6,4.0,1,2,1,0,0,0,rPET,82.0,1.1,Yes
+Extra,Curvy,Sitting,125,30.0,6,6,Center,Very Long,Short,3,9.0,3,0,2,4,3,7,4.2,0,3,0,0,0,0,rPET,84.0,1.1,Yes
+Extra,Curvy,One Hand Up,126,30.0,6,6,Center,Long,Knee,5,67.0,6,4,1,5,7,8,6.3,2,4,2,0,1,0,Virgin PET,48.0,1.0,Yes
+Made to Move,Made to Move,Two Hands Up,129,29.0,7,5,Left,Medium,Knee,0,0.0,0,0,0,6,0,8,4.3,0,3,0,0,0,0,rPET,84.0,1.1,Yes
+Extra,Curvy,One Hand Up,138,30.0,6,6,Center,Short,Short,5,29.0,6,1,0,5,3,8,4.9,0,3,0,0,0,0,rPET,84.0,1.1,Yes
+Careers,Standard,One Hand on Hip,115,29.0,5,7,Center,Long,Short,3,38.0,7,2,1,2,5,6,3.8,1,2,1,0,0,0,rPET,82.0,1.1,Yes
+Dreamtopia,Standard,Sitting,120,30.0,7,5,Back,Medium,Short,5,32.0,8,2,0,5,4,9,5.4,1,3,1,0,0,0,rPET,80.0,1.1,Yes
+Fashionistas,Standard,One Hand on Hip,115,29.2,3,8,Center,Medium,Knee,5,52.0,7,4,0,1,6,5,3.6,1,1,2,0,0,0,rPET,82.0,1.1,Yes
+Dreamtopia,Standard,Sitting,130,30.2,7,5,Back,Short,Knee,2,28.0,2,1,0,5,2,7,4.4,0,3,0,0,0,0,rPET,84.0,1.1,Yes
+Dreamtopia,Standard,One Hand on Hip,126,30.2,7,5,Back,Short,Long,5,51.0,7,2,1,6,6,9,6.6,1,4,1,0,1,0,Virgin PET,52.0,1.0,Yes
+Fashionistas,Standard,Sitting,120,29.0,3,8,Center,Long,Short,2,27.0,4,1,1,1,3,3,2.1,0,2,0,0,0,0,Recycled Cardboard + rPET,96.0,0.85,Yes
+Dreamtopia,Standard,One Hand Up,121,30.0,7,5,Back,Medium,Knee,5,28.0,7,0,0,6,3,9,5.6,0,2,0,0,0,0,rPET,86.0,1.1,Yes
+Made to Move,Made to Move,Arms Open,121,29.0,7,5,Left,Very Long,Short,0,0.0,0,0,2,6,2,8,5.0,0,3,0,0,0,0,rPET,84.0,1.1,Yes
+Fashionistas,Standard,One Leg Bent,119,29.2,3,8,Center,Medium,Knee,1,5.0,3,0,0,2,1,3,1.8,0,1,0,1,0,0,Recycled Cardboard + rPET,96.0,0.85,Yes
+Signature,Made to Move,One Leg Bent,140,29.0,8,6,Center,Long,Knee,3,27.0,3,1,1,7,3,10,6.2,0,4,0,1,1,0,Virgin PET,54.0,1.0,Yes
+Dreamtopia,Standard,One Leg Bent,122,30.0,7,5,Back,Medium,Knee,4,41.0,10,2,0,7,5,8,6.5,1,4,1,1,1,0,Virgin PET,50.0,1.0,Yes
+Careers,Standard,Walking,124,29.0,5,7,Center,Long,Knee,5,75.0,7,3,1,5,6,7,5.8,1,3,1,1,0,0,rPET,78.0,1.1,Yes
+Careers,Standard,One Hand Up,117,29.0,5,7,Center,Long,Knee,0,0.0,0,0,1,2,1,5,2.2,0,2,0,0,0,0,Recycled Cardboard + rPET,96.0,0.85,Yes
+Extra,Curvy,Arms Open,130,30.0,6,6,Center,Very Long,Short,1,2.0,1,0,2,6,2,6,4.6,0,3,0,0,0,0,rPET,84.0,1.1,Yes
+Fashionistas,Standard,One Hand Up,112,29.0,3,8,Center,Short,Short,5,74.0,8,3,0,1,5,5,3.2,1,1,1,0,0,0,rPET,84.0,1.1,Yes
+Careers,Standard,One Hand on Hip,119,29.0,5,7,Center,Medium,Knee,5,30.0,7,1,0,2,3,7,3.4,0,1,0,0,0,0,rPET,88.0,1.1,Yes
+Fashionistas,Standard,Standing Straight,113,29.0,3,8,Center,Short,Long,4,49.0,6,2,1,0,6,4,2.9,1,2,1,0,0,0,Recycled Cardboard + rPET,92.0,0.85,Yes
+Dreamtopia,Standard,Standing Straight,130,30.2,7,5,Back,Long,Short,4,42.0,8,2,1,5,6,8,6.0,1,3,1,0,0,0,rPET,80.0,1.1,Yes
+Extra,Curvy,Sitting,139,30.0,6,6,Center,Medium,Short,2,17.0,3,1,0,4,1,6,3.4,0,2,0,0,0,0,rPET,86.0,1.1,Yes
+Made to Move,Made to Move,Standing Straight,123,29.0,7,5,Left,Medium,Long,0,0.0,0,0,1,4,1,8,3.8,0,2,0,0,0,0,rPET,86.0,1.1,Yes
+Dreamtopia,Standard,One Leg Bent,129,30.0,7,5,Back,Very Long,Knee,1,2.0,3,0,2,7,3,7,5.6,0,3,0,1,0,0,rPET,82.0,1.1,Yes
+Extra,Curvy,Arms Open,134,30.0,6,6,Center,Very Long,Long,5,27.0,5,0,3,6,6,8,6.4,1,4,0,0,1,0,Virgin PET,54.0,1.0,Yes
+Fashionistas,Standard,One Hand Up,112,29.0,3,8,Center,Short,Long,4,60.0,5,4,1,1,7,4,3.7,2,2,2,0,1,0,rPET,72.0,1.1,Yes
+Fashionistas,Standard,Arms Open,114,29.0,3,8,Center,Short,Knee,0,0.0,0,0,0,2,0,3,1.5,0,1,0,0,0,0,Recycled Cardboard + rPET,98.0,0.85,Yes
+Fashionistas,Standard,One Hand on Hip,120,29.0,3,8,Center,Very Long,Short,3,22.0,3,0,2,2,4,4,3.1,1,2,0,0,0,0,rPET,84.0,1.1,Yes
+Fashionistas,Standard,Two Hands Up,114,29.0,3,8,Center,Very Long,Knee,3,28.0,6,2,2,2,6,4,3.8,1,2,1,0,0,0,rPET,82.0,1.1,Yes
+Careers,Standard,One Leg Bent,125,29.0,5,7,Center,Short,Knee,4,54.0,9,3,0,4,5,6,4.8,1,3,1,1,0,0,rPET,78.0,1.1,Yes
+Careers,Standard,Two Hands Up,130,29.0,5,7,Center,Very Long,Knee,4,41.0,8,4,2,4,8,6,5.8,2,3,2,0,1,0,rPET,70.0,1.1,Yes
+Careers,Standard,One Hand Up,129,29.0,5,7,Center,Long,Knee,0,0.0,0,0,1,3,1,5,2.7,0,2,0,0,0,0,Recycled Cardboard + rPET,96.0,0.85,Yes
+Fashionistas,Standard,Sitting,118,29.0,3,8,Center,Medium,Knee,1,30.0,1,1,0,0,1,3,1.0,0,1,0,0,0,0,Recycled Cardboard + rPET,98.0,0.85,Yes
+Fashionistas,Standard,Walking,117,29.0,3,8,Center,Short,Short,5,47.0,7,3,0,3,5,5,4.1,1,3,1,1,0,0,rPET,78.0,1.1,Yes
+Careers,Standard,Walking,123,29.0,5,7,Center,Short,Knee,3,49.0,6,3,0,5,5,6,5.2,1,3,1,1,0,0,rPET,78.0,1.1,Yes
+Careers,Standard,Standing Straight,127,29.0,5,7,Center,Medium,Knee,4,31.0,9,1,0,2,3,6,3.2,0,2,0,0,0,0,rPET,86.0,1.1,Yes
+Signature,Made to Move,One Hand on Hip,141,29.0,8,6,Center,Short,Long,2,12.0,3,1,1,6,2,9,5.2,0,3,0,0,0,0,rPET,84.0,1.1,Yes
+Careers,Standard,Sitting,115,29.0,5,7,Center,Medium,Short,3,27.0,7,2,0,1,4,6,3.0,1,2,1,0,0,0,rPET,82.0,1.1,Yes
+Signature,Made to Move,One Hand on Hip,144,29.2,8,6,Center,Very Long,Long,2,23.0,5,2,3,6,7,9,7.0,2,4,1,0,1,0,Virgin PET,50.0,1.0,Yes
+Signature,Made to Move,Standing Straight,143,29.2,8,6,Center,Long,Short,4,57.0,5,4,1,5,7,10,6.7,2,4,2,0,1,0,Virgin PET,48.0,1.0,Yes
+Made to Move,Made to Move,Arms Open,119,29.0,7,5,Left,Medium,Long,4,29.0,6,1,1,5,4,9,5.4,2,3,0,0,0,0,rPET,80.0,1.1,Yes
+Extra,Curvy,Two Hands Up,137,30.0,6,6,Center,Short,Knee,2,48.0,2,2,0,6,4,6,5.3,1,3,1,0,0,0,rPET,80.0,1.1,Yes
+Made to Move,Made to Move,Arms Open,119,29.0,7,5,Left,Short,Short,4,56.0,6,2,0,5,5,9,5.8,1,3,1,0,0,0,rPET,80.0,1.1,Yes
+Signature,Made to Move,Walking,139,29.2,8,6,Center,Medium,Knee,3,31.0,4,2,0,7,3,10,6.2,0,4,1,1,1,0,Virgin PET,52.0,1.0,Yes
+Dreamtopia,Standard,Standing Straight,120,30.0,7,5,Back,Medium,Long,5,55.0,8,4,1,5,7,9,6.5,2,4,2,0,1,0,Virgin PET,48.0,1.0,Yes
+Fashionistas,Standard,Sitting,120,29.2,3,8,Center,Long,Knee,3,14.0,4,1,1,1,2,4,2.0,0,1,0,0,0,0,Recycled Cardboard + rPET,98.0,0.85,Yes
+Made to Move,Made to Move,Arms Open,122,29.0,7,5,Left,Short,Short,0,0.0,0,0,0,6,0,8,4.3,0,3,0,0,0,0,rPET,84.0,1.1,Yes
+Extra,Curvy,Standing Straight,136,30.2,6,6,Center,Medium,Knee,2,9.0,2,0,0,4,1,6,3.4,0,2,0,0,0,0,rPET,86.0,1.1,Yes
+Extra,Curvy,One Hand on Hip,140,30.2,6,6,Center,Long,Short,5,57.0,7,4,1,6,7,8,6.8,2,4,2,0,1,0,Virgin PET,48.0,1.0,Yes
+Dreamtopia,Standard,One Leg Bent,128,30.0,7,5,Back,Long,Short,3,37.0,5,3,1,7,5,8,6.5,1,4,1,1,1,0,Virgin PET,50.0,1.0,Yes
+Extra,Curvy,One Leg Bent,130,30.0,6,6,Center,Medium,Knee,2,33.0,2,2,0,6,3,6,5.0,0,2,1,1,0,0,rPET,82.0,1.1,Yes
+Fashionistas,Standard,Sitting,114,29.2,3,8,Center,Long,Short,1,15.0,1,1,1,0,1,3,1.0,0,1,0,0,0,0,Recycled Cardboard + rPET,98.0,0.85,Yes
+Signature,Made to Move,Two Hands Up,150,29.0,8,6,Center,Long,Knee,1,20.0,1,1,1,7,2,9,5.6,0,3,0,0,0,1,rPET,79.0,1.1,Yes
+Fashionistas,Standard,Walking,115,29.2,3,8,Center,Long,Short,5,59.0,7,4,1,3,7,5,4.8,2,3,2,1,1,0,rPET,68.0,1.1,Yes
+Fashionistas,Standard,Sitting,111,29.2,3,8,Center,Long,Long,0,0.0,0,0,2,0,2,3,1.3,0,1,0,0,0,0,Recycled Cardboard + rPET,98.0,0.85,Yes
+Careers,Standard,One Leg Bent,119,29.2,5,7,Center,Medium,Knee,3,43.0,4,3,0,3,4,6,4.0,1,2,1,1,0,0,rPET,80.0,1.1,Yes
+Dreamtopia,Standard,Walking,123,30.0,7,5,Back,Short,Short,1,6.0,1,0,0,8,0,7,5.0,0,3,0,2,0,1,rPET,75.0,1.1,Yes
+Fashionistas,Standard,One Hand Up,118,29.2,3,8,Center,Long,Knee,0,0.0,0,0,1,1,1,3,1.4,0,1,0,0,0,0,Recycled Cardboard + rPET,98.0,0.85,Yes
+Dreamtopia,Standard,One Hand on Hip,133,30.0,7,5,Back,Very Long,Short,1,8.0,2,1,2,6,3,7,5.2,0,3,0,0,0,0,rPET,84.0,1.1,Yes
+Made to Move,Made to Move,Two Hands Up,130,29.0,7,5,Left,Medium,Short,3,39.0,5,1,0,6,3,9,5.6,0,3,0,0,0,0,rPET,84.0,1.1,Yes
+Made to Move,Made to Move,One Hand on Hip,125,29.0,7,5,Left,Long,Short,0,0.0,0,0,1,5,1,8,4.2,0,3,0,0,0,0,rPET,84.0,1.1,Yes
+Careers,Standard,One Leg Bent,119,29.2,5,7,Center,Medium,Short,1,16.0,1,1,0,3,0,5,2.4,0,2,0,1,0,0,Recycled Cardboard + rPET,94.0,0.85,Yes
+Extra,Curvy,One Hand Up,138,30.2,6,6,Center,Long,Short,0,0.0,0,0,1,5,1,6,3.8,0,2,0,0,0,0,rPET,86.0,1.1,Yes
+Extra,Curvy,Sitting,138,30.0,6,6,Center,Short,Short,5,45.0,7,3,0,4,5,8,5.2,2,3,1,0,0,0,rPET,78.0,1.1,Yes
+Signature,Made to Move,One Hand on Hip,133,29.0,8,6,Center,Short,Short,0,0.0,0,0,0,5,0,9,4.0,0,3,0,0,0,0,rPET,84.0,1.1,Yes
+Careers,Standard,Arms Open,118,29.2,5,7,Center,Medium,Long,1,7.0,1,0,1,3,1,5,2.7,0,2,0,0,0,0,Recycled Cardboard + rPET,96.0,0.85,Yes
+Careers,Standard,Standing Straight,115,29.0,5,7,Center,Short,Knee,2,11.0,6,0,0,1,2,5,2.2,0,2,0,0,0,0,Recycled Cardboard + rPET,96.0,0.85,Yes
+Signature,Made to Move,One Hand Up,141,29.0,8,6,Center,Short,Knee,5,74.0,9,3,0,6,5,10,6.4,1,4,1,0,1,0,Virgin PET,52.0,1.0,Yes
+Signature,Made to Move,Walking,132,29.0,8,6,Center,Long,Knee,4,29.0,6,3,1,7,5,10,6.9,1,4,1,1,1,0,Virgin PET,50.0,1.0,Yes
+Extra,Curvy,One Hand on Hip,134,30.0,6,6,Center,Very Long,Knee,5,43.0,7,2,2,5,7,8,6.3,2,3,1,0,1,0,Virgin PET,52.0,1.0,Yes
+Fashionistas,Standard,Walking,113,29.2,3,8,Center,Long,Knee,5,30.0,8,1,1,3,4,5,3.8,1,2,0,1,0,0,rPET,82.0,1.1,Yes
+Signature,Made to Move,Walking,133,29.0,8,6,Center,Long,Long,3,40.0,4,2,2,7,6,10,7.2,1,4,1,1,1,0,Virgin PET,50.0,1.0,Yes
+Made to Move,Made to Move,Arms Open,118,29.0,7,5,Left,Short,Short,1,5.0,1,0,0,5,0,8,3.8,0,2,0,0,0,0,rPET,86.0,1.1,Yes
+Careers,Standard,Standing Straight,126,29.2,5,7,Center,Medium,Knee,0,0.0,0,0,0,2,0,5,1.9,0,1,0,0,0,0,Recycled Cardboard + rPET,98.0,0.85,Yes
+Made to Move,Made to Move,Sitting,125,29.0,7,5,Left,Short,Short,4,31.0,5,2,0,4,4,9,5.0,1,3,1,0,0,0,rPET,80.0,1.1,Yes
+Careers,Standard,One Leg Bent,129,29.0,5,7,Center,Long,Short,3,31.0,6,1,1,4,4,6,4.4,2,3,0,1,0,0,rPET,78.0,1.1,Yes
+Signature,Made to Move,One Leg Bent,145,29.2,8,6,Center,Medium,Short,5,64.0,9,5,0,7,6,10,7.2,1,4,2,1,1,1,Virgin PET,43.0,1.0,Yes
+Dreamtopia,Standard,One Hand Up,134,30.2,7,5,Back,Long,Short,1,7.0,1,0,1,6,1,7,4.4,0,3,0,0,0,0,rPET,84.0,1.1,Yes
+Signature,Made to Move,One Hand on Hip,148,29.0,8,6,Center,Long,Long,1,1.0,1,0,2,6,2,9,5.2,0,2,0,0,0,1,rPET,81.0,1.1,Yes
+Careers,Standard,One Leg Bent,121,29.0,5,7,Center,Medium,Long,3,32.0,4,2,1,4,4,6,4.4,1,3,1,1,0,0,rPET,78.0,1.1,Yes
+Made to Move,Made to Move,Two Hands Up,130,29.0,7,5,Left,Long,Knee,4,25.0,5,2,1,6,5,9,6.2,1,4,1,0,1,0,Virgin PET,52.0,1.0,Yes
+Made to Move,Made to Move,Sitting,127,29.0,7,5,Left,Medium,Knee,3,31.0,4,2,0,4,3,9,4.6,0,3,1,0,0,0,rPET,82.0,1.1,Yes
+Careers,Standard,Walking,123,29.0,5,7,Center,Long,Short,2,19.0,4,2,1,5,3,5,4.3,0,3,1,1,0,0,rPET,80.0,1.1,Yes
+Extra,Curvy,One Hand Up,132,30.2,6,6,Center,Very Long,Short,5,50.0,10,3,2,5,7,8,6.3,2,3,1,0,1,0,Virgin PET,52.0,1.0,Yes
+Fashionistas,Standard,Standing Straight,111,29.0,3,8,Center,Long,Long,3,30.0,6,2,2,0,6,4,2.9,1,2,1,0,0,0,Recycled Cardboard + rPET,92.0,0.85,Yes
+Dreamtopia,Standard,One Leg Bent,129,30.2,7,5,Back,Long,Knee,5,53.0,7,3,1,7,6,9,7.0,1,4,1,1,1,0,Virgin PET,50.0,1.0,Yes
+Dreamtopia,Standard,One Hand on Hip,134,30.0,7,5,Back,Medium,Knee,4,38.0,6,2,0,6,4,8,5.7,1,3,1,0,0,0,rPET,80.0,1.1,Yes
+Dreamtopia,Standard,Standing Straight,120,30.0,7,5,Back,Very Long,Long,0,0.0,0,0,3,5,3,7,4.7,0,3,0,0,0,0,rPET,84.0,1.1,Yes
+Extra,Curvy,Arms Open,135,30.0,6,6,Center,Medium,Short,1,4.0,1,0,0,6,0,6,3.9,0,2,0,0,0,0,rPET,86.0,1.1,Yes
+Extra,Curvy,Walking,134,30.2,6,6,Center,Short,Knee,2,29.0,2,2,0,7,3,6,5.4,0,3,1,1,0,0,rPET,80.0,1.1,Yes
+Signature,Made to Move,Sitting,145,29.0,8,6,Center,Long,Knee,4,64.0,7,3,1,5,6,10,6.4,1,4,1,0,1,1,Virgin PET,47.0,1.0,Yes
+Careers,Standard,Sitting,130,29.2,5,7,Center,Long,Knee,3,34.0,6,2,1,2,5,6,3.8,1,2,1,0,0,0,rPET,82.0,1.1,Yes
+Extra,Curvy,Arms Open,137,30.2,6,6,Center,Long,Knee,2,33.0,3,2,1,6,4,6,5.3,2,3,1,0,0,0,rPET,78.0,1.1,Yes
+Extra,Curvy,One Leg Bent,126,30.0,6,6,Center,Long,Short,5,64.0,7,4,1,6,7,8,6.8,2,4,2,1,1,0,Virgin PET,46.0,1.0,Yes
+Signature,Made to Move,Sitting,150,29.0,8,6,Center,Medium,Knee,2,22.0,5,1,0,5,3,9,5.1,0,3,0,0,0,1,rPET,79.0,1.1,Yes
+Dreamtopia,Standard,Sitting,121,30.2,7,5,Back,Medium,Short,2,7.0,4,0,0,5,1,7,4.0,0,3,0,0,0,0,rPET,84.0,1.1,Yes
+Signature,Made to Move,Standing Straight,132,29.0,8,6,Center,Short,Short,4,27.0,9,1,0,4,3,10,4.8,0,3,0,0,0,0,rPET,84.0,1.1,Yes
+Fashionistas,Standard,One Hand on Hip,117,29.2,3,8,Center,Long,Knee,3,29.0,4,2,1,1,4,4,2.6,1,2,1,0,0,0,Recycled Cardboard + rPET,92.0,0.85,Yes
+Signature,Made to Move,Sitting,148,29.0,8,6,Center,Very Long,Short,3,17.0,4,1,2,5,3,10,5.3,0,3,0,0,0,1,rPET,79.0,1.1,Yes
+Fashionistas,Standard,Two Hands Up,111,29.0,3,8,Center,Short,Knee,2,31.0,5,2,0,2,4,3,2.9,1,2,1,0,0,0,Recycled Cardboard + rPET,92.0,0.85,Yes
+Dreamtopia,Standard,One Hand Up,130,30.0,7,5,Back,Long,Short,3,22.0,4,1,1,6,3,8,5.4,0,3,0,0,0,0,rPET,84.0,1.1,Yes
+Fashionistas,Standard,One Leg Bent,120,29.0,3,8,Center,Long,Knee,2,33.0,4,1,1,3,3,3,3.0,0,2,0,1,0,0,Recycled Cardboard + rPET,94.0,0.85,Yes
+Fashionistas,Standard,One Leg Bent,114,29.2,3,8,Center,Medium,Short,5,113.0,9,5,0,2,6,5,4.0,1,3,2,1,0,0,rPET,76.0,1.1,Yes
+Made to Move,Made to Move,One Leg Bent,118,29.2,7,5,Left,Medium,Short,4,33.0,8,2,0,5,4,9,5.4,1,3,1,1,0,0,rPET,78.0,1.1,Yes
+Fashionistas,Standard,One Hand Up,111,29.2,3,8,Center,Long,Knee,2,17.0,4,1,1,1,2,3,1.8,0,1,0,0,0,0,Recycled Cardboard + rPET,98.0,0.85,Yes
+Signature,Made to Move,Arms Open,143,29.2,8,6,Center,Long,Short,3,33.0,6,1,1,7,4,10,6.6,1,4,0,0,1,0,Virgin PET,54.0,1.0,Yes
+Careers,Standard,Walking,120,29.0,5,7,Center,Long,Knee,1,1.0,1,0,1,5,1,5,3.6,0,2,0,1,0,0,rPET,84.0,1.1,Yes
+Fashionistas,Standard,Walking,113,29.2,3,8,Center,Very Long,Knee,3,30.0,5,2,2,3,6,4,4.2,1,3,1,1,0,0,rPET,78.0,1.1,Yes
+Careers,Standard,Standing Straight,128,29.2,5,7,Center,Long,Short,1,9.0,2,1,1,2,2,5,2.6,0,2,0,0,0,0,Recycled Cardboard + rPET,96.0,0.85,Yes
+Signature,Made to Move,Sitting,134,29.0,8,6,Center,Short,Knee,2,20.0,4,2,0,4,3,9,4.6,0,3,1,0,0,0,rPET,82.0,1.1,Yes
+Dreamtopia,Standard,One Leg Bent,133,30.0,7,5,Back,Long,Long,5,96.0,8,5,2,7,8,9,7.8,2,4,2,1,1,0,Virgin PET,46.0,1.0,Yes
+Dreamtopia,Standard,Arms Open,133,30.0,7,5,Back,Long,Knee,2,32.0,5,2,1,7,5,7,6.3,1,4,1,0,1,0,Virgin PET,52.0,1.0,Yes
+Careers,Standard,Two Hands Up,122,29.0,5,7,Center,Short,Short,2,28.0,3,2,0,4,3,5,3.8,0,2,1,0,0,0,rPET,84.0,1.1,Yes
+Made to Move,Made to Move,Sitting,128,29.0,7,5,Left,Long,Short,1,15.0,1,1,1,4,1,8,3.8,0,2,0,0,0,0,rPET,86.0,1.1,Yes
+Signature,Made to Move,One Hand on Hip,130,29.0,8,6,Center,Long,Short,4,55.0,7,3,1,5,6,10,6.4,1,4,1,0,1,0,Virgin PET,52.0,1.0,Yes
+Made to Move,Made to Move,Walking,130,29.0,7,5,Left,Short,Long,2,14.0,4,1,1,7,2,8,5.4,0,3,0,1,0,0,rPET,82.0,1.1,Yes
+Fashionistas,Standard,Standing Straight,111,29.0,3,8,Center,Long,Knee,0,0.0,0,0,1,0,1,3,1.0,0,1,0,0,0,0,Recycled Cardboard + rPET,98.0,0.85,Yes
+Careers,Standard,One Hand Up,127,29.2,5,7,Center,Long,Short,4,24.0,7,1,1,3,4,6,4.0,1,2,0,0,0,0,rPET,84.0,1.1,Yes
+Dreamtopia,Standard,Two Hands Up,128,30.0,7,5,Back,Long,Short,0,0.0,0,0,1,7,1,7,4.9,0,3,0,0,0,0,rPET,84.0,1.1,Yes
+Fashionistas,Standard,Walking,115,29.0,3,8,Center,Long,Knee,5,51.0,10,3,1,3,6,5,4.4,1,3,1,1,0,0,rPET,78.0,1.1,Yes
+Made to Move,Made to Move,Standing Straight,121,29.0,7,5,Left,Short,Short,2,11.0,2,0,0,4,1,8,3.8,0,2,0,0,0,0,rPET,86.0,1.1,Yes
+Made to Move,Made to Move,Standing Straight,123,29.2,7,5,Left,Short,Knee,5,58.0,8,3,0,4,5,10,5.6,1,3,1,0,0,0,rPET,80.0,1.1,Yes
+Extra,Curvy,Sitting,138,30.0,6,6,Center,Long,Long,1,10.0,1,1,2,4,2,6,3.7,0,2,0,0,0,0,rPET,86.0,1.1,Yes
+Signature,Made to Move,Arms Open,141,29.0,8,6,Center,Short,Long,4,27.0,5,2,1,7,5,10,6.9,1,3,1,0,1,0,Virgin PET,54.0,1.0,Yes
+Extra,Curvy,One Hand Up,126,30.2,6,6,Center,Very Long,Knee,2,30.0,5,2,2,5,6,6,5.6,1,3,1,0,0,0,rPET,80.0,1.1,Yes
+Extra,Curvy,One Leg Bent,136,30.2,6,6,Center,Short,Long,3,33.0,3,1,1,6,3,7,5.2,0,3,0,1,0,0,rPET,82.0,1.1,Yes
+Fashionistas,Standard,Two Hands Up,116,29.0,3,8,Center,Medium,Long,1,20.0,1,1,1,2,2,3,2.2,0,2,0,0,0,0,Recycled Cardboard + rPET,96.0,0.85,Yes
+Dreamtopia,Standard,Walking,125,30.0,7,5,Back,Long,Long,5,43.0,6,1,2,8,6,9,7.5,2,4,0,2,1,1,Virgin PET,43.0,1.0,Yes
+Careers,Standard,One Hand Up,117,29.0,5,7,Center,Medium,Knee,2,18.0,2,1,0,2,1,5,2.2,0,2,0,0,0,0,Recycled Cardboard + rPET,96.0,0.85,Yes
+Extra,Curvy,Standing Straight,128,30.0,6,6,Center,Long,Knee,2,18.0,5,1,1,4,3,6,4.0,0,3,0,0,0,0,rPET,84.0,1.1,Yes
+Dreamtopia,Standard,One Hand on Hip,130,30.0,7,5,Back,Long,Knee,5,35.0,7,2,1,6,5,9,6.2,1,4,1,0,1,0,Virgin PET,52.0,1.0,Yes
+Extra,Curvy,One Hand on Hip,129,30.0,6,6,Center,Medium,Knee,2,21.0,2,1,0,5,2,6,4.2,0,3,0,0,0,0,rPET,84.0,1.1,Yes
+Signature,Made to Move,Sitting,133,29.0,8,6,Center,Medium,Knee,5,41.0,7,1,0,4,4,10,5.2,1,3,0,0,0,0,rPET,82.0,1.1,Yes
+Extra,Curvy,Walking,138,30.0,6,6,Center,Medium,Long,1,10.0,2,0,1,7,2,6,5.0,0,3,0,1,0,0,rPET,82.0,1.1,Yes
+Fashionistas,Standard,Arms Open,120,29.2,3,8,Center,Long,Knee,1,10.0,1,1,1,3,1,3,2.3,0,1,0,0,0,0,Recycled Cardboard + rPET,98.0,0.85,Yes
+Signature,Made to Move,Sitting,141,29.0,8,6,Center,Medium,Short,4,27.0,7,2,0,5,4,10,5.6,1,3,1,0,0,0,rPET,80.0,1.1,Yes
+Careers,Standard,Sitting,122,29.0,5,7,Center,Very Long,Short,5,37.0,7,2,2,2,6,7,4.4,2,3,1,0,0,0,rPET,78.0,1.1,Yes
+Extra,Curvy,Walking,138,30.2,6,6,Center,Medium,Short,2,32.0,3,2,0,7,3,6,5.4,0,3,1,1,0,0,rPET,80.0,1.1,Yes
+Signature,Made to Move,Sitting,148,29.0,8,6,Center,Short,Knee,3,41.0,5,3,0,5,5,10,6.0,1,4,1,0,1,1,rPET,67.0,1.1,Yes
+Made to Move,Made to Move,Sitting,122,29.2,7,5,Left,Medium,Long,2,8.0,2,0,1,4,2,8,4.1,0,3,0,0,0,0,rPET,84.0,1.1,Yes
+Careers,Standard,Walking,130,29.0,5,7,Center,Short,Long,4,72.0,6,3,1,5,6,6,5.6,1,3,1,1,0,0,rPET,78.0,1.1,Yes
+Made to Move,Made to Move,Standing Straight,121,29.0,7,5,Left,Short,Knee,0,0.0,0,0,0,4,0,8,3.4,0,2,0,0,0,0,rPET,86.0,1.1,Yes
+Fashionistas,Standard,Walking,114,29.0,3,8,Center,Long,Long,2,15.0,3,1,2,3,3,3,3.0,0,2,0,1,0,0,Recycled Cardboard + rPET,94.0,0.85,Yes
+Fashionistas,Standard,One Leg Bent,120,29.0,3,8,Center,Short,Knee,2,24.0,4,2,0,3,3,3,3.0,0,2,1,1,0,0,Recycled Cardboard + rPET,92.0,0.85,Yes
+Signature,Made to Move,Sitting,142,29.2,8,6,Center,Medium,Short,3,27.0,5,1,0,5,3,10,5.3,0,3,0,0,0,0,rPET,84.0,1.1,Yes
+Careers,Standard,One Hand on Hip,123,29.0,5,7,Center,Short,Short,2,27.0,4,2,0,3,3,5,3.4,0,2,1,0,0,0,rPET,84.0,1.1,Yes
+Careers,Standard,Standing Straight,130,29.0,5,7,Center,Very Long,Long,4,31.0,8,2,3,2,7,6,4.6,2,3,1,0,1,0,rPET,72.0,1.1,Yes
+Fashionistas,Standard,One Leg Bent,110,29.0,3,8,Center,Medium,Knee,2,37.0,2,1,0,2,2,3,2.2,0,2,0,1,0,0,Recycled Cardboard + rPET,94.0,0.85,Yes
+Signature,Made to Move,One Hand on Hip,141,29.0,8,6,Center,Very Long,Knee,4,49.0,6,3,2,6,7,10,7.2,2,4,1,0,1,0,Virgin PET,50.0,1.0,Yes
+Dreamtopia,Standard,Walking,125,30.2,7,5,Back,Medium,Short,3,13.0,5,0,0,8,2,8,5.9,0,3,0,2,0,1,rPET,75.0,1.1,Yes
+Fashionistas,Standard,Sitting,118,29.0,3,8,Center,Short,Short,0,0.0,0,0,0,0,0,3,0.6,0,1,0,0,0,0,Recycled Cardboard + rPET,98.0,0.85,Yes
+Made to Move,Made to Move,Standing Straight,119,29.0,7,5,Left,Long,Long,5,54.0,9,4,2,3,8,10,6.2,2,4,2,0,1,0,Virgin PET,48.0,1.0,Yes
+Made to Move,Made to Move,One Hand on Hip,128,29.0,7,5,Left,Very Long,Short,2,35.0,2,2,2,5,5,8,5.6,1,3,1,0,0,0,rPET,80.0,1.1,Yes
+Made to Move,Made to Move,Standing Straight,120,29.0,7,5,Left,Long,Knee,1,12.0,1,1,1,4,1,8,3.8,0,2,0,0,0,0,rPET,86.0,1.1,Yes
+Fashionistas,Standard,Arms Open,120,29.2,3,8,Center,Long,Short,1,25.0,1,1,1,3,2,3,2.6,0,1,0,0,0,0,Recycled Cardboard + rPET,98.0,0.85,Yes
+Dreamtopia,Standard,One Hand Up,125,30.0,7,5,Back,Medium,Short,3,48.0,6,3,0,6,5,8,6.0,1,4,1,0,1,0,Virgin PET,52.0,1.0,Yes
+Dreamtopia,Standard,Sitting,135,30.0,7,5,Back,Medium,Long,4,28.0,5,1,1,5,4,8,5.2,1,3,0,0,0,0,rPET,82.0,1.1,Yes
+Dreamtopia,Standard,Standing Straight,124,30.0,7,5,Back,Medium,Short,2,12.0,4,1,0,5,1,7,4.0,0,3,0,0,0,0,rPET,84.0,1.1,Yes
+Careers,Standard,Two Hands Up,120,29.2,5,7,Center,Long,Short,5,44.0,10,2,1,4,6,7,5.3,1,3,1,0,0,0,rPET,80.0,1.1,Yes
+Made to Move,Made to Move,Two Hands Up,115,29.2,7,5,Left,Long,Short,0,0.0,0,0,1,5,1,8,4.2,0,3,0,0,0,0,rPET,84.0,1.1,Yes
+Careers,Standard,Standing Straight,130,29.2,5,7,Center,Short,Short,2,19.0,3,1,0,2,1,5,2.2,0,2,0,0,0,0,Recycled Cardboard + rPET,96.0,0.85,Yes
+Extra,Curvy,Standing Straight,128,30.0,6,6,Center,Medium,Long,0,0.0,0,0,1,4,1,6,3.4,0,2,0,0,0,0,rPET,86.0,1.1,Yes
+Careers,Standard,Sitting,119,29.0,5,7,Center,Short,Long,5,35.0,8,1,1,1,4,7,3.2,1,2,0,0,0,0,rPET,84.0,1.1,Yes
+Careers,Standard,Walking,123,29.2,5,7,Center,Long,Short,0,0.0,0,0,1,5,1,5,3.6,0,2,0,1,0,0,rPET,84.0,1.1,Yes
+Extra,Curvy,Walking,139,30.0,6,6,Center,Very Long,Long,4,67.0,9,4,3,7,9,7,7.7,2,4,2,1,1,0,Virgin PET,46.0,1.0,Yes
+Careers,Standard,One Hand Up,116,29.2,5,7,Center,Medium,Knee,5,108.0,9,5,0,2,6,7,4.4,1,2,2,0,0,0,rPET,80.0,1.1,Yes
+Made to Move,Made to Move,Sitting,127,29.0,7,5,Left,Medium,Short,3,61.0,5,3,0,4,5,9,5.4,1,2,1,0,0,0,rPET,82.0,1.1,Yes
+Fashionistas,Standard,Two Hands Up,112,29.0,3,8,Center,Long,Short,5,53.0,10,2,1,2,6,5,4.0,1,3,1,0,0,0,rPET,80.0,1.1,Yes
+Careers,Standard,One Leg Bent,128,29.2,5,7,Center,Long,Short,5,38.0,8,2,1,4,5,7,5.0,1,3,1,1,0,0,rPET,78.0,1.1,Yes
+Fashionistas,Standard,One Leg Bent,111,29.0,3,8,Center,Long,Knee,3,16.0,5,0,1,2,3,4,2.8,0,2,0,1,0,0,Recycled Cardboard + rPET,94.0,0.85,Yes
+Fashionistas,Standard,One Leg Bent,119,29.2,3,8,Center,Medium,Knee,2,46.0,4,2,0,2,4,3,2.9,1,2,1,1,0,0,Recycled Cardboard + rPET,90.0,0.85,Yes
+Made to Move,Made to Move,One Leg Bent,128,29.0,7,5,Left,Short,Short,3,15.0,5,0,0,6,2,9,5.2,0,3,0,1,0,0,rPET,82.0,1.1,Yes
+Fashionistas,Standard,Arms Open,120,29.2,3,8,Center,Long,Long,4,39.0,5,3,2,3,6,4,4.2,1,3,1,0,0,0,rPET,80.0,1.1,Yes
+Dreamtopia,Standard,One Hand Up,129,30.0,7,5,Back,Medium,Long,3,28.0,3,2,1,6,4,8,5.7,1,3,1,0,0,0,rPET,80.0,1.1,Yes
+Careers,Standard,One Hand on Hip,124,29.0,5,7,Center,Long,Short,0,0.0,0,0,1,3,1,5,2.7,0,2,0,0,0,0,Recycled Cardboard + rPET,96.0,0.85,Yes
+Dreamtopia,Standard,One Hand on Hip,121,30.2,7,5,Back,Short,Knee,0,0.0,0,0,0,6,0,7,4.1,0,3,0,0,0,0,rPET,84.0,1.1,Yes
+Dreamtopia,Standard,Sitting,128,30.0,7,5,Back,Medium,Short,4,36.0,6,2,0,5,4,8,5.2,1,2,1,0,0,0,rPET,82.0,1.1,Yes
+Signature,Made to Move,Sitting,144,29.0,8,6,Center,Long,Long,0,0.0,0,0,2,5,2,9,4.8,0,2,0,0,0,0,rPET,86.0,1.1,Yes
+Signature,Made to Move,One Hand Up,139,29.0,8,6,Center,Long,Knee,5,51.0,7,4,1,5,7,10,6.7,2,4,2,0,1,0,Virgin PET,48.0,1.0,Yes
+Dreamtopia,Standard,One Hand on Hip,128,30.0,7,5,Back,Very Long,Long,1,10.0,1,1,3,6,3,7,5.2,0,3,0,0,0,0,rPET,84.0,1.1,Yes
+Extra,Curvy,Walking,127,30.2,6,6,Center,Very Long,Short,5,45.0,8,3,2,7,7,8,7.2,2,4,1,1,1,0,Virgin PET,48.0,1.0,Yes
+Extra,Curvy,One Hand on Hip,125,30.0,6,6,Center,Medium,Short,5,41.0,6,3,0,5,5,8,5.6,1,3,1,0,0,0,rPET,80.0,1.1,Yes
+Fashionistas,Standard,Two Hands Up,120,29.2,3,8,Center,Long,Knee,4,60.0,9,3,1,3,6,4,4.2,1,3,1,0,0,0,rPET,80.0,1.1,Yes
+Fashionistas,Standard,Sitting,120,29.2,3,8,Center,Long,Long,0,0.0,0,0,2,1,2,3,1.8,0,1,0,0,0,0,Recycled Cardboard + rPET,98.0,0.85,Yes
+Made to Move,Made to Move,One Leg Bent,119,29.0,7,5,Left,Short,Short,0,0.0,0,0,0,5,0,8,3.8,0,2,0,1,0,0,rPET,84.0,1.1,Yes
+Made to Move,Made to Move,Standing Straight,121,29.0,7,5,Left,Medium,Knee,5,71.0,7,2,0,4,5,10,5.6,1,3,1,0,0,0,rPET,80.0,1.1,Yes
+Extra,Curvy,Sitting,131,30.0,6,6,Center,Medium,Knee,3,26.0,6,1,0,4,3,7,4.2,0,3,0,0,0,0,rPET,84.0,1.1,Yes
+Dreamtopia,Standard,One Hand Up,123,30.0,7,5,Back,Very Long,Knee,3,40.0,4,2,2,6,6,8,6.4,1,4,1,0,1,0,Virgin PET,52.0,1.0,Yes
+Extra,Curvy,Arms Open,139,30.2,6,6,Center,Medium,Short,3,27.0,7,1,0,6,3,7,5.2,0,2,0,0,0,0,rPET,86.0,1.1,Yes
+Extra,Curvy,One Hand on Hip,125,30.0,6,6,Center,Long,Knee,3,23.0,6,1,1,5,4,7,5.0,1,3,0,0,0,0,rPET,82.0,1.1,Yes
+Extra,Curvy,Walking,134,30.0,6,6,Center,Medium,Knee,4,31.0,9,1,0,7,3,7,5.6,0,3,0,1,0,0,rPET,82.0,1.1,Yes
+Fashionistas,Standard,One Leg Bent,120,29.0,3,8,Center,Medium,Short,0,0.0,0,0,0,3,0,3,2.0,0,1,0,1,0,0,Recycled Cardboard + rPET,96.0,0.85,Yes
+Dreamtopia,Standard,Arms Open,133,30.2,7,5,Back,Medium,Short,5,66.0,5,3,0,7,5,9,6.7,1,4,1,0,1,0,Virgin PET,52.0,1.0,Yes
+Signature,Made to Move,One Leg Bent,145,29.2,8,6,Center,Very Long,Short,5,76.0,7,5,2,7,8,10,8.0,2,4,2,1,1,1,Virgin PET,41.0,1.0,Yes
+Made to Move,Made to Move,One Leg Bent,120,29.0,7,5,Left,Long,Knee,3,26.0,3,1,1,6,3,9,5.6,0,3,0,1,0,0,rPET,82.0,1.1,Yes
+Signature,Made to Move,Sitting,137,29.2,8,6,Center,Very Long,Short,4,60.0,4,3,2,4,6,10,5.9,1,3,1,0,0,0,rPET,80.0,1.1,Yes
+Fashionistas,Standard,One Hand Up,117,29.0,3,8,Center,Long,Knee,3,40.0,3,1,1,1,4,4,2.6,1,2,0,0,0,0,Recycled Cardboard + rPET,94.0,0.85,Yes
+Made to Move,Made to Move,Two Hands Up,126,29.0,7,5,Left,Long,Long,4,37.0,6,2,2,6,6,9,6.6,1,4,1,0,1,0,Virgin PET,52.0,1.0,Yes
+Dreamtopia,Standard,Sitting,122,30.2,7,5,Back,Medium,Short,1,16.0,2,1,0,5,1,7,4.0,0,3,0,0,0,0,rPET,84.0,1.1,Yes
+Made to Move,Made to Move,One Hand on Hip,118,29.0,7,5,Left,Very Long,Knee,1,9.0,2,1,2,4,3,8,4.4,0,3,0,0,0,0,rPET,84.0,1.1,Yes
+Fashionistas,Standard,One Leg Bent,110,29.0,3,8,Center,Medium,Short,5,70.0,7,3,0,2,5,5,3.6,1,2,1,1,0,0,rPET,80.0,1.1,Yes
+Extra,Curvy,Arms Open,126,30.0,6,6,Center,Medium,Short,1,5.0,1,0,0,6,0,6,3.9,0,2,0,0,0,0,rPET,86.0,1.1,Yes
+Careers,Standard,Arms Open,122,29.0,5,7,Center,Medium,Short,2,25.0,4,1,0,4,2,5,3.5,0,2,0,0,0,0,rPET,86.0,1.1,Yes
+Fashionistas,Standard,One Hand Up,118,29.0,3,8,Center,Long,Long,4,60.0,4,2,2,1,6,4,3.4,1,2,1,0,0,0,rPET,82.0,1.1,Yes
+Signature,Made to Move,Arms Open,131,29.0,8,6,Center,Long,Long,0,0.0,0,0,2,6,2,9,5.2,0,3,0,0,0,0,rPET,84.0,1.1,Yes
+Fashionistas,Standard,Standing Straight,119,29.2,3,8,Center,Long,Long,4,18.0,5,0,2,0,4,4,2.2,1,1,0,0,0,0,Recycled Cardboard + rPET,96.0,0.85,Yes
+Fashionistas,Standard,One Hand Up,120,29.0,3,8,Center,Long,Long,1,18.0,2,1,2,2,3,3,2.6,0,2,0,0,0,0,Recycled Cardboard + rPET,96.0,0.85,Yes
+Made to Move,Made to Move,Standing Straight,129,29.2,7,5,Left,Medium,Long,1,8.0,1,1,1,4,1,8,3.8,0,2,0,0,0,0,rPET,86.0,1.1,Yes
+Careers,Standard,One Hand on Hip,125,29.0,5,7,Center,Short,Short,3,44.0,6,2,0,3,5,6,4.3,2,3,1,0,0,0,rPET,78.0,1.1,Yes
+Dreamtopia,Standard,Two Hands Up,135,30.0,7,5,Back,Medium,Short,2,46.0,3,2,0,7,4,7,6.0,1,3,1,0,0,0,rPET,80.0,1.1,Yes
+Fashionistas,Standard,Two Hands Up,115,29.2,3,8,Center,Long,Short,4,50.0,6,3,1,2,6,4,3.8,1,2,1,0,0,0,rPET,82.0,1.1,Yes
+Dreamtopia,Standard,One Hand on Hip,133,30.0,7,5,Back,Very Long,Long,4,47.0,9,3,3,6,8,8,7.1,2,4,1,0,1,0,Virgin PET,50.0,1.0,Yes
+Made to Move,Made to Move,Two Hands Up,126,29.0,7,5,Left,Medium,Knee,5,100.0,7,5,0,6,6,10,6.8,1,4,2,0,1,0,Virgin PET,50.0,1.0,Yes
+Fashionistas,Standard,Two Hands Up,111,29.0,3,8,Center,Medium,Long,1,14.0,2,1,1,2,2,3,2.2,0,2,0,0,0,0,Recycled Cardboard + rPET,96.0,0.85,Yes
+Extra,Curvy,Standing Straight,137,30.0,6,6,Center,Long,Knee,4,32.0,6,3,1,4,5,7,5.0,1,2,1,0,0,0,rPET,82.0,1.1,Yes
+Made to Move,Made to Move,One Leg Bent,124,29.0,7,5,Left,Medium,Knee,4,56.0,6,3,0,6,5,9,6.2,1,4,1,1,1,0,Virgin PET,50.0,1.0,Yes
+Careers,Standard,One Leg Bent,125,29.0,5,7,Center,Short,Short,4,57.0,6,3,0,4,5,6,4.8,1,3,1,1,0,0,rPET,78.0,1.1,Yes
+Extra,Curvy,One Hand on Hip,137,30.0,6,6,Center,Long,Long,4,68.0,7,4,2,5,8,7,6.4,2,4,2,0,1,0,Virgin PET,48.0,1.0,Yes
+Fashionistas,Standard,One Hand on Hip,120,29.0,3,8,Center,Long,Long,5,41.0,9,3,2,2,7,5,4.4,2,3,1,0,1,0,rPET,72.0,1.1,Yes
+Dreamtopia,Standard,Two Hands Up,126,30.0,7,5,Back,Short,Knee,3,51.0,5,3,0,7,5,8,6.5,1,4,1,0,1,0,Virgin PET,52.0,1.0,Yes
+Careers,Standard,Walking,119,29.2,5,7,Center,Very Long,Short,0,0.0,0,0,2,4,2,5,3.5,0,2,0,1,0,0,rPET,84.0,1.1,Yes
+Careers,Standard,Standing Straight,124,29.2,5,7,Center,Medium,Knee,0,0.0,0,0,0,2,0,5,1.9,0,1,0,0,0,0,Recycled Cardboard + rPET,98.0,0.85,Yes
+Signature,Made to Move,One Leg Bent,130,29.2,8,6,Center,Long,Short,2,40.0,3,2,1,6,5,9,6.2,1,4,1,1,1,0,Virgin PET,50.0,1.0,Yes
+Made to Move,Made to Move,Walking,118,29.2,7,5,Left,Short,Short,5,34.0,9,3,0,6,4,10,6.1,1,4,1,1,1,0,Virgin PET,50.0,1.0,Yes
+Careers,Standard,Standing Straight,118,29.0,5,7,Center,Medium,Knee,3,36.0,4,2,0,1,3,6,2.7,0,2,1,0,0,0,Recycled Cardboard + rPET,94.0,0.85,Yes
+Fashionistas,Standard,One Hand Up,113,29.2,3,8,Center,Very Long,Knee,5,98.0,7,5,2,1,8,5,4.2,2,3,2,0,1,0,rPET,70.0,1.1,Yes
+Extra,Curvy,One Hand Up,132,30.0,6,6,Center,Medium,Knee,5,56.0,8,3,0,5,5,8,5.6,1,3,1,0,0,0,rPET,80.0,1.1,Yes
+Dreamtopia,Standard,Sitting,132,30.2,7,5,Back,Long,Short,4,60.0,7,3,1,5,6,8,6.0,1,3,1,0,0,0,rPET,80.0,1.1,Yes
+Signature,Made to Move,One Hand on Hip,141,29.0,8,6,Center,Short,Knee,3,33.0,5,1,0,6,3,10,5.8,0,2,0,0,0,0,rPET,86.0,1.1,Yes
+Extra,Curvy,One Hand on Hip,126,30.0,6,6,Center,Long,Knee,3,30.0,3,1,1,5,3,7,4.7,0,2,0,0,0,0,rPET,86.0,1.1,Yes
+Extra,Curvy,One Hand on Hip,137,30.2,6,6,Center,Long,Knee,2,35.0,3,2,1,5,4,6,4.8,1,3,1,0,0,0,rPET,80.0,1.1,Yes
+Careers,Standard,Two Hands Up,129,29.2,5,7,Center,Very Long,Knee,3,30.0,6,2,2,4,6,6,5.1,1,3,1,0,0,0,rPET,80.0,1.1,Yes
+Fashionistas,Standard,Two Hands Up,112,29.0,3,8,Center,Long,Short,5,58.0,9,3,1,2,6,5,4.0,1,3,1,0,0,0,rPET,80.0,1.1,Yes
+Extra,Curvy,One Hand Up,131,30.0,6,6,Center,Medium,Knee,4,21.0,7,1,0,5,3,7,4.7,0,3,0,0,0,0,rPET,84.0,1.1,Yes
+Signature,Made to Move,One Leg Bent,133,29.2,8,6,Center,Long,Short,2,6.0,4,0,1,6,2,9,5.2,0,3,0,1,0,0,rPET,82.0,1.1,Yes
+Careers,Standard,One Leg Bent,116,29.2,5,7,Center,Short,Short,2,22.0,4,2,0,3,3,5,3.4,0,2,1,1,0,0,rPET,82.0,1.1,Yes
+Extra,Curvy,Walking,140,30.0,6,6,Center,Long,Short,4,20.0,5,1,1,8,4,7,6.4,1,4,0,2,1,1,Virgin PET,45.0,1.0,Yes
+Dreamtopia,Standard,Arms Open,129,30.0,7,5,Back,Medium,Long,3,28.0,5,2,1,7,5,8,6.5,1,3,1,0,1,0,Virgin PET,54.0,1.0,Yes
+Extra,Curvy,One Hand on Hip,127,30.0,6,6,Center,Medium,Knee,4,24.0,4,1,0,5,2,7,4.4,0,3,0,0,0,0,rPET,84.0,1.1,Yes
+Fashionistas,Standard,Walking,115,29.0,3,8,Center,Medium,Knee,4,26.0,5,1,0,3,3,4,3.2,0,2,0,1,0,0,rPET,84.0,1.1,Yes
+Dreamtopia,Standard,One Leg Bent,124,30.2,7,5,Back,Long,Knee,5,62.0,10,4,1,7,7,9,7.4,2,4,2,1,1,0,Virgin PET,46.0,1.0,Yes
+Dreamtopia,Standard,Two Hands Up,130,30.0,7,5,Back,Long,Knee,3,70.0,4,2,1,7,5,8,6.5,1,4,1,0,1,0,Virgin PET,52.0,1.0,Yes
+Fashionistas,Standard,Walking,115,29.2,3,8,Center,Short,Knee,3,32.0,3,1,0,3,2,4,2.8,0,2,0,1,0,0,Recycled Cardboard + rPET,94.0,0.85,Yes
+Dreamtopia,Standard,One Hand Up,122,30.0,7,5,Back,Long,Knee,5,99.0,6,5,1,6,7,9,7.0,2,4,2,0,1,0,Virgin PET,48.0,1.0,Yes
+Dreamtopia,Standard,Walking,123,30.2,7,5,Back,Long,Short,4,68.0,7,3,1,8,6,8,7.3,1,4,1,2,1,1,Virgin PET,43.0,1.0,Yes
+Extra,Curvy,One Hand Up,131,30.0,6,6,Center,Long,Short,5,61.0,8,2,1,5,6,8,6.0,1,3,1,0,0,0,rPET,80.0,1.1,Yes
+Fashionistas,Standard,Arms Open,110,29.0,3,8,Center,Long,Short,5,86.0,9,5,1,2,7,5,4.4,2,3,2,0,1,0,rPET,70.0,1.1,Yes
+Careers,Standard,One Leg Bent,129,29.0,5,7,Center,Long,Knee,3,39.0,6,3,1,4,5,6,4.8,1,3,1,1,0,0,rPET,78.0,1.1,Yes
+Dreamtopia,Standard,Walking,120,30.0,7,5,Back,Medium,Knee,4,46.0,5,2,0,8,5,8,7.0,1,4,1,2,1,1,Virgin PET,43.0,1.0,Yes
+Signature,Made to Move,Two Hands Up,133,29.0,8,6,Center,Long,Short,1,12.0,2,1,1,6,2,9,5.2,0,3,0,0,0,0,rPET,84.0,1.1,Yes
+Signature,Made to Move,Walking,132,29.0,8,6,Center,Medium,Knee,1,4.0,1,0,0,7,0,9,5.0,0,2,0,1,0,0,rPET,84.0,1.1,Yes
+Made to Move,Made to Move,Two Hands Up,125,29.0,7,5,Left,Short,Short,3,56.0,4,2,0,6,4,9,5.9,1,2,1,0,0,0,rPET,82.0,1.1,Yes
+Careers,Standard,One Hand Up,125,29.0,5,7,Center,Medium,Long,0,0.0,0,0,1,3,1,5,2.7,0,1,0,0,0,0,Recycled Cardboard + rPET,98.0,0.85,Yes
+Made to Move,Made to Move,Walking,122,29.2,7,5,Left,Long,Knee,4,35.0,7,1,1,7,4,9,6.4,1,4,0,1,1,0,Virgin PET,52.0,1.0,Yes
+Fashionistas,Standard,Standing Straight,110,29.0,3,8,Center,Medium,Knee,3,35.0,5,2,0,0,4,4,2.2,1,1,1,0,0,0,Recycled Cardboard + rPET,94.0,0.85,Yes
+Extra,Curvy,Sitting,125,30.0,6,6,Center,Long,Knee,0,0.0,0,0,1,4,1,6,3.4,0,2,0,0,0,0,rPET,86.0,1.1,Yes
+Signature,Made to Move,Two Hands Up,147,29.2,8,6,Center,Long,Short,3,26.0,4,1,1,7,3,10,6.2,0,4,0,0,1,1,Virgin PET,51.0,1.0,Yes
+Fashionistas,Standard,One Hand Up,120,29.2,3,8,Center,Medium,Long,2,28.0,2,1,1,2,3,3,2.6,0,2,0,0,0,0,Recycled Cardboard + rPET,96.0,0.85,Yes
+Signature,Made to Move,Standing Straight,135,29.0,8,6,Center,Long,Knee,4,30.0,6,2,1,4,5,10,5.6,2,3,1,0,0,0,rPET,78.0,1.1,Yes
+Signature,Made to Move,Walking,144,29.2,8,6,Center,Medium,Long,0,0.0,0,0,1,8,1,9,5.8,0,2,0,2,0,1,rPET,77.0,1.1,Yes
+Signature,Made to Move,Walking,138,29.2,8,6,Center,Medium,Knee,2,34.0,3,2,0,7,3,9,6.0,0,4,1,1,1,0,rPET,72.0,1.1,Yes
+Made to Move,Made to Move,Arms Open,121,29.2,7,5,Left,Long,Short,1,9.0,2,1,1,6,2,8,5.0,0,3,0,0,0,0,rPET,84.0,1.1,Yes
+Dreamtopia,Standard,Arms Open,122,30.0,7,5,Back,Short,Knee,1,7.0,1,0,0,7,0,7,4.6,0,3,0,0,0,0,rPET,84.0,1.1,Yes
+Dreamtopia,Standard,Arms Open,128,30.0,7,5,Back,Medium,Knee,2,14.0,2,0,0,7,1,7,4.9,0,3,0,0,0,0,rPET,84.0,1.1,Yes
+Fashionistas,Standard,Standing Straight,115,29.2,3,8,Center,Medium,Knee,3,61.0,3,2,0,0,4,4,2.2,1,2,1,0,0,0,Recycled Cardboard + rPET,92.0,0.85,Yes
+Extra,Curvy,Standing Straight,135,30.0,6,6,Center,Medium,Long,2,14.0,5,0,1,4,3,6,4.0,0,2,0,0,0,0,rPET,86.0,1.1,Yes
+Careers,Standard,One Hand on Hip,119,29.2,5,7,Center,Very Long,Knee,0,0.0,0,0,2,2,2,5,2.6,0,2,0,0,0,0,Recycled Cardboard + rPET,96.0,0.85,Yes
+Careers,Standard,One Hand Up,120,29.0,5,7,Center,Long,Knee,3,71.0,6,3,1,3,6,6,4.6,1,3,1,0,0,0,rPET,80.0,1.1,Yes
+Signature,Made to Move,Standing Straight,150,29.2,8,6,Center,Short,Short,5,54.0,10,3,0,5,5,10,6.0,1,4,1,0,1,1,rPET,67.0,1.1,Yes
+Fashionistas,Standard,One Hand Up,116,29.2,3,8,Center,Medium,Short,5,78.0,8,4,0,1,6,5,3.6,1,2,2,0,0,0,rPET,80.0,1.1,Yes
+Dreamtopia,Standard,Arms Open,131,30.0,7,5,Back,Medium,Short,0,0.0,0,0,0,7,0,7,4.6,0,3,0,0,0,0,rPET,84.0,1.1,Yes
+Fashionistas,Standard,One Hand on Hip,120,29.2,3,8,Center,Medium,Short,4,37.0,7,2,0,2,4,4,3.1,1,2,1,0,0,0,rPET,82.0,1.1,Yes
+Made to Move,Made to Move,Sitting,122,29.0,7,5,Left,Very Long,Long,0,0.0,0,0,3,4,3,8,4.4,0,3,0,0,0,0,rPET,84.0,1.1,Yes
+Signature,Made to Move,Arms Open,149,29.0,8,6,Center,Short,Long,5,60.0,6,3,1,7,6,10,7.2,1,4,1,0,1,1,Virgin PET,47.0,1.0,Yes
+Dreamtopia,Standard,One Leg Bent,135,30.0,7,5,Back,Long,Knee,4,29.0,5,1,1,7,4,8,6.2,1,4,0,1,1,0,Virgin PET,52.0,1.0,Yes
+Fashionistas,Standard,One Hand on Hip,112,29.0,3,8,Center,Long,Knee,1,10.0,1,1,1,1,1,3,1.4,0,1,0,0,0,0,Recycled Cardboard + rPET,98.0,0.85,Yes
+Fashionistas,Standard,One Leg Bent,114,29.2,3,8,Center,Long,Long,5,68.0,8,4,2,2,8,5,4.7,2,3,2,1,1,0,rPET,68.0,1.1,Yes
+Extra,Curvy,Two Hands Up,131,30.2,6,6,Center,Short,Long,5,25.0,9,2,1,6,5,8,6.0,1,4,1,0,1,0,Virgin PET,52.0,1.0,Yes
+Careers,Standard,One Hand Up,129,29.0,5,7,Center,Very Long,Knee,5,65.0,7,3,2,3,7,7,5.2,2,2,1,0,1,0,rPET,74.0,1.1,Yes
+Made to Move,Made to Move,One Hand Up,125,29.0,7,5,Left,Long,Knee,0,0.0,0,0,1,5,1,8,4.2,0,3,0,0,0,0,rPET,84.0,1.1,Yes
+Careers,Standard,Standing Straight,129,29.0,5,7,Center,Medium,Knee,5,52.0,6,3,0,2,5,7,4.0,1,3,1,0,0,0,rPET,80.0,1.1,Yes
+Extra,Curvy,Sitting,138,30.2,6,6,Center,Medium,Short,1,12.0,2,1,0,4,1,6,3.4,0,2,0,0,0,0,rPET,86.0,1.1,Yes
+Made to Move,Made to Move,Standing Straight,115,29.2,7,5,Left,Medium,Knee,0,0.0,0,0,0,3,0,8,3.0,0,2,0,0,0,0,Recycled Cardboard + rPET,96.0,0.85,Yes
+Fashionistas,Standard,One Hand Up,113,29.0,3,8,Center,Medium,Short,5,57.0,7,3,0,1,5,5,3.2,1,1,1,0,0,0,rPET,84.0,1.1,Yes
+Dreamtopia,Standard,Two Hands Up,120,30.2,7,5,Back,Long,Long,2,24.0,3,2,2,7,5,7,6.3,1,4,1,0,1,0,Virgin PET,52.0,1.0,Yes
+Extra,Curvy,Two Hands Up,135,30.0,6,6,Center,Long,Knee,1,22.0,3,1,1,6,3,6,5.0,0,3,0,0,0,0,rPET,84.0,1.1,Yes
+Fashionistas,Standard,One Hand Up,119,29.2,3,8,Center,Medium,Short,3,23.0,5,2,0,1,4,4,2.6,1,2,1,0,0,0,Recycled Cardboard + rPET,92.0,0.85,Yes
+Signature,Made to Move,One Hand on Hip,131,29.0,8,6,Center,Medium,Long,5,33.0,11,2,1,5,5,10,6.0,1,3,1,0,1,0,rPET,74.0,1.1,Yes
+Dreamtopia,Standard,Standing Straight,134,30.0,7,5,Back,Medium,Knee,0,0.0,0,0,0,5,0,7,3.6,0,2,0,0,0,0,rPET,86.0,1.1,Yes
+Extra,Curvy,Two Hands Up,126,30.2,6,6,Center,Short,Long,3,31.0,7,2,1,6,5,7,5.8,1,2,1,0,0,0,rPET,82.0,1.1,Yes
+Fashionistas,Standard,One Hand on Hip,113,29.2,3,8,Center,Long,Knee,3,21.0,5,1,1,1,4,4,2.6,1,2,0,0,0,0,Recycled Cardboard + rPET,94.0,0.85,Yes
+Careers,Standard,Arms Open,118,29.0,5,7,Center,Long,Knee,0,0.0,0,0,1,3,1,5,2.7,0,2,0,0,0,0,Recycled Cardboard + rPET,96.0,0.85,Yes
+Made to Move,Made to Move,One Leg Bent,125,29.2,7,5,Left,Short,Short,4,34.0,7,3,0,6,4,9,5.9,1,3,1,1,0,0,rPET,78.0,1.1,Yes
+Careers,Standard,Standing Straight,121,29.2,5,7,Center,Short,Knee,2,20.0,3,1,0,2,2,5,2.6,0,2,0,0,0,0,Recycled Cardboard + rPET,96.0,0.85,Yes
+Careers,Standard,One Hand Up,129,29.0,5,7,Center,Medium,Knee,0,0.0,0,0,0,3,0,5,2.4,0,2,0,0,0,0,Recycled Cardboard + rPET,96.0,0.85,Yes
+Careers,Standard,Two Hands Up,128,29.2,5,7,Center,Very Long,Knee,2,36.0,3,2,2,4,5,5,4.6,1,3,1,0,0,0,rPET,80.0,1.1,Yes
+Fashionistas,Standard,One Hand on Hip,112,29.0,3,8,Center,Medium,Knee,2,26.0,2,2,0,1,3,3,2.1,0,2,1,0,0,0,Recycled Cardboard + rPET,94.0,0.85,Yes
+Made to Move,Made to Move,Sitting,115,29.2,7,5,Left,Long,Knee,0,0.0,0,0,1,3,1,8,3.3,0,2,0,0,0,0,rPET,86.0,1.1,Yes
+Careers,Standard,One Hand on Hip,116,29.0,5,7,Center,Medium,Long,5,70.0,8,3,1,2,6,7,4.4,1,3,1,0,0,0,rPET,80.0,1.1,Yes
+Careers,Standard,One Hand on Hip,125,29.0,5,7,Center,Long,Knee,3,22.0,5,2,1,3,5,6,4.3,1,3,1,0,0,0,rPET,80.0,1.1,Yes
+Dreamtopia,Standard,Standing Straight,130,30.2,7,5,Back,Medium,Short,0,0.0,0,0,0,5,0,7,3.6,0,2,0,0,0,0,rPET,86.0,1.1,Yes
+Signature,Made to Move,One Leg Bent,131,29.0,8,6,Center,Medium,Short,1,12.0,2,1,0,6,1,9,4.8,0,3,0,1,0,0,rPET,82.0,1.1,Yes
+Signature,Made to Move,Standing Straight,144,29.2,8,6,Center,Medium,Knee,2,33.0,3,2,0,5,3,9,5.1,0,3,1,0,0,0,rPET,82.0,1.1,Yes
+Made to Move,Made to Move,One Leg Bent,127,29.0,7,5,Left,Medium,Long,0,0.0,0,0,1,6,1,8,4.6,0,3,0,1,0,0,rPET,82.0,1.1,Yes
+Made to Move,Made to Move,One Leg Bent,117,29.0,7,5,Left,Short,Short,2,12.0,2,0,0,5,1,8,4.2,0,3,0,1,0,0,rPET,82.0,1.1,Yes
+Extra,Curvy,One Hand Up,136,30.0,6,6,Center,Very Long,Short,2,19.0,3,1,2,5,3,6,4.5,0,3,0,0,0,0,rPET,84.0,1.1,Yes
+Fashionistas,Standard,One Hand Up,114,29.2,3,8,Center,Short,Long,1,15.0,1,1,1,1,1,3,1.4,0,1,0,0,0,0,Recycled Cardboard + rPET,98.0,0.85,Yes
+Fashionistas,Standard,Standing Straight,112,29.0,3,8,Center,Short,Long,0,0.0,0,0,1,0,1,3,1.0,0,1,0,0,0,0,Recycled Cardboard + rPET,98.0,0.85,Yes
+Made to Move,Made to Move,Sitting,115,29.2,7,5,Left,Short,Knee,0,0.0,0,0,0,3,0,8,3.0,0,2,0,0,0,0,Recycled Cardboard + rPET,96.0,0.85,Yes
+Signature,Made to Move,One Hand Up,136,29.0,8,6,Center,Medium,Short,2,24.0,2,1,0,5,2,9,4.8,0,3,0,0,0,0,rPET,84.0,1.1,Yes
+Signature,Made to Move,Standing Straight,146,29.2,8,6,Center,Long,Long,0,0.0,0,0,2,5,2,9,4.8,0,3,0,0,0,1,rPET,79.0,1.1,Yes
+Made to Move,Made to Move,Standing Straight,119,29.0,7,5,Left,Short,Short,2,10.0,3,1,0,3,1,8,3.3,0,2,0,0,0,0,rPET,86.0,1.1,Yes
+Signature,Made to Move,Sitting,143,29.2,8,6,Center,Medium,Short,4,69.0,7,4,0,5,6,10,6.4,1,4,2,0,1,0,Virgin PET,50.0,1.0,Yes
+Dreamtopia,Standard,Walking,129,30.0,7,5,Back,Medium,Short,2,8.0,3,0,0,8,1,7,5.4,0,3,0,2,0,1,rPET,75.0,1.1,Yes
+Made to Move,Made to Move,One Hand on Hip,130,29.0,7,5,Left,Long,Knee,5,49.0,9,2,1,5,6,10,6.4,1,4,1,0,1,0,Virgin PET,52.0,1.0,Yes
+Dreamtopia,Standard,Arms Open,132,30.2,7,5,Back,Long,Short,4,31.0,8,1,1,7,4,8,6.2,1,4,0,0,1,0,Virgin PET,54.0,1.0,Yes
+Made to Move,Made to Move,One Hand on Hip,126,29.2,7,5,Left,Long,Knee,3,24.0,6,1,1,5,4,9,5.4,1,3,0,0,0,0,rPET,82.0,1.1,Yes
+Fashionistas,Standard,Standing Straight,120,29.2,3,8,Center,Long,Short,1,16.0,2,1,1,1,2,3,1.8,0,1,0,0,0,0,Recycled Cardboard + rPET,98.0,0.85,Yes
+Dreamtopia,Standard,Two Hands Up,134,30.0,7,5,Back,Medium,Short,3,21.0,5,1,0,7,3,8,5.8,0,3,0,0,0,0,rPET,84.0,1.1,Yes
+Extra,Curvy,One Hand Up,136,30.0,6,6,Center,Long,Short,0,0.0,0,0,1,5,1,6,3.8,0,2,0,0,0,0,rPET,86.0,1.1,Yes
+Signature,Made to Move,Walking,146,29.0,8,6,Center,Medium,Short,4,19.0,7,0,0,8,2,10,6.3,0,4,0,2,1,1,Virgin PET,47.0,1.0,Yes
+Signature,Made to Move,One Leg Bent,143,29.0,8,6,Center,Medium,Knee,3,32.0,3,2,0,7,3,10,6.2,0,4,1,1,1,0,Virgin PET,52.0,1.0,Yes
+Extra,Curvy,Arms Open,137,30.0,6,6,Center,Short,Short,5,41.0,8,3,0,6,5,8,6.0,1,3,1,0,1,0,Virgin PET,54.0,1.0,Yes
+Made to Move,Made to Move,Walking,124,29.2,7,5,Left,Long,Knee,2,24.0,3,2,1,7,4,8,6.2,1,4,1,1,1,0,Virgin PET,50.0,1.0,Yes
+Signature,Made to Move,Walking,132,29.0,8,6,Center,Short,Short,1,8.0,2,1,0,7,1,9,5.3,0,3,0,1,0,0,rPET,82.0,1.1,Yes
+Careers,Standard,One Hand Up,123,29.0,5,7,Center,Long,Knee,2,40.0,3,2,1,3,5,5,4.1,1,3,1,0,0,0,rPET,80.0,1.1,Yes
+Fashionistas,Standard,One Hand Up,112,29.2,3,8,Center,Long,Long,0,0.0,0,0,2,1,2,3,1.8,0,1,0,0,0,0,Recycled Cardboard + rPET,98.0,0.85,Yes
+Signature,Made to Move,One Hand Up,139,29.0,8,6,Center,Long,Knee,3,35.0,3,1,1,5,3,10,5.3,0,3,0,0,0,0,rPET,84.0,1.1,Yes
+Careers,Standard,Standing Straight,115,29.0,5,7,Center,Long,Long,1,6.0,1,0,2,1,2,5,2.2,0,2,0,0,0,0,Recycled Cardboard + rPET,96.0,0.85,Yes
+Signature,Made to Move,Arms Open,137,29.0,8,6,Center,Long,Short,1,3.0,1,0,1,6,1,9,4.8,0,3,0,0,0,0,rPET,84.0,1.1,Yes
+Dreamtopia,Standard,Arms Open,134,30.2,7,5,Back,Long,Short,0,0.0,0,0,1,7,1,7,4.9,0,3,0,0,0,0,rPET,84.0,1.1,Yes
+Extra,Curvy,One Hand on Hip,131,30.0,6,6,Center,Long,Knee,1,12.0,2,1,1,5,2,6,4.2,0,3,0,0,0,0,rPET,84.0,1.1,Yes
+Made to Move,Made to Move,Arms Open,115,29.0,7,5,Left,Short,Long,2,9.0,6,0,1,5,3,8,4.9,0,3,0,0,0,0,rPET,84.0,1.1,Yes
+Dreamtopia,Standard,One Leg Bent,120,30.0,7,5,Back,Long,Long,2,6.0,2,0,2,7,3,7,5.6,0,3,0,1,0,0,rPET,82.0,1.1,Yes
+Extra,Curvy,One Hand on Hip,138,30.2,6,6,Center,Long,Knee,5,55.0,6,3,1,5,6,8,6.0,1,3,1,0,0,0,rPET,80.0,1.1,Yes
+Dreamtopia,Standard,Two Hands Up,120,30.2,7,5,Back,Long,Long,1,10.0,2,0,2,7,3,7,5.6,0,3,0,0,0,0,rPET,84.0,1.1,Yes
+Fashionistas,Standard,Sitting,115,29.2,3,8,Center,Long,Knee,4,14.0,6,0,1,0,3,4,1.8,0,1,0,0,0,0,Recycled Cardboard + rPET,98.0,0.85,Yes
+Made to Move,Made to Move,Standing Straight,127,29.0,7,5,Left,Medium,Short,4,34.0,6,2,0,4,4,9,5.0,1,3,1,0,0,0,rPET,80.0,1.1,Yes
+Fashionistas,Standard,Arms Open,115,29.2,3,8,Center,Very Long,Knee,2,12.0,3,1,2,2,3,3,2.6,0,1,0,0,0,0,Recycled Cardboard + rPET,98.0,0.85,Yes
+Careers,Standard,Two Hands Up,118,29.2,5,7,Center,Long,Short,5,74.0,8,4,1,3,7,7,5.2,2,3,2,0,1,0,rPET,70.0,1.1,Yes
+Dreamtopia,Standard,One Hand on Hip,120,30.0,7,5,Back,Short,Long,3,23.0,5,1,1,6,4,8,5.7,1,3,0,0,0,0,rPET,82.0,1.1,Yes
+Signature,Made to Move,One Hand on Hip,146,29.0,8,6,Center,Medium,Short,0,0.0,0,0,0,6,0,9,4.5,0,3,0,0,0,1,rPET,79.0,1.1,Yes
+Signature,Made to Move,One Hand on Hip,143,29.0,8,6,Center,Short,Short,4,25.0,5,1,0,6,3,10,5.8,0,3,0,0,0,0,rPET,84.0,1.1,Yes
+Signature,Made to Move,One Hand Up,132,29.0,8,6,Center,Very Long,Long,1,5.0,1,0,3,5,3,9,5.1,0,3,0,0,0,0,rPET,84.0,1.1,Yes
+Extra,Curvy,Two Hands Up,134,30.0,6,6,Center,Long,Knee,1,16.0,1,1,1,6,1,6,4.2,0,3,0,0,0,0,rPET,84.0,1.1,Yes
+Extra,Curvy,One Leg Bent,134,30.2,6,6,Center,Medium,Knee,3,18.0,6,1,0,6,2,7,4.8,0,3,0,1,0,0,rPET,82.0,1.1,Yes
+Made to Move,Made to Move,Sitting,115,29.0,7,5,Left,Medium,Long,4,22.0,9,1,1,3,4,9,4.6,1,3,0,0,0,0,rPET,82.0,1.1,Yes
+Extra,Curvy,One Leg Bent,140,30.0,6,6,Center,Medium,Short,0,0.0,0,0,0,7,0,6,4.4,0,3,0,1,0,0,rPET,82.0,1.1,Yes
+Made to Move,Made to Move,Sitting,129,29.0,7,5,Left,Long,Knee,2,9.0,2,0,1,4,2,8,4.1,0,3,0,0,0,0,rPET,84.0,1.1,Yes
+Signature,Made to Move,Arms Open,135,29.0,8,6,Center,Medium,Long,5,68.0,7,4,1,6,7,10,7.2,2,4,2,0,1,0,Virgin PET,48.0,1.0,Yes
+Dreamtopia,Standard,One Hand on Hip,132,30.2,7,5,Back,Short,Knee,3,35.0,6,2,0,6,4,8,5.7,2,3,1,0,0,0,rPET,78.0,1.1,Yes
+Dreamtopia,Standard,One Hand Up,125,30.0,7,5,Back,Long,Knee,5,26.0,8,2,1,6,5,9,6.2,1,4,1,0,1,0,Virgin PET,52.0,1.0,Yes
+Dreamtopia,Standard,Two Hands Up,126,30.0,7,5,Back,Medium,Knee,0,0.0,0,0,0,7,0,7,4.6,0,3,0,0,0,0,rPET,84.0,1.1,Yes
+Made to Move,Made to Move,One Hand Up,117,29.0,7,5,Left,Long,Knee,3,18.0,4,0,1,4,2,9,4.3,0,3,0,0,0,0,rPET,84.0,1.1,Yes
+Careers,Standard,One Hand on Hip,123,29.0,5,7,Center,Long,Knee,0,0.0,0,0,1,3,1,5,2.7,0,2,0,0,0,0,Recycled Cardboard + rPET,96.0,0.85,Yes
+Dreamtopia,Standard,Walking,134,30.0,7,5,Back,Medium,Short,1,2.0,1,0,0,8,0,7,5.0,0,3,0,2,1,1,rPET,69.0,1.1,Yes
+Extra,Curvy,Standing Straight,128,30.2,6,6,Center,Very Long,Short,5,64.0,9,4,2,4,8,8,6.2,2,4,2,0,1,0,Virgin PET,48.0,1.0,Yes
+Signature,Made to Move,Two Hands Up,144,29.0,8,6,Center,Short,Knee,5,62.0,8,4,0,7,6,10,7.2,1,4,2,0,1,0,Virgin PET,50.0,1.0,Yes
+Signature,Made to Move,Sitting,138,29.0,8,6,Center,Short,Short,0,0.0,0,0,0,4,0,9,3.6,0,2,0,0,0,0,rPET,86.0,1.1,Yes
+Fashionistas,Standard,Arms Open,111,29.2,3,8,Center,Long,Short,5,43.0,9,2,1,2,6,5,4.0,1,3,1,0,0,0,rPET,80.0,1.1,Yes
+Fashionistas,Standard,Sitting,112,29.0,3,8,Center,Medium,Short,0,0.0,0,0,0,0,0,3,0.6,0,1,0,0,0,0,Recycled Cardboard + rPET,98.0,0.85,Yes
+Made to Move,Made to Move,One Leg Bent,121,29.0,7,5,Left,Long,Long,4,39.0,8,2,2,6,6,9,6.6,1,4,1,1,1,0,Virgin PET,50.0,1.0,Yes
+Dreamtopia,Standard,Standing Straight,123,30.0,7,5,Back,Long,Knee,4,65.0,8,3,1,5,6,8,6.0,1,2,1,0,0,0,rPET,82.0,1.1,Yes
+Extra,Curvy,One Hand on Hip,131,30.0,6,6,Center,Medium,Short,0,0.0,0,0,0,5,0,6,3.4,0,1,0,0,0,0,rPET,88.0,1.1,Yes
+Signature,Made to Move,Two Hands Up,130,29.0,8,6,Center,Medium,Short,5,38.0,10,2,0,6,4,10,6.1,1,3,1,0,1,0,Virgin PET,54.0,1.0,Yes
+Careers,Standard,Walking,118,29.2,5,7,Center,Short,Short,3,34.0,5,2,0,4,4,6,4.4,1,3,1,1,0,0,rPET,78.0,1.1,Yes
+Extra,Curvy,Arms Open,135,30.2,6,6,Center,Long,Knee,4,30.0,9,2,1,6,5,7,5.8,1,3,1,0,0,0,rPET,80.0,1.1,Yes
+Dreamtopia,Standard,Two Hands Up,127,30.0,7,5,Back,Short,Short,0,0.0,0,0,0,7,0,7,4.6,0,3,0,0,0,0,rPET,84.0,1.1,Yes
+Made to Move,Made to Move,Standing Straight,125,29.0,7,5,Left,Medium,Knee,0,0.0,0,0,0,4,0,8,3.4,0,2,0,0,0,0,rPET,86.0,1.1,Yes
+Signature,Made to Move,Two Hands Up,138,29.2,8,6,Center,Long,Short,1,18.0,3,1,1,6,2,9,5.2,0,3,0,0,0,0,rPET,84.0,1.1,Yes
+Careers,Standard,One Hand Up,130,29.0,5,7,Center,Long,Knee,4,31.0,5,2,1,3,5,6,4.3,1,3,1,0,0,0,rPET,80.0,1.1,Yes
+Careers,Standard,Walking,125,29.2,5,7,Center,Long,Knee,5,27.0,7,0,1,5,4,7,5.0,1,3,0,1,0,0,rPET,80.0,1.1,Yes
+Dreamtopia,Standard,One Hand on Hip,130,30.2,7,5,Back,Medium,Short,4,26.0,8,2,0,6,4,8,5.7,1,3,1,0,0,0,rPET,80.0,1.1,Yes
+Made to Move,Made to Move,One Hand on Hip,122,29.2,7,5,Left,Long,Long,1,25.0,1,1,2,5,3,8,4.9,0,2,0,0,0,0,rPET,86.0,1.1,Yes
+Dreamtopia,Standard,Two Hands Up,123,30.0,7,5,Back,Medium,Knee,1,5.0,1,0,0,7,0,7,4.6,0,3,0,0,0,0,rPET,84.0,1.1,Yes
+Made to Move,Made to Move,One Hand Up,116,29.0,7,5,Left,Medium,Short,1,18.0,1,1,0,4,0,8,3.4,0,2,0,0,0,0,rPET,86.0,1.1,Yes
+Made to Move,Made to Move,One Hand Up,116,29.0,7,5,Left,Very Long,Knee,3,55.0,5,2,2,4,7,9,6.0,2,4,1,0,1,0,Virgin PET,50.0,1.0,Yes
+Extra,Curvy,Sitting,135,30.0,6,6,Center,Medium,Knee,0,0.0,0,0,0,4,0,6,3.0,0,2,0,0,0,0,Recycled Cardboard + rPET,96.0,0.85,Yes
+Dreamtopia,Standard,Sitting,133,30.2,7,5,Back,Long,Knee,1,25.0,1,1,1,5,2,7,4.4,0,3,0,0,0,0,rPET,84.0,1.1,Yes
+Fashionistas,Standard,Arms Open,115,29.0,3,8,Center,Medium,Knee,5,47.0,10,3,0,2,5,5,3.6,1,2,1,0,0,0,rPET,82.0,1.1,Yes
+Signature,Made to Move,Walking,137,29.2,8,6,Center,Long,Knee,1,5.0,3,0,1,7,2,9,5.6,0,3,0,1,0,0,rPET,82.0,1.1,Yes
+Dreamtopia,Standard,Arms Open,120,30.0,7,5,Back,Long,Short,1,4.0,1,0,1,7,1,7,4.9,0,2,0,0,0,0,rPET,86.0,1.1,Yes
+Made to Move,Made to Move,Standing Straight,119,29.0,7,5,Left,Short,Short,4,34.0,4,2,0,3,3,9,4.2,0,3,1,0,0,0,rPET,82.0,1.1,Yes
+Extra,Curvy,Walking,131,30.0,6,6,Center,Long,Knee,3,36.0,4,3,1,7,4,7,6.0,1,3,1,1,0,0,rPET,78.0,1.1,Yes
+Signature,Made to Move,One Hand Up,137,29.0,8,6,Center,Short,Short,2,22.0,2,1,0,5,2,9,4.8,0,3,0,0,0,0,rPET,84.0,1.1,Yes
+Signature,Made to Move,One Leg Bent,150,29.0,8,6,Center,Medium,Knee,0,0.0,0,0,0,7,0,9,5.0,0,3,0,1,0,1,rPET,77.0,1.1,Yes
+Signature,Made to Move,Two Hands Up,141,29.0,8,6,Center,Medium,Knee,3,15.0,4,1,0,7,1,10,5.5,0,3,0,0,0,0,rPET,84.0,1.1,Yes
+Fashionistas,Standard,Walking,116,29.0,3,8,Center,Long,Knee,0,0.0,0,0,1,3,1,3,2.3,0,2,0,1,0,0,Recycled Cardboard + rPET,94.0,0.85,Yes
+Extra,Curvy,Walking,138,30.0,6,6,Center,Long,Long,4,34.0,7,2,2,7,6,7,6.6,1,4,1,1,1,0,Virgin PET,50.0,1.0,Yes
+Fashionistas,Standard,One Hand on Hip,112,29.0,3,8,Center,Medium,Short,2,24.0,3,2,0,1,3,3,2.1,0,2,1,0,0,0,Recycled Cardboard + rPET,94.0,0.85,Yes
+Careers,Standard,Arms Open,130,29.0,5,7,Center,Medium,Knee,1,14.0,1,1,0,4,0,5,2.8,0,2,0,0,0,0,Recycled Cardboard + rPET,96.0,0.85,Yes
+Extra,Curvy,One Leg Bent,131,30.0,6,6,Center,Short,Knee,5,45.0,8,3,0,6,5,8,6.0,1,4,1,1,1,0,Virgin PET,50.0,1.0,Yes
+Extra,Curvy,Standing Straight,138,30.0,6,6,Center,Very Long,Short,3,30.0,6,2,2,4,6,7,5.3,1,3,1,0,0,0,rPET,80.0,1.1,Yes
+Made to Move,Made to Move,One Leg Bent,117,29.0,7,5,Left,Long,Long,0,0.0,0,0,2,5,2,8,4.6,0,3,0,1,0,0,rPET,82.0,1.1,Yes
+Made to Move,Made to Move,Arms Open,120,29.0,7,5,Left,Long,Long,5,78.0,10,5,2,6,8,10,7.5,2,4,2,0,1,0,Virgin PET,48.0,1.0,Yes
+Careers,Standard,One Hand on Hip,130,29.2,5,7,Center,Long,Knee,5,43.0,6,3,1,3,6,7,4.8,1,3,1,0,0,0,rPET,80.0,1.1,Yes
+Careers,Standard,One Hand Up,122,29.0,5,7,Center,Medium,Long,2,32.0,4,2,1,3,4,5,3.8,1,2,1,0,0,0,rPET,82.0,1.1,Yes
+Signature,Made to Move,Standing Straight,150,29.0,8,6,Center,Medium,Knee,5,36.0,7,1,0,5,3,10,5.3,0,3,0,0,0,1,rPET,79.0,1.1,Yes
+Extra,Curvy,Walking,132,30.2,6,6,Center,Long,Knee,1,5.0,1,0,1,7,1,6,4.7,0,2,0,1,0,0,rPET,84.0,1.1,Yes
+Careers,Standard,Walking,117,29.2,5,7,Center,Long,Short,5,69.0,11,4,1,4,7,7,5.6,2,3,2,1,1,0,rPET,68.0,1.1,Yes
+Made to Move,Made to Move,Sitting,117,29.2,7,5,Left,Very Long,Long,1,14.0,3,1,3,3,4,8,4.4,1,3,0,0,0,0,rPET,82.0,1.1,Yes
+Signature,Made to Move,Arms Open,139,29.2,8,6,Center,Very Long,Knee,3,30.0,6,3,2,6,6,10,6.8,1,4,1,0,1,0,Virgin PET,52.0,1.0,Yes
+Made to Move,Made to Move,Walking,117,29.0,7,5,Left,Long,Knee,2,26.0,3,2,1,6,4,8,5.7,1,3,1,1,0,0,rPET,78.0,1.1,Yes
+Careers,Standard,One Leg Bent,121,29.2,5,7,Center,Medium,Short,1,6.0,1,0,0,4,0,5,2.8,0,2,0,1,0,0,Recycled Cardboard + rPET,94.0,0.85,Yes
+Extra,Curvy,Standing Straight,125,30.0,6,6,Center,Short,Knee,4,33.0,4,2,0,4,3,7,4.2,0,3,1,0,0,0,rPET,82.0,1.1,Yes
+Dreamtopia,Standard,Standing Straight,129,30.2,7,5,Back,Medium,Short,1,18.0,1,1,0,5,0,7,3.6,0,2,0,0,0,0,rPET,86.0,1.1,Yes
+Made to Move,Made to Move,One Leg Bent,121,29.0,7,5,Left,Short,Long,3,25.0,6,1,1,6,4,9,5.9,1,3,0,1,0,0,rPET,80.0,1.1,Yes
+Made to Move,Made to Move,Two Hands Up,121,29.0,7,5,Left,Long,Long,1,18.0,3,1,2,6,3,8,5.4,0,3,0,0,0,0,rPET,84.0,1.1,Yes
+Signature,Made to Move,Two Hands Up,143,29.0,8,6,Center,Long,Knee,5,75.0,10,3,1,7,6,10,7.2,1,4,1,0,1,0,Virgin PET,52.0,1.0,Yes
+Extra,Curvy,Two Hands Up,137,30.0,6,6,Center,Medium,Short,4,30.0,6,2,0,6,4,7,5.5,1,3,1,0,0,0,rPET,80.0,1.1,Yes
+Signature,Made to Move,Walking,133,29.0,8,6,Center,Short,Knee,0,0.0,0,0,0,7,0,9,5.0,0,3,0,1,0,0,rPET,82.0,1.1,Yes
+Dreamtopia,Standard,Two Hands Up,121,30.0,7,5,Back,Medium,Knee,3,22.0,4,2,0,7,3,8,5.8,0,3,1,0,0,0,rPET,82.0,1.1,Yes
+Dreamtopia,Standard,One Hand on Hip,128,30.0,7,5,Back,Medium,Short,3,43.0,6,3,0,6,5,8,6.0,1,4,1,0,1,0,Virgin PET,52.0,1.0,Yes
+Extra,Curvy,One Hand on Hip,135,30.0,6,6,Center,Long,Long,5,34.0,7,1,2,5,5,8,5.6,1,3,0,0,0,0,rPET,82.0,1.1,Yes
+Fashionistas,Standard,Two Hands Up,115,29.0,3,8,Center,Long,Short,5,50.0,9,3,1,2,6,5,4.0,1,3,1,0,0,0,rPET,80.0,1.1,Yes
+Fashionistas,Standard,Sitting,112,29.0,3,8,Center,Long,Long,2,10.0,2,0,2,0,3,3,1.6,0,1,0,0,0,0,Recycled Cardboard + rPET,98.0,0.85,Yes
+Made to Move,Made to Move,One Hand Up,122,29.0,7,5,Left,Medium,Knee,3,30.0,3,2,0,5,3,9,5.1,0,3,1,0,0,0,rPET,82.0,1.1,Yes
+Dreamtopia,Standard,Two Hands Up,126,30.0,7,5,Back,Very Long,Long,2,11.0,3,1,3,7,4,7,6.0,1,2,0,0,0,0,rPET,84.0,1.1,Yes
+Made to Move,Made to Move,Two Hands Up,116,29.2,7,5,Left,Medium,Knee,4,33.0,7,2,0,5,4,9,5.4,1,3,1,0,0,0,rPET,80.0,1.1,Yes
+Extra,Curvy,One Leg Bent,127,30.0,6,6,Center,Medium,Long,3,17.0,4,1,1,6,2,7,4.8,0,3,0,1,0,0,rPET,82.0,1.1,Yes
+Careers,Standard,One Hand on Hip,118,29.2,5,7,Center,Medium,Knee,5,47.0,7,2,0,2,5,7,4.0,1,3,1,0,0,0,rPET,80.0,1.1,Yes
+Extra,Curvy,One Hand on Hip,126,30.0,6,6,Center,Medium,Short,5,58.0,9,3,0,5,5,8,5.6,1,3,1,0,0,0,rPET,80.0,1.1,Yes
+Signature,Made to Move,Standing Straight,144,29.0,8,6,Center,Long,Long,3,42.0,7,2,2,5,7,10,6.7,2,4,1,0,1,0,Virgin PET,50.0,1.0,Yes
+Extra,Curvy,Standing Straight,132,30.0,6,6,Center,Medium,Knee,5,65.0,9,4,0,4,6,8,5.5,1,3,2,0,0,0,rPET,78.0,1.1,Yes
+Made to Move,Made to Move,Standing Straight,115,29.0,7,5,Left,Very Long,Short,3,58.0,4,3,2,3,6,9,5.2,1,3,1,0,0,0,rPET,80.0,1.1,Yes
+Made to Move,Made to Move,One Hand Up,123,29.2,7,5,Left,Medium,Long,0,0.0,0,0,1,5,1,8,4.2,0,3,0,0,0,0,rPET,84.0,1.1,Yes
+Fashionistas,Standard,One Hand on Hip,118,29.2,3,8,Center,Long,Short,5,32.0,6,2,1,1,5,5,3.2,1,2,1,0,0,0,rPET,82.0,1.1,Yes
+Made to Move,Made to Move,Two Hands Up,117,29.2,7,5,Left,Medium,Long,5,70.0,8,3,1,5,6,10,6.4,1,4,1,0,1,0,Virgin PET,52.0,1.0,Yes
+Dreamtopia,Standard,One Hand on Hip,133,30.0,7,5,Back,Medium,Short,0,0.0,0,0,0,6,0,7,4.1,0,3,0,0,0,0,rPET,84.0,1.1,Yes
+Careers,Standard,One Leg Bent,125,29.2,5,7,Center,Long,Short,0,0.0,0,0,1,4,1,5,3.2,0,2,0,1,0,0,rPET,84.0,1.1,Yes
+Dreamtopia,Standard,One Hand on Hip,124,30.0,7,5,Back,Very Long,Knee,0,0.0,0,0,2,6,2,7,4.8,0,3,0,0,0,0,rPET,84.0,1.1,Yes
+Signature,Made to Move,One Hand on Hip,148,29.2,8,6,Center,Short,Short,3,21.0,4,1,0,6,2,10,5.4,0,3,0,0,0,1,rPET,79.0,1.1,Yes
+Made to Move,Made to Move,Walking,126,29.2,7,5,Left,Very Long,Short,5,69.0,8,4,2,7,8,10,8.0,2,4,2,1,1,0,Virgin PET,46.0,1.0,Yes
+Dreamtopia,Standard,Sitting,127,30.0,7,5,Back,Medium,Knee,3,38.0,4,2,0,5,3,8,4.9,0,3,1,0,0,0,rPET,82.0,1.1,Yes
+Dreamtopia,Standard,Arms Open,129,30.0,7,5,Back,Medium,Knee,4,61.0,5,4,0,7,6,8,6.8,1,4,2,0,1,0,Virgin PET,50.0,1.0,Yes
+Fashionistas,Standard,Standing Straight,110,29.2,3,8,Center,Medium,Knee,5,37.0,7,2,0,0,4,5,2.4,1,2,1,0,0,0,Recycled Cardboard + rPET,92.0,0.85,Yes
+Careers,Standard,One Hand Up,130,29.2,5,7,Center,Long,Knee,5,23.0,7,1,1,3,4,7,4.2,2,3,0,0,0,0,rPET,80.0,1.1,Yes
+Made to Move,Made to Move,Standing Straight,125,29.0,7,5,Left,Long,Short,5,63.0,5,2,1,4,6,10,5.9,1,3,1,0,0,0,rPET,80.0,1.1,Yes
+Signature,Made to Move,Standing Straight,131,29.0,8,6,Center,Long,Knee,2,9.0,5,0,1,4,3,9,4.6,0,3,0,0,0,0,rPET,84.0,1.1,Yes
+Signature,Made to Move,Sitting,135,29.0,8,6,Center,Long,Short,5,45.0,7,3,1,4,6,10,5.9,1,3,1,0,0,0,rPET,80.0,1.1,Yes
+Dreamtopia,Standard,Sitting,132,30.0,7,5,Back,Short,Knee,2,45.0,2,2,0,5,4,7,5.0,1,3,1,0,0,0,rPET,80.0,1.1,Yes
+Extra,Curvy,Two Hands Up,137,30.0,6,6,Center,Short,Knee,4,31.0,6,2,0,6,4,7,5.5,2,3,1,0,0,0,rPET,78.0,1.1,Yes
+Fashionistas,Standard,Sitting,114,29.0,3,8,Center,Long,Knee,3,14.0,7,0,1,0,3,4,1.8,0,1,0,0,0,0,Recycled Cardboard + rPET,98.0,0.85,Yes
+Dreamtopia,Standard,Arms Open,135,30.0,7,5,Back,Long,Short,5,54.0,6,3,1,7,6,9,7.0,1,4,1,0,1,0,Virgin PET,52.0,1.0,Yes
+Fashionistas,Standard,Sitting,115,29.2,3,8,Center,Long,Short,1,2.0,1,0,1,0,1,3,1.0,0,1,0,0,0,0,Recycled Cardboard + rPET,98.0,0.85,Yes
+Dreamtopia,Standard,One Leg Bent,132,30.0,7,5,Back,Long,Short,0,0.0,0,0,1,7,1,7,4.9,0,2,0,1,0,0,rPET,84.0,1.1,Yes
+Fashionistas,Standard,Standing Straight,117,29.0,3,8,Center,Very Long,Short,4,47.0,8,2,2,0,7,4,3.2,2,2,1,0,1,0,rPET,74.0,1.1,Yes
+Extra,Curvy,Arms Open,138,30.0,6,6,Center,Long,Knee,0,0.0,0,0,1,6,1,6,4.2,0,3,0,0,0,0,rPET,84.0,1.1,Yes
+Signature,Made to Move,Sitting,142,29.0,8,6,Center,Medium,Knee,1,12.0,2,1,0,5,1,9,4.4,0,3,0,0,0,0,rPET,84.0,1.1,Yes
+Extra,Curvy,One Hand Up,137,30.2,6,6,Center,Very Long,Knee,0,0.0,0,0,2,5,2,6,4.2,0,3,0,0,0,0,rPET,84.0,1.1,Yes
+Extra,Curvy,Arms Open,137,30.0,6,6,Center,Long,Knee,0,0.0,0,0,1,6,1,6,4.2,0,3,0,0,0,0,rPET,84.0,1.1,Yes
+Made to Move,Made to Move,Standing Straight,117,29.0,7,5,Left,Medium,Knee,4,54.0,6,3,0,3,5,9,4.9,1,3,1,0,0,0,rPET,80.0,1.1,Yes
+Dreamtopia,Standard,One Leg Bent,135,30.0,7,5,Back,Long,Short,4,30.0,8,1,1,7,4,8,6.2,1,4,0,1,1,0,Virgin PET,52.0,1.0,Yes
+Careers,Standard,Arms Open,128,29.0,5,7,Center,Long,Short,0,0.0,0,0,1,4,1,5,3.2,0,2,0,0,0,0,rPET,86.0,1.1,Yes
+Fashionistas,Standard,One Leg Bent,118,29.0,3,8,Center,Medium,Knee,3,15.0,5,0,0,2,2,4,2.4,0,2,0,1,0,0,Recycled Cardboard + rPET,94.0,0.85,Yes
+Made to Move,Made to Move,One Leg Bent,130,29.0,7,5,Left,Long,Knee,5,69.0,7,4,1,6,7,10,7.2,2,4,2,1,1,0,Virgin PET,46.0,1.0,Yes
+Signature,Made to Move,Walking,150,29.0,8,6,Center,Long,Short,5,47.0,8,2,1,8,6,10,7.7,1,4,1,2,1,1,Virgin PET,43.0,1.0,Yes
+Extra,Curvy,One Hand Up,130,30.0,6,6,Center,Long,Long,0,0.0,0,0,2,5,2,6,4.2,0,2,0,0,0,0,rPET,86.0,1.1,Yes
+Made to Move,Made to Move,Arms Open,121,29.2,7,5,Left,Short,Knee,0,0.0,0,0,0,6,0,8,4.3,0,2,0,0,0,0,rPET,86.0,1.1,Yes
+Fashionistas,Standard,Standing Straight,111,29.2,3,8,Center,Medium,Long,1,14.0,3,1,1,0,2,3,1.3,0,1,0,0,0,0,Recycled Cardboard + rPET,98.0,0.85,Yes
+Dreamtopia,Standard,One Hand on Hip,133,30.2,7,5,Back,Short,Short,4,32.0,6,2,0,6,4,8,5.7,1,3,1,0,0,0,rPET,80.0,1.1,Yes
+Fashionistas,Standard,One Hand Up,118,29.0,3,8,Center,Short,Knee,2,9.0,4,0,0,1,1,3,1.4,0,1,0,0,0,0,Recycled Cardboard + rPET,98.0,0.85,Yes
+Made to Move,Made to Move,Standing Straight,126,29.2,7,5,Left,Long,Short,0,0.0,0,0,1,4,1,8,3.8,0,2,0,0,0,0,rPET,86.0,1.1,Yes
+Dreamtopia,Standard,Two Hands Up,121,30.0,7,5,Back,Short,Short,1,7.0,1,0,0,7,0,7,4.6,0,3,0,0,0,0,rPET,84.0,1.1,Yes
+Dreamtopia,Standard,Standing Straight,126,30.2,7,5,Back,Medium,Short,4,26.0,5,1,0,5,3,8,4.9,0,3,0,0,0,0,rPET,84.0,1.1,Yes
+Made to Move,Made to Move,One Hand Up,123,29.0,7,5,Left,Medium,Long,3,47.0,3,2,1,5,5,9,5.8,1,3,1,0,0,0,rPET,80.0,1.1,Yes
+Dreamtopia,Standard,Arms Open,133,30.2,7,5,Back,Short,Short,5,67.0,6,3,0,7,5,9,6.7,1,4,1,0,1,0,Virgin PET,52.0,1.0,Yes
+Extra,Curvy,Standing Straight,131,30.2,6,6,Center,Medium,Knee,4,26.0,5,1,0,4,3,7,4.2,0,3,0,0,0,0,rPET,84.0,1.1,Yes
+Extra,Curvy,Walking,138,30.0,6,6,Center,Medium,Knee,3,29.0,4,2,0,7,3,7,5.6,0,2,1,1,0,0,rPET,82.0,1.1,Yes
+Dreamtopia,Standard,One Leg Bent,127,30.0,7,5,Back,Medium,Knee,5,46.0,6,3,0,7,5,9,6.7,2,4,1,1,1,0,Virgin PET,48.0,1.0,Yes
+Made to Move,Made to Move,Walking,117,29.0,7,5,Left,Very Long,Knee,1,30.0,1,1,2,6,3,8,5.4,0,3,0,1,0,0,rPET,82.0,1.1,Yes
+Made to Move,Made to Move,Standing Straight,122,29.0,7,5,Left,Short,Short,1,5.0,1,0,0,4,0,8,3.4,0,2,0,0,0,0,rPET,86.0,1.1,Yes
+Signature,Made to Move,One Hand Up,133,29.0,8,6,Center,Short,Knee,2,23.0,5,1,0,5,3,9,5.1,0,3,0,0,0,0,rPET,84.0,1.1,Yes
+Careers,Standard,Two Hands Up,130,29.0,5,7,Center,Long,Knee,2,4.0,2,0,1,4,2,5,3.5,0,2,0,0,0,0,rPET,86.0,1.1,Yes
+Made to Move,Made to Move,Two Hands Up,118,29.0,7,5,Left,Short,Long,3,28.0,5,1,1,5,4,9,5.4,1,3,0,0,0,0,rPET,82.0,1.1,Yes
+Made to Move,Made to Move,One Leg Bent,127,29.0,7,5,Left,Long,Short,5,34.0,7,2,1,6,5,10,6.4,1,4,1,1,1,0,Virgin PET,50.0,1.0,Yes
+Extra,Curvy,Arms Open,129,30.0,6,6,Center,Medium,Knee,0,0.0,0,0,0,6,0,6,3.9,0,2,0,0,0,0,rPET,86.0,1.1,Yes
+Careers,Standard,One Hand Up,126,29.2,5,7,Center,Long,Knee,3,52.0,8,2,1,3,6,6,4.6,1,3,1,0,0,0,rPET,80.0,1.1,Yes
+Signature,Made to Move,Sitting,141,29.0,8,6,Center,Long,Short,3,30.0,4,3,1,5,4,10,5.6,1,3,1,0,0,0,rPET,80.0,1.1,Yes
+Signature,Made to Move,Two Hands Up,137,29.0,8,6,Center,Long,Short,2,12.0,2,1,1,6,2,9,5.2,0,3,0,0,0,0,rPET,84.0,1.1,Yes
+Made to Move,Made to Move,Walking,125,29.0,7,5,Left,Long,Short,1,14.0,3,1,1,7,2,8,5.4,0,3,0,1,0,0,rPET,82.0,1.1,Yes
+Dreamtopia,Standard,Walking,125,30.2,7,5,Back,Short,Knee,4,42.0,6,3,0,8,5,8,7.0,1,4,1,2,1,1,Virgin PET,43.0,1.0,Yes
+Signature,Made to Move,Arms Open,130,29.0,8,6,Center,Long,Long,1,28.0,2,1,2,6,4,9,5.9,1,3,0,0,0,0,rPET,82.0,1.1,Yes
+Dreamtopia,Standard,Sitting,123,30.0,7,5,Back,Short,Short,5,67.0,10,4,0,5,6,9,6.2,1,3,2,0,1,0,Virgin PET,52.0,1.0,Yes
+Dreamtopia,Standard,Sitting,131,30.0,7,5,Back,Very Long,Knee,4,54.0,6,3,2,5,7,8,6.3,2,4,1,0,1,0,Virgin PET,50.0,1.0,Yes
+Made to Move,Made to Move,Sitting,116,29.2,7,5,Left,Medium,Short,4,44.0,5,1,0,3,4,9,4.6,1,3,0,0,0,0,rPET,82.0,1.1,Yes
+Fashionistas,Standard,One Hand Up,115,29.0,3,8,Center,Long,Long,3,24.0,4,2,2,1,5,4,3.0,1,2,1,0,0,0,Recycled Cardboard + rPET,92.0,0.85,Yes
+Fashionistas,Standard,Two Hands Up,111,29.0,3,8,Center,Very Long,Short,4,20.0,5,1,2,2,5,4,3.4,1,2,0,0,0,0,rPET,84.0,1.1,Yes
+Extra,Curvy,One Hand on Hip,134,30.0,6,6,Center,Medium,Short,0,0.0,0,0,0,5,0,6,3.4,0,2,0,0,0,0,rPET,86.0,1.1,Yes
+Made to Move,Made to Move,One Hand on Hip,127,29.0,7,5,Left,Very Long,Long,5,57.0,6,3,3,5,8,10,7.0,2,4,1,0,1,0,Virgin PET,50.0,1.0,Yes
+Extra,Curvy,Two Hands Up,126,30.0,6,6,Center,Long,Long,0,0.0,0,0,2,6,2,6,4.6,0,3,0,0,0,0,rPET,84.0,1.1,Yes
+Fashionistas,Standard,One Hand on Hip,119,29.0,3,8,Center,Medium,Short,0,0.0,0,0,0,1,0,3,1.0,0,1,0,0,0,0,Recycled Cardboard + rPET,98.0,0.85,Yes
+Extra,Curvy,Two Hands Up,136,30.2,6,6,Center,Short,Short,0,0.0,0,0,0,6,0,6,3.9,0,2,0,0,0,0,rPET,86.0,1.1,Yes
+Fashionistas,Standard,Two Hands Up,113,29.0,3,8,Center,Long,Long,3,36.0,4,2,2,2,5,4,3.4,1,2,1,0,0,0,rPET,82.0,1.1,Yes
+Careers,Standard,Arms Open,119,29.2,5,7,Center,Medium,Knee,2,44.0,3,2,0,3,4,5,3.8,1,2,1,0,0,0,rPET,82.0,1.1,Yes
+Dreamtopia,Standard,Two Hands Up,125,30.2,7,5,Back,Long,Short,3,19.0,4,1,1,7,2,8,5.4,0,3,0,0,0,0,rPET,84.0,1.1,Yes
+Made to Move,Made to Move,Sitting,129,29.0,7,5,Left,Short,Knee,0,0.0,0,0,0,4,0,8,3.4,0,2,0,0,0,0,rPET,86.0,1.1,Yes
+Careers,Standard,Two Hands Up,121,29.0,5,7,Center,Short,Short,3,31.0,6,2,0,4,4,6,4.4,1,3,1,0,0,0,rPET,80.0,1.1,Yes
+Dreamtopia,Standard,One Hand Up,121,30.0,7,5,Back,Long,Long,5,36.0,10,2,2,6,6,9,6.6,1,4,1,0,1,0,Virgin PET,52.0,1.0,Yes
+Careers,Standard,One Hand Up,130,29.2,5,7,Center,Medium,Knee,1,12.0,1,1,0,3,0,5,2.4,0,2,0,0,0,0,Recycled Cardboard + rPET,96.0,0.85,Yes
+Dreamtopia,Standard,One Leg Bent,132,30.2,7,5,Back,Long,Knee,3,32.0,5,2,1,7,5,8,6.5,1,4,1,1,1,0,Virgin PET,50.0,1.0,Yes
+Signature,Made to Move,Arms Open,130,29.0,8,6,Center,Short,Knee,5,88.0,7,5,0,6,6,10,6.8,1,4,2,0,1,0,Virgin PET,50.0,1.0,Yes
+Extra,Curvy,One Hand on Hip,135,30.0,6,6,Center,Very Long,Knee,3,29.0,3,2,2,5,5,7,5.4,1,3,1,0,0,0,rPET,80.0,1.1,Yes
+Signature,Made to Move,One Leg Bent,132,29.0,8,6,Center,Medium,Short,4,58.0,8,2,0,6,5,10,6.4,1,4,1,1,1,0,Virgin PET,50.0,1.0,Yes
+Fashionistas,Standard,Sitting,111,29.0,3,8,Center,Very Long,Short,3,34.0,4,2,2,0,5,4,2.6,1,2,1,0,0,0,Recycled Cardboard + rPET,92.0,0.85,Yes
+Signature,Made to Move,Two Hands Up,133,29.2,8,6,Center,Long,Knee,1,18.0,1,1,1,6,1,9,4.8,0,3,0,0,0,0,rPET,84.0,1.1,Yes
+Extra,Curvy,One Hand on Hip,129,30.0,6,6,Center,Short,Knee,2,16.0,2,1,0,5,1,6,3.8,0,2,0,0,0,0,rPET,86.0,1.1,Yes
+Extra,Curvy,Sitting,129,30.0,6,6,Center,Short,Short,0,0.0,0,0,0,4,0,6,3.0,0,2,0,0,0,0,Recycled Cardboard + rPET,96.0,0.85,Yes
+Signature,Made to Move,One Leg Bent,146,29.0,8,6,Center,Long,Long,1,18.0,1,1,2,7,2,9,5.6,0,3,0,1,0,1,rPET,77.0,1.1,Yes
+Signature,Made to Move,Standing Straight,145,29.0,8,6,Center,Long,Knee,2,29.0,2,1,1,5,3,9,5.1,0,3,0,0,0,1,rPET,79.0,1.1,Yes
+Careers,Standard,One Hand Up,126,29.0,5,7,Center,Very Long,Knee,1,1.0,1,0,2,3,2,5,3.0,0,2,0,0,0,0,rPET,86.0,1.1,Yes
+Extra,Curvy,One Hand on Hip,126,30.0,6,6,Center,Short,Short,5,43.0,6,2,0,5,5,8,5.6,1,3,1,0,0,0,rPET,80.0,1.1,Yes
+Extra,Curvy,Sitting,133,30.2,6,6,Center,Short,Short,3,61.0,6,2,0,4,5,7,5.0,1,3,1,0,0,0,rPET,80.0,1.1,Yes
+Dreamtopia,Standard,Standing Straight,123,30.2,7,5,Back,Short,Knee,1,30.0,1,1,0,5,1,7,4.0,0,3,0,0,0,0,rPET,84.0,1.1,Yes
+Signature,Made to Move,Standing Straight,141,29.2,8,6,Center,Long,Knee,2,13.0,3,1,1,5,2,9,4.8,0,3,0,0,0,0,rPET,84.0,1.1,Yes
+Signature,Made to Move,Walking,138,29.0,8,6,Center,Long,Short,0,0.0,0,0,1,7,1,9,5.3,0,3,0,1,0,0,rPET,82.0,1.1,Yes
+Careers,Standard,One Hand on Hip,118,29.0,5,7,Center,Long,Long,5,73.0,9,3,2,2,7,7,4.8,2,3,1,0,1,0,rPET,72.0,1.1,Yes
+Fashionistas,Standard,Standing Straight,113,29.2,3,8,Center,Medium,Short,4,48.0,6,3,0,0,5,4,2.6,1,2,1,0,0,0,Recycled Cardboard + rPET,92.0,0.85,Yes
+Dreamtopia,Standard,One Hand on Hip,135,30.0,7,5,Back,Long,Short,1,4.0,1,0,1,6,1,7,4.4,0,3,0,0,0,0,rPET,84.0,1.1,Yes
+Fashionistas,Standard,One Hand on Hip,118,29.2,3,8,Center,Medium,Long,4,54.0,9,4,1,1,7,4,3.7,2,2,2,0,1,0,rPET,72.0,1.1,Yes
+Fashionistas,Standard,Standing Straight,115,29.0,3,8,Center,Long,Short,3,23.0,8,1,1,0,4,4,2.2,1,1,0,0,0,0,Recycled Cardboard + rPET,96.0,0.85,Yes
+Extra,Curvy,Walking,125,30.0,6,6,Center,Long,Knee,1,22.0,3,1,1,7,3,6,5.4,0,3,0,1,0,0,rPET,82.0,1.1,Yes
+Extra,Curvy,Walking,126,30.2,6,6,Center,Short,Long,3,32.0,3,2,1,7,4,7,6.0,1,3,1,1,0,0,rPET,78.0,1.1,Yes
+Careers,Standard,One Hand Up,117,29.0,5,7,Center,Medium,Knee,4,29.0,5,1,0,2,3,6,3.2,0,2,0,0,0,0,rPET,86.0,1.1,Yes
+Careers,Standard,One Hand Up,127,29.2,5,7,Center,Medium,Short,1,1.0,1,0,0,3,0,5,2.4,0,2,0,0,0,0,Recycled Cardboard + rPET,96.0,0.85,Yes
+Signature,Made to Move,Standing Straight,148,29.2,8,6,Center,Short,Long,4,41.0,5,2,1,5,6,10,6.4,1,4,1,0,1,1,Virgin PET,47.0,1.0,Yes
+Extra,Curvy,One Hand Up,133,30.0,6,6,Center,Long,Short,2,14.0,2,1,1,5,2,6,4.2,0,3,0,0,0,0,rPET,84.0,1.1,Yes
+Extra,Curvy,Arms Open,130,30.0,6,6,Center,Short,Short,0,0.0,0,0,0,6,0,6,3.9,0,2,0,0,0,0,rPET,86.0,1.1,Yes
+Extra,Curvy,Sitting,133,30.0,6,6,Center,Medium,Knee,5,73.0,7,3,0,4,5,8,5.2,1,3,1,0,0,0,rPET,80.0,1.1,Yes
+Made to Move,Made to Move,One Hand Up,121,29.2,7,5,Left,Short,Knee,5,59.0,8,4,0,5,6,10,6.4,1,4,2,0,1,0,Virgin PET,50.0,1.0,Yes
+Signature,Made to Move,Walking,132,29.2,8,6,Center,Long,Short,1,2.0,3,0,1,7,2,9,5.6,0,3,0,1,0,0,rPET,82.0,1.1,Yes
+Careers,Standard,One Hand Up,124,29.0,5,7,Center,Very Long,Knee,0,0.0,0,0,2,3,2,5,3.0,0,2,0,0,0,0,rPET,86.0,1.1,Yes
+Signature,Made to Move,Arms Open,137,29.2,8,6,Center,Very Long,Short,0,0.0,0,0,2,6,2,9,5.2,0,3,0,0,0,0,rPET,84.0,1.1,Yes
+Extra,Curvy,One Hand on Hip,128,30.2,6,6,Center,Long,Short,5,65.0,8,4,1,5,7,8,6.3,2,4,2,0,1,0,Virgin PET,48.0,1.0,Yes
+Careers,Standard,Sitting,121,29.0,5,7,Center,Medium,Short,4,31.0,4,1,0,2,2,6,2.8,0,2,0,0,0,0,Recycled Cardboard + rPET,96.0,0.85,Yes
+Signature,Made to Move,Sitting,142,29.0,8,6,Center,Medium,Knee,3,24.0,4,1,0,5,2,10,5.0,0,3,0,0,0,0,rPET,84.0,1.1,Yes
+Extra,Curvy,Sitting,140,30.0,6,6,Center,Medium,Knee,1,14.0,3,1,0,5,1,6,3.8,0,2,0,0,0,0,rPET,86.0,1.1,Yes
+Dreamtopia,Standard,Walking,135,30.2,7,5,Back,Short,Short,2,25.0,4,1,0,8,2,7,5.7,0,3,0,2,0,1,rPET,75.0,1.1,Yes
+Extra,Curvy,Two Hands Up,137,30.2,6,6,Center,Long,Short,0,0.0,0,0,1,6,1,6,4.2,0,3,0,0,0,0,rPET,84.0,1.1,Yes
+Dreamtopia,Standard,Two Hands Up,134,30.2,7,5,Back,Very Long,Short,4,27.0,7,1,2,7,5,8,6.5,1,4,0,0,1,0,Virgin PET,54.0,1.0,Yes
+Fashionistas,Standard,Two Hands Up,110,29.2,3,8,Center,Short,Short,0,0.0,0,0,0,2,0,3,1.5,0,1,0,0,0,0,Recycled Cardboard + rPET,98.0,0.85,Yes
+Careers,Standard,Sitting,115,29.2,5,7,Center,Very Long,Short,0,0.0,0,0,2,1,2,5,2.2,0,2,0,0,0,0,Recycled Cardboard + rPET,96.0,0.85,Yes
+Signature,Made to Move,One Hand on Hip,150,29.2,8,6,Center,Short,Long,0,0.0,0,0,1,6,1,9,4.8,0,3,0,0,0,1,rPET,79.0,1.1,Yes
+Made to Move,Made to Move,Sitting,125,29.2,7,5,Left,Short,Short,4,27.0,5,2,0,4,4,9,5.0,1,3,1,0,0,0,rPET,80.0,1.1,Yes
+Signature,Made to Move,One Leg Bent,139,29.0,8,6,Center,Medium,Short,4,51.0,7,3,0,6,5,10,6.4,1,4,1,1,1,0,Virgin PET,50.0,1.0,Yes
+Dreamtopia,Standard,Arms Open,123,30.0,7,5,Back,Long,Short,2,18.0,3,1,1,7,2,7,5.2,0,3,0,0,0,0,rPET,84.0,1.1,Yes
+Fashionistas,Standard,One Hand on Hip,116,29.0,3,8,Center,Short,Short,1,10.0,2,0,0,1,1,3,1.4,0,1,0,0,0,0,Recycled Cardboard + rPET,98.0,0.85,Yes
+Fashionistas,Standard,Arms Open,116,29.0,3,8,Center,Short,Knee,1,3.0,1,0,0,2,0,3,1.5,0,1,0,0,0,0,Recycled Cardboard + rPET,98.0,0.85,Yes
+Careers,Standard,Walking,127,29.2,5,7,Center,Long,Long,0,0.0,0,0,2,5,2,5,4.0,0,2,0,1,0,0,rPET,84.0,1.1,Yes
+Fashionistas,Standard,Sitting,111,29.0,3,8,Center,Short,Long,2,24.0,3,2,1,0,4,3,2.0,1,1,1,0,0,0,Recycled Cardboard + rPET,94.0,0.85,Yes
+Dreamtopia,Standard,Arms Open,131,30.0,7,5,Back,Long,Knee,1,7.0,1,0,1,7,1,7,4.9,0,3,0,0,0,0,rPET,84.0,1.1,Yes
+Fashionistas,Standard,Arms Open,115,29.2,3,8,Center,Short,Knee,5,97.0,6,4,0,2,6,5,4.0,1,3,2,0,0,0,rPET,78.0,1.1,Yes
+Extra,Curvy,Walking,134,30.0,6,6,Center,Long,Short,3,38.0,5,2,1,7,5,7,6.3,1,4,1,1,1,0,Virgin PET,50.0,1.0,Yes
+Made to Move,Made to Move,Sitting,117,29.0,7,5,Left,Long,Long,5,49.0,9,5,2,3,8,10,6.2,2,4,2,0,1,0,Virgin PET,48.0,1.0,Yes
+Careers,Standard,Sitting,119,29.0,5,7,Center,Medium,Knee,3,53.0,4,3,0,1,4,6,3.0,1,2,1,0,0,0,rPET,82.0,1.1,Yes
+Careers,Standard,Two Hands Up,128,29.2,5,7,Center,Medium,Short,1,18.0,3,1,0,4,1,5,3.2,0,2,0,0,0,0,rPET,86.0,1.1,Yes
+Dreamtopia,Standard,Arms Open,132,30.0,7,5,Back,Medium,Knee,5,68.0,9,3,0,7,5,9,6.7,1,4,1,0,1,0,Virgin PET,52.0,1.0,Yes
+Signature,Made to Move,Sitting,150,29.0,8,6,Center,Short,Long,1,2.0,1,0,1,5,1,9,4.4,0,3,0,0,0,1,rPET,79.0,1.1,Yes
+Signature,Made to Move,One Leg Bent,147,29.0,8,6,Center,Long,Knee,4,28.0,5,1,1,7,4,10,6.6,1,4,0,1,1,1,Virgin PET,47.0,1.0,Yes
+Signature,Made to Move,One Hand on Hip,148,29.2,8,6,Center,Medium,Knee,5,60.0,9,4,0,6,6,10,6.8,1,4,2,0,1,1,Virgin PET,45.0,1.0,Yes
+Fashionistas,Standard,Arms Open,111,29.0,3,8,Center,Medium,Short,0,0.0,0,0,0,2,0,3,1.5,0,1,0,0,0,0,Recycled Cardboard + rPET,98.0,0.85,Yes
+Fashionistas,Standard,One Hand on Hip,115,29.2,3,8,Center,Medium,Short,0,0.0,0,0,0,1,0,3,1.0,0,1,0,0,0,0,Recycled Cardboard + rPET,98.0,0.85,Yes
+Careers,Standard,Two Hands Up,116,29.0,5,7,Center,Medium,Long,1,30.0,1,1,1,3,2,5,3.0,0,2,0,0,0,0,rPET,86.0,1.1,Yes
+Extra,Curvy,Walking,129,30.2,6,6,Center,Very Long,Long,1,7.0,1,0,3,7,3,6,5.4,0,3,0,1,0,0,rPET,82.0,1.1,Yes
+Careers,Standard,Sitting,122,29.0,5,7,Center,Long,Short,5,68.0,9,5,1,2,7,7,4.8,2,3,2,0,1,0,rPET,70.0,1.1,Yes
+Dreamtopia,Standard,Standing Straight,132,30.2,7,5,Back,Short,Long,2,27.0,3,2,1,5,4,7,5.0,1,2,1,0,0,0,rPET,82.0,1.1,Yes
+Signature,Made to Move,Standing Straight,148,29.0,8,6,Center,Medium,Knee,1,30.0,1,1,0,5,1,9,4.4,0,2,0,0,0,1,rPET,81.0,1.1,Yes
+Dreamtopia,Standard,One Hand on Hip,131,30.0,7,5,Back,Short,Short,4,42.0,4,1,0,6,3,8,5.4,0,3,0,0,0,0,rPET,84.0,1.1,Yes
+Made to Move,Made to Move,Walking,128,29.0,7,5,Left,Long,Knee,1,2.0,1,0,1,7,1,8,5.1,0,3,0,1,0,0,rPET,82.0,1.1,Yes
+Made to Move,Made to Move,One Leg Bent,124,29.0,7,5,Left,Medium,Short,5,60.0,8,4,0,6,6,10,6.8,1,4,2,1,1,0,Virgin PET,48.0,1.0,Yes
+Extra,Curvy,Walking,129,30.0,6,6,Center,Long,Short,1,5.0,1,0,1,7,1,6,4.7,0,3,0,1,0,0,rPET,82.0,1.1,Yes
+Fashionistas,Standard,Arms Open,110,29.0,3,8,Center,Long,Knee,3,20.0,3,1,1,2,3,4,2.8,0,2,0,0,0,0,Recycled Cardboard + rPET,96.0,0.85,Yes
+Made to Move,Made to Move,One Hand Up,123,29.2,7,5,Left,Long,Knee,3,23.0,4,2,1,5,4,9,5.4,1,3,1,0,0,0,rPET,80.0,1.1,Yes
+Made to Move,Made to Move,Two Hands Up,117,29.2,7,5,Left,Medium,Long,5,55.0,9,2,1,5,6,10,6.4,1,4,1,0,1,0,Virgin PET,52.0,1.0,Yes
+Dreamtopia,Standard,One Hand Up,127,30.0,7,5,Back,Short,Knee,4,19.0,9,0,0,6,2,8,5.0,0,3,0,0,0,0,rPET,84.0,1.1,Yes
+Extra,Curvy,One Hand Up,127,30.2,6,6,Center,Medium,Short,5,38.0,7,2,0,5,4,8,5.2,1,3,1,0,0,0,rPET,80.0,1.1,Yes
+Signature,Made to Move,Walking,131,29.0,8,6,Center,Long,Short,0,0.0,0,0,1,7,1,9,5.3,0,3,0,1,0,0,rPET,82.0,1.1,Yes
+Careers,Standard,Sitting,126,29.2,5,7,Center,Long,Short,1,25.0,1,1,1,2,2,5,2.6,0,2,0,0,0,0,Recycled Cardboard + rPET,96.0,0.85,Yes
+Dreamtopia,Standard,One Hand on Hip,123,30.0,7,5,Back,Medium,Short,2,7.0,4,0,0,6,1,7,4.4,0,3,0,0,0,0,rPET,84.0,1.1,Yes
+Dreamtopia,Standard,Sitting,126,30.2,7,5,Back,Very Long,Short,0,0.0,0,0,2,5,2,7,4.4,0,3,0,0,0,0,rPET,84.0,1.1,Yes
+Made to Move,Made to Move,Sitting,116,29.2,7,5,Left,Very Long,Knee,0,0.0,0,0,2,3,2,8,3.6,0,2,0,0,0,0,rPET,86.0,1.1,Yes
+Signature,Made to Move,One Hand Up,139,29.0,8,6,Center,Very Long,Knee,3,35.0,5,2,2,5,6,10,6.4,1,4,1,0,1,0,Virgin PET,52.0,1.0,Yes
+Fashionistas,Standard,Sitting,116,29.2,3,8,Center,Medium,Short,5,79.0,9,4,0,0,6,5,3.1,1,1,2,0,0,0,rPET,82.0,1.1,Yes
+Extra,Curvy,One Hand on Hip,128,30.2,6,6,Center,Long,Short,4,53.0,5,3,1,5,6,7,5.8,1,3,1,0,0,0,rPET,80.0,1.1,Yes
+Made to Move,Made to Move,Standing Straight,116,29.0,7,5,Left,Short,Knee,0,0.0,0,0,0,3,0,8,3.0,0,2,0,0,0,0,Recycled Cardboard + rPET,96.0,0.85,Yes
+Fashionistas,Standard,Two Hands Up,111,29.2,3,8,Center,Medium,Short,5,70.0,6,4,0,2,6,5,4.0,1,3,2,0,0,0,rPET,78.0,1.1,Yes
+Dreamtopia,Standard,One Hand on Hip,125,30.2,7,5,Back,Long,Knee,5,46.0,7,4,1,6,7,9,7.0,2,4,2,0,1,0,Virgin PET,48.0,1.0,Yes
+Fashionistas,Standard,Two Hands Up,115,29.0,3,8,Center,Long,Short,2,26.0,3,1,1,2,3,3,2.6,0,2,0,0,0,0,Recycled Cardboard + rPET,96.0,0.85,Yes
+Fashionistas,Standard,One Hand Up,116,29.0,3,8,Center,Long,Knee,3,23.0,5,1,1,1,4,4,2.6,1,2,0,0,0,0,Recycled Cardboard + rPET,94.0,0.85,Yes
+Signature,Made to Move,Walking,149,29.0,8,6,Center,Very Long,Knee,3,15.0,4,1,2,8,3,10,6.6,0,3,0,2,1,1,Virgin PET,49.0,1.0,Yes
+Fashionistas,Standard,One Leg Bent,110,29.0,3,8,Center,Long,Short,0,0.0,0,0,1,2,1,3,1.8,0,1,0,1,0,0,Recycled Cardboard + rPET,96.0,0.85,Yes
+Signature,Made to Move,One Leg Bent,145,29.0,8,6,Center,Medium,Short,2,8.0,4,0,0,7,1,9,5.3,0,3,0,1,0,1,rPET,77.0,1.1,Yes
+Dreamtopia,Standard,Walking,128,30.2,7,5,Back,Medium,Short,1,7.0,1,0,0,8,0,7,5.0,0,3,0,2,0,1,rPET,75.0,1.1,Yes
+Fashionistas,Standard,One Hand Up,117,29.0,3,8,Center,Long,Knee,1,9.0,2,1,1,1,2,3,1.8,0,1,0,0,0,0,Recycled Cardboard + rPET,98.0,0.85,Yes
+Dreamtopia,Standard,Sitting,123,30.2,7,5,Back,Medium,Short,2,8.0,2,0,0,5,1,7,4.0,0,3,0,0,0,0,rPET,84.0,1.1,Yes
+Careers,Standard,One Hand on Hip,119,29.0,5,7,Center,Medium,Long,2,20.0,3,1,1,2,3,5,3.0,0,2,0,0,0,0,Recycled Cardboard + rPET,96.0,0.85,Yes
+Dreamtopia,Standard,Arms Open,133,30.2,7,5,Back,Medium,Long,5,57.0,9,3,1,7,6,9,7.0,1,3,1,0,1,0,Virgin PET,54.0,1.0,Yes
+Careers,Standard,Two Hands Up,116,29.2,5,7,Center,Long,Knee,4,61.0,5,3,1,3,6,6,4.6,1,2,1,0,0,0,rPET,82.0,1.1,Yes
+Signature,Made to Move,Walking,139,29.0,8,6,Center,Short,Short,0,0.0,0,0,0,7,0,9,5.0,0,3,0,1,0,0,rPET,82.0,1.1,Yes
+Made to Move,Made to Move,Sitting,129,29.2,7,5,Left,Short,Knee,5,52.0,9,3,0,4,5,10,5.6,1,3,1,0,0,0,rPET,80.0,1.1,Yes
+Signature,Made to Move,Sitting,133,29.0,8,6,Center,Short,Short,3,23.0,6,1,0,4,3,10,4.8,0,3,0,0,0,0,rPET,84.0,1.1,Yes
+Extra,Curvy,Two Hands Up,131,30.0,6,6,Center,Medium,Short,4,46.0,9,2,0,6,5,7,5.8,1,3,1,0,0,0,rPET,80.0,1.1,Yes
+Dreamtopia,Standard,Sitting,135,30.0,7,5,Back,Medium,Short,1,9.0,2,1,0,5,1,7,4.0,0,3,0,0,0,0,rPET,84.0,1.1,Yes
+Fashionistas,Standard,Sitting,112,29.2,3,8,Center,Medium,Knee,4,32.0,8,1,0,0,3,4,1.8,0,1,0,0,0,0,Recycled Cardboard + rPET,98.0,0.85,Yes
+Dreamtopia,Standard,One Leg Bent,132,30.0,7,5,Back,Very Long,Short,3,55.0,4,3,2,7,6,8,6.8,1,4,1,1,1,0,Virgin PET,50.0,1.0,Yes
+Signature,Made to Move,Walking,136,29.0,8,6,Center,Very Long,Knee,2,7.0,4,0,2,7,3,9,6.0,0,4,0,1,1,0,rPET,74.0,1.1,Yes
+Careers,Standard,Walking,120,29.0,5,7,Center,Short,Short,0,0.0,0,0,0,5,0,5,3.2,0,2,0,1,0,0,rPET,84.0,1.1,Yes
+Careers,Standard,Standing Straight,129,29.0,5,7,Center,Long,Knee,2,25.0,3,2,1,2,4,5,3.3,2,2,1,0,0,0,rPET,80.0,1.1,Yes
+Careers,Standard,Arms Open,128,29.0,5,7,Center,Very Long,Short,1,5.0,1,0,2,4,2,5,3.5,0,2,0,0,0,0,rPET,86.0,1.1,Yes
+Signature,Made to Move,Sitting,143,29.0,8,6,Center,Medium,Knee,1,4.0,1,0,0,5,0,9,4.0,0,3,0,0,0,0,rPET,84.0,1.1,Yes
+Made to Move,Made to Move,One Hand Up,128,29.0,7,5,Left,Very Long,Knee,0,0.0,0,0,2,5,2,8,4.6,0,3,0,0,0,0,rPET,84.0,1.1,Yes
+Fashionistas,Standard,Arms Open,119,29.0,3,8,Center,Short,Knee,4,37.0,9,2,0,2,4,4,3.1,1,2,1,0,0,0,rPET,82.0,1.1,Yes
+Signature,Made to Move,One Hand on Hip,140,29.0,8,6,Center,Short,Knee,1,12.0,2,1,0,6,1,9,4.8,0,3,0,0,0,0,rPET,84.0,1.1,Yes
+Careers,Standard,Two Hands Up,125,29.0,5,7,Center,Long,Knee,2,9.0,5,0,1,4,3,5,3.8,0,2,0,0,0,0,rPET,86.0,1.1,Yes
+Signature,Made to Move,One Hand on Hip,130,29.0,8,6,Center,Very Long,Long,5,67.0,7,4,3,5,9,10,7.4,2,4,2,0,1,0,Virgin PET,48.0,1.0,Yes
+Made to Move,Made to Move,One Hand on Hip,118,29.0,7,5,Left,Medium,Long,3,37.0,4,2,1,4,4,9,5.0,1,3,1,0,0,0,rPET,80.0,1.1,Yes
+Fashionistas,Standard,Arms Open,119,29.0,3,8,Center,Medium,Short,1,9.0,2,1,0,2,1,3,1.8,0,1,0,0,0,0,Recycled Cardboard + rPET,98.0,0.85,Yes
+Careers,Standard,Two Hands Up,115,29.0,5,7,Center,Long,Short,2,17.0,4,2,1,3,3,5,3.4,0,2,1,0,0,0,rPET,84.0,1.1,Yes
+Signature,Made to Move,One Hand Up,133,29.2,8,6,Center,Medium,Long,3,14.0,5,0,1,5,3,10,5.3,0,3,0,0,0,0,rPET,84.0,1.1,Yes
+Signature,Made to Move,Walking,141,29.2,8,6,Center,Medium,Long,2,27.0,4,1,1,8,3,9,6.4,0,4,0,2,1,1,Virgin PET,47.0,1.0,Yes
+Careers,Standard,One Hand on Hip,120,29.0,5,7,Center,Medium,Short,4,48.0,8,4,0,3,6,6,4.6,1,3,2,0,0,0,rPET,78.0,1.1,Yes
+Signature,Made to Move,Arms Open,139,29.2,8,6,Center,Long,Knee,2,44.0,2,2,1,6,5,9,6.2,1,4,1,0,1,0,Virgin PET,52.0,1.0,Yes
+Extra,Curvy,Walking,128,30.0,6,6,Center,Long,Short,5,86.0,9,5,1,7,7,8,7.2,2,3,2,1,1,0,Virgin PET,48.0,1.0,Yes
+Extra,Curvy,Sitting,138,30.0,6,6,Center,Medium,Knee,4,60.0,6,3,0,4,5,7,5.0,1,2,1,0,0,0,rPET,82.0,1.1,Yes
+Extra,Curvy,One Leg Bent,126,30.2,6,6,Center,Medium,Knee,1,30.0,1,1,0,6,1,6,4.2,0,3,0,1,0,0,rPET,82.0,1.1,Yes
+Made to Move,Made to Move,Sitting,127,29.0,7,5,Left,Short,Knee,0,0.0,0,0,0,4,0,8,3.4,0,2,0,0,0,0,rPET,86.0,1.1,Yes
+Signature,Made to Move,One Hand on Hip,144,29.0,8,6,Center,Very Long,Knee,5,52.0,8,4,2,6,8,10,7.5,2,4,2,0,1,0,Virgin PET,48.0,1.0,Yes
+Signature,Made to Move,Sitting,141,29.0,8,6,Center,Long,Short,5,34.0,11,1,1,5,4,10,5.6,1,3,0,0,0,0,rPET,82.0,1.1,Yes
+Dreamtopia,Standard,Two Hands Up,133,30.2,7,5,Back,Medium,Long,3,15.0,6,0,1,7,3,8,5.8,0,2,0,0,0,0,rPET,86.0,1.1,Yes
+Extra,Curvy,Sitting,125,30.0,6,6,Center,Long,Long,4,37.0,5,3,2,4,6,7,5.3,1,3,1,0,0,0,rPET,80.0,1.1,Yes
+Dreamtopia,Standard,One Hand Up,130,30.0,7,5,Back,Very Long,Long,1,1.0,1,0,3,6,3,7,5.2,0,3,0,0,0,0,rPET,84.0,1.1,Yes
+Extra,Curvy,Walking,137,30.0,6,6,Center,Long,Short,0,0.0,0,0,1,7,1,6,4.7,0,3,0,1,0,0,rPET,82.0,1.1,Yes
+Extra,Curvy,Two Hands Up,138,30.0,6,6,Center,Very Long,Short,5,79.0,8,3,2,6,7,8,6.8,2,4,1,0,1,0,Virgin PET,50.0,1.0,Yes
+Fashionistas,Standard,One Leg Bent,115,29.2,3,8,Center,Short,Short,5,31.0,5,1,0,2,3,5,3.0,0,2,0,1,0,0,Recycled Cardboard + rPET,94.0,0.85,Yes
+Careers,Standard,One Hand on Hip,118,29.2,5,7,Center,Long,Short,5,53.0,10,2,1,2,6,7,4.4,1,3,1,0,0,0,rPET,80.0,1.1,Yes
+Fashionistas,Standard,Walking,112,29.0,3,8,Center,Medium,Short,3,31.0,4,2,0,3,3,4,3.2,0,1,1,1,0,0,rPET,84.0,1.1,Yes
+Signature,Made to Move,One Hand Up,148,29.0,8,6,Center,Short,Knee,0,0.0,0,0,0,6,0,9,4.5,0,3,0,0,0,1,rPET,79.0,1.1,Yes
+Extra,Curvy,One Hand on Hip,125,30.2,6,6,Center,Long,Long,5,76.0,8,2,2,5,7,8,6.3,2,4,1,0,1,0,Virgin PET,50.0,1.0,Yes
+Extra,Curvy,One Leg Bent,136,30.0,6,6,Center,Medium,Long,2,27.0,2,1,1,6,3,6,5.0,0,3,0,1,0,0,rPET,82.0,1.1,Yes
+Careers,Standard,One Hand Up,122,29.2,5,7,Center,Long,Knee,2,21.0,3,1,1,3,3,5,3.4,0,2,0,0,0,0,rPET,86.0,1.1,Yes
+Signature,Made to Move,Standing Straight,138,29.0,8,6,Center,Very Long,Knee,5,61.0,8,4,2,4,8,10,6.6,2,4,2,0,1,0,Virgin PET,48.0,1.0,Yes
+Careers,Standard,Walking,118,29.0,5,7,Center,Medium,Knee,0,0.0,0,0,0,4,0,5,2.8,0,2,0,1,0,0,Recycled Cardboard + rPET,94.0,0.85,Yes
+Careers,Standard,One Hand on Hip,123,29.0,5,7,Center,Short,Knee,2,16.0,3,1,0,3,1,5,2.7,0,2,0,0,0,0,Recycled Cardboard + rPET,96.0,0.85,Yes
+Careers,Standard,One Hand Up,121,29.0,5,7,Center,Short,Knee,3,8.0,5,0,0,3,2,6,3.2,0,1,0,0,0,0,rPET,88.0,1.1,Yes
+Signature,Made to Move,One Leg Bent,150,29.0,8,6,Center,Medium,Knee,2,16.0,3,1,0,7,1,9,5.3,0,3,0,1,0,1,rPET,77.0,1.1,Yes
+Careers,Standard,One Hand on Hip,129,29.0,5,7,Center,Short,Short,1,7.0,1,0,0,3,0,5,2.4,0,2,0,0,0,0,Recycled Cardboard + rPET,96.0,0.85,Yes
+Fashionistas,Standard,One Leg Bent,120,29.2,3,8,Center,Long,Short,2,17.0,4,2,1,3,3,3,3.0,0,2,1,1,0,0,Recycled Cardboard + rPET,92.0,0.85,Yes
+Dreamtopia,Standard,Standing Straight,135,30.2,7,5,Back,Long,Short,4,50.0,6,2,1,5,6,8,6.0,1,3,1,0,0,0,rPET,80.0,1.1,Yes
+Dreamtopia,Standard,One Leg Bent,126,30.2,7,5,Back,Short,Short,4,20.0,4,0,0,7,2,8,5.4,0,3,0,1,0,0,rPET,82.0,1.1,Yes
+Extra,Curvy,One Hand on Hip,131,30.0,6,6,Center,Short,Short,2,19.0,2,1,0,5,1,6,3.8,0,2,0,0,0,0,rPET,86.0,1.1,Yes
+Fashionistas,Standard,One Hand Up,111,29.2,3,8,Center,Long,Short,2,15.0,3,1,1,1,2,3,1.8,0,1,0,0,0,0,Recycled Cardboard + rPET,98.0,0.85,Yes
+Careers,Standard,Walking,130,29.0,5,7,Center,Very Long,Short,4,49.0,8,3,2,5,7,6,5.9,2,3,1,1,1,0,rPET,70.0,1.1,Yes
+Fashionistas,Standard,Sitting,117,29.2,3,8,Center,Long,Knee,3,24.0,4,2,1,0,4,4,2.2,1,2,1,0,0,0,Recycled Cardboard + rPET,92.0,0.85,Yes
+Signature,Made to Move,Arms Open,136,29.2,8,6,Center,Long,Knee,3,53.0,3,2,1,6,5,10,6.4,1,4,1,0,1,0,Virgin PET,52.0,1.0,Yes
+Signature,Made to Move,One Hand Up,148,29.0,8,6,Center,Short,Short,5,44.0,5,1,0,6,4,10,6.1,1,4,0,0,1,1,Virgin PET,49.0,1.0,Yes
+Made to Move,Made to Move,Sitting,128,29.2,7,5,Left,Long,Long,4,57.0,5,3,2,4,7,9,6.0,2,4,1,0,1,0,Virgin PET,50.0,1.0,Yes
+Signature,Made to Move,Sitting,142,29.0,8,6,Center,Short,Short,5,84.0,8,4,0,5,6,10,6.4,1,4,2,0,1,0,Virgin PET,50.0,1.0,Yes
+Extra,Curvy,Sitting,126,30.2,6,6,Center,Medium,Knee,4,16.0,9,1,0,4,2,7,3.9,0,2,0,0,0,0,rPET,86.0,1.1,Yes
+Signature,Made to Move,One Leg Bent,150,29.2,8,6,Center,Medium,Short,1,24.0,1,1,0,7,1,9,5.3,0,3,0,1,0,1,rPET,77.0,1.1,Yes
+Signature,Made to Move,Sitting,143,29.0,8,6,Center,Medium,Short,5,37.0,7,2,0,5,4,10,5.6,1,3,1,0,0,0,rPET,80.0,1.1,Yes
+Careers,Standard,One Hand on Hip,125,29.0,5,7,Center,Short,Knee,5,42.0,6,2,0,3,5,7,4.5,1,3,1,0,0,0,rPET,80.0,1.1,Yes
+Made to Move,Made to Move,One Hand on Hip,125,29.0,7,5,Left,Long,Short,4,39.0,7,2,1,5,5,9,5.8,1,3,1,0,0,0,rPET,80.0,1.1,Yes
+Dreamtopia,Standard,One Hand Up,128,30.2,7,5,Back,Long,Long,5,47.0,8,2,2,6,7,9,7.0,2,3,1,0,1,0,Virgin PET,52.0,1.0,Yes
+Fashionistas,Standard,Walking,120,29.0,3,8,Center,Long,Knee,2,19.0,4,1,1,4,2,3,3.1,0,2,0,1,0,0,rPET,84.0,1.1,Yes
+Dreamtopia,Standard,Walking,121,30.0,7,5,Back,Medium,Long,3,42.0,5,3,1,8,6,8,7.3,1,4,1,2,1,1,Virgin PET,43.0,1.0,Yes
+Made to Move,Made to Move,Two Hands Up,125,29.2,7,5,Left,Medium,Knee,2,14.0,5,0,0,6,2,8,5.0,0,2,0,0,0,0,rPET,86.0,1.1,Yes
+Signature,Made to Move,One Leg Bent,148,29.0,8,6,Center,Very Long,Short,3,13.0,4,0,2,7,3,10,6.2,0,3,0,1,1,1,Virgin PET,51.0,1.0,Yes
+Dreamtopia,Standard,Arms Open,121,30.0,7,5,Back,Long,Short,0,0.0,0,0,1,7,1,7,4.9,0,3,0,0,0,0,rPET,84.0,1.1,Yes
+Extra,Curvy,One Hand on Hip,138,30.2,6,6,Center,Medium,Short,2,3.0,2,0,0,5,1,6,3.8,0,2,0,0,0,0,rPET,86.0,1.1,Yes
+Fashionistas,Standard,One Hand on Hip,118,29.0,3,8,Center,Medium,Short,2,48.0,4,2,0,1,4,3,2.4,1,2,1,0,0,0,Recycled Cardboard + rPET,92.0,0.85,Yes
+Made to Move,Made to Move,Standing Straight,118,29.0,7,5,Left,Very Long,Short,1,14.0,3,1,2,3,3,8,4.0,0,2,0,0,0,0,rPET,86.0,1.1,Yes
+Extra,Curvy,One Hand Up,125,30.0,6,6,Center,Short,Short,5,61.0,6,4,0,5,6,8,6.0,1,3,2,0,0,0,rPET,78.0,1.1,Yes
+Extra,Curvy,Walking,127,30.0,6,6,Center,Long,Long,4,67.0,8,4,2,7,8,7,7.4,2,4,2,1,1,0,Virgin PET,46.0,1.0,Yes
+Fashionistas,Standard,One Leg Bent,110,29.0,3,8,Center,Long,Short,0,0.0,0,0,1,2,1,3,1.8,0,1,0,1,0,0,Recycled Cardboard + rPET,96.0,0.85,Yes
+Signature,Made to Move,One Hand on Hip,139,29.0,8,6,Center,Medium,Knee,3,27.0,6,1,0,5,3,10,5.3,0,3,0,0,0,0,rPET,84.0,1.1,Yes
+Fashionistas,Standard,Walking,112,29.0,3,8,Center,Long,Short,2,23.0,2,1,1,3,3,3,3.0,0,2,0,1,0,0,Recycled Cardboard + rPET,94.0,0.85,Yes
+Signature,Made to Move,Sitting,148,29.0,8,6,Center,Long,Knee,4,45.0,7,2,1,5,6,10,6.4,1,4,1,0,1,1,Virgin PET,47.0,1.0,Yes
+Fashionistas,Standard,One Hand Up,120,29.0,3,8,Center,Very Long,Short,5,25.0,7,0,2,2,5,5,3.6,1,2,0,0,0,0,rPET,84.0,1.1,Yes
+Extra,Curvy,Arms Open,134,30.2,6,6,Center,Short,Knee,1,15.0,1,1,0,6,0,6,3.9,0,2,0,0,0,0,rPET,86.0,1.1,Yes
+Made to Move,Made to Move,Arms Open,121,29.2,7,5,Left,Short,Long,0,0.0,0,0,1,6,1,8,4.6,0,3,0,0,0,0,rPET,84.0,1.1,Yes
+Made to Move,Made to Move,Arms Open,121,29.0,7,5,Left,Long,Short,0,0.0,0,0,1,6,1,8,4.6,0,3,0,0,0,0,rPET,84.0,1.1,Yes
+Extra,Curvy,One Hand Up,135,30.0,6,6,Center,Long,Knee,4,33.0,6,1,1,5,4,7,5.0,1,3,0,0,0,0,rPET,82.0,1.1,Yes
+Signature,Made to Move,Walking,141,29.0,8,6,Center,Very Long,Long,4,31.0,6,2,3,8,7,10,8.0,2,4,1,2,1,1,Virgin PET,41.0,1.0,Yes
+Careers,Standard,Arms Open,127,29.0,5,7,Center,Short,Knee,5,50.0,7,3,0,4,5,7,5.0,1,3,1,0,0,0,rPET,80.0,1.1,Yes
+Careers,Standard,Two Hands Up,118,29.0,5,7,Center,Medium,Short,0,0.0,0,0,0,3,0,5,2.4,0,2,0,0,0,0,Recycled Cardboard + rPET,96.0,0.85,Yes
+Fashionistas,Standard,Arms Open,117,29.0,3,8,Center,Medium,Knee,4,45.0,7,3,0,2,5,4,3.4,1,2,1,0,0,0,rPET,82.0,1.1,Yes
+Fashionistas,Standard,Two Hands Up,118,29.0,3,8,Center,Medium,Short,3,31.0,5,2,0,2,4,4,3.1,1,2,1,0,0,0,rPET,82.0,1.1,Yes
+Extra,Curvy,Walking,126,30.0,6,6,Center,Medium,Short,5,31.0,9,1,0,7,3,8,5.8,0,3,0,1,0,0,rPET,82.0,1.1,Yes
+Fashionistas,Standard,One Hand Up,116,29.0,3,8,Center,Medium,Knee,4,19.0,7,1,0,1,2,4,2.0,0,1,0,0,0,0,Recycled Cardboard + rPET,98.0,0.85,Yes
+Careers,Standard,Standing Straight,123,29.2,5,7,Center,Long,Knee,0,0.0,0,0,1,2,1,5,2.2,0,2,0,0,0,0,Recycled Cardboard + rPET,96.0,0.85,Yes
+Careers,Standard,Walking,122,29.0,5,7,Center,Medium,Short,0,0.0,0,0,0,5,0,5,3.2,0,2,0,1,0,0,rPET,84.0,1.1,Yes
+Made to Move,Made to Move,One Hand on Hip,122,29.0,7,5,Left,Long,Short,4,36.0,7,3,1,5,5,9,5.8,1,3,1,0,0,0,rPET,80.0,1.1,Yes
+Fashionistas,Standard,Arms Open,116,29.0,3,8,Center,Medium,Long,5,24.0,6,0,1,2,4,5,3.3,1,2,0,0,0,0,rPET,84.0,1.1,Yes
+Dreamtopia,Standard,Walking,126,30.0,7,5,Back,Long,Knee,2,32.0,3,2,1,8,4,7,6.4,1,4,1,2,1,1,Virgin PET,43.0,1.0,Yes
+Fashionistas,Standard,One Hand Up,118,29.2,3,8,Center,Long,Knee,5,76.0,6,2,1,1,6,5,3.6,1,2,1,0,0,0,rPET,82.0,1.1,Yes
+Careers,Standard,One Leg Bent,117,29.0,5,7,Center,Short,Long,1,9.0,2,1,1,3,2,5,3.0,0,2,0,1,0,0,rPET,84.0,1.1,Yes
+Fashionistas,Standard,Standing Straight,120,29.0,3,8,Center,Medium,Short,2,37.0,4,2,0,1,3,3,2.1,0,2,1,0,0,0,Recycled Cardboard + rPET,94.0,0.85,Yes
+Fashionistas,Standard,Walking,112,29.2,3,8,Center,Long,Short,2,6.0,2,0,1,3,2,3,2.6,0,2,0,1,0,0,Recycled Cardboard + rPET,94.0,0.85,Yes
+Dreamtopia,Standard,Arms Open,120,30.0,7,5,Back,Long,Knee,0,0.0,0,0,1,7,1,7,4.9,0,3,0,0,0,0,rPET,84.0,1.1,Yes
+Extra,Curvy,One Leg Bent,134,30.0,6,6,Center,Long,Short,1,5.0,3,0,1,6,2,6,4.6,0,3,0,1,0,0,rPET,82.0,1.1,Yes
+Careers,Standard,Walking,118,29.0,5,7,Center,Long,Short,3,33.0,3,1,1,4,3,6,4.0,0,3,0,1,0,0,rPET,82.0,1.1,Yes
+Signature,Made to Move,One Leg Bent,147,29.0,8,6,Center,Long,Short,3,16.0,5,0,1,7,3,10,6.2,0,3,0,1,1,1,Virgin PET,51.0,1.0,Yes
+Extra,Curvy,Standing Straight,136,30.0,6,6,Center,Long,Long,5,48.0,7,2,2,4,7,8,5.8,2,3,1,0,1,0,rPET,72.0,1.1,Yes
+Signature,Made to Move,Sitting,149,29.0,8,6,Center,Short,Knee,5,50.0,6,3,0,5,5,10,6.0,1,4,1,0,1,1,rPET,67.0,1.1,Yes
+Fashionistas,Standard,One Hand on Hip,116,29.0,3,8,Center,Long,Short,3,38.0,3,2,1,1,4,4,2.6,1,1,1,0,0,0,Recycled Cardboard + rPET,94.0,0.85,Yes
+Careers,Standard,One Leg Bent,128,29.0,5,7,Center,Medium,Short,3,49.0,4,3,0,4,4,6,4.4,1,3,1,1,0,0,rPET,78.0,1.1,Yes
+Careers,Standard,Arms Open,129,29.2,5,7,Center,Short,Long,2,10.0,2,0,1,4,2,5,3.5,0,2,0,0,0,0,rPET,86.0,1.1,Yes
+Made to Move,Made to Move,Arms Open,127,29.2,7,5,Left,Medium,Long,2,22.0,2,1,1,6,3,8,5.4,0,3,0,0,0,0,rPET,84.0,1.1,Yes
+Dreamtopia,Standard,One Leg Bent,130,30.2,7,5,Back,Short,Knee,4,33.0,8,2,0,7,4,8,6.2,1,4,1,1,1,0,Virgin PET,50.0,1.0,Yes
+Fashionistas,Standard,Two Hands Up,114,29.0,3,8,Center,Very Long,Knee,5,56.0,6,2,2,2,7,5,4.4,2,3,1,0,1,0,rPET,72.0,1.1,Yes
+Fashionistas,Standard,Two Hands Up,120,29.0,3,8,Center,Long,Short,4,42.0,9,3,1,3,6,4,4.2,1,3,1,0,0,0,rPET,80.0,1.1,Yes
+Careers,Standard,Arms Open,124,29.0,5,7,Center,Long,Short,0,0.0,0,0,1,4,1,5,3.2,0,2,0,0,0,0,rPET,86.0,1.1,Yes
+Made to Move,Made to Move,One Hand on Hip,118,29.0,7,5,Left,Medium,Short,2,36.0,3,2,0,4,3,8,4.4,0,3,1,0,0,0,rPET,82.0,1.1,Yes
+Made to Move,Made to Move,Arms Open,115,29.0,7,5,Left,Medium,Short,2,19.0,3,2,0,5,2,8,4.6,0,3,1,0,0,0,rPET,82.0,1.1,Yes
+Fashionistas,Standard,Walking,118,29.2,3,8,Center,Very Long,Knee,0,0.0,0,0,2,3,2,3,2.6,0,2,0,1,0,0,Recycled Cardboard + rPET,94.0,0.85,Yes
+Dreamtopia,Standard,Arms Open,124,30.2,7,5,Back,Short,Knee,0,0.0,0,0,0,7,0,7,4.6,0,3,0,0,0,0,rPET,84.0,1.1,Yes
+Signature,Made to Move,Arms Open,131,29.0,8,6,Center,Very Long,Short,5,51.0,6,3,2,6,7,10,7.2,2,4,1,0,1,0,Virgin PET,50.0,1.0,Yes
+Made to Move,Made to Move,One Hand Up,128,29.0,7,5,Left,Very Long,Short,2,10.0,4,0,2,5,3,8,4.9,0,3,0,0,0,0,rPET,84.0,1.1,Yes
+Fashionistas,Standard,One Leg Bent,119,29.0,3,8,Center,Short,Knee,2,24.0,3,2,0,2,3,3,2.6,0,2,1,1,0,0,Recycled Cardboard + rPET,92.0,0.85,Yes
+Dreamtopia,Standard,Arms Open,124,30.2,7,5,Back,Long,Short,3,29.0,4,2,1,7,4,8,6.2,1,4,1,0,1,0,Virgin PET,52.0,1.0,Yes
+Careers,Standard,One Hand on Hip,117,29.0,5,7,Center,Long,Knee,4,41.0,5,2,1,2,6,6,4.2,1,3,1,0,0,0,rPET,80.0,1.1,Yes
+Fashionistas,Standard,Arms Open,116,29.0,3,8,Center,Short,Knee,2,17.0,3,1,0,2,1,3,1.8,0,1,0,0,0,0,Recycled Cardboard + rPET,98.0,0.85,Yes
+Made to Move,Made to Move,One Leg Bent,126,29.0,7,5,Left,Medium,Knee,3,41.0,5,1,0,6,4,9,5.9,1,3,0,1,0,0,rPET,80.0,1.1,Yes
+Made to Move,Made to Move,Arms Open,115,29.0,7,5,Left,Short,Short,2,14.0,3,1,0,5,1,8,4.2,0,3,0,0,0,0,rPET,84.0,1.1,Yes
+Careers,Standard,Arms Open,126,29.0,5,7,Center,Long,Long,2,21.0,4,2,2,4,5,5,4.6,1,2,1,0,0,0,rPET,82.0,1.1,Yes
+Dreamtopia,Standard,Walking,124,30.0,7,5,Back,Long,Knee,4,43.0,7,2,1,8,6,8,7.3,2,4,1,2,1,1,Virgin PET,41.0,1.0,Yes
+Dreamtopia,Standard,One Hand on Hip,121,30.0,7,5,Back,Long,Knee,2,27.0,2,1,1,6,3,7,5.2,0,3,0,0,0,0,rPET,84.0,1.1,Yes
+Extra,Curvy,Walking,134,30.2,6,6,Center,Medium,Short,0,0.0,0,0,0,7,0,6,4.4,0,3,0,1,0,0,rPET,82.0,1.1,Yes
+Dreamtopia,Standard,One Hand Up,121,30.2,7,5,Back,Medium,Short,5,81.0,6,3,0,6,5,9,6.2,1,4,1,0,1,0,Virgin PET,52.0,1.0,Yes
+Dreamtopia,Standard,Standing Straight,124,30.0,7,5,Back,Long,Knee,0,0.0,0,0,1,5,1,7,4.0,0,3,0,0,0,0,rPET,84.0,1.1,Yes
+Careers,Standard,One Hand on Hip,121,29.0,5,7,Center,Short,Short,0,0.0,0,0,0,3,0,5,2.4,0,2,0,0,0,0,Recycled Cardboard + rPET,96.0,0.85,Yes
+Signature,Made to Move,Walking,137,29.0,8,6,Center,Short,Short,4,27.0,5,1,0,7,3,10,6.2,0,4,0,1,1,0,Virgin PET,54.0,1.0,Yes
+Signature,Made to Move,One Leg Bent,131,29.0,8,6,Center,Medium,Knee,1,2.0,1,0,0,6,0,9,4.5,0,3,0,1,0,0,rPET,82.0,1.1,Yes
+Careers,Standard,One Hand Up,123,29.2,5,7,Center,Long,Long,4,61.0,6,4,2,3,8,6,5.4,2,3,2,0,1,0,rPET,70.0,1.1,Yes
+Extra,Curvy,One Hand on Hip,129,30.2,6,6,Center,Short,Short,5,56.0,6,3,0,5,5,8,5.6,1,3,1,0,0,0,rPET,80.0,1.1,Yes
+Extra,Curvy,Two Hands Up,131,30.0,6,6,Center,Medium,Short,0,0.0,0,0,0,6,0,6,3.9,0,2,0,0,0,0,rPET,86.0,1.1,Yes
+Extra,Curvy,Sitting,140,30.0,6,6,Center,Long,Short,5,70.0,6,3,1,5,6,8,6.0,1,3,1,0,0,0,rPET,80.0,1.1,Yes
+Made to Move,Made to Move,Two Hands Up,128,29.0,7,5,Left,Short,Knee,4,56.0,6,4,0,6,6,9,6.6,1,4,2,0,1,0,Virgin PET,50.0,1.0,Yes
+Fashionistas,Standard,Walking,110,29.2,3,8,Center,Long,Knee,3,44.0,6,3,1,3,6,4,4.2,1,2,1,1,0,0,rPET,80.0,1.1,Yes
+Extra,Curvy,One Leg Bent,129,30.0,6,6,Center,Long,Knee,0,0.0,0,0,1,6,1,6,4.2,0,3,0,1,0,0,rPET,82.0,1.1,Yes
+Dreamtopia,Standard,Walking,131,30.2,7,5,Back,Long,Knee,2,40.0,2,2,1,8,5,7,6.8,1,4,1,2,1,1,Virgin PET,43.0,1.0,Yes
+Signature,Made to Move,Standing Straight,146,29.0,8,6,Center,Short,Short,5,59.0,8,2,0,5,5,10,6.0,1,4,1,0,1,1,rPET,67.0,1.1,Yes
+Made to Move,Made to Move,One Leg Bent,119,29.0,7,5,Left,Long,Knee,3,23.0,5,2,1,5,5,9,5.8,1,2,1,1,0,0,rPET,80.0,1.1,Yes
+Careers,Standard,Standing Straight,130,29.0,5,7,Center,Very Long,Knee,1,16.0,1,1,2,2,2,5,2.6,0,2,0,0,0,0,Recycled Cardboard + rPET,96.0,0.85,Yes
+Signature,Made to Move,Standing Straight,146,29.2,8,6,Center,Long,Short,2,37.0,4,2,1,5,4,9,5.4,1,3,1,0,0,1,rPET,75.0,1.1,Yes
+Dreamtopia,Standard,One Leg Bent,132,30.0,7,5,Back,Short,Long,1,12.0,2,1,1,7,2,7,5.2,0,3,0,1,0,0,rPET,82.0,1.1,Yes
+Dreamtopia,Standard,One Leg Bent,123,30.0,7,5,Back,Very Long,Knee,1,35.0,1,1,2,7,3,7,5.6,0,3,0,1,0,0,rPET,82.0,1.1,Yes
+Made to Move,Made to Move,Two Hands Up,122,29.0,7,5,Left,Long,Short,3,45.0,5,2,1,6,6,9,6.6,1,4,1,0,1,0,Virgin PET,52.0,1.0,Yes
+Made to Move,Made to Move,One Leg Bent,117,29.0,7,5,Left,Long,Short,5,39.0,7,2,1,5,5,10,6.0,1,3,1,1,1,0,rPET,72.0,1.1,Yes
+Dreamtopia,Standard,One Hand Up,120,30.0,7,5,Back,Medium,Knee,3,44.0,5,2,0,6,5,8,6.0,1,4,1,0,1,0,Virgin PET,52.0,1.0,Yes
+Careers,Standard,Sitting,121,29.0,5,7,Center,Medium,Knee,2,16.0,2,1,0,2,1,5,2.2,0,2,0,0,0,0,Recycled Cardboard + rPET,96.0,0.85,Yes
+Dreamtopia,Standard,Sitting,125,30.0,7,5,Back,Long,Long,1,4.0,1,0,2,5,2,7,4.4,0,2,0,0,0,0,rPET,86.0,1.1,Yes
+Signature,Made to Move,One Hand on Hip,130,29.2,8,6,Center,Very Long,Short,0,0.0,0,0,2,5,2,9,4.8,0,3,0,0,0,0,rPET,84.0,1.1,Yes
+Extra,Curvy,Arms Open,125,30.0,6,6,Center,Long,Knee,0,0.0,0,0,1,6,1,6,4.2,0,3,0,0,0,0,rPET,84.0,1.1,Yes
+Dreamtopia,Standard,Standing Straight,135,30.0,7,5,Back,Long,Knee,3,29.0,4,2,1,5,4,8,5.2,1,3,1,0,0,0,rPET,80.0,1.1,Yes
+Extra,Curvy,Two Hands Up,129,30.0,6,6,Center,Medium,Knee,0,0.0,0,0,0,6,0,6,3.9,0,2,0,0,0,0,rPET,86.0,1.1,Yes
+Careers,Standard,Sitting,119,29.2,5,7,Center,Medium,Short,1,4.0,1,0,0,1,0,5,1.4,0,1,0,0,0,0,Recycled Cardboard + rPET,98.0,0.85,Yes
+Made to Move,Made to Move,Standing Straight,116,29.2,7,5,Left,Long,Short,2,15.0,2,1,1,3,2,8,3.6,0,2,0,0,0,0,rPET,86.0,1.1,Yes
+Made to Move,Made to Move,Standing Straight,123,29.0,7,5,Left,Long,Short,1,12.0,2,1,1,4,2,8,4.1,0,3,0,0,0,0,rPET,84.0,1.1,Yes
+Signature,Made to Move,One Leg Bent,132,29.2,8,6,Center,Long,Long,4,44.0,9,3,2,6,7,10,7.2,2,4,1,1,1,0,Virgin PET,48.0,1.0,Yes
+Extra,Curvy,Walking,137,30.2,6,6,Center,Short,Knee,0,0.0,0,0,0,7,0,6,4.4,0,3,0,1,0,0,rPET,82.0,1.1,Yes
+Fashionistas,Standard,Standing Straight,114,29.2,3,8,Center,Short,Short,2,26.0,4,2,0,0,3,3,1.6,0,1,1,0,0,0,Recycled Cardboard + rPET,96.0,0.85,Yes
+Careers,Standard,One Hand on Hip,121,29.0,5,7,Center,Long,Short,1,15.0,1,1,1,3,1,5,2.7,0,2,0,0,0,0,Recycled Cardboard + rPET,96.0,0.85,Yes
+Careers,Standard,One Leg Bent,125,29.2,5,7,Center,Very Long,Short,3,35.0,3,1,2,4,4,6,4.4,1,2,0,1,0,0,rPET,82.0,1.1,Yes
+Careers,Standard,Walking,116,29.0,5,7,Center,Very Long,Long,4,57.0,6,2,3,4,8,6,5.8,2,3,1,1,1,0,rPET,70.0,1.1,Yes
+Careers,Standard,One Hand on Hip,117,29.2,5,7,Center,Medium,Short,5,58.0,9,2,0,2,5,7,4.0,2,2,1,0,0,0,rPET,80.0,1.1,Yes
+Signature,Made to Move,Walking,146,29.0,8,6,Center,Long,Knee,2,23.0,3,2,1,8,4,9,6.8,1,4,1,2,1,1,Virgin PET,43.0,1.0,Yes
+Signature,Made to Move,Standing Straight,137,29.0,8,6,Center,Very Long,Short,1,4.0,1,0,2,4,2,9,4.3,0,3,0,0,0,0,rPET,84.0,1.1,Yes
+Extra,Curvy,Standing Straight,137,30.2,6,6,Center,Long,Short,3,32.0,6,2,1,4,5,7,5.0,1,2,1,0,0,0,rPET,82.0,1.1,Yes
+Signature,Made to Move,One Leg Bent,134,29.0,8,6,Center,Long,Knee,0,0.0,0,0,1,6,1,9,4.8,0,3,0,1,0,0,rPET,82.0,1.1,Yes
+Dreamtopia,Standard,One Leg Bent,131,30.0,7,5,Back,Short,Knee,0,0.0,0,0,0,7,0,7,4.6,0,3,0,1,0,0,rPET,82.0,1.1,Yes
+Made to Move,Made to Move,Sitting,117,29.2,7,5,Left,Short,Knee,4,55.0,6,3,0,3,5,9,4.9,1,3,1,0,0,0,rPET,80.0,1.1,Yes
+Fashionistas,Standard,One Hand on Hip,110,29.2,3,8,Center,Medium,Short,0,0.0,0,0,0,1,0,3,1.0,0,1,0,0,0,0,Recycled Cardboard + rPET,98.0,0.85,Yes
+Fashionistas,Standard,One Hand on Hip,112,29.0,3,8,Center,Short,Short,2,18.0,3,1,0,1,1,3,1.4,0,1,0,0,0,0,Recycled Cardboard + rPET,98.0,0.85,Yes
+Made to Move,Made to Move,Two Hands Up,122,29.0,7,5,Left,Short,Short,5,66.0,8,4,0,6,6,10,6.8,2,4,2,0,1,0,Virgin PET,48.0,1.0,Yes
+Careers,Standard,Two Hands Up,123,29.2,5,7,Center,Medium,Knee,2,16.0,2,1,0,4,1,5,3.2,0,2,0,0,0,0,rPET,86.0,1.1,Yes
+Made to Move,Made to Move,Walking,122,29.0,7,5,Left,Long,Long,4,19.0,8,0,2,7,4,9,6.4,1,4,0,1,1,0,Virgin PET,52.0,1.0,Yes
+Careers,Standard,Two Hands Up,123,29.0,5,7,Center,Long,Knee,0,0.0,0,0,1,4,1,5,3.2,0,2,0,0,0,0,rPET,86.0,1.1,Yes
+Made to Move,Made to Move,One Hand Up,128,29.2,7,5,Left,Very Long,Knee,0,0.0,0,0,2,5,2,8,4.6,0,3,0,0,0,0,rPET,84.0,1.1,Yes
+Signature,Made to Move,One Hand Up,134,29.2,8,6,Center,Medium,Knee,1,8.0,3,0,0,5,1,9,4.4,0,3,0,0,0,0,rPET,84.0,1.1,Yes
+Signature,Made to Move,Standing Straight,134,29.0,8,6,Center,Very Long,Knee,5,26.0,6,1,2,4,5,10,5.6,1,3,0,0,0,0,rPET,82.0,1.1,Yes
+Signature,Made to Move,Standing Straight,130,29.0,8,6,Center,Long,Short,4,28.0,7,1,1,4,4,10,5.2,1,3,0,0,0,0,rPET,82.0,1.1,Yes
+Made to Move,Made to Move,Walking,117,29.0,7,5,Left,Medium,Knee,3,17.0,4,1,0,6,1,9,4.8,0,2,0,1,0,0,rPET,84.0,1.1,Yes
+Extra,Curvy,Arms Open,137,30.0,6,6,Center,Medium,Short,3,64.0,4,3,0,6,4,7,5.5,1,3,1,0,0,0,rPET,80.0,1.1,Yes
+Fashionistas,Standard,Two Hands Up,110,29.2,3,8,Center,Medium,Knee,2,37.0,4,2,0,2,3,3,2.6,0,2,1,0,0,0,Recycled Cardboard + rPET,94.0,0.85,Yes
+Fashionistas,Standard,Two Hands Up,119,29.0,3,8,Center,Very Long,Long,4,30.0,7,3,3,2,7,4,4.2,2,3,1,0,1,0,rPET,72.0,1.1,Yes
+Made to Move,Made to Move,Standing Straight,115,29.0,7,5,Left,Long,Knee,3,40.0,6,3,1,3,6,9,5.2,1,3,1,0,0,0,rPET,80.0,1.1,Yes
+Signature,Made to Move,Arms Open,131,29.0,8,6,Center,Long,Long,5,47.0,8,1,2,6,6,10,6.8,1,4,0,0,1,0,Virgin PET,54.0,1.0,Yes
+Careers,Standard,One Leg Bent,129,29.0,5,7,Center,Long,Knee,4,33.0,6,2,1,4,5,6,4.8,1,3,1,1,0,0,rPET,78.0,1.1,Yes
+Careers,Standard,One Hand Up,129,29.2,5,7,Center,Very Long,Short,0,0.0,0,0,2,3,2,5,3.0,0,2,0,0,0,0,rPET,86.0,1.1,Yes
+Careers,Standard,Standing Straight,123,29.0,5,7,Center,Very Long,Knee,2,13.0,3,1,2,2,3,5,3.0,0,2,0,0,0,0,Recycled Cardboard + rPET,96.0,0.85,Yes
+Dreamtopia,Standard,One Leg Bent,132,30.0,7,5,Back,Long,Short,5,50.0,9,3,1,7,6,9,7.0,1,4,1,1,1,0,Virgin PET,50.0,1.0,Yes
+Dreamtopia,Standard,Two Hands Up,120,30.0,7,5,Back,Medium,Knee,2,14.0,5,1,0,7,2,7,5.2,0,3,0,0,0,0,rPET,84.0,1.1,Yes
+Signature,Made to Move,Arms Open,144,29.0,8,6,Center,Short,Short,0,0.0,0,0,0,7,0,9,5.0,0,3,0,0,0,0,rPET,84.0,1.1,Yes
+Fashionistas,Standard,One Hand Up,117,29.2,3,8,Center,Long,Short,0,0.0,0,0,1,1,1,3,1.4,0,1,0,0,0,0,Recycled Cardboard + rPET,98.0,0.85,Yes
+Extra,Curvy,Standing Straight,127,30.0,6,6,Center,Long,Knee,0,0.0,0,0,1,4,1,6,3.4,0,2,0,0,0,0,rPET,86.0,1.1,Yes
+Dreamtopia,Standard,Arms Open,128,30.0,7,5,Back,Medium,Knee,1,18.0,1,1,0,7,0,7,4.6,0,3,0,0,0,0,rPET,84.0,1.1,Yes
+Signature,Made to Move,One Hand on Hip,134,29.2,8,6,Center,Long,Short,5,68.0,7,2,1,5,6,10,6.4,1,3,1,0,1,0,Virgin PET,54.0,1.0,Yes
+Fashionistas,Standard,One Hand Up,117,29.2,3,8,Center,Medium,Knee,1,1.0,1,0,0,1,0,3,1.0,0,1,0,0,0,0,Recycled Cardboard + rPET,98.0,0.85,Yes
+Signature,Made to Move,Sitting,131,29.2,8,6,Center,Very Long,Long,0,0.0,0,0,3,4,3,9,4.6,0,3,0,0,0,0,rPET,84.0,1.1,Yes
+Dreamtopia,Standard,One Hand on Hip,131,30.2,7,5,Back,Long,Knee,2,4.0,4,0,1,6,2,7,4.8,0,3,0,0,0,0,rPET,84.0,1.1,Yes
+Careers,Standard,Two Hands Up,129,29.0,5,7,Center,Long,Short,2,20.0,2,1,1,4,3,5,3.8,0,2,0,0,0,0,rPET,86.0,1.1,Yes
+Fashionistas,Standard,One Hand on Hip,120,29.0,3,8,Center,Short,Knee,2,19.0,3,1,0,2,1,3,1.8,0,1,0,0,0,0,Recycled Cardboard + rPET,98.0,0.85,Yes
+Fashionistas,Standard,Standing Straight,112,29.0,3,8,Center,Medium,Knee,2,20.0,3,1,0,0,2,3,1.3,0,1,0,0,0,0,Recycled Cardboard + rPET,98.0,0.85,Yes
+Dreamtopia,Standard,One Hand Up,133,30.2,7,5,Back,Medium,Long,2,34.0,5,2,1,6,5,7,5.8,1,3,1,0,0,0,rPET,80.0,1.1,Yes
+Fashionistas,Standard,Sitting,110,29.0,3,8,Center,Very Long,Long,0,0.0,0,0,3,0,3,3,1.6,0,1,0,0,0,0,Recycled Cardboard + rPET,98.0,0.85,Yes
+Careers,Standard,Walking,118,29.2,5,7,Center,Medium,Short,5,58.0,6,2,0,4,5,7,5.0,1,3,1,1,0,0,rPET,78.0,1.1,Yes
+Dreamtopia,Standard,Two Hands Up,131,30.0,7,5,Back,Medium,Knee,5,62.0,8,1,0,7,4,9,6.4,1,4,0,0,1,0,Virgin PET,54.0,1.0,Yes
+Made to Move,Made to Move,Sitting,117,29.0,7,5,Left,Very Long,Long,4,34.0,8,2,3,3,7,9,5.6,2,3,1,0,1,0,rPET,72.0,1.1,Yes
+Made to Move,Made to Move,One Hand on Hip,128,29.2,7,5,Left,Long,Long,4,48.0,5,3,2,5,7,9,6.5,2,4,1,0,1,0,Virgin PET,50.0,1.0,Yes
+Careers,Standard,Sitting,130,29.2,5,7,Center,Long,Knee,2,14.0,5,0,1,2,3,5,3.0,0,2,0,0,0,0,Recycled Cardboard + rPET,96.0,0.85,Yes
+Dreamtopia,Standard,Walking,129,30.0,7,5,Back,Medium,Knee,2,28.0,4,2,0,8,3,7,6.0,0,4,1,2,1,1,Virgin PET,45.0,1.0,Yes
+Signature,Made to Move,Sitting,140,29.2,8,6,Center,Very Long,Knee,3,48.0,6,3,2,5,7,10,6.7,2,4,1,0,1,0,Virgin PET,50.0,1.0,Yes
+Signature,Made to Move,Sitting,143,29.0,8,6,Center,Short,Knee,0,0.0,0,0,0,5,0,9,4.0,0,3,0,0,0,0,rPET,84.0,1.1,Yes
+Careers,Standard,Standing Straight,130,29.2,5,7,Center,Medium,Knee,1,15.0,2,1,0,2,1,5,2.2,0,2,0,0,0,0,Recycled Cardboard + rPET,96.0,0.85,Yes
+Signature,Made to Move,Sitting,134,29.2,8,6,Center,Medium,Long,5,51.0,6,1,1,4,5,10,5.6,1,3,0,0,0,0,rPET,82.0,1.1,Yes
+Extra,Curvy,One Hand on Hip,133,30.0,6,6,Center,Medium,Short,3,52.0,4,2,0,5,4,7,5.0,1,3,1,0,0,0,rPET,80.0,1.1,Yes
+Made to Move,Made to Move,One Hand on Hip,130,29.2,7,5,Left,Long,Short,1,35.0,1,1,1,5,2,8,4.6,0,3,0,0,0,0,rPET,84.0,1.1,Yes
+Made to Move,Made to Move,Two Hands Up,115,29.0,7,5,Left,Short,Short,4,28.0,6,1,0,5,3,9,5.1,0,3,0,0,0,0,rPET,84.0,1.1,Yes
+Signature,Made to Move,One Hand Up,145,29.2,8,6,Center,Short,Long,3,45.0,4,2,1,6,5,10,6.4,1,3,1,0,1,1,Virgin PET,49.0,1.0,Yes
+Signature,Made to Move,Walking,132,29.0,8,6,Center,Long,Knee,3,25.0,6,1,1,7,4,10,6.6,1,4,0,1,1,0,Virgin PET,52.0,1.0,Yes
+Dreamtopia,Standard,Standing Straight,132,30.2,7,5,Back,Long,Knee,0,0.0,0,0,1,5,1,7,4.0,0,3,0,0,0,0,rPET,84.0,1.1,Yes
+Dreamtopia,Standard,One Hand on Hip,130,30.2,7,5,Back,Long,Short,5,24.0,9,1,1,6,4,9,5.9,1,2,0,0,0,0,rPET,84.0,1.1,Yes
+Careers,Standard,One Leg Bent,126,29.0,5,7,Center,Very Long,Knee,5,58.0,8,2,2,4,7,7,5.6,2,3,1,1,1,0,rPET,70.0,1.1,Yes
+Dreamtopia,Standard,Standing Straight,129,30.0,7,5,Back,Long,Knee,5,72.0,6,4,1,5,7,9,6.5,2,4,2,0,1,0,Virgin PET,48.0,1.0,Yes
+Extra,Curvy,Sitting,127,30.0,6,6,Center,Long,Knee,2,16.0,3,1,1,4,2,6,3.7,0,2,0,0,0,0,rPET,86.0,1.1,Yes
+Extra,Curvy,One Leg Bent,139,30.0,6,6,Center,Medium,Short,5,62.0,11,4,0,6,6,8,6.4,1,4,2,1,1,0,Virgin PET,48.0,1.0,Yes
+Extra,Curvy,Sitting,128,30.0,6,6,Center,Medium,Short,4,25.0,7,2,0,4,4,7,4.6,1,3,1,0,0,0,rPET,80.0,1.1,Yes
+Made to Move,Made to Move,Walking,128,29.0,7,5,Left,Medium,Short,1,30.0,1,1,0,7,1,8,5.1,0,3,0,1,0,0,rPET,82.0,1.1,Yes
+Careers,Standard,Walking,116,29.2,5,7,Center,Long,Knee,3,19.0,3,1,1,4,2,6,3.7,0,2,0,1,0,0,rPET,84.0,1.1,Yes
+Careers,Standard,Walking,125,29.0,5,7,Center,Medium,Short,2,9.0,4,0,0,5,1,5,3.6,0,2,0,1,0,0,rPET,84.0,1.1,Yes
+Made to Move,Made to Move,One Leg Bent,129,29.0,7,5,Left,Long,Short,2,32.0,5,1,1,6,4,8,5.7,1,3,0,1,0,0,rPET,80.0,1.1,Yes
+Signature,Made to Move,One Hand on Hip,137,29.2,8,6,Center,Medium,Short,4,36.0,5,2,0,5,4,10,5.6,1,3,1,0,0,0,rPET,80.0,1.1,Yes
+Made to Move,Made to Move,One Leg Bent,115,29.2,7,5,Left,Very Long,Long,4,33.0,7,1,3,5,6,9,6.2,1,4,0,1,1,0,Virgin PET,52.0,1.0,Yes
+Fashionistas,Standard,One Hand on Hip,117,29.0,3,8,Center,Medium,Short,4,66.0,6,4,0,1,6,4,3.4,1,2,2,0,0,0,rPET,80.0,1.1,Yes
+Made to Move,Made to Move,Arms Open,119,29.0,7,5,Left,Medium,Short,5,44.0,7,2,0,5,5,10,6.0,1,4,1,0,1,0,rPET,72.0,1.1,Yes
+Signature,Made to Move,Walking,143,29.0,8,6,Center,Medium,Long,2,6.0,4,0,1,8,2,9,6.1,0,4,0,2,1,1,Virgin PET,47.0,1.0,Yes
+Signature,Made to Move,Walking,133,29.0,8,6,Center,Long,Knee,1,18.0,1,1,1,7,1,9,5.3,0,3,0,1,0,0,rPET,82.0,1.1,Yes
+Fashionistas,Standard,Standing Straight,115,29.0,3,8,Center,Long,Short,5,35.0,7,2,1,0,5,5,2.8,1,2,1,0,0,0,Recycled Cardboard + rPET,92.0,0.85,Yes
+Signature,Made to Move,Walking,132,29.2,8,6,Center,Long,Long,0,0.0,0,0,2,7,2,9,5.6,0,3,0,1,0,0,rPET,82.0,1.1,Yes
+Extra,Curvy,Sitting,135,30.0,6,6,Center,Long,Knee,5,69.0,8,4,1,4,7,8,5.8,2,2,2,0,1,0,rPET,72.0,1.1,Yes
+Fashionistas,Standard,One Leg Bent,120,29.2,3,8,Center,Short,Short,3,15.0,6,0,0,3,2,4,2.8,0,2,0,1,0,0,Recycled Cardboard + rPET,94.0,0.85,Yes
+Signature,Made to Move,Walking,137,29.2,8,6,Center,Short,Knee,3,24.0,3,2,0,7,3,10,6.2,0,4,1,1,1,0,Virgin PET,52.0,1.0,Yes
+Fashionistas,Standard,Sitting,117,29.0,3,8,Center,Short,Knee,0,0.0,0,0,0,0,0,3,0.6,0,1,0,0,0,0,Recycled Cardboard + rPET,98.0,0.85,Yes
+Signature,Made to Move,One Hand on Hip,146,29.2,8,6,Center,Long,Short,0,0.0,0,0,1,6,1,9,4.8,0,3,0,0,0,1,rPET,79.0,1.1,Yes
+Signature,Made to Move,One Hand Up,149,29.0,8,6,Center,Long,Short,5,32.0,7,2,1,6,5,10,6.4,1,4,1,0,1,1,Virgin PET,47.0,1.0,Yes
+Dreamtopia,Standard,One Hand on Hip,127,30.2,7,5,Back,Medium,Knee,1,16.0,1,1,0,6,0,7,4.1,0,3,0,0,0,0,rPET,84.0,1.1,Yes
+Careers,Standard,Sitting,122,29.0,5,7,Center,Long,Knee,5,63.0,7,4,1,2,7,7,4.8,2,3,2,0,1,0,rPET,70.0,1.1,Yes
+Fashionistas,Standard,One Leg Bent,115,29.2,3,8,Center,Medium,Short,0,0.0,0,0,0,2,0,3,1.5,0,1,0,1,0,0,Recycled Cardboard + rPET,96.0,0.85,Yes
+Careers,Standard,One Leg Bent,124,29.0,5,7,Center,Very Long,Short,5,58.0,10,4,2,4,8,7,6.0,2,4,2,1,1,0,rPET,66.0,1.1,Yes
+Dreamtopia,Standard,Walking,125,30.0,7,5,Back,Very Long,Knee,2,26.0,3,1,2,8,4,7,6.4,1,4,0,2,1,1,Virgin PET,45.0,1.0,Yes
+Signature,Made to Move,One Hand on Hip,145,29.0,8,6,Center,Long,Knee,0,0.0,0,0,1,6,1,9,4.8,0,3,0,0,0,1,rPET,79.0,1.1,Yes
+Careers,Standard,Two Hands Up,121,29.0,5,7,Center,Short,Knee,2,18.0,2,1,0,4,1,5,3.2,0,2,0,0,0,0,rPET,86.0,1.1,Yes
+Made to Move,Made to Move,Two Hands Up,128,29.0,7,5,Left,Long,Knee,2,15.0,5,1,1,6,3,8,5.4,0,3,0,0,0,0,rPET,84.0,1.1,Yes
+Extra,Curvy,Two Hands Up,133,30.0,6,6,Center,Long,Short,0,0.0,0,0,1,6,1,6,4.2,0,3,0,0,0,0,rPET,84.0,1.1,Yes
+Dreamtopia,Standard,Sitting,133,30.0,7,5,Back,Long,Short,1,15.0,2,1,1,5,2,7,4.4,0,3,0,0,0,0,rPET,84.0,1.1,Yes
+Careers,Standard,Standing Straight,118,29.2,5,7,Center,Long,Short,4,64.0,6,4,1,1,7,6,4.1,2,2,2,0,1,0,rPET,72.0,1.1,Yes
+Extra,Curvy,Walking,125,30.0,6,6,Center,Short,Knee,2,7.0,4,0,0,7,1,6,4.7,0,3,0,1,0,0,rPET,82.0,1.1,Yes
+Made to Move,Made to Move,Arms Open,117,29.2,7,5,Left,Short,Short,4,21.0,5,1,0,5,3,9,5.1,0,3,0,0,0,0,rPET,84.0,1.1,Yes
+Fashionistas,Standard,One Hand Up,112,29.2,3,8,Center,Medium,Knee,2,19.0,2,1,0,1,1,3,1.4,0,1,0,0,0,0,Recycled Cardboard + rPET,98.0,0.85,Yes
+Signature,Made to Move,Two Hands Up,135,29.0,8,6,Center,Medium,Short,5,62.0,6,4,0,6,6,10,6.8,2,4,2,0,1,0,Virgin PET,48.0,1.0,Yes
+Made to Move,Made to Move,One Leg Bent,115,29.2,7,5,Left,Short,Short,3,27.0,6,1,0,5,3,9,5.1,0,2,0,1,0,0,rPET,84.0,1.1,Yes
+Signature,Made to Move,Arms Open,139,29.0,8,6,Center,Short,Knee,5,37.0,7,2,0,6,4,10,6.1,1,4,1,0,1,0,Virgin PET,52.0,1.0,Yes
+Fashionistas,Standard,Standing Straight,111,29.0,3,8,Center,Long,Short,5,45.0,6,2,1,0,6,5,3.1,1,2,1,0,0,0,rPET,82.0,1.1,Yes
+Extra,Curvy,Standing Straight,127,30.0,6,6,Center,Long,Knee,5,38.0,8,3,1,4,5,8,5.2,2,3,1,0,0,0,rPET,78.0,1.1,Yes
+Careers,Standard,Walking,119,29.0,5,7,Center,Long,Knee,1,4.0,1,0,1,4,1,5,3.2,0,2,0,1,0,0,rPET,84.0,1.1,Yes
+Fashionistas,Standard,Standing Straight,114,29.0,3,8,Center,Medium,Knee,2,47.0,4,2,0,0,4,3,2.0,1,2,1,0,0,0,Recycled Cardboard + rPET,92.0,0.85,Yes
+Signature,Made to Move,One Leg Bent,138,29.2,8,6,Center,Long,Short,3,46.0,5,3,1,6,6,10,6.8,1,3,1,1,1,0,Virgin PET,52.0,1.0,Yes
+Made to Move,Made to Move,Sitting,123,29.0,7,5,Left,Medium,Knee,4,32.0,4,1,0,4,2,9,4.3,0,3,0,0,0,0,rPET,84.0,1.1,Yes
+Signature,Made to Move,One Leg Bent,130,29.0,8,6,Center,Long,Long,4,26.0,5,1,2,6,5,10,6.4,1,4,0,1,1,0,Virgin PET,52.0,1.0,Yes
+Careers,Standard,Arms Open,115,29.0,5,7,Center,Long,Knee,3,46.0,5,1,1,3,5,6,4.3,1,3,0,0,0,0,rPET,82.0,1.1,Yes
+Made to Move,Made to Move,Walking,125,29.0,7,5,Left,Long,Long,0,0.0,0,0,2,7,2,8,5.4,0,3,0,1,0,0,rPET,82.0,1.1,Yes
+Made to Move,Made to Move,Sitting,121,29.0,7,5,Left,Long,Short,3,31.0,3,2,1,4,4,9,5.0,1,3,1,0,0,0,rPET,80.0,1.1,Yes
+Fashionistas,Standard,One Hand Up,119,29.0,3,8,Center,Short,Knee,3,24.0,5,2,0,1,4,4,2.6,1,2,1,0,0,0,Recycled Cardboard + rPET,92.0,0.85,Yes
+Careers,Standard,Arms Open,119,29.0,5,7,Center,Medium,Knee,3,26.0,7,2,0,3,4,6,4.0,1,2,1,0,0,0,rPET,82.0,1.1,Yes
+Fashionistas,Standard,Arms Open,113,29.2,3,8,Center,Long,Knee,2,29.0,2,1,1,2,3,3,2.6,0,2,0,0,0,0,Recycled Cardboard + rPET,96.0,0.85,Yes
+Careers,Standard,Two Hands Up,122,29.0,5,7,Center,Medium,Knee,4,53.0,8,3,0,4,5,6,4.8,1,3,1,0,0,0,rPET,80.0,1.1,Yes
+Signature,Made to Move,One Leg Bent,132,29.0,8,6,Center,Medium,Short,1,22.0,3,1,0,6,2,9,5.2,0,3,0,1,0,0,rPET,82.0,1.1,Yes
+Signature,Made to Move,Sitting,135,29.2,8,6,Center,Long,Short,3,45.0,5,3,1,4,6,10,5.9,1,3,1,0,0,0,rPET,80.0,1.1,Yes
+Fashionistas,Standard,Two Hands Up,116,29.0,3,8,Center,Short,Long,3,40.0,7,2,1,2,6,4,3.8,1,2,1,0,0,0,rPET,82.0,1.1,Yes
+Careers,Standard,Sitting,128,29.0,5,7,Center,Short,Short,2,34.0,2,2,0,2,3,5,3.0,0,2,1,0,0,0,Recycled Cardboard + rPET,94.0,0.85,Yes
+Fashionistas,Standard,Sitting,120,29.0,3,8,Center,Long,Knee,2,42.0,4,2,1,1,5,3,2.8,1,2,1,0,0,0,Recycled Cardboard + rPET,92.0,0.85,Yes
+Fashionistas,Standard,Standing Straight,114,29.2,3,8,Center,Long,Long,5,41.0,8,2,2,0,7,5,3.4,2,2,1,0,1,0,rPET,74.0,1.1,Yes
+Signature,Made to Move,Walking,149,29.0,8,6,Center,Medium,Short,2,35.0,3,1,0,8,2,9,6.1,0,4,0,2,1,1,Virgin PET,47.0,1.0,Yes
+Signature,Made to Move,Walking,134,29.0,8,6,Center,Long,Long,0,0.0,0,0,2,7,2,9,5.6,0,3,0,1,0,0,rPET,82.0,1.1,Yes
+Dreamtopia,Standard,Arms Open,125,30.0,7,5,Back,Medium,Long,0,0.0,0,0,1,7,1,7,4.9,0,3,0,0,0,0,rPET,84.0,1.1,Yes
+Made to Move,Made to Move,Two Hands Up,121,29.0,7,5,Left,Long,Knee,2,19.0,2,1,1,6,2,8,5.0,0,2,0,0,0,0,rPET,86.0,1.1,Yes
+Extra,Curvy,One Hand on Hip,139,30.2,6,6,Center,Short,Short,4,32.0,8,2,0,5,4,7,5.0,1,3,1,0,0,0,rPET,80.0,1.1,Yes
+Extra,Curvy,One Leg Bent,125,30.0,6,6,Center,Medium,Long,3,42.0,4,1,1,6,4,7,5.5,1,3,0,1,0,0,rPET,80.0,1.1,Yes
+Dreamtopia,Standard,Two Hands Up,132,30.0,7,5,Back,Long,Knee,1,30.0,1,1,1,7,2,7,5.2,0,2,0,0,0,0,rPET,86.0,1.1,Yes
+Fashionistas,Standard,Sitting,112,29.0,3,8,Center,Long,Short,2,13.0,3,1,1,0,2,3,1.3,0,1,0,0,0,0,Recycled Cardboard + rPET,98.0,0.85,Yes
+Signature,Made to Move,Arms Open,148,29.0,8,6,Center,Short,Knee,5,60.0,9,4,0,7,6,10,7.2,1,4,2,0,1,1,Virgin PET,45.0,1.0,Yes
+Dreamtopia,Standard,Walking,128,30.2,7,5,Back,Long,Knee,3,51.0,4,2,1,8,5,8,7.0,2,4,1,2,1,1,Virgin PET,41.0,1.0,Yes
+Extra,Curvy,Arms Open,132,30.0,6,6,Center,Short,Long,1,9.0,2,1,1,6,2,6,4.6,0,3,0,0,0,0,rPET,84.0,1.1,Yes
+Made to Move,Made to Move,One Hand on Hip,130,29.0,7,5,Left,Medium,Long,0,0.0,0,0,1,5,1,8,4.2,0,3,0,0,0,0,rPET,84.0,1.1,Yes
+Fashionistas,Standard,Two Hands Up,117,29.0,3,8,Center,Long,Short,4,20.0,7,1,1,2,4,4,3.1,1,2,0,0,0,0,rPET,84.0,1.1,Yes
+Signature,Made to Move,One Hand Up,142,29.0,8,6,Center,Long,Knee,2,36.0,2,1,1,6,3,9,5.6,0,3,0,0,0,0,rPET,84.0,1.1,Yes
+Careers,Standard,Sitting,125,29.2,5,7,Center,Short,Knee,1,6.0,1,0,0,2,0,5,1.9,0,1,0,0,0,0,Recycled Cardboard + rPET,98.0,0.85,Yes
+Careers,Standard,One Leg Bent,120,29.2,5,7,Center,Long,Knee,3,17.0,6,0,1,4,3,6,4.0,0,3,0,1,0,0,rPET,82.0,1.1,Yes
+Made to Move,Made to Move,Walking,130,29.2,7,5,Left,Long,Knee,4,23.0,7,1,1,7,4,9,6.4,1,4,0,1,1,0,Virgin PET,52.0,1.0,Yes
+Made to Move,Made to Move,One Leg Bent,120,29.0,7,5,Left,Long,Long,5,61.0,9,3,2,6,7,10,7.2,2,4,1,1,1,0,Virgin PET,48.0,1.0,Yes
+Made to Move,Made to Move,One Hand on Hip,128,29.0,7,5,Left,Long,Long,1,18.0,2,1,2,5,3,8,4.9,0,3,0,0,0,0,rPET,84.0,1.1,Yes
+Extra,Curvy,Two Hands Up,130,30.2,6,6,Center,Very Long,Short,2,12.0,3,1,2,6,3,6,5.0,0,3,0,0,0,0,rPET,84.0,1.1,Yes
+Fashionistas,Standard,Arms Open,110,29.2,3,8,Center,Medium,Short,2,6.0,4,0,0,2,1,3,1.8,0,1,0,0,0,0,Recycled Cardboard + rPET,98.0,0.85,Yes
+Fashionistas,Standard,Walking,114,29.2,3,8,Center,Very Long,Knee,0,0.0,0,0,2,3,2,3,2.6,0,2,0,1,0,0,Recycled Cardboard + rPET,94.0,0.85,Yes
+Dreamtopia,Standard,Standing Straight,135,30.0,7,5,Back,Short,Knee,2,11.0,2,0,0,5,1,7,4.0,0,3,0,0,0,0,rPET,84.0,1.1,Yes
+Dreamtopia,Standard,One Hand on Hip,121,30.2,7,5,Back,Long,Long,3,42.0,3,1,2,6,5,8,6.0,1,4,0,0,1,0,Virgin PET,54.0,1.0,Yes
+Made to Move,Made to Move,Standing Straight,130,29.0,7,5,Left,Medium,Long,4,30.0,7,2,1,4,5,9,5.4,2,3,1,0,0,0,rPET,78.0,1.1,Yes
+Made to Move,Made to Move,One Hand Up,115,29.2,7,5,Left,Long,Short,5,95.0,8,4,1,4,7,10,6.2,2,4,2,0,1,0,Virgin PET,48.0,1.0,Yes
+Extra,Curvy,Sitting,129,30.0,6,6,Center,Medium,Long,0,0.0,0,0,1,4,1,6,3.4,0,2,0,0,0,0,rPET,86.0,1.1,Yes
+Signature,Made to Move,Walking,131,29.0,8,6,Center,Short,Knee,1,12.0,1,1,0,7,0,9,5.0,0,3,0,1,0,0,rPET,82.0,1.1,Yes
+Made to Move,Made to Move,Sitting,115,29.0,7,5,Left,Long,Long,2,23.0,3,1,2,3,4,8,4.4,1,3,0,0,0,0,rPET,82.0,1.1,Yes
+Made to Move,Made to Move,Sitting,126,29.2,7,5,Left,Short,Knee,3,38.0,5,2,0,4,4,9,5.0,1,3,1,0,0,0,rPET,80.0,1.1,Yes
+Made to Move,Made to Move,Two Hands Up,117,29.0,7,5,Left,Long,Knee,5,40.0,8,2,1,5,6,10,6.4,1,4,1,0,1,0,Virgin PET,52.0,1.0,Yes
+Fashionistas,Standard,One Leg Bent,110,29.0,3,8,Center,Long,Knee,3,27.0,4,2,1,2,4,4,3.1,1,2,1,1,0,0,rPET,80.0,1.1,Yes
+Fashionistas,Standard,Two Hands Up,110,29.0,3,8,Center,Medium,Short,2,20.0,3,1,0,2,2,3,2.2,0,2,0,0,0,0,Recycled Cardboard + rPET,96.0,0.85,Yes
+Careers,Standard,One Hand on Hip,117,29.2,5,7,Center,Very Long,Short,0,0.0,0,0,2,2,2,5,2.6,0,2,0,0,0,0,Recycled Cardboard + rPET,96.0,0.85,Yes
+Dreamtopia,Standard,Walking,122,30.0,7,5,Back,Medium,Knee,0,0.0,0,0,0,8,0,7,5.0,0,3,0,2,0,1,rPET,75.0,1.1,Yes
+Fashionistas,Standard,Sitting,113,29.2,3,8,Center,Medium,Short,5,35.0,9,3,0,0,4,5,2.4,1,2,1,0,0,0,Recycled Cardboard + rPET,92.0,0.85,Yes
+Dreamtopia,Standard,One Hand on Hip,126,30.2,7,5,Back,Long,Short,0,0.0,0,0,1,6,1,7,4.4,0,3,0,0,0,0,rPET,84.0,1.1,Yes
+Extra,Curvy,One Hand on Hip,134,30.0,6,6,Center,Medium,Knee,3,27.0,5,1,0,5,3,7,4.7,0,3,0,0,0,0,rPET,84.0,1.1,Yes
+Extra,Curvy,One Hand Up,131,30.0,6,6,Center,Long,Short,2,8.0,2,0,1,5,2,6,4.2,0,3,0,0,0,0,rPET,84.0,1.1,Yes
+Fashionistas,Standard,Sitting,117,29.0,3,8,Center,Short,Short,2,20.0,3,1,0,0,2,3,1.3,0,1,0,0,0,0,Recycled Cardboard + rPET,98.0,0.85,Yes
+Dreamtopia,Standard,Standing Straight,131,30.2,7,5,Back,Long,Long,5,43.0,8,2,2,5,7,9,6.5,2,4,1,0,1,0,Virgin PET,50.0,1.0,Yes
+Made to Move,Made to Move,Walking,116,29.2,7,5,Left,Medium,Knee,1,15.0,1,1,0,6,0,8,4.3,0,3,0,1,0,0,rPET,82.0,1.1,Yes
+Signature,Made to Move,One Hand on Hip,143,29.0,8,6,Center,Long,Knee,2,7.0,4,0,1,6,2,9,5.2,0,3,0,0,0,0,rPET,84.0,1.1,Yes
+Extra,Curvy,One Hand Up,133,30.0,6,6,Center,Long,Short,1,5.0,3,0,1,5,2,6,4.2,0,3,0,0,0,0,rPET,84.0,1.1,Yes
+Fashionistas,Standard,Two Hands Up,110,29.0,3,8,Center,Long,Knee,3,27.0,4,2,1,2,4,4,3.1,1,2,1,0,0,0,rPET,82.0,1.1,Yes
+Dreamtopia,Standard,One Hand on Hip,131,30.2,7,5,Back,Medium,Knee,0,0.0,0,0,0,6,0,7,4.1,0,3,0,0,0,0,rPET,84.0,1.1,Yes
+Made to Move,Made to Move,Two Hands Up,118,29.2,7,5,Left,Medium,Long,1,7.0,1,0,1,5,1,8,4.2,0,3,0,0,0,0,rPET,84.0,1.1,Yes
+Made to Move,Made to Move,Two Hands Up,125,29.0,7,5,Left,Long,Short,2,13.0,6,0,1,6,3,8,5.4,0,3,0,0,0,0,rPET,84.0,1.1,Yes
+Careers,Standard,One Hand Up,129,29.2,5,7,Center,Short,Short,4,60.0,6,2,0,3,5,6,4.3,1,3,1,0,0,0,rPET,80.0,1.1,Yes
+Careers,Standard,One Hand Up,128,29.2,5,7,Center,Medium,Long,2,9.0,2,0,1,3,2,5,3.0,0,2,0,0,0,0,rPET,86.0,1.1,Yes
+Signature,Made to Move,Two Hands Up,149,29.0,8,6,Center,Medium,Knee,0,0.0,0,0,0,7,0,9,5.0,0,3,0,0,0,1,rPET,79.0,1.1,Yes
+Made to Move,Made to Move,One Leg Bent,122,29.2,7,5,Left,Short,Knee,2,9.0,2,1,0,6,1,8,4.6,0,3,0,1,0,0,rPET,82.0,1.1,Yes
+Fashionistas,Standard,Arms Open,116,29.2,3,8,Center,Short,Knee,2,16.0,3,1,0,2,1,3,1.8,0,1,0,0,0,0,Recycled Cardboard + rPET,98.0,0.85,Yes
+Signature,Made to Move,Sitting,149,29.2,8,6,Center,Very Long,Short,4,59.0,7,3,2,5,7,10,6.7,2,4,1,0,1,1,Virgin PET,45.0,1.0,Yes
+Signature,Made to Move,One Hand on Hip,134,29.2,8,6,Center,Medium,Long,0,0.0,0,0,1,5,1,9,4.4,0,3,0,0,0,0,rPET,84.0,1.1,Yes
+Made to Move,Made to Move,One Leg Bent,119,29.0,7,5,Left,Medium,Short,0,0.0,0,0,0,5,0,8,3.8,0,2,0,1,0,0,rPET,84.0,1.1,Yes
+Fashionistas,Standard,Arms Open,113,29.0,3,8,Center,Medium,Short,1,9.0,2,1,0,2,1,3,1.8,0,1,0,0,0,0,Recycled Cardboard + rPET,98.0,0.85,Yes
+Fashionistas,Standard,One Leg Bent,113,29.0,3,8,Center,Short,Short,5,34.0,9,2,0,2,4,5,3.3,1,2,1,1,0,0,rPET,80.0,1.1,Yes
+Dreamtopia,Standard,One Hand Up,120,30.0,7,5,Back,Short,Short,4,47.0,8,3,0,6,5,8,6.0,1,4,1,0,1,0,Virgin PET,52.0,1.0,Yes
+Extra,Curvy,Arms Open,140,30.2,6,6,Center,Medium,Knee,1,7.0,1,0,0,7,0,6,4.4,0,3,0,0,0,0,rPET,84.0,1.1,Yes
+Fashionistas,Standard,One Hand on Hip,111,29.0,3,8,Center,Short,Knee,1,8.0,1,1,0,1,0,3,1.0,0,1,0,0,0,0,Recycled Cardboard + rPET,98.0,0.85,Yes
+Fashionistas,Standard,One Hand on Hip,116,29.0,3,8,Center,Long,Long,5,74.0,8,5,2,1,8,5,4.2,2,3,2,0,1,0,rPET,70.0,1.1,Yes
+Extra,Curvy,Walking,137,30.2,6,6,Center,Short,Knee,5,43.0,5,2,0,7,5,8,6.5,2,4,1,1,1,0,Virgin PET,48.0,1.0,Yes
+Extra,Curvy,One Hand on Hip,130,30.0,6,6,Center,Medium,Short,0,0.0,0,0,0,5,0,6,3.4,0,2,0,0,0,0,rPET,86.0,1.1,Yes
+Careers,Standard,One Hand Up,127,29.0,5,7,Center,Long,Short,1,6.0,1,0,1,3,1,5,2.7,0,1,0,0,0,0,Recycled Cardboard + rPET,98.0,0.85,Yes
+Extra,Curvy,Sitting,134,30.0,6,6,Center,Short,Short,1,10.0,2,0,0,4,1,6,3.4,0,2,0,0,0,0,rPET,86.0,1.1,Yes
+Dreamtopia,Standard,One Hand Up,129,30.0,7,5,Back,Medium,Long,0,0.0,0,0,1,6,1,7,4.4,0,3,0,0,0,0,rPET,84.0,1.1,Yes
+Made to Move,Made to Move,One Leg Bent,128,29.0,7,5,Left,Short,Knee,0,0.0,0,0,0,6,0,8,4.3,0,3,0,1,0,0,rPET,82.0,1.1,Yes
+Fashionistas,Standard,Standing Straight,111,29.0,3,8,Center,Long,Short,3,20.0,5,1,1,0,4,4,2.2,2,2,0,0,0,0,Recycled Cardboard + rPET,92.0,0.85,Yes
+Fashionistas,Standard,One Leg Bent,115,29.0,3,8,Center,Long,Short,3,30.0,6,1,1,2,4,4,3.1,1,1,0,1,0,0,rPET,84.0,1.1,Yes
+Fashionistas,Standard,Walking,120,29.0,3,8,Center,Medium,Short,3,24.0,5,1,0,4,3,4,3.6,0,2,0,1,0,0,rPET,84.0,1.1,Yes
+Careers,Standard,One Hand on Hip,118,29.2,5,7,Center,Long,Long,4,48.0,4,2,2,2,6,6,4.2,1,3,1,0,0,0,rPET,80.0,1.1,Yes
+Extra,Curvy,Standing Straight,135,30.2,6,6,Center,Very Long,Short,1,12.0,2,1,2,4,3,6,4.0,0,3,0,0,0,0,rPET,84.0,1.1,Yes
+Extra,Curvy,Sitting,137,30.2,6,6,Center,Short,Short,5,67.0,9,2,0,4,5,8,5.2,1,3,1,0,0,0,rPET,80.0,1.1,Yes
+Fashionistas,Standard,One Hand on Hip,119,29.2,3,8,Center,Long,Knee,3,19.0,4,2,1,1,3,4,2.3,0,2,1,0,0,0,Recycled Cardboard + rPET,94.0,0.85,Yes
+Signature,Made to Move,One Hand Up,133,29.0,8,6,Center,Medium,Short,4,31.0,5,2,0,5,4,10,5.6,1,3,1,0,0,0,rPET,80.0,1.1,Yes
+Made to Move,Made to Move,Walking,125,29.2,7,5,Left,Medium,Long,4,44.0,6,2,1,7,6,9,7.0,1,4,1,1,1,0,Virgin PET,50.0,1.0,Yes
+Extra,Curvy,Two Hands Up,138,30.0,6,6,Center,Medium,Short,0,0.0,0,0,0,6,0,6,3.9,0,2,0,0,0,0,rPET,86.0,1.1,Yes
+Made to Move,Made to Move,Standing Straight,126,29.2,7,5,Left,Short,Knee,1,3.0,3,0,0,4,1,8,3.8,0,2,0,0,0,0,rPET,86.0,1.1,Yes
+Extra,Curvy,One Hand on Hip,128,30.0,6,6,Center,Long,Knee,3,40.0,6,2,1,5,6,7,5.8,1,3,1,0,0,0,rPET,80.0,1.1,Yes
+Made to Move,Made to Move,Sitting,129,29.2,7,5,Left,Long,Long,5,59.0,9,4,2,4,8,10,6.6,2,4,2,0,1,0,Virgin PET,48.0,1.0,Yes
+Extra,Curvy,One Leg Bent,139,30.0,6,6,Center,Short,Short,1,1.0,1,0,0,6,0,6,3.9,0,2,0,1,0,0,rPET,84.0,1.1,Yes
+Fashionistas,Standard,Sitting,120,29.0,3,8,Center,Medium,Long,0,0.0,0,0,1,1,1,3,1.4,0,1,0,0,0,0,Recycled Cardboard + rPET,98.0,0.85,Yes
+Dreamtopia,Standard,One Hand on Hip,130,30.2,7,5,Back,Long,Knee,0,0.0,0,0,1,6,1,7,4.4,0,3,0,0,0,0,rPET,84.0,1.1,Yes
+Dreamtopia,Standard,Two Hands Up,128,30.2,7,5,Back,Long,Long,3,38.0,6,1,2,7,5,8,6.5,1,4,0,0,1,0,Virgin PET,54.0,1.0,Yes
+Careers,Standard,Two Hands Up,123,29.0,5,7,Center,Long,Knee,1,5.0,2,0,1,4,2,5,3.5,0,2,0,0,0,0,rPET,86.0,1.1,Yes
+Careers,Standard,Walking,116,29.0,5,7,Center,Long,Short,3,28.0,5,1,1,4,4,6,4.4,1,3,0,1,0,0,rPET,80.0,1.1,Yes
+Extra,Curvy,Standing Straight,130,30.0,6,6,Center,Long,Short,3,10.0,5,0,1,4,3,7,4.2,0,3,0,0,0,0,rPET,84.0,1.1,Yes
+Fashionistas,Standard,Two Hands Up,120,29.0,3,8,Center,Medium,Knee,0,0.0,0,0,0,3,0,3,2.0,0,1,0,0,0,0,Recycled Cardboard + rPET,98.0,0.85,Yes
+Made to Move,Made to Move,Sitting,128,29.2,7,5,Left,Short,Short,4,37.0,4,2,0,4,3,9,4.6,0,3,1,0,0,0,rPET,82.0,1.1,Yes
+Extra,Curvy,Walking,135,30.0,6,6,Center,Medium,Short,2,22.0,3,1,0,7,2,6,5.0,0,3,0,1,0,0,rPET,82.0,1.1,Yes
+Extra,Curvy,Arms Open,134,30.2,6,6,Center,Long,Long,4,53.0,4,2,2,6,6,7,6.2,1,4,1,0,1,0,Virgin PET,52.0,1.0,Yes
+Extra,Curvy,Standing Straight,137,30.0,6,6,Center,Very Long,Short,2,27.0,6,1,2,4,5,6,4.8,1,3,0,0,0,0,rPET,82.0,1.1,Yes
+Fashionistas,Standard,Standing Straight,112,29.0,3,8,Center,Long,Knee,4,33.0,7,2,1,0,5,4,2.6,1,2,1,0,0,0,Recycled Cardboard + rPET,92.0,0.85,Yes
+Dreamtopia,Standard,One Leg Bent,128,30.0,7,5,Back,Short,Long,0,0.0,0,0,1,7,1,7,4.9,0,3,0,1,0,0,rPET,82.0,1.1,Yes
+Fashionistas,Standard,Two Hands Up,118,29.0,3,8,Center,Short,Knee,4,36.0,7,2,0,2,4,4,3.1,1,2,1,0,0,0,rPET,82.0,1.1,Yes
+Careers,Standard,Two Hands Up,125,29.0,5,7,Center,Long,Short,4,65.0,7,3,1,4,6,6,5.1,1,3,1,0,0,0,rPET,80.0,1.1,Yes
+Made to Move,Made to Move,One Leg Bent,128,29.0,7,5,Left,Very Long,Short,2,20.0,2,1,2,6,4,8,5.7,1,3,0,1,0,0,rPET,80.0,1.1,Yes
+Signature,Made to Move,Walking,137,29.0,8,6,Center,Very Long,Short,4,41.0,6,2,2,7,7,10,7.6,2,4,1,1,1,0,Virgin PET,48.0,1.0,Yes
+Extra,Curvy,Walking,128,30.0,6,6,Center,Medium,Short,0,0.0,0,0,0,7,0,6,4.4,0,3,0,1,0,0,rPET,82.0,1.1,Yes
+Made to Move,Made to Move,One Hand on Hip,120,29.0,7,5,Left,Long,Long,3,39.0,6,2,2,5,6,9,6.2,1,4,1,0,1,0,Virgin PET,52.0,1.0,Yes

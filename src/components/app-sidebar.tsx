@@ -39,9 +39,8 @@ type Item = { title: string; url: string; icon: typeof LayoutDashboard };
 const NAV: Record<AuthUser["role"], Item[]> = {
   engineer: [
     { title: "Dashboard",             url: "/app/dashboard",              icon: LayoutDashboard },
-    { title: "Pose & Doll Analysis",  url: "/app/product-analysis",       icon: ScanLine        },
+    { title: "Product Analysis",      url: "/app/product-analysis",       icon: ScanLine        },
     { title: "Attachment Planner",    url: "/app/packaging-planner",      icon: Link2           },
-    { title: "Attachment Visualizer", url: "/app/packaging-preview",      icon: LayoutTemplate  },
     { title: "Assembly Calculator",   url: "/app/assembly-calculator",    icon: Calculator      },
     { title: "Risk Assessment",       url: "/app/risk-assessment",        icon: ShieldAlert     },
     { title: "Cost & Sustainability", url: "/app/cost-analysis",          icon: DollarSign      },
@@ -58,9 +57,8 @@ const NAV: Record<AuthUser["role"], Item[]> = {
   ],
   admin: [
     { title: "Dashboard",             url: "/app/dashboard",           icon: LayoutDashboard },
-    { title: "Pose & Doll Analysis",  url: "/app/product-analysis",    icon: ScanLine        },
+    { title: "Product Analysis",      url: "/app/product-analysis",    icon: ScanLine        },
     { title: "Attachment Planner",    url: "/app/packaging-planner",   icon: Link2           },
-    { title: "Attachment Visualizer", url: "/app/packaging-preview",   icon: LayoutTemplate  },
     { title: "Assembly Calculator",   url: "/app/assembly-calculator", icon: Calculator      },
     { title: "Pending Approvals",     url: "/app/approvals",           icon: CheckSquare     },
     { title: "Risk Assessment",       url: "/app/risk-assessment",     icon: ShieldAlert     },

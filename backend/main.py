@@ -6,6 +6,9 @@ import numpy as np
 import io
 from PIL import Image
 import base64
+import joblib
+import pandas as pd
+from pydantic import BaseModel
 
 app = FastAPI()
 
@@ -17,6 +20,87 @@ app.add_middleware(
     allow_methods=["*"],
     allow_headers=["*"],
 )
+
+class PackagingRequest(BaseModel):
+    product_family: str = "Fashionistas"
+    articulation: str = "Standard"
+    pose: str = "Arms Open"
+    product_weight_g: int = 120
+    height_cm: float = 29.0
+    center_of_gravity: str = "Center"
+    hair_length: str = "Short"
+    dress_length: str = "Short"
+    accessory_count: int = 1
+    accessory_weight_g: float = 15.0
+    complexity_score: int = 5
+    stability_index: int = 5
+    fragility_score: int = 5
+    attachment_needed: int = 1
+    fragile_parts_count: int = 1
+
+encoders = {}
+rf_models = {}
+
+@app.on_event("startup")
+def load_models():
+    global encoders, rf_models
+    try:
+        encoders = joblib.load("label_encoders.pkl")
+        rf_models = {
+            "recommended_head_strap": joblib.load("head_strap.pkl"),
+            "recommended_waist_strap": joblib.load("waist_strap.pkl"),
+            "recommended_hand_strap": joblib.load("hand_strap.pkl"),
+            "recommended_leg_strap": joblib.load("leg_strap.pkl"),
+            "recommended_back_support": joblib.load("back_support.pkl"),
+            "recommended_base_support": joblib.load("base_support.pkl"),
+            "recommended_material": joblib.load("material.pkl")
+        }
+        print("Successfully loaded RF models and encoders.")
+    except Exception as e:
+        print(f"Error loading RF models: {e}")
+
+@app.post("/api/predict-packaging")
+async def predict_packaging(req: PackagingRequest):
+    try:
+        data = req.model_dump()
+    except AttributeError:
+        data = req.dict()
+    df = pd.DataFrame([data])
+    
+    feature_columns = [
+        "product_family", "articulation", "pose", "product_weight_g", "height_cm",
+        "complexity_score", "stability_index", "center_of_gravity", "hair_length",
+        "dress_length", "accessory_count", "accessory_weight_g", "fragility_score",
+        "attachment_needed", "fragile_parts_count"
+    ]
+    
+    categorical_cols = ["product_family", "articulation", "pose", "center_of_gravity", "hair_length", "dress_length"]
+    for col in categorical_cols:
+        if col in encoders:
+            try:
+                # If label is unseen, we just fallback to the first encoded class (usually 0) to avoid errors
+                # This could happen with random unseen pose or family
+                classes = list(encoders[col].classes_)
+                val = df[col].iloc[0]
+                if val not in classes:
+                    df[col] = 0
+                else:
+                    df[col] = encoders[col].transform(df[col])
+            except Exception:
+                df[col] = 0
+                
+    df = df[feature_columns]
+    
+    output = {}
+    for target, rf_model in rf_models.items():
+        pred = rf_model.predict(df)[0]
+        output[target] = int(pred)
+        
+    if "recommended_material" in encoders:
+        mat_encoder = encoders["recommended_material"]
+        output["recommended_material"] = mat_encoder.inverse_transform([output["recommended_material"]])[0]
+        
+    return output
 
 # Load YOLOv8 Pose model (auto-downloads if not present)
 model = YOLO("yolov8n-pose.pt")

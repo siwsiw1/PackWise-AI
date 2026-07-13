@@ -21,9 +21,9 @@ export const Route = createFileRoute("/app/cost-analysis")({
 });
 
 const WORKFLOW_STEPS = [
-  { label: "Pose & Doll Analysis", done: true  },
+  { label: "Product Input", done: true },
+  { label: "Analysis Results", done: true },
   { label: "Attachment Planner",    done: true  },
-  { label: "Attachment Visualizer", done: true  },
   { label: "Risk Assessment",      done: true  },
   { label: "Cost & Sustainability", active: true },
 ];

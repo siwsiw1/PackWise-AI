@@ -22,7 +22,6 @@ import { Route as AppRolesRouteImport } from './routes/app.roles'
 import { Route as AppRiskAssessmentRouteImport } from './routes/app.risk-assessment'
 import { Route as AppReportsRouteImport } from './routes/app.reports'
 import { Route as AppProductAnalysisRouteImport } from './routes/app.product-analysis'
-import { Route as AppPackagingPreviewRouteImport } from './routes/app.packaging-preview'
 import { Route as AppPackagingPlannerRouteImport } from './routes/app.packaging-planner'
 import { Route as AppDashboardRouteImport } from './routes/app.dashboard'
 import { Route as AppCostAnalysisRouteImport } from './routes/app.cost-analysis'
@@ -95,11 +94,6 @@ const AppProductAnalysisRoute = AppProductAnalysisRouteImport.update({
   path: '/product-analysis',
   getParentRoute: () => AppRoute,
 } as any)
-const AppPackagingPreviewRoute = AppPackagingPreviewRouteImport.update({
-  id: '/packaging-preview',
-  path: '/packaging-preview',
-  getParentRoute: () => AppRoute,
-} as any)
 const AppPackagingPlannerRoute = AppPackagingPlannerRouteImport.update({
   id: '/packaging-planner',
   path: '/packaging-planner',
@@ -140,7 +134,6 @@ export interface FileRoutesByFullPath {
   '/app/cost-analysis': typeof AppCostAnalysisRoute
   '/app/dashboard': typeof AppDashboardRoute
   '/app/packaging-planner': typeof AppPackagingPlannerRoute
-  '/app/packaging-preview': typeof AppPackagingPreviewRoute
   '/app/product-analysis': typeof AppProductAnalysisRoute
   '/app/reports': typeof AppReportsRoute
   '/app/risk-assessment': typeof AppRiskAssessmentRoute
@@ -161,7 +154,6 @@ export interface FileRoutesByTo {
   '/app/cost-analysis': typeof AppCostAnalysisRoute
   '/app/dashboard': typeof AppDashboardRoute
   '/app/packaging-planner': typeof AppPackagingPlannerRoute
-  '/app/packaging-preview': typeof AppPackagingPreviewRoute
   '/app/product-analysis': typeof AppProductAnalysisRoute
   '/app/reports': typeof AppReportsRoute
   '/app/risk-assessment': typeof AppRiskAssessmentRoute
@@ -184,7 +176,6 @@ export interface FileRoutesById {
   '/app/cost-analysis': typeof AppCostAnalysisRoute
   '/app/dashboard': typeof AppDashboardRoute
   '/app/packaging-planner': typeof AppPackagingPlannerRoute
-  '/app/packaging-preview': typeof AppPackagingPreviewRoute
   '/app/product-analysis': typeof AppProductAnalysisRoute
   '/app/reports': typeof AppReportsRoute
   '/app/risk-assessment': typeof AppRiskAssessmentRoute
@@ -208,7 +199,6 @@ export interface FileRouteTypes {
     | '/app/cost-analysis'
     | '/app/dashboard'
     | '/app/packaging-planner'
-    | '/app/packaging-preview'
     | '/app/product-analysis'
     | '/app/reports'
     | '/app/risk-assessment'
@@ -229,7 +219,6 @@ export interface FileRouteTypes {
     | '/app/cost-analysis'
     | '/app/dashboard'
     | '/app/packaging-planner'
-    | '/app/packaging-preview'
     | '/app/product-analysis'
     | '/app/reports'
     | '/app/risk-assessment'
@@ -251,7 +240,6 @@ export interface FileRouteTypes {
     | '/app/cost-analysis'
     | '/app/dashboard'
     | '/app/packaging-planner'
-    | '/app/packaging-preview'
     | '/app/product-analysis'
     | '/app/reports'
     | '/app/risk-assessment'
@@ -364,13 +352,6 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof AppProductAnalysisRouteImport
       parentRoute: typeof AppRoute
     }
-    '/app/packaging-preview': {
-      id: '/app/packaging-preview'
-      path: '/packaging-preview'
-      fullPath: '/app/packaging-preview'
-      preLoaderRoute: typeof AppPackagingPreviewRouteImport
-      parentRoute: typeof AppRoute
-    }
     '/app/packaging-planner': {
       id: '/app/packaging-planner'
       path: '/packaging-planner'
@@ -434,7 +415,6 @@ interface AppRouteChildren {
   AppCostAnalysisRoute: typeof AppCostAnalysisRoute
   AppDashboardRoute: typeof AppDashboardRoute
   AppPackagingPlannerRoute: typeof AppPackagingPlannerRoute
-  AppPackagingPreviewRoute: typeof AppPackagingPreviewRoute
   AppProductAnalysisRoute: typeof AppProductAnalysisRoute
   AppReportsRoute: typeof AppReportsRoute
   AppRiskAssessmentRoute: typeof AppRiskAssessmentRoute
@@ -453,7 +433,6 @@ const AppRouteChildren: AppRouteChildren = {
   AppCostAnalysisRoute: AppCostAnalysisRoute,
   AppDashboardRoute: AppDashboardRoute,
   AppPackagingPlannerRoute: AppPackagingPlannerRoute,
-  AppPackagingPreviewRoute: AppPackagingPreviewRoute,
   AppProductAnalysisRoute: AppProductAnalysisRoute,
   AppReportsRoute: AppReportsRoute,
   AppRiskAssessmentRoute: AppRiskAssessmentRoute,

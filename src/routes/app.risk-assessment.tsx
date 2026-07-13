@@ -22,9 +22,9 @@ export const Route = createFileRoute("/app/risk-assessment")({
 });
 
 const WORKFLOW_STEPS = [
-  { label: "Pose & Doll Analysis", done: true  },
+  { label: "Product Input", done: true },
+  { label: "Analysis Results", done: true },
   { label: "Attachment Planner",    done: true  },
-  { label: "Attachment Visualizer", done: true  },
   { label: "Risk Assessment",      active: true },
   { label: "Cost & Sustainability", done: false },
 ];
@@ -117,8 +117,8 @@ function RiskAssessmentPage() {
         description={`Predictive movement, accessory loss, and drop-test analysis — ${productName}`}
         actions={
           <>
-            <Button variant="outline" size="sm" onClick={() => navigate({ to: "/app/packaging-preview" })}>
-              <ArrowLeft className="h-4 w-4" /> Back to Visualizer
+            <Button variant="outline" size="sm" onClick={() => navigate({ to: "/app/packaging-planner" })}>
+              <ArrowLeft className="h-4 w-4" /> Back to Planner
             </Button>
             <Button size="sm" onClick={() => navigate({ to: "/app/cost-analysis" })}>
               <DollarSign className="h-4 w-4" /> Cost & Sustainability <ChevronRight className="h-4 w-4" />
