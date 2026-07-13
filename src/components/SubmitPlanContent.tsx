@@ -1,5 +1,6 @@
-import { useMemo, useState } from "react";
+import { useMemo, useState, useEffect } from "react";
 import { Link } from "@tanstack/react-router";
+import { getToken } from "@/lib/auth";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
@@ -661,10 +662,66 @@ function ReportMetadataFooter({ meta }: { meta: ReportMetadata }) {
 
 export default function SubmitPlanContent() {
   const [notes, setNotes] = useState("");
+  const [apiData, setApiData] = useState<any>(null);
 
-  const summary = DEFAULT_SUMMARY;
+  useEffect(() => {
+    async function fetchApi() {
+      const token = getToken();
+      if (!token) return;
+      try {
+        const res = await fetch("http://localhost:8000/predict", {
+          method: "POST",
+          headers: { "Content-Type": "application/json", "Authorization": `Bearer ${token}` },
+          body: JSON.stringify({
+            plan_id: 1,
+            product_weight_g: 250,
+            height_cm: 30.0,
+            fragility_score: 5,
+            center_of_gravity: "Back",
+            accessory_count: 5,
+            accessory_weight_g: 45,
+            movement_score: 7,
+            complexity_score: 8,
+            stability_index: 4,
+            recommended_head_strap: 1,
+            recommended_waist_strap: 1,
+            recommended_hand_strap: 0,
+            recommended_leg_strap: 0,
+          })
+        });
+        if (res.ok) {
+          setApiData(await res.json());
+        }
+      } catch (e) {
+        console.error("Failed to fetch API:", e);
+      }
+    }
+    fetchApi();
+  }, []);
+
+  const summary = useMemo(() => {
+    if (!apiData) return DEFAULT_SUMMARY;
+    return {
+      ...DEFAULT_SUMMARY,
+      overallRisk: (apiData.overall_risk_level || "LOW").toUpperCase() as "LOW" | "MEDIUM" | "HIGH",
+      movementRisk: apiData.categories?.["Movement Risk"]?.risk_percentage || DEFAULT_SUMMARY.movementRisk,
+      accessoryLoss: apiData.categories?.["Accessory Loss Risk"]?.risk_percentage || DEFAULT_SUMMARY.accessoryLoss,
+      dropSurvival: apiData.categories?.["Drop Test Risk"]?.pass_probability || DEFAULT_SUMMARY.dropSurvival,
+    };
+  }, [apiData]);
+
   const config = DEFAULT_CONFIG;
-  const metrics = DEFAULT_METRICS;
+
+  const metrics = useMemo(() => {
+    if (!apiData) return DEFAULT_METRICS;
+    return {
+      ...DEFAULT_METRICS,
+      movementRisk: apiData.categories?.["Movement Risk"]?.risk_percentage || DEFAULT_METRICS.movementRisk,
+      accessoryLoss: apiData.categories?.["Accessory Loss Risk"]?.risk_percentage || DEFAULT_METRICS.accessoryLoss,
+      dropSurvival: apiData.categories?.["Drop Test Risk"]?.pass_probability || DEFAULT_METRICS.dropSurvival,
+    };
+  }, [apiData]);
+
   const findings = DEFAULT_FINDINGS;
   const rules = DEFAULT_RULES;
   const optimization = DEFAULT_OPTIMIZATION;

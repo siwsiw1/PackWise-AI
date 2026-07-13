@@ -1,5 +1,6 @@
-import { useMemo, useState } from "react";
+import { useMemo, useState, useEffect } from "react";
 import { Link } from "@tanstack/react-router";
+import { getToken } from "@/lib/auth";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
@@ -293,28 +294,69 @@ export default function RiskAssessmentContent({
   const [traceOpen, setTraceOpen] = useState(false);
   const sc = SCENARIOS[scenario];
 
+  const [apiData, setApiData] = useState<any>(null);
+
+  useEffect(() => {
+    async function fetchApi() {
+      const token = getToken();
+      if (!token) return;
+      try {
+        const res = await fetch("http://localhost:8000/predict", {
+          method: "POST",
+          headers: { "Content-Type": "application/json", "Authorization": `Bearer ${token}` },
+          body: JSON.stringify({
+            plan_id: 1,
+            product_weight_g: 250,
+            height_cm: 30.0,
+            fragility_score: 5,
+            center_of_gravity: "Back",
+            accessory_count: 5,
+            accessory_weight_g: 45,
+            movement_score: 7,
+            complexity_score: 8,
+            stability_index: 4,
+            recommended_head_strap: 1,
+            recommended_waist_strap: 1,
+            recommended_hand_strap: 0,
+            recommended_leg_strap: 0,
+          })
+        });
+        if (res.ok) {
+          setApiData(await res.json());
+        }
+      } catch (e) {
+        console.error("Failed to fetch risk assessment API:", e);
+      }
+    }
+    fetchApi();
+  }, []);
+
   const attachmentCoverage = useMemo(
     () => attachments.reduce((s, a) => s + a.coverage, 0) / attachments.length,
     [attachments],
   );
 
   const movementRisk = useMemo(
-    () =>
-      clamp(
-        (0.5 * product.complexity -
-          0.2 * (product.support * 10) -
-          0.3 * attachmentCoverage +
-          35) * sc.mv,
-      ),
-    [product, attachmentCoverage, sc.mv],
+    () => {
+      if (apiData?.categories?.["Movement Risk"]) {
+        return clamp(apiData.categories["Movement Risk"].risk_percentage * sc.mv);
+      }
+      return clamp((0.5 * product.complexity - 0.2 * (product.support * 10) - 0.3 * attachmentCoverage + 35) * sc.mv);
+    },
+    [apiData, product, attachmentCoverage, sc.mv],
   );
 
   const unsecuredSmall = accessories.filter((a) => !a.secured && a.small).length;
   const securedCount = accessories.filter((a) => a.secured).length;
 
   const accessoryLoss = useMemo(
-    () => clamp((20 + 15 * unsecuredSmall - 10 * securedCount + 25) * sc.ac),
-    [unsecuredSmall, securedCount, sc.ac],
+    () => {
+      if (apiData?.categories?.["Accessory Loss Risk"]) {
+        return clamp(apiData.categories["Accessory Loss Risk"].risk_percentage * sc.ac);
+      }
+      return clamp((20 + 15 * unsecuredSmall - 10 * securedCount + 25) * sc.ac);
+    },
+    [apiData, unsecuredSmall, securedCount, sc.ac],
   );
 
   const poseStability = useMemo(
@@ -323,8 +365,13 @@ export default function RiskAssessmentContent({
   );
 
   const dropScore = useMemo(
-    () => clamp((100 - movementRisk * 0.4 - accessoryLoss * 0.2 + poseStability * 0.3) * sc.dr),
-    [movementRisk, accessoryLoss, poseStability, sc.dr],
+    () => {
+      if (apiData?.categories?.["Drop Test Risk"]) {
+        return clamp(apiData.categories["Drop Test Risk"].pass_probability * sc.dr);
+      }
+      return clamp((100 - movementRisk * 0.4 - accessoryLoss * 0.2 + poseStability * 0.3) * sc.dr);
+    },
+    [apiData, movementRisk, accessoryLoss, poseStability, sc.dr],
   );
 
   // Alt plans (deterministic deltas)
