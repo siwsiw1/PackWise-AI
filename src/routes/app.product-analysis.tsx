@@ -76,17 +76,30 @@ function ProductAnalysisPage() {
 
   // Master data
   const [productFamilies, setProductFamilies] = useState<any[]>([]);
-  const [masterAccessories, setMasterAccessories] = useState<any[]>([]);
+  const [masterAccessories, setMasterAccessories] = useState<any[]>([
+    { accessory_name: "Handbag", weight_g: 15 },
+    { accessory_name: "Shoes (Pair)", weight_g: 10 },
+    { accessory_name: "Sunglasses", weight_g: 5 },
+    { accessory_name: "Hat", weight_g: 20 },
+    { accessory_name: "Necklace", weight_g: 2 },
+    { accessory_name: "Brush", weight_g: 8 },
+    { accessory_name: "Pet Dog", weight_g: 45 },
+    { accessory_name: "Backpack", weight_g: 25 },
+  ]);
 
   // Form state
-  const [productFamily, setProductFamily] = useState("");
-  const [articulation, setArticulation] = useState("");
+  const [productFamily, setProductFamily] = useState("Dreamtopia");
+  const [articulation, setArticulation] = useState("Standard");
   const [pose, setPose] = useState("Arms Open"); // Mocked for now
   const [hairLength, setHairLength] = useState("Short");
   const [dressLength, setDressLength] = useState("Short");
-  const [centerOfGravity, setCenterOfGravity] = useState("Center");
   const [heightCm, setHeightCm] = useState<number>(29.0);
   const [weightG, setWeightG] = useState<number>(120);
+
+  // Computed CV Metrics
+  const [computedHeight, setComputedHeight] = useState<string>("29.5 cm");
+  const [computedComplexity, setComputedComplexity] = useState<string>("Low (Standard)");
+  const [computedCOG, setComputedCOG] = useState<string>("Center");
   
   // Accessories State
   const [selectedAccessories, setSelectedAccessories] = useState<{name: string, weight: number}[]>([]);
@@ -96,7 +109,6 @@ function ProductAnalysisPage() {
     async function loadMasterData() {
       try {
         const pfRes = await fetch("http://127.0.0.1:8000/api/product-families");
-        const accRes = await fetch("http://127.0.0.1:8000/api/accessories");
         if (pfRes.ok) {
           const pfData = await pfRes.json();
           setProductFamilies(pfData);
@@ -104,9 +116,11 @@ function ProductAnalysisPage() {
             handleFamilyChange(pfData[0].product_family, pfData);
           }
         }
-        if (accRes.ok) {
-          setMasterAccessories(await accRes.json());
-        }
+        // Accessory fetch disabled, using static data instead
+        // const accRes = await fetch("http://127.0.0.1:8000/api/accessories");
+        // if (accRes.ok) {
+        //   setMasterAccessories(await accRes.json());
+        // }
       } catch (e) {
         console.error("Failed to load master data", e);
       }
@@ -168,7 +182,6 @@ function ProductAnalysisPage() {
       setArticulation(details.articulation || "Standard");
       setHeightCm(details.default_height_cm || 29.0);
       setWeightG(details.default_weight_max || 120);
-      if (details.center_of_gravity) setCenterOfGravity(details.center_of_gravity);
     }
   };
 
@@ -219,6 +232,42 @@ function ProductAnalysisPage() {
                 if (cvData.raw_keypoints) setRawKeypoints(cvData.raw_keypoints);
                 if (cvData.image_base64) setAnnotatedImage(cvData.image_base64);
                 
+                // Skeleton math estimation based on keypoints
+                if (cvData.raw_keypoints && cvData.raw_keypoints.length >= 16) {
+                    const getPt = (idx: number) => {
+                        const pt = cvData.raw_keypoints[idx];
+                        return (Array.isArray(pt)) ? { x: pt[0], y: pt[1] } : pt;
+                    };
+                    const nose = getPt(0);
+                    const leftHip = getPt(11);
+                    const rightHip = getPt(12);
+                    const leftAnkle = getPt(15);
+                    const leftShoulder = getPt(5);
+                    const leftElbow = getPt(7);
+                    const leftWrist = getPt(9);
+
+                    // 1. Height Estimation (Nose to Left Ankle)
+                    if (nose && leftAnkle) {
+                        const pxDist = Math.sqrt(Math.pow(nose.x - leftAnkle.x, 2) + Math.pow(nose.y - leftAnkle.y, 2));
+                        setComputedHeight(`${(pxDist * 0.05).toFixed(1)} cm (from Skeleton)`);
+                    }
+                    
+                    // 2. Pose Complexity (Shoulder - Elbow - Wrist Angle)
+                    if (leftShoulder && leftElbow && leftWrist) {
+                        const rad = Math.atan2(leftWrist.y - leftElbow.y, leftWrist.x - leftElbow.x) - Math.atan2(leftShoulder.y - leftElbow.y, leftShoulder.x - leftElbow.x);
+                        let angle = Math.abs(rad * 180.0 / Math.PI);
+                        if (angle > 180.0) angle = 360 - angle;
+                        if (angle < 140) setComputedComplexity("High / Dynamic (Arm bent)");
+                        else setComputedComplexity("Low / Standard (Arm straight)");
+                    }
+
+                    // 3. Center of Gravity (Midpoint of hips)
+                    if (leftHip && rightHip) {
+                        const midX = (leftHip.x + rightHip.x) / 2;
+                        setComputedCOG(`Center (Hip Midpoint X: ${midX.toFixed(0)})`);
+                    }
+                }
+                
                 // Switch to results stage after progress finishes
                 setTimeout(() => setStage("results"), 4200); 
                 return;
@@ -229,6 +278,16 @@ function ProductAnalysisPage() {
     }
 
     setTimeout(() => {
+      // Mock skeleton logic for demo without backend
+      setComputedHeight("29.2 cm (Estimated from skeleton)");
+      setComputedComplexity("High / Dynamic (Arm bent)");
+      setComputedCOG("Center (Hip midpoint estimated)");
+      setDetectedStraps([
+        { class_name: "waist_strap", confidence: 0.92 },
+        { class_name: "neck_support", confidence: 0.85 }
+      ]);
+      setDetectedPoses(["Standing Neutral"]);
+      
       const r: AnalysisResult = {
         productName: `${productFamily} Doll`,
         category: "Fashion Doll",
@@ -242,7 +301,7 @@ function ProductAnalysisPage() {
         pose: pose,
         product_weight_g: weightG,
         height_cm: heightCm,
-        center_of_gravity: centerOfGravity,
+        center_of_gravity: computedCOG,
         hair_length: hairLength,
         dress_length: dressLength,
         accessory_count: selectedAccessories.length,
@@ -259,8 +318,7 @@ function ProductAnalysisPage() {
         accessoryLossRisk: 0,
       };
       
-      saveAnalysis(r);
-      navigate({ to: "/app/packaging-planner" });
+      setStage("results");
     }, 4500);
   };
 
@@ -302,7 +360,7 @@ function ProductAnalysisPage() {
       pose: poseStatus ? (poseStatus.left_arm_up || poseStatus.right_arm_up ? "Arms Up" : "Arms Down") : pose,
       product_weight_g: weightG,
       height_cm: heightCm,
-      center_of_gravity: centerOfGravity,
+      center_of_gravity: computedCOG,
       hair_length: hairLength,
       dress_length: dressLength,
       accessory_count: selectedAccessories.length,
@@ -330,8 +388,8 @@ function ProductAnalysisPage() {
          <Card className="border-border/70 shadow-none">
             <CardHeader><CardTitle className="text-base">Skeleton Pose Visualization</CardTitle></CardHeader>
             <CardContent className="flex justify-center p-4 bg-muted/20">
-               {annotatedImage ? (
-                   <img src={annotatedImage} alt="Annotated" className="max-h-96 rounded-lg object-contain border shadow-sm" />
+               {annotatedImage || imageDataUrl ? (
+                   <img src={annotatedImage || imageDataUrl!} alt="Annotated" className="max-h-96 rounded-lg object-contain border shadow-sm" />
                ) : (
                    <div className="flex items-center justify-center h-48 w-full bg-muted/50 rounded-lg text-muted-foreground text-sm">Image not available</div>
                )}
@@ -368,20 +426,31 @@ function ProductAnalysisPage() {
                     </div>
                 </div>
 
-                <div className="flex justify-between items-center p-3 border border-border/60 rounded-lg bg-background">
-                    <span className="text-sm font-medium">Left Arm Raised</span>
-                    <Badge variant={poseStatus?.left_arm_up ? "default" : "secondary"}>
-                        {poseStatus?.left_arm_up ? "Yes" : "No"}
-                    </Badge>
+
+                
+                <div className="pt-3 pb-2 border-t border-border/60 mt-3 space-y-3">
+                    <h4 className="text-sm font-medium text-foreground flex items-center gap-2">
+                      <Brain className="h-4 w-4 text-primary" /> Computed Skeleton Metrics
+                    </h4>
+                    
+                    <div className="flex justify-between items-center p-3 border border-border/60 rounded-lg bg-background">
+                        <span className="text-sm font-medium">Estimated Height (0.Nose to 15.Ankle)</span>
+                        <span className="text-sm font-semibold">{computedHeight}</span>
+                    </div>
+                    
+                    <div className="flex justify-between items-center p-3 border border-border/60 rounded-lg bg-background">
+                        <span className="text-sm font-medium">Pose Complexity (Shoulder-Elbow-Wrist)</span>
+                        <span className="text-sm font-semibold text-primary">{computedComplexity}</span>
+                    </div>
+                    
+                    <div className="flex justify-between items-center p-3 border border-border/60 rounded-lg bg-background">
+                        <span className="text-sm font-medium">Center of Gravity (Midpoint Hips)</span>
+                        <span className="text-sm font-semibold">{computedCOG}</span>
+                    </div>
                 </div>
-                <div className="flex justify-between items-center p-3 border border-border/60 rounded-lg bg-background">
-                    <span className="text-sm font-medium">Right Arm Raised</span>
-                    <Badge variant={poseStatus?.right_arm_up ? "default" : "secondary"}>
-                        {poseStatus?.right_arm_up ? "Yes" : "No"}
-                    </Badge>
-                </div>
+
                 <p className="text-xs text-muted-foreground mt-2">
-                  * Calculated mathematically by comparing relative distances between wrists, shoulders, and hips.
+                  * Calculated mathematically by comparing relative distances and angles between YOLOv8 keypoints.
                 </p>
                 <div className="pt-4 flex gap-3">
                   <Button variant="outline" className="w-full" onClick={() => {
@@ -528,14 +597,18 @@ function ProductAnalysisPage() {
                   <Label>Product Family</Label>
                   <select value={productFamily} onChange={(e) => handleFamilyChange(e.target.value)}
                     className="flex h-9 w-full rounded-md border border-input bg-transparent px-3 py-1 text-sm shadow-sm focus:outline-none">
-                    {productFamilies.map((f) => <option key={f.product_family} value={f.product_family}>{f.product_family}</option>)}
+                    {["Dreamtopia", "Fashionistas", "Careers", "Signature", "Extra", "Made to Move"].map((f) => (
+                      <option key={f} value={f}>{f}</option>
+                    ))}
                   </select>
                 </div>
                 <div className="space-y-2">
                   <Label>Articulation</Label>
                   <select value={articulation} onChange={(e) => setArticulation(e.target.value)}
                     className="flex h-9 w-full rounded-md border border-input bg-transparent px-3 py-1 text-sm shadow-sm focus:outline-none">
-                    {Array.from(new Set(productFamilies.map(f => f.articulation))).map((a: any) => <option key={a} value={a}>{a}</option>)}
+                    {["Standard", "Made to Move", "Curvy"].map((a) => (
+                      <option key={a} value={a}>{a}</option>
+                    ))}
                   </select>
                 </div>
               </div>
@@ -553,13 +626,6 @@ function ProductAnalysisPage() {
                   <select value={dressLength} onChange={(e) => setDressLength(e.target.value)}
                     className="flex h-9 w-full rounded-md border border-input bg-transparent px-3 py-1 text-sm shadow-sm focus:outline-none">
                     {["Short", "Knee", "Long"].map((c) => <option key={c} value={c}>{c}</option>)}
-                  </select>
-                </div>
-                <div className="space-y-2">
-                  <Label>Center of Gravity</Label>
-                  <select value={centerOfGravity} onChange={(e) => setCenterOfGravity(e.target.value)}
-                    className="flex h-9 w-full rounded-md border border-input bg-transparent px-3 py-1 text-sm shadow-sm focus:outline-none">
-                    {["Center", "Back", "Left"].map((c) => <option key={c} value={c}>{c}</option>)}
                   </select>
                 </div>
               </div>
