@@ -152,7 +152,15 @@ function ProductAnalysisPage() {
   const handleFile = (f: File) => {
     setImageFile(f);
     const reader = new FileReader();
-    reader.onload = (ev) => setImageDataUrl(ev.target?.result as string);
+    reader.onload = (ev) => {
+      const src = ev.target?.result as string;
+      setImageDataUrl(src);
+      try {
+        sessionStorage.setItem("packwise_image", src);
+      } catch (e) {
+        console.warn("Failed to save raw image to sessionStorage:", e);
+      }
+    };
     reader.readAsDataURL(f);
   };
 
@@ -388,7 +396,7 @@ function ProductAnalysisPage() {
     const r: AnalysisResult = {
       productName: `${productFamily} Doll`,
       category: "Fashion Doll",
-      imageDataUrl: annotatedImage || imageDataUrl,
+      imageDataUrl: imageDataUrl,
       productType: "Doll",
       dimensions: `${heightCm}cm`,
       analysedAt: new Date().toISOString(),

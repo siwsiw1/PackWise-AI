@@ -716,9 +716,6 @@ function AttachmentPlannerPage() {
                   <TabsTrigger value="scan" className="text-xs py-1">CV Strap Detection</TabsTrigger>
                   <TabsTrigger value="blueprint" className="text-xs py-1">AI Pose Blueprint</TabsTrigger>
                 </TabsList>
-                <Badge variant="outline" className="border-border/70 text-xs font-normal">
-                  <Brain className="mr-1 h-3 w-3" /> Pose + CV
-                </Badge>
               </div>
             </CardHeader>
 
