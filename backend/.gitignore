@@ -2,3 +2,6 @@ __pycache__/
 yolov8n-pose.pt
 .env
 venv/
+*.pt
+*.pkl
+uvicorn_log.txt

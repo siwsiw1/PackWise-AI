@@ -1,37 +1,21 @@
 import { useMemo, useState, useEffect } from "react";
-import { Link } from "@tanstack/react-router";
 import { getToken } from "@/lib/auth";
 import { loadAnalysis, loadPlan } from "@/lib/workflow-store";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
-import { Input } from "@/components/ui/input";
-import { Label } from "@/components/ui/label";
 import { Badge } from "@/components/ui/badge";
-import { Slider } from "@/components/ui/slider";
 import { Checkbox } from "@/components/ui/checkbox";
 import { Progress } from "@/components/ui/progress";
 import { Separator } from "@/components/ui/separator";
 import {
-  Dialog,
-  DialogContent,
-  DialogHeader,
-  DialogTitle,
-  DialogDescription,
-} from "@/components/ui/dialog";
-import {
   ArrowRight,
-  Box,
   CheckCircle2,
-  ChevronRight,
   CircleAlert,
-  Cpu,
-  Layers,
   Package,
   ShieldCheck,
   Sparkles,
   TrendingDown,
   Wand2,
-  Zap,
   Activity,
   AlertTriangle,
   Factory,
@@ -39,13 +23,7 @@ import {
   Truck,
   Store,
   Gauge,
-  Info,
-  Wrench,
-  BookOpen,
-  Database,
   FileText,
-  GitBranch,
-  ChevronDown,
 } from "lucide-react";
 
 type Attachment = { region: string; type: string; coverage: number };
@@ -124,14 +102,6 @@ const SCENARIOS: Record<
   },
 };
 
-const STEPS = [
-  { label: "Product Upload", icon: Package, href: "/" as const },
-  { label: "Attachment Planner", icon: Layers, href: "/" as const },
-  { label: "Attachment Visualizer", icon: Box, href: "/" as const },
-  { label: "Risk Assessment", icon: ShieldCheck, href: "/" as const },
-  { label: "Cost & Sustainability", icon: Sparkles, href: "/" as const },
-  { label: "Engineering Report", icon: FileText, href: "/report" as const },
-];
 
 const REGION_WEIGHTS: Record<string, number> = {
   Arms: 0.28,
@@ -139,65 +109,6 @@ const REGION_WEIGHTS: Record<string, number> = {
   Legs: 0.22,
   Waist: 0.16,
 };
-
-type PackagingConfig = {
-  method: string;
-  type: string;
-  attachment: string;
-  supportPoints: number;
-  cushionMaterial: string;
-  cushionThickness: string;
-  weight: string;
-  centerOfGravity: string;
-  clearance: string;
-  designMethod: string;
-  istaLevel: string;
-};
-
-const DEFAULT_PACKAGING_CONFIG: PackagingConfig = {
-  method: "Plastic-free Display Box",
-  type: "Rigid Paperboard Window Box",
-  attachment: "PET Strap + Paperboard Insert",
-  supportPoints: 3,
-  cushionMaterial: "EPE Foam",
-  cushionThickness: "15 mm",
-  weight: "412 g",
-  centerOfGravity: "Offset (12 mm)",
-  clearance: "6.5 mm",
-  designMethod: "Rule-Based Engine v2.4",
-  istaLevel: "3A",
-};
-
-type RuleEngineStatus = {
-  literaturePapers: number;
-  engineeringRules: number;
-  activeRulesTriggered: number;
-  ruleCoverage: number; // 0–100
-};
-
-const DEFAULT_RULE_ENGINE_STATUS: RuleEngineStatus = {
-  literaturePapers: 18,
-  engineeringRules: 38,
-  activeRulesTriggered: 18,
-  ruleCoverage: 94,
-};
-
-type EngineeringRule = {
-  id: string;         // R-WT-001
-  evidenceId: string; // E001
-  rule: string;
-  status: "Triggered" | "Monitoring" | "Inactive";
-};
-
-const ENGINEERING_RULES: EngineeringRule[] = [
-  { id: "R-WT-001", evidenceId: "E001", rule: "Higher product weight increases transmitted force on cushion", status: "Triggered" },
-  { id: "R-SP-002", evidenceId: "E002", rule: "Support points below recommended threshold for articulated toys", status: "Triggered" },
-  { id: "R-CL-003", evidenceId: "E003", rule: "Large internal clearance increases in-pack movement amplitude", status: "Triggered" },
-  { id: "R-AC-004", evidenceId: "E004", rule: "Unsecured sub-5 g accessories escape blister windows under vibration", status: "Triggered" },
-  { id: "R-CG-005", evidenceId: "E005", rule: "CoG offset > 10 mm generates rotational moment during drop", status: "Triggered" },
-  { id: "R-DT-006", evidenceId: "E006", rule: "EPE foam < 20 mm insufficient for 1.2 m drop on 400 g product", status: "Monitoring" },
-  { id: "R-ST-007", evidenceId: "E007", rule: "Paperboard insert compressive strength adequate for 3-pallet stack", status: "Inactive" },
-];
 
 type FailureModeMap = Record<"Assembly" | "Warehouse" | "Transport" | "Shelf", string>;
 const FAILURE_MODES: FailureModeMap = {
@@ -224,16 +135,6 @@ function evidenceFor(region: string): FailureEvidence {
   return EVIDENCE_MAP[region] ?? { evidenceId: "E000", suggestedRule: "Review with engineer" };
 }
 
-type DecisionTraceStep = { stage: string; label: string; detail: string; icon: typeof BookOpen };
-const DECISION_TRACE: DecisionTraceStep[] = [
-  { stage: "Literature",           label: "IoP 2021 · Rouillard vibration study",           detail: "Sub-5 g parts displaced above 65 Hz on parcel routes",  icon: BookOpen },
-  { stage: "Knowledge Extraction", label: "E003 · Clearance–Movement correlation",           detail: "Extracted coefficient 0.30 for clearance term",           icon: Database },
-  { stage: "Engineering Rule",     label: "R-CL-003 · Large clearance increases movement",   detail: "IF clearance > 5 mm THEN movement_risk += weighted term", icon: FileText },
-  { stage: "Triggered Condition",  label: "Clearance 6.5 mm > 5 mm threshold",               detail: "Rule R-CL-003 fires with active weight 0.30",            icon: GitBranch },
-  { stage: "Risk Score",           label: "Movement Risk contribution +19.5 pts",            detail: "Aggregated into inertial drift index",                    icon: Activity },
-  { stage: "Recommendation",       label: "Add molded cradle · reduce clearance to 2 mm",    detail: "Predicted −18% movement risk · +12% drop survival",     icon: Sparkles },
-];
-
 type ImprovementBenefit = {
   title: string;
   detail: string;
@@ -257,17 +158,7 @@ function dropLevel(score: number): { label: "LOW" | "MEDIUM" | "HIGH"; tone: str
 const clamp = (n: number, lo = 0, hi = 100) => Math.max(lo, Math.min(hi, n));
 const round = (n: number) => Math.round(n * 10) / 10;
 
-export default function RiskAssessmentContent({
-  packagingConfig = DEFAULT_PACKAGING_CONFIG,
-  ruleEngineStatus = DEFAULT_RULE_ENGINE_STATUS,
-  engineeringRules = ENGINEERING_RULES,
-  decisionTrace = DECISION_TRACE,
-}: {
-  packagingConfig?: PackagingConfig;
-  ruleEngineStatus?: RuleEngineStatus;
-  engineeringRules?: EngineeringRule[];
-  decisionTrace?: DecisionTraceStep[];
-} = {}) {
+export default function RiskAssessmentContent() {
   const [product, setProduct] = useState({
     name: "—",
     category: "—",
@@ -280,9 +171,6 @@ export default function RiskAssessmentContent({
   const [attachments, setAttachments] = useState<Attachment[]>([]);
 
   const [scenario, setScenario] = useState<ScenarioKey>("normal");
-  const [confOpen, setConfOpen] = useState(false);
-  const [optOpen, setOptOpen] = useState(false);
-  const [traceOpen, setTraceOpen] = useState(false);
   const sc = SCENARIOS[scenario];
 
   const [apiData, setApiData] = useState<any>(null);
@@ -358,7 +246,9 @@ export default function RiskAssessmentContent({
   }, []);
 
   const attachmentCoverage = useMemo(
-    () => attachments.reduce((s, a) => s + a.coverage, 0) / attachments.length,
+    () => attachments.length > 0
+      ? attachments.reduce((s, a) => s + a.coverage, 0) / attachments.length
+      : 0,
     [attachments],
   );
 
@@ -481,40 +371,7 @@ export default function RiskAssessmentContent({
     return zones.sort((a, b) => b.severity - a.severity).slice(0, 5);
   }, [movementRisk, accessories, attachments, accessoryLoss]);
 
-  // What-if optimized state (all accessories secured + +15% coverage + +2 support)
-  const optimized = useMemo(() => {
-    const optCoverage = clamp(attachmentCoverage + 15);
-    const optSupport  = Math.min(10, product.support + 2);
-    const mv = clamp((0.5 * product.complexity - 0.2 * optSupport * 10 - 0.3 * optCoverage + 35) * sc.mv);
-    const ac = clamp((20 + 0 - 10 * accessories.length + 25) * sc.ac);
-    const ps = clamp(100 - 0.45 * product.complexity + 6 * optSupport + 0.25 * optCoverage);
-    const dr = clamp((100 - mv * 0.4 - ac * 0.2 + ps * 0.3) * sc.dr);
-    return { mv, ac, ps, dr };
-  }, [product, attachments, accessories, attachmentCoverage, sc]);
 
-  // Confidence factor breakdown
-  const confFactors = useMemo(
-    () => [
-      { label: "Attachment coverage",     delta: +round(attachmentCoverage * 0.12), good: true },
-      { label: "Secured accessories",     delta: +round(securedCount * 1.6),        good: true },
-      { label: "Scenario adjustment",     delta: sc.conf,                            good: sc.conf >= 0 },
-      { label: "Unsecured small parts",   delta: -unsecuredSmall * 2,                good: unsecuredSmall === 0 },
-      { label: "Model baseline (v2.4)",   delta: 70,                                  good: true },
-    ],
-    [attachmentCoverage, securedCount, sc.conf, unsecuredSmall],
-  );
-
-  // Confidence panel breakdown (Model / Rule / Literature / Missing vars)
-  const confidenceBreakdown = useMemo(() => {
-    const missingVars = unsecuredSmall + (attachmentCoverage < 70 ? 1 : 0);
-    const literatureCoverage = clamp(ruleEngineStatus.ruleCoverage - 2 + securedCount);
-    return [
-      { label: "Model Confidence",   value: Math.round(confidence),                suffix: "%", tone: "good" as const },
-      { label: "Rule Coverage",      value: ruleEngineStatus.ruleCoverage,         suffix: "%", tone: "good" as const },
-      { label: "Literature Coverage", value: Math.round(literatureCoverage),        suffix: "%", tone: "good" as const },
-      { label: "Missing Variables",  value: missingVars,                            suffix: "",  tone: missingVars === 0 ? "good" as const : "warn" as const },
-    ];
-  }, [confidence, ruleEngineStatus.ruleCoverage, unsecuredSmall, attachmentCoverage, securedCount]);
 
   // Primary causes per metric — deterministic engineering reasoning
   const primaryCauses = useMemo(() => {
@@ -598,25 +455,18 @@ export default function RiskAssessmentContent({
               recompute every score live.
             </p>
           </div>
-          <div className="flex items-center gap-3 rounded-2xl border border-border bg-card px-4 py-3 shadow-sm">
-            <button
-              onClick={() => setConfOpen(true)}
-              className="group flex items-center gap-3 text-left transition hover:opacity-90"
-            >
-              <div className="grid h-10 w-10 place-items-center rounded-full bg-[color:var(--pink-soft)] transition group-hover:scale-105">
+        <div className="flex items-center rounded-2xl border border-border bg-card px-4 py-3 shadow-sm">
+            <div className="flex items-center gap-3">
+              <div className="grid h-10 w-10 place-items-center rounded-full bg-[color:var(--pink-soft)]">
                 <ShieldCheck className="h-5 w-5 text-[color:var(--pink)]" />
               </div>
               <div>
-                <div className="flex items-center gap-1 text-[11px] uppercase tracking-wider text-muted-foreground">
-                  Model confidence <Info className="h-3 w-3" />
-                </div>
-                <div className="text-lg font-semibold tabular-nums transition-all">
-                  {Math.round(confidence)}%
-                </div>
+                <div className="text-[11px] uppercase tracking-wider text-muted-foreground">Model confidence</div>
+                <div className="text-lg font-semibold tabular-nums">{Math.round(confidence)}%</div>
               </div>
-            </button>
-            <div className="ml-2 h-10 w-px bg-border" />
-            <div>
+            </div>
+            <div className="ml-4 h-10 w-px bg-border" />
+            <div className="ml-4">
               <div className="text-[11px] uppercase tracking-wider text-muted-foreground">Run</div>
               <div className="text-sm font-medium">#PW-2418</div>
             </div>
@@ -624,7 +474,7 @@ export default function RiskAssessmentContent({
         </section>
 
         <div className="grid grid-cols-12 gap-6">
-          {/* Sidebar inputs */}
+          {/* Sidebar */}
           <aside className="col-span-12 space-y-6 lg:col-span-3">
             <Card className="rounded-2xl border-border shadow-sm">
               <CardHeader className="pb-3">
@@ -632,47 +482,11 @@ export default function RiskAssessmentContent({
                   Product
                 </CardTitle>
               </CardHeader>
-              <CardContent className="space-y-4">
-                <div>
-                  <Label className="text-xs text-muted-foreground">Name</Label>
-                  <Input
-                    value={product.name}
-                    onChange={(e) => setProduct({ ...product, name: e.target.value })}
-                    className="mt-1 h-9"
-                  />
-                </div>
-                <div>
-                  <Label className="text-xs text-muted-foreground">Category</Label>
-                  <Input
-                    value={product.category}
-                    onChange={(e) => setProduct({ ...product, category: e.target.value })}
-                    className="mt-1 h-9"
-                  />
-                </div>
-                <div>
-                  <div className="mb-1.5 flex items-center justify-between">
-                    <Label className="text-xs text-muted-foreground">Complexity Score</Label>
-                    <span className="text-xs font-semibold">{product.complexity}</span>
-                  </div>
-                  <Slider
-                    value={[product.complexity]}
-                    onValueChange={(v) => setProduct({ ...product, complexity: v[0] })}
-                    max={100}
-                    step={1}
-                  />
-                </div>
-                <div>
-                  <div className="mb-1.5 flex items-center justify-between">
-                    <Label className="text-xs text-muted-foreground">Support Points</Label>
-                    <span className="text-xs font-semibold">{product.support}</span>
-                  </div>
-                  <Slider
-                    value={[product.support]}
-                    onValueChange={(v) => setProduct({ ...product, support: v[0] })}
-                    max={10}
-                    step={1}
-                  />
-                </div>
+              <CardContent className="space-y-3">
+                <InfoField label="Name" value={product.name} />
+                <InfoField label="Category" value={product.category} />
+                <InfoField label="Complexity Score" value={String(product.complexity)} />
+                <InfoField label="Support Points" value={String(product.support)} />
               </CardContent>
             </Card>
 
@@ -733,60 +547,7 @@ export default function RiskAssessmentContent({
 
           {/* Main content */}
           <section className="col-span-12 space-y-6 lg:col-span-9">
-            {/* Engineering Input Summary + Rule Engine Status */}
-            <div className="grid grid-cols-1 gap-6 xl:grid-cols-3">
-              <Card className="rounded-2xl border-border shadow-sm xl:col-span-2">
-                <CardHeader className="pb-2">
-                  <div className="flex items-center gap-2">
-                    <Package className="h-4 w-4 text-[color:var(--pink)]" />
-                    <CardTitle className="text-[15px] font-semibold tracking-tight">
-                      Packaging Configuration
-                    </CardTitle>
-                    <Badge className="ml-auto bg-muted text-muted-foreground">
-                      ISTA {packagingConfig.istaLevel}
-                    </Badge>
-                  </div>
-                </CardHeader>
-                <CardContent>
-                  <div className="grid grid-cols-2 gap-x-6 gap-y-3 md:grid-cols-3 lg:grid-cols-4">
-                    <ConfigField label="Method"     value={packagingConfig.method} />
-                    <ConfigField label="Type"       value={packagingConfig.type} />
-                    <ConfigField label="Attachment" value={packagingConfig.attachment} />
-                    <ConfigField label="Support Pts" value={String(packagingConfig.supportPoints)} />
-                    <ConfigField label="Cushion"    value={packagingConfig.cushionMaterial} />
-                    <ConfigField label="Thickness"  value={packagingConfig.cushionThickness} />
-                    <ConfigField label="Weight"     value={packagingConfig.weight} />
-                    <ConfigField label="CoG"        value={packagingConfig.centerOfGravity} />
-                    <ConfigField label="Clearance"  value={packagingConfig.clearance} />
-                    <ConfigField label="Design"     value={packagingConfig.designMethod} />
-                    <ConfigField label="ISTA"       value={packagingConfig.istaLevel} />
-                  </div>
-                </CardContent>
-              </Card>
-
-              <Card className="rounded-2xl border-border shadow-sm">
-                <CardHeader className="pb-2">
-                  <div className="flex items-center gap-2">
-                    <Database className="h-4 w-4 text-[color:var(--pink)]" />
-                    <CardTitle className="text-[15px] font-semibold tracking-tight">
-                      Knowledge Base Status
-                    </CardTitle>
-                  </div>
-                </CardHeader>
-                <CardContent>
-                  <div className="grid grid-cols-2 gap-3">
-                    <KbStat label="Literature Papers" value={ruleEngineStatus.literaturePapers} />
-                    <KbStat label="Engineering Rules" value={ruleEngineStatus.engineeringRules} />
-                    <KbStat label="Active Triggered"  value={ruleEngineStatus.activeRulesTriggered} />
-                    <KbStat label="Rule Coverage"     value={`${ruleEngineStatus.ruleCoverage}%`} />
-                  </div>
-                  <div className="mt-3 h-1.5 overflow-hidden rounded-full bg-muted">
-                    <div className="h-full rounded-full transition-all"
-                      style={{ width: `${ruleEngineStatus.ruleCoverage}%`, backgroundColor: "#d946ef" }} />
-                  </div>
-                </CardContent>
-              </Card>
-            </div>
+            {/* Spacer — removed hardcoded Packaging Config & KB Status cards */}
 
             {/* Scenario selector */}
             <Card className="rounded-2xl border-border shadow-sm">
@@ -856,46 +617,6 @@ export default function RiskAssessmentContent({
               <MetricCard label="Drop-Test Prediction" value={dropScore}    suffix="/100" tone={dropLevel(dropScore)}      hint="Survival score"        primaryCause={primaryCauses.dr} highlight />
             </div>
 
-            {/* Triggered Engineering Rules */}
-            <Card className="rounded-2xl border-border shadow-sm">
-              <CardHeader className="pb-2">
-                <div className="flex items-center gap-2">
-                  <FileText className="h-4 w-4 text-[color:var(--pink)]" />
-                  <CardTitle className="text-[15px] font-semibold tracking-tight">
-                    Triggered Engineering Rules
-                  </CardTitle>
-                  <Badge className="ml-auto bg-muted text-muted-foreground">
-                    {engineeringRules.filter((r) => r.status === "Triggered").length} active
-                  </Badge>
-                </div>
-              </CardHeader>
-              <CardContent>
-                <div className="overflow-hidden rounded-xl border border-border">
-                  <table className="w-full text-sm">
-                    <thead className="bg-muted/50 text-[11px] uppercase tracking-wider text-muted-foreground">
-                      <tr>
-                        <th className="px-4 py-2 text-left font-medium">Rule ID</th>
-                        <th className="px-4 py-2 text-left font-medium">Evidence</th>
-                        <th className="px-4 py-2 text-left font-medium">Engineering Rule</th>
-                        <th className="px-4 py-2 text-right font-medium">Status</th>
-                      </tr>
-                    </thead>
-                    <tbody>
-                      {engineeringRules.map((r) => (
-                        <tr key={r.id} className="border-t border-border">
-                          <td className="px-4 py-3 font-semibold text-[color:var(--pink)]">{r.id}</td>
-                          <td className="px-4 py-3 font-mono text-[12px] text-muted-foreground">{r.evidenceId}</td>
-                          <td className="px-4 py-3">{r.rule}</td>
-                          <td className="px-4 py-3 text-right">
-                            <RuleStatusBadge status={r.status} />
-                          </td>
-                        </tr>
-                      ))}
-                    </tbody>
-                  </table>
-                </div>
-              </CardContent>
-            </Card>
 
             {/* Survival Timeline */}
             <Card className="rounded-2xl border-border shadow-sm">
@@ -1153,47 +874,6 @@ export default function RiskAssessmentContent({
               </CardContent>
             </Card>
 
-            {/* Engineering Explanation */}
-            <Card className="rounded-2xl border-border shadow-sm">
-              <CardHeader className="pb-2">
-                <div className="flex items-center gap-2">
-                  <Wand2 className="h-4 w-4 text-[color:var(--pink)]" />
-                  <CardTitle className="text-[15px] font-semibold tracking-tight">Engineering Explanation</CardTitle>
-                  <Badge className="ml-auto bg-muted text-muted-foreground">Rule Engine · v2.4</Badge>
-                </div>
-              </CardHeader>
-              <CardContent>
-                <div className="grid grid-cols-1 gap-4 md:grid-cols-3">
-                  <Explain
-                    title="Movement risk increases because"
-                    points={[
-                      `Internal clearance ${packagingConfig.clearance} exceeds recommended 5 mm limit`,
-                      `Support points only restrain ${Math.round(product.support * 12 + 30)}% of product mass`,
-                      `CoG offset ${packagingConfig.centerOfGravity} generates rotational moment`,
-                      `Attachment coverage at ${Math.round(attachmentCoverage)}% leaves head & arms partly free`,
-                    ]}
-                  />
-                  <Explain
-                    title="Accessory loss occurs because"
-                    points={[
-                      `${unsecuredSmall} sub-5 g part(s) below vibration retention threshold`,
-                      `Blister window tolerance exceeds accessory footprint by 1.8 mm`,
-                      `${securedCount} restrained part(s) verified against R118 threshold`,
-                      `Cushion ${packagingConfig.cushionMaterial} ${packagingConfig.cushionThickness} damps only mid-band vibration`,
-                    ]}
-                  />
-                  <Explain
-                    title="Drop survival is limited by"
-                    points={[
-                      `Movement contribution: −${round(movementRisk * 0.4)} pts (R-CL-003, R-CG-005)`,
-                      `Accessory displacement: −${round(accessoryLoss * 0.2)} pts (R118)`,
-                      `Pose stability recovery: +${round(poseStability * 0.3)} pts`,
-                      `Scenario ${sc.label} drop height ${sc.conditions.dropHeight} applies factor ×${sc.dr}`,
-                    ]}
-                  />
-                </div>
-              </CardContent>
-            </Card>
 
             {/* AI suggestions */}
             <Card className="rounded-2xl border-border shadow-sm">
@@ -1212,9 +892,7 @@ export default function RiskAssessmentContent({
                   ))}
                 </div>
 
-                <Separator className="my-6" />
-
-                <div className="flex flex-wrap items-center justify-between gap-4">
+                <div className="mt-4 flex flex-wrap items-center justify-between gap-4">
                   <div className="flex items-center gap-3">
                     <div className="grid h-10 w-10 place-items-center rounded-full bg-[color:var(--pink-soft)]">
                       <CircleAlert className="h-5 w-5 text-[color:var(--pink)]" />
@@ -1228,186 +906,12 @@ export default function RiskAssessmentContent({
                       </div>
                     </div>
                   </div>
-                  <Button
-                    size="lg"
-                    className="h-11 rounded-full px-6 text-white shadow-md hover:opacity-95"
-                    style={{ backgroundColor: "#d946ef" }}
-                  >
-                    Review Cost & Sustainability
-                    <ArrowRight className="ml-2 h-4 w-4" />
-                  </Button>
-                </div>
-
-                <Separator className="my-6" />
-
-                <div className="flex flex-wrap items-center justify-between gap-4 rounded-xl border border-dashed border-[color:var(--pink)]/40 bg-[color:var(--pink-soft)]/30 p-4">
-                  <div className="flex items-center gap-3">
-                    <div className="grid h-10 w-10 place-items-center rounded-full bg-white shadow-sm">
-                      <Wrench className="h-5 w-5 text-[color:var(--pink)]" />
-                    </div>
-                    <div>
-                      <div className="text-sm font-semibold">What-if Optimization</div>
-                      <div className="text-[12px] text-muted-foreground">
-                        Secure all parts, +15% coverage, +2 support points.
-                      </div>
-                    </div>
-                  </div>
-                  <Button
-                    variant="outline"
-                    onClick={() => setOptOpen(true)}
-                    className="h-10 rounded-full border-[color:var(--pink)]/40 px-5 text-[color:var(--pink)] hover:bg-[color:var(--pink-soft)]"
-                  >
-                    Try Optimization
-                    <Sparkles className="ml-2 h-4 w-4" />
-                  </Button>
                 </div>
               </CardContent>
             </Card>
-
-            {/* Decision Trace (collapsible) */}
-            <Card className="rounded-2xl border-border shadow-sm">
-              <button
-                onClick={() => setTraceOpen((v) => !v)}
-                className="flex w-full items-center gap-2 px-6 py-4 text-left"
-              >
-                <GitBranch className="h-4 w-4 text-[color:var(--pink)]" />
-                <span className="text-[15px] font-semibold tracking-tight">Decision Trace</span>
-                <Badge className="ml-2 bg-muted text-muted-foreground">
-                  Literature → Recommendation
-                </Badge>
-                <ChevronDown
-                  className={`ml-auto h-4 w-4 text-muted-foreground transition-transform ${traceOpen ? "rotate-180" : ""}`}
-                />
-              </button>
-              {traceOpen && (
-                <CardContent className="pt-0">
-                  <div className="grid grid-cols-1 gap-3 md:grid-cols-6">
-                    {decisionTrace.map((s, i) => {
-                      const Icon = s.icon;
-                      return (
-                        <div key={s.stage} className="relative">
-                          <div className="rounded-xl border border-border bg-card p-3">
-                            <div className="flex items-center gap-2">
-                              <div className="grid h-7 w-7 place-items-center rounded-md bg-[color:var(--pink-soft)]">
-                                <Icon className="h-3.5 w-3.5 text-[color:var(--pink)]" />
-                              </div>
-                              <span className="text-[10px] font-semibold uppercase tracking-wider text-muted-foreground">
-                                {s.stage}
-                              </span>
-                            </div>
-                            <div className="mt-2 text-[12.5px] font-semibold leading-tight">{s.label}</div>
-                            <div className="mt-1 text-[11px] leading-snug text-muted-foreground">{s.detail}</div>
-                          </div>
-                          {i < decisionTrace.length - 1 && (
-                            <div className="pointer-events-none absolute right-[-10px] top-1/2 hidden h-px w-4 -translate-y-1/2 bg-border md:block" />
-                          )}
-                        </div>
-                      );
-                    })}
-                  </div>
-                  <div className="mt-3 rounded-lg bg-[color:var(--pink-soft)]/40 p-3 text-[12px] text-muted-foreground">
-                    Every prediction on this page is traceable back to a literature source through the
-                    Rule Prediction Knowledge Base (RPKB).
-                  </div>
-                </CardContent>
-              )}
-            </Card>
           </section>
         </div>
-
-        <footer className="mt-10 flex flex-wrap items-center justify-between gap-3 border-t border-border pt-6 text-[12px] text-muted-foreground">
-          <div>PackWise AI · Risk inference engine v2.4 · Deterministic mode</div>
-          <div className="flex items-center gap-3">
-            <span className="inline-flex items-center gap-1.5"><span className="h-2 w-2 rounded-full bg-emerald-500" /> LOW</span>
-            <span className="inline-flex items-center gap-1.5"><span className="h-2 w-2 rounded-full bg-amber-500" /> MEDIUM</span>
-            <span className="inline-flex items-center gap-1.5"><span className="h-2 w-2 rounded-full bg-rose-500" /> HIGH</span>
-          </div>
-        </footer>
       </main>
-
-      {/* Confidence Explainability Dialog */}
-      <Dialog open={confOpen} onOpenChange={setConfOpen}>
-        <DialogContent>
-          <DialogHeader>
-            <DialogTitle className="flex items-center gap-2">
-              <ShieldCheck className="h-5 w-5 text-[color:var(--pink)]" />
-              Confidence Explainability — {Math.round(confidence)}%
-            </DialogTitle>
-            <DialogDescription>
-              Deterministic factors contributing to the model's confidence under{" "}
-              <span className="font-medium text-foreground">{sc.label}</span>.
-            </DialogDescription>
-          </DialogHeader>
-          <div className="mt-2 grid grid-cols-2 gap-2">
-            {confidenceBreakdown.map((b) => (
-              <div key={b.label} className="rounded-lg border border-border bg-card px-3 py-2">
-                <div className="text-[10px] font-medium uppercase tracking-wider text-muted-foreground">
-                  {b.label}
-                </div>
-                <div className={`mt-1 text-lg font-semibold tabular-nums ${b.tone === "warn" ? "text-amber-600" : "text-foreground"}`}>
-                  {b.value}{b.suffix}
-                </div>
-              </div>
-            ))}
-          </div>
-          <Separator className="my-3" />
-          <div className="mt-2 space-y-2">
-            {confFactors.map((f) => (
-              <div
-                key={f.label}
-                className="flex items-center justify-between rounded-lg border border-border bg-card px-3 py-2"
-              >
-                <div className="flex items-center gap-2">
-                  <span
-                    className={`h-2 w-2 rounded-full ${f.good ? "bg-emerald-500" : "bg-rose-500"}`}
-                  />
-                  <span className="text-sm">{f.label}</span>
-                </div>
-                <span
-                  className={`text-sm font-semibold tabular-nums ${
-                    f.delta >= 0 ? "text-emerald-600" : "text-rose-600"
-                  }`}
-                >
-                  {f.delta >= 0 ? "+" : ""}
-                  {f.delta}
-                </span>
-              </div>
-            ))}
-          </div>
-          <div className="mt-3 rounded-lg bg-[color:var(--pink-soft)]/50 p-3 text-[12px] text-muted-foreground">
-            Sum is clamped to 0–100. Confidence reflects input completeness, not predicted outcome.
-          </div>
-        </DialogContent>
-      </Dialog>
-
-      {/* What-if Optimization Dialog */}
-      <Dialog open={optOpen} onOpenChange={setOptOpen}>
-        <DialogContent className="sm:max-w-2xl">
-          <DialogHeader>
-            <DialogTitle className="flex items-center gap-2">
-              <Wrench className="h-5 w-5 text-[color:var(--pink)]" />
-              What-if Optimization
-            </DialogTitle>
-            <DialogDescription>
-              Engineering deltas if all accessories are secured, coverage +15%, support +2.
-            </DialogDescription>
-          </DialogHeader>
-          <div className="mt-2 grid grid-cols-1 gap-3 md:grid-cols-2">
-            <BeforeAfter label="Movement Risk"  before={movementRisk}  after={optimized.mv}  invert />
-            <BeforeAfter label="Accessory Loss" before={accessoryLoss} after={optimized.ac}  invert />
-            <BeforeAfter label="Pose Stability" before={poseStability} after={optimized.ps} />
-            <BeforeAfter label="Drop Survival"  before={dropScore}     after={optimized.dr} />
-          </div>
-          <div className="mt-3 flex items-center justify-between rounded-lg border border-[color:var(--pink)]/30 bg-[color:var(--pink-soft)]/40 p-3">
-            <div className="text-[12px] text-muted-foreground">
-              Net survival uplift
-            </div>
-            <div className="text-lg font-semibold text-[color:var(--pink)] tabular-nums">
-              +{round(optimized.dr - dropScore)} pts
-            </div>
-          </div>
-        </DialogContent>
-      </Dialog>
     </div>
   );
 }
@@ -1618,6 +1122,15 @@ function BeforeAfter({
         {delta > 0 ? "+" : ""}
         {delta} {improved ? "✓" : ""}
       </div>
+    </div>
+  );
+}
+
+function InfoField({ label, value }: { label: string; value: string }) {
+  return (
+    <div>
+      <div className="text-[10px] font-medium uppercase tracking-wider text-muted-foreground">{label}</div>
+      <div className="mt-0.5 text-[13px] font-medium leading-tight text-foreground">{value || "—"}</div>
     </div>
   );
 }
