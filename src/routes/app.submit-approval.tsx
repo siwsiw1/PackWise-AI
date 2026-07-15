@@ -29,6 +29,12 @@ function SubmitApprovalPage() {
     if (!analysisCheck) {
       toast.error("Please complete Product Analysis before submitting a plan.");
       navigate({ to: "/app/product-analysis" });
+      return;
+    }
+    const planCheck = loadPlan();
+    if (!planCheck) {
+      toast.error("Please run the Packaging Planner before submitting a plan.");
+      navigate({ to: "/app/packaging-planner" });
     }
   }, []);
 
