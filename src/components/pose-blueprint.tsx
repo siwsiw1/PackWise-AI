@@ -191,6 +191,7 @@ interface PoseBlueprintProps {
   currentKeypoints: Keypoint[];
   imageUrl?: string;
   className?: string;
+  mode?: "before" | "after" | "overlay";
 }
 
 export const PoseBlueprint = memo(function PoseBlueprint({
@@ -198,6 +199,7 @@ export const PoseBlueprint = memo(function PoseBlueprint({
   currentKeypoints,
   imageUrl,
   className = "",
+  mode = "overlay",
 }: PoseBlueprintProps) {
   const [imgDim, setImgDim] = useState({ w: 0, h: 0 });
 
@@ -230,39 +232,44 @@ export const PoseBlueprint = memo(function PoseBlueprint({
             className="absolute inset-0 w-full h-full pointer-events-none"
           >
             {/* Current pose (faded slate) */}
-            <SkeletonLines kps={currentKeypoints} color="#94a3b8" opacity={0.6} strokeWidth={imgDim.w * 0.006} />
+            {(mode === "before" || mode === "overlay") && (
+              <SkeletonLines kps={currentKeypoints} color={mode === "before" ? "#ef4444" : "#94a3b8"} opacity={mode === "before" ? 1 : 0.6} strokeWidth={imgDim.w * 0.006} />
+            )}
 
             {/* Recommended pose (bright pink matching brand) */}
-            <SkeletonLines kps={recommendation.recommendedKeypoints} color="#ec4899" opacity={1} strokeWidth={imgDim.w * 0.01} showLabels={true} />
+            {(mode === "after" || mode === "overlay") && (
+              <SkeletonLines kps={recommendation.recommendedKeypoints} color="#ec4899" opacity={1} strokeWidth={imgDim.w * 0.01} showLabels={true} />
+            )}
 
             {/* Attachment markers */}
-            {/* We scale the offset manually based on image dimensions instead of W/H */}
-            <g>
-              {recommendation.attachmentPlacements.map((p, i) => {
-                const kp = recommendation.recommendedKeypoints[p.keypointIndex];
-                if (!kp || (kp.x === 0 && kp.y === 0)) return null;
-                // p.offsetX/Y are percentages (-0.5 to 0.5) intended for the normalized 400x500 box.
-                // We map them to the image dimensions.
-                const cx = kp.x + (p.offsetX * imgDim.w * 0.5);
-                const cy = kp.y + (p.offsetY * imgDim.h * 0.5);
-                const baseR = imgDim.w * 0.02;
-                return (
-                  <g key={i}>
-                    {/* Marker */}
-                    <circle cx={cx} cy={cy} r={baseR} fill={p.color} opacity={0.9} />
-                    <circle cx={cx} cy={cy} r={baseR * 0.5} fill="white" opacity={0.8} />
-                    {/* Label */}
-                    <text
-                      x={cx + baseR * 1.5} y={cy + baseR * 0.5}
-                      fontSize={baseR * 1.2} fontWeight="600" fill={p.color}
-                      fontFamily="system-ui"
-                    >
-                      {p.method}
-                    </text>
-                  </g>
-                );
-              })}
-            </g>
+            {(mode === "after" || mode === "overlay") && (
+              <g>
+                {recommendation.attachmentPlacements.map((p, i) => {
+                  const kp = recommendation.recommendedKeypoints[p.keypointIndex];
+                  if (!kp || (kp.x === 0 && kp.y === 0)) return null;
+                  // p.offsetX/Y are percentages (-0.5 to 0.5) intended for the normalized 400x500 box.
+                  // We map them to the image dimensions.
+                  const cx = kp.x + (p.offsetX * imgDim.w * 0.5);
+                  const cy = kp.y + (p.offsetY * imgDim.h * 0.5);
+                  const baseR = imgDim.w * 0.02;
+                  return (
+                    <g key={i}>
+                      {/* Marker */}
+                      <circle cx={cx} cy={cy} r={baseR} fill={p.color} opacity={0.9} />
+                      <circle cx={cx} cy={cy} r={baseR * 0.5} fill="white" opacity={0.8} />
+                      {/* Label */}
+                      <text
+                        x={cx + baseR * 1.5} y={cy + baseR * 0.5}
+                        fontSize={baseR * 1.2} fontWeight="600" fill={p.color}
+                        fontFamily="system-ui"
+                      >
+                        {p.method}
+                      </text>
+                    </g>
+                  );
+                })}
+              </g>
+            )}
           </svg>
         )}
       </div>
@@ -270,6 +277,18 @@ export const PoseBlueprint = memo(function PoseBlueprint({
   }
 
   // Grid Mode (Fallback)
+  const titleText = mode === "before" 
+    ? "ORIGINAL SKELETON (BEFORE)" 
+    : mode === "after" 
+    ? "OPTIMIZED BLUEPRINT (AFTER)" 
+    : "AI POSE COMPARISON OVERLAY";
+
+  const riskText = mode === "before" 
+    ? `Risk Score: ${recommendation.currentPoseRisk}/100`
+    : mode === "after"
+    ? `Risk Score: ${recommendation.recommendedPoseRisk}/100`
+    : `${recommendation.poseName} — Risk: ${recommendation.currentPoseRisk} → ${recommendation.recommendedPoseRisk}`;
+
   return (
     <svg
       viewBox={`0 0 ${W} ${H}`}
@@ -291,30 +310,57 @@ export const PoseBlueprint = memo(function PoseBlueprint({
 
       {/* Title */}
       <text x={W / 2} y={22} textAnchor="middle" fontSize={11} fontWeight="700" fill="#0f172a" fontFamily="system-ui">
-        RECOMMENDED POSE BLUEPRINT
+        {titleText}
       </text>
       <text x={W / 2} y={36} textAnchor="middle" fontSize={8} fill="#64748b" fontFamily="system-ui">
-        {recommendation.poseName} — Risk: {recommendation.currentPoseRisk} → {recommendation.recommendedPoseRisk}
+        {riskText}
       </text>
 
-      {/* Current pose (faded slate) */}
-      <SkeletonLines kps={normalizedCurrent} color="#94a3b8" opacity={0.4} strokeWidth={1.5} />
+      {/* Current pose (faded slate or red) */}
+      {(mode === "before" || mode === "overlay") && (
+        <SkeletonLines kps={normalizedCurrent} color={mode === "before" ? "#ef4444" : "#94a3b8"} opacity={mode === "before" ? 1 : 0.4} strokeWidth={mode === "before" ? 2.5 : 1.5} />
+      )}
 
       {/* Recommended pose (bright pink matching brand) */}
-      <SkeletonLines kps={normalizedRecommended} color="#ec4899" opacity={1} strokeWidth={2.5} showLabels={true} />
+      {(mode === "after" || mode === "overlay") && (
+        <SkeletonLines kps={normalizedRecommended} color="#ec4899" opacity={1} strokeWidth={2.5} showLabels={true} />
+      )}
 
       {/* Attachment markers */}
-      <AttachmentMarkers placements={recommendation.attachmentPlacements} kps={normalizedRecommended} />
+      {(mode === "after" || mode === "overlay") && (
+        <AttachmentMarkers placements={recommendation.attachmentPlacements} kps={normalizedRecommended} />
+      )}
 
       {/* Legend */}
-      <g transform={`translate(12, ${H - 50})`}>
-        <rect x={-4} y={-8} width={130} height={46} rx={4} fill="#ffffff" stroke="#e2e8f0" strokeWidth={1} />
-        <circle cx={8} cy={4} r={4} fill="#94a3b8" opacity={0.5} />
-        <text x={18} y={7} fontSize={8} fill="#334155" fontFamily="system-ui">Current Pose</text>
-        <circle cx={8} cy={18} r={4} fill="#ec4899" />
-        <text x={18} y={21} fontSize={8} fill="#334155" fontFamily="system-ui">Recommended Pose</text>
-        <circle cx={8} cy={32} r={4} fill="#22c55e" />
-        <text x={18} y={35} fontSize={8} fill="#334155" fontFamily="system-ui">Attachment Point</text>
+      <g transform={`translate(12, ${H - (mode === "overlay" ? 50 : 35)})`}>
+        <rect x={-4} y={-8} width={130} height={mode === "overlay" ? 46 : 30} rx={4} fill="#ffffff" stroke="#e2e8f0" strokeWidth={1} />
+        
+        {mode === "before" && (
+          <>
+            <circle cx={8} cy={4} r={4} fill="#ef4444" />
+            <text x={18} y={7} fontSize={8} fill="#334155" fontFamily="system-ui">Current Pose (High Risk)</text>
+          </>
+        )}
+
+        {mode === "after" && (
+          <>
+            <circle cx={8} cy={4} r={4} fill="#ec4899" />
+            <text x={18} y={7} fontSize={8} fill="#334155" fontFamily="system-ui">Recommended Pose</text>
+            <circle cx={8} cy={16} r={4} fill="#22c55e" />
+            <text x={18} y={19} fontSize={8} fill="#334155" fontFamily="system-ui">Attachment Point</text>
+          </>
+        )}
+
+        {mode === "overlay" && (
+          <>
+            <circle cx={8} cy={4} r={4} fill="#94a3b8" opacity={0.5} />
+            <text x={18} y={7} fontSize={8} fill="#334155" fontFamily="system-ui">Current Pose</text>
+            <circle cx={8} cy={18} r={4} fill="#ec4899" />
+            <text x={18} y={21} fontSize={8} fill="#334155" fontFamily="system-ui">Recommended Pose</text>
+            <circle cx={8} cy={32} r={4} fill="#22c55e" />
+            <text x={18} y={35} fontSize={8} fill="#334155" fontFamily="system-ui">Attachment Point</text>
+          </>
+        )}
       </g>
     </svg>
   );
