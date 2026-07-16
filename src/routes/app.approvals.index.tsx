@@ -6,7 +6,8 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { PageHeader } from "@/components/page-header";
 import { useState, useEffect } from "react";
-import { loadApprovalRequests, type ApprovalRequest } from "@/lib/workflow-store";
+import { type ApprovalRequest } from "@/lib/workflow-store";
+import { supabase } from "@/lib/supabase";
 
 export const Route = createFileRoute("/app/approvals/")({
   head: () => ({ meta: [{ title: "Approvals — PackWise AI" }] }),
@@ -114,9 +115,24 @@ function ApprovalsPage() {
   const [tab, setTab] = useState<"pending" | "accepted">("pending");
 
   useEffect(() => {
-    setAll(loadApprovalRequests());
-    // Poll every 2s so if engineer submits in another tab it updates
-    const interval = setInterval(() => setAll(loadApprovalRequests()), 2000);
+    async function fetchData() {
+      const { data } = await supabase.from('approval_requests').select('*').order('submitted_at', { ascending: false });
+      if (data) {
+        setAll(data.map(d => ({
+          id: d.req_id,
+          sku: d.sku,
+          engineer: d.engineer_name,
+          date: new Date(d.submitted_at).toLocaleString(),
+          risk: d.risk_level,
+          cost: d.est_cost,
+          laborTime: d.labor_time,
+          status: d.status as any,
+          decidedAt: undefined
+        })));
+      }
+    }
+    fetchData();
+    const interval = setInterval(fetchData, 5000);
     return () => clearInterval(interval);
   }, []);
 
