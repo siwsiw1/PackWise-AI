@@ -416,53 +416,94 @@ function ProductAnalysisPage() {
 
   const handleContinue = async () => {
     setIsSaving(true);
-
-    const user = (() => { try { return JSON.parse(localStorage.getItem("packwise_user") || ""); } catch { return null; } })();
-    
-    let publicImageUrl = null;
-    if (imageFile) {
-      try {
-        const fileExt = imageFile.name.split('.').pop() || 'jpg';
-        const fileName = `${Date.now()}-${Math.random().toString(36).substring(7)}.${fileExt}`;
-        const filePath = `${user?.user_id || 'anonymous'}/${fileName}`;
-        
-        const { error: uploadError } = await supabase.storage.from('product-images').upload(filePath, imageFile);
-        if (!uploadError) {
-          const { data } = supabase.storage.from('product-images').getPublicUrl(filePath);
-          publicImageUrl = data.publicUrl;
-        } else {
-          console.warn("Supabase Storage upload failed:", uploadError);
-        }
-      } catch (err) {
-        console.warn("Failed to upload image:", err);
-      }
-    }
-
-    let analysisId = undefined;
-    
-    // Save full analysis to Supabase product_analyses
     try {
+      const user = (() => { try { return JSON.parse(localStorage.getItem("packwise_user") || ""); } catch { return null; } })();
+      
+      let publicImageUrl = null;
+      if (imageFile) {
+        try {
+          const fileExt = imageFile.name.split('.').pop() || 'jpg';
+          const fileName = `${Date.now()}-${Math.random().toString(36).substring(7)}.${fileExt}`;
+          const filePath = `${user?.user_id || 'anonymous'}/${fileName}`;
+          
+          const { error: uploadError } = await supabase.storage.from('product-images').upload(filePath, imageFile);
+          if (!uploadError) {
+            const { data } = supabase.storage.from('product-images').getPublicUrl(filePath);
+            publicImageUrl = data.publicUrl;
+          } else {
+            console.warn("Supabase Storage upload failed:", uploadError);
+          }
+        } catch (err) {
+          console.warn("Failed to upload image:", err);
+        }
+      }
+
+      // Save full analysis to Supabase product_analyses
+      try {
+        const finalWeight = customWeightG !== "" ? parseFloat(customWeightG) : weightG;
+        const finalHeight = customHeightCm !== "" ? parseFloat(customHeightCm) : heightCm;
+
+        const mlOutputs = {
+          detected_poses: detectedPoses,
+          raw_keypoints: rawKeypoints,
+          cv_detections: detectedStraps,
+          pose_status: poseStatus,
+          computed_height: computedHeight,
+          computed_complexity: computedComplexity,
+          computed_cog: computedCOG
+        };
+
+        const { data, error } = await supabase.from('product_analyses').insert([{
+          id: runId,
+          user_id: user?.user_id ?? null,
+          product_name: `${productFamily} Doll`,
+          product_family: productFamily,
+          articulation: articulation,
+          pose: poseStatus ? (poseStatus.left_arm_up || poseStatus.right_arm_up ? "Arms Up" : "Arms Down") : pose,
+          weight_g: finalWeight,
+          height_cm: finalHeight,
+          center_of_gravity: computedCOG,
+          hair_length: hairLength,
+          dress_length: dressLength,
+          accessory_count: selectedAccessories.length,
+          accessory_weight_g: selectedAccessories.reduce((acc, curr) => acc + curr.weight, 0),
+          selected_accessories: selectedAccessories.map((a) => a.name),
+          image_url: publicImageUrl,
+          annotated_image_url: null, // Can be updated later if needed
+          ml_outputs: mlOutputs,
+          created_at: new Date().toISOString(),
+        }]).select();
+
+        if (error) {
+          console.warn("Supabase save warning:", error.message);
+          toast.error("Database save error: " + error.message);
+        } else if (data && data.length > 0) {
+          console.log("[PackWise] Analysis saved to Supabase ✓", data[0].id);
+          toast.success("Analysis saved to Supabase successfully.");
+        }
+      } catch (err: any) {
+        console.warn("Supabase save failed (offline?):", err);
+        toast.error("Database connection issue: " + err.message);
+      }
+    } finally {
+      setIsSaving(false);
+
       const finalWeight = customWeightG !== "" ? parseFloat(customWeightG) : weightG;
       const finalHeight = customHeightCm !== "" ? parseFloat(customHeightCm) : heightCm;
 
-      const mlOutputs = {
-        detected_poses: detectedPoses,
-        raw_keypoints: rawKeypoints,
-        cv_detections: detectedStraps,
-        pose_status: poseStatus,
-        computed_height: computedHeight,
-        computed_complexity: computedComplexity,
-        computed_cog: computedCOG
-      };
-
-      const { data, error } = await supabase.from('product_analyses').insert([{
+      const r: AnalysisResult = {
         id: runId,
-        user_id: user?.user_id ?? null,
-        product_name: `${productFamily} Doll`,
+        productName: `${productFamily} Doll`,
+        category: "Fashion Doll",
+        imageDataUrl: imageDataUrl,
+        productType: "Doll",
+        dimensions: `${finalHeight}cm`,
+        analysedAt: new Date().toISOString(),
+
         product_family: productFamily,
         articulation: articulation,
         pose: poseStatus ? (poseStatus.left_arm_up || poseStatus.right_arm_up ? "Arms Up" : "Arms Down") : pose,
-        weight_g: finalWeight,
+        product_weight_g: finalWeight,
         height_cm: finalHeight,
         center_of_gravity: computedCOG,
         hair_length: hairLength,
@@ -470,68 +511,28 @@ function ProductAnalysisPage() {
         accessory_count: selectedAccessories.length,
         accessory_weight_g: selectedAccessories.reduce((acc, curr) => acc + curr.weight, 0),
         selected_accessories: selectedAccessories.map((a) => a.name),
-        image_url: publicImageUrl,
-        annotated_image_url: null, // Can be updated later if needed
-        ml_outputs: mlOutputs,
-        created_at: new Date().toISOString(),
-      }]).select();
+        cvDetections: detectedStraps,
+        raw_keypoints: rawKeypoints,
 
-      if (error) {
-        console.warn("Supabase save warning:", error.message);
-      } else if (data && data.length > 0) {
-        console.log("[PackWise] Analysis saved to Supabase ✓", data[0].id);
-      }
-      analysisId = runId;
-    } catch (err) {
-      console.warn("Supabase save failed (offline?):", err);
+        // Skeleton & CV output for Attachment Planner
+        annotatedImageDataUrl: annotatedImage,
+        detectedPoses: detectedPoses,
+        computedHeight: computedHeight,
+        computedComplexity: computedComplexity,
+        computedCOG: computedCOG,
+        poseStatus: poseStatus ?? { left_arm_up: false, right_arm_up: false },
+
+        accessories: selectedAccessories.map((a) => a.name),
+        bodyRegions: ["Head", "Torso", "Arms", "Legs"],
+        attachmentZones: [],
+        poseComplexityScore: 0,
+        poseStabilityScore: 0,
+        movementRiskScore: 0,
+        accessoryLossRisk: 0,
+      };
+      saveAnalysis(r);
+      navigate({ to: "/app/packaging-planner" });
     }
-
-    setIsSaving(false);
-
-    const finalWeight = customWeightG !== "" ? parseFloat(customWeightG) : weightG;
-    const finalHeight = customHeightCm !== "" ? parseFloat(customHeightCm) : heightCm;
-
-    const r: AnalysisResult = {
-      id: analysisId,
-      productName: `${productFamily} Doll`,
-      category: "Fashion Doll",
-      imageDataUrl: imageDataUrl,
-      productType: "Doll",
-      dimensions: `${finalHeight}cm`,
-      analysedAt: new Date().toISOString(),
-
-      product_family: productFamily,
-      articulation: articulation,
-      pose: poseStatus ? (poseStatus.left_arm_up || poseStatus.right_arm_up ? "Arms Up" : "Arms Down") : pose,
-      product_weight_g: finalWeight,
-      height_cm: finalHeight,
-      center_of_gravity: computedCOG,
-      hair_length: hairLength,
-      dress_length: dressLength,
-      accessory_count: selectedAccessories.length,
-      accessory_weight_g: selectedAccessories.reduce((acc, curr) => acc + curr.weight, 0),
-      selected_accessories: selectedAccessories.map((a) => a.name),
-      cvDetections: detectedStraps,
-      raw_keypoints: rawKeypoints,
-
-      // Skeleton & CV output for Attachment Planner
-      annotatedImageDataUrl: annotatedImage,
-      detectedPoses: detectedPoses,
-      computedHeight: computedHeight,
-      computedComplexity: computedComplexity,
-      computedCOG: computedCOG,
-      poseStatus: poseStatus ?? { left_arm_up: false, right_arm_up: false },
-
-      accessories: selectedAccessories.map((a) => a.name),
-      bodyRegions: ["Head", "Torso", "Arms", "Legs"],
-      attachmentZones: [],
-      poseComplexityScore: 0,
-      poseStabilityScore: 0,
-      movementRiskScore: 0,
-      accessoryLossRisk: 0,
-    };
-    saveAnalysis(r);
-    navigate({ to: "/app/packaging-planner" });
   };
 
   if (stage === "results") return (
