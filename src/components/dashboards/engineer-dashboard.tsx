@@ -1,5 +1,5 @@
 import { Link } from "@tanstack/react-router";
-import { Activity, Sparkles, ArrowRight, ShieldAlert, ScanLine, Link2 } from "lucide-react";
+import { Activity, Sparkles, ArrowRight, ShieldAlert, ScanLine, Link2, FileText } from "lucide-react";
 import {
   Area, AreaChart, CartesianGrid, ResponsiveContainer, Tooltip, XAxis, YAxis,
 } from "recharts";
@@ -13,6 +13,7 @@ import type { AuthUser } from "@/lib/auth";
 import { useState, useEffect } from "react";
 import { loadAnalysis, type ApprovalRequest } from "@/lib/workflow-store";
 import { supabase } from "@/lib/supabase";
+import { openReportInNewTab } from "@/lib/report-generator";
 
 const statusStyles: Record<string, string> = {
   Optimized: "bg-[color:var(--success)]/10 text-[color:var(--success)] border-transparent",
@@ -102,6 +103,34 @@ export function EngineerDashboard({ user }: { user: AuthUser }) {
                   <div className="flex items-center gap-4">
                     <span className="text-sm text-muted-foreground">{req.est_cost}</span>
                     <Badge variant="outline" className={statusStyles[req.status] ?? ""}>{req.status}</Badge>
+                    {req.report_snapshot && (
+                      <Button
+                        size="sm"
+                        variant="outline"
+                        className="gap-1.5 h-7 text-xs px-2"
+                        onClick={() => openReportInNewTab({
+                          reqId: req.req_id || req.id,
+                          sku: req.sku,
+                          engineer: req.engineer_name || req.engineer,
+                          date: new Date(req.submitted_at || req.date).toLocaleString(),
+                          status: req.status,
+                          grade: req.report_snapshot?.grade,
+                          overallRisk: req.report_snapshot?.overallRisk,
+                          dropSurvival: req.report_snapshot?.dropSurvival,
+                          movementRisk: req.report_snapshot?.movementRisk,
+                          accessoryLoss: req.report_snapshot?.accessoryLoss,
+                          zones: req.report_snapshot?.zones,
+                          finalRecommendation: req.report_snapshot?.finalRecommendation,
+                          imageDataUrl: req.report_snapshot?.imageDataUrl,
+                          annotatedImageDataUrl: req.report_snapshot?.annotatedImageDataUrl,
+                          accessories: req.report_snapshot?.accessories,
+                          detectedPoses: req.report_snapshot?.detectedPoses,
+                        })}
+                      >
+                        <FileText className="h-3 w-3" />
+                        View
+                      </Button>
+                    )}
                   </div>
                 </div>
               ))}

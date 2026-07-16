@@ -53,6 +53,7 @@ const NAV: Record<Role, Item[]> = {
     { title: "Cost & Sustainability",url: "/app/cost-analysis",icon: DollarSign     },
     { title: "Sustainability",       url: "/app/sustainability",icon: Leaf           },
     { title: "Reports",              url: "/app/reports",      icon: FileBarChart2  },
+    { title: "Settings",             url: "/app/settings",     icon: Settings       },
   ],
   admin: [
     { title: "Dashboard",             url: "/app/dashboard",           icon: LayoutDashboard },
@@ -65,6 +66,7 @@ const NAV: Record<Role, Item[]> = {
     { title: "User Management",       url: "/app/users",               icon: Users           },
     { title: "Role Assignment",       url: "/app/roles",               icon: ShieldCheck     },
     { title: "System Settings",       url: "/app/system-settings",     icon: Cog             },
+    { title: "Settings",              url: "/app/settings",            icon: Settings        },
   ],
   "Packaging Engineer": [
     { title: "Dashboard",             url: "/app/dashboard",              icon: LayoutDashboard },
@@ -82,6 +84,7 @@ const NAV: Record<Role, Item[]> = {
     { title: "Cost & Sustainability",url: "/app/cost-analysis",icon: DollarSign     },
     { title: "Sustainability",       url: "/app/sustainability",icon: Leaf           },
     { title: "Reports",              url: "/app/reports",      icon: FileBarChart2  },
+    { title: "Settings",             url: "/app/settings",     icon: Settings       },
   ],
   Admin: [
     { title: "Dashboard",             url: "/app/dashboard",           icon: LayoutDashboard },
@@ -94,6 +97,7 @@ const NAV: Record<Role, Item[]> = {
     { title: "User Management",       url: "/app/users",               icon: Users           },
     { title: "Role Assignment",       url: "/app/roles",               icon: ShieldCheck     },
     { title: "System Settings",       url: "/app/system-settings",     icon: Cog             },
+    { title: "Settings",              url: "/app/settings",            icon: Settings        },
   ],
 };
 
@@ -140,7 +144,10 @@ export function AppSidebar({ user }: { user: AuthUser }) {
       </SidebarContent>
 
       <SidebarFooter className="border-t border-sidebar-border p-3">
-        <div className="flex items-center gap-3 rounded-md px-2 py-2">
+        <Link
+          to="/app/settings"
+          className="flex items-center gap-3 rounded-md px-2 py-2 hover:bg-sidebar-accent hover:text-sidebar-accent-foreground transition-colors w-full text-left"
+        >
           <div className="flex h-8 w-8 items-center justify-center rounded-full bg-[color:var(--primary-soft)] text-sm font-semibold text-primary">
             {user.name.split(" ").map((n) => n[0]).slice(0, 2).join("")}
           </div>
@@ -148,7 +155,7 @@ export function AppSidebar({ user }: { user: AuthUser }) {
             <p className="truncate text-sm font-medium text-sidebar-foreground">{user.name}</p>
             <p className="truncate text-xs text-muted-foreground">{ROLE_LABEL[user.role]}</p>
           </div>
-        </div>
+        </Link>
         <Button
           variant="ghost" size="sm" onClick={handleLogout}
           className="w-full justify-start text-muted-foreground hover:text-foreground group-data-[collapsible=icon]:justify-center"

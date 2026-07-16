@@ -8,6 +8,7 @@ import { PageHeader } from "@/components/page-header";
 import { useState, useEffect } from "react";
 import { loadApprovalRequests, type ApprovalRequest } from "@/lib/workflow-store";
 import { openReportInNewTab } from "@/lib/report-generator";
+import { supabase } from "@/lib/supabase";
 
 export const Route = createFileRoute("/app/approvals/")({
   head: () => ({ meta: [{ title: "Approvals — PackWise AI" }] }),
@@ -152,7 +153,7 @@ function ApprovalsPage() {
     async function fetchData() {
       const { data } = await supabase.from('approval_requests').select('*').order('submitted_at', { ascending: false });
       if (data) {
-        setAll(data.map(d => ({
+        setAll(data.map((d: any) => ({
           id: d.req_id,
           sku: d.sku,
           engineer: d.engineer_name,
