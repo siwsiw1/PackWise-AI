@@ -49,7 +49,6 @@ const NAV: Record<Role, Item[]> = {
   manager: [
     { title: "Dashboard",            url: "/app/dashboard",   icon: LayoutDashboard },
     { title: "Pending Approvals",    url: "/app/approvals",   icon: CheckSquare     },
-    { title: "Cost & Sustainability",url: "/app/cost-analysis",icon: DollarSign     },
     { title: "Reports",              url: "/app/reports",      icon: FileBarChart2  },
     { title: "Settings",             url: "/app/settings",     icon: Settings       },
   ],
@@ -72,7 +71,6 @@ const NAV: Record<Role, Item[]> = {
   "Operations Manager": [
     { title: "Dashboard",            url: "/app/dashboard",   icon: LayoutDashboard },
     { title: "Pending Approvals",    url: "/app/approvals",   icon: CheckSquare     },
-    { title: "Cost & Sustainability",url: "/app/cost-analysis",icon: DollarSign     },
     { title: "Reports",              url: "/app/reports",      icon: FileBarChart2  },
     { title: "Settings",             url: "/app/settings",     icon: Settings       },
   ],
