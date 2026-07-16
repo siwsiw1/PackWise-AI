@@ -593,7 +593,12 @@ function AttachmentPlannerPage() {
         title="Attachment Planner"
         description={`AI-recommended attachment methods for each attachment zone — ${productName}`}
         actions={
-          <>
+          <div className="flex items-center gap-2">
+            {analysis?.id && (
+              <Badge variant="outline" className="border-border/70 font-mono text-muted-foreground bg-muted/20">
+                ID: #{analysis.id.split('-')[0].toUpperCase()}
+              </Badge>
+            )}
             <Button variant="outline" size="sm" onClick={() => navigate({ to: "/app/product-analysis" })}>
               <ArrowLeft className="h-4 w-4" /> Back to Analysis
             </Button>
@@ -652,7 +657,7 @@ function AttachmentPlannerPage() {
             }}>
               {isSaving ? "Saving..." : "Proceed to Risk Assessment"} <ChevronRight className="ml-2 h-4 w-4" />
             </Button>
-          </>
+          </div>
         }
       />
       <WorkflowBar steps={WORKFLOW_STEPS} />

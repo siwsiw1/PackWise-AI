@@ -107,6 +107,7 @@ function WorkflowBar() {
 
 function CostSustainabilityPage() {
   const navigate = useNavigate();
+  const [analysisId, setAnalysisId] = useState("");
   const [productName, setProductName] = useState("");
   const [plan, setPlan] = useState<PlanResult | null>(null);
   const [ready, setReady] = useState(false);
@@ -114,6 +115,13 @@ function CostSustainabilityPage() {
 
   useEffect(() => {
     const analysis = loadAnalysis();
+    if (!analysis) {
+      toast.error("Please complete Product Analysis first.");
+      navigate({ to: "/app/product-analysis" });
+      return;
+    }
+    setAnalysisId(analysis.id || "");
+    setProductName(analysis.productName);
     const p = loadPlan();
 
     if (!analysis || !p) {
@@ -212,14 +220,19 @@ function CostSustainabilityPage() {
         title="Cost & Sustainability"
         description={`Attachment costs, material analysis, and environmental impact — ${productName}`}
         actions={
-          <>
+          <div className="flex items-center gap-2">
+            {analysisId && (
+              <Badge variant="outline" className="border-border/70 font-mono text-muted-foreground bg-muted/20">
+                ID: #{analysisId.split('-')[0].toUpperCase()}
+              </Badge>
+            )}
             <Button variant="outline" size="sm" onClick={() => navigate({ to: "/app/risk-assessment" })}>
               <ArrowLeft className="h-4 w-4" /> Back to Risk Assessment
             </Button>
             <Button size="sm" onClick={() => navigate({ to: "/app/submit-approval" })} className="bg-primary text-primary-foreground hover:bg-primary/90">
               <Send className="mr-2 h-4 w-4" /> Submit Plan
             </Button>
-          </>
+          </div>
         }
       />
       <WorkflowBar />

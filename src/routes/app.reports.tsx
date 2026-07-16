@@ -423,7 +423,7 @@ function ReportDetailModal({ report, onClose }: { report: DerivedReport; onClose
       <div class="kvi"><div class="kvl">Product Name</div><div class="kvv">${report.product}</div></div>
       <div class="kvi"><div class="kvl">Detected Pose</div><div class="kvv">${snap?.detectedPoses?.join(", ") || "—"}</div></div>
       <div class="kvi"><div class="kvl">Accessories</div><div class="kvv">${snap?.accessories?.join(", ") || "None"}</div></div>
-      <div class="kvi"><div class="kvl">Run ID</div><div class="kvv">${report.reqId}</div></div>
+      <div class="kvi"><div class="kvl">ID</div><div class="kvv">#${(report.reqId || "").split("-")[0].toUpperCase()}</div></div>
     </div>
   </div>
 

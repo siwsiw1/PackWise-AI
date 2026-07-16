@@ -57,6 +57,7 @@ function WorkflowBar({ steps }: { steps: ReturnType<typeof getWorkflowSteps> }) 
 function ProductAnalysisPage() {
   const navigate = useNavigate();
   const fileRef = useRef<HTMLInputElement>(null);
+  const [runId] = useState(() => crypto.randomUUID());
   const [stage, setStage] = useState<Stage>("form");
   const [progress, setProgress] = useState(0);
   const [poseStatus, setPoseStatus] = useState<{ left_arm_up: boolean, right_arm_up: boolean } | null>(null);
@@ -390,6 +391,7 @@ function ProductAnalysisPage() {
       };
 
       const { data, error } = await supabase.from('product_analyses').insert([{
+        id: runId,
         user_id: user?.user_id ?? null,
         product_name: `${productFamily} Doll`,
         product_family: productFamily,
@@ -413,8 +415,8 @@ function ProductAnalysisPage() {
         console.warn("Supabase save warning:", error.message);
       } else if (data && data.length > 0) {
         console.log("[PackWise] Analysis saved to Supabase ✓", data[0].id);
-        analysisId = data[0].id;
       }
+      analysisId = runId;
     } catch (err) {
       console.warn("Supabase save failed (offline?):", err);
     }
@@ -672,8 +674,9 @@ function ProductAnalysisPage() {
           </Card>
 
           <Card className="border-border/70 shadow-none">
-            <CardHeader>
+            <CardHeader className="flex flex-row items-center justify-between pb-2 space-y-0">
               <CardTitle className="text-base">Product Identity</CardTitle>
+              <Badge variant="outline" className="border-border/70 font-mono text-muted-foreground bg-muted/20">ID: #{runId.split('-')[0].toUpperCase()}</Badge>
             </CardHeader>
             <CardContent className="space-y-4">
               <div className="grid gap-4 sm:grid-cols-2">

@@ -174,11 +174,13 @@ export default function RiskAssessmentContent() {
   const sc = SCENARIOS[scenario];
 
   const [apiData, setApiData] = useState<any>(null);
+  const [analysisId, setAnalysisId] = useState("");
 
   // Hydrate from real analysis data
   useEffect(() => {
     const a = loadAnalysis();
     if (a) {
+      setAnalysisId(a.id || "");
       setProduct({
         name: a.productName ?? "—",
         category: a.category ?? a.productType ?? "—",
@@ -513,12 +515,10 @@ export default function RiskAssessmentContent() {
             </div>
             <div className="ml-4 h-10 w-px bg-border" />
             <div className="ml-4">
-              <div className="text-[11px] uppercase tracking-wider text-muted-foreground">Run</div>
+              <div className="text-[11px] uppercase tracking-wider text-muted-foreground">ID</div>
               <div className="text-sm font-medium text-red-500">
-                {apiData?.assessment_id ? (
-                  <span className="text-foreground">#{apiData.assessment_id.split("-")[0].toUpperCase()}</span>
-                ) : apiData?.detail ? (
-                  `Error: ${typeof apiData.detail === 'string' ? apiData.detail : JSON.stringify(apiData.detail)}`
+                {analysisId ? (
+                  <span className="text-foreground">#{analysisId.split("-")[0].toUpperCase()}</span>
                 ) : apiData?.error ? (
                   `Error: ${apiData.error}`
                 ) : (

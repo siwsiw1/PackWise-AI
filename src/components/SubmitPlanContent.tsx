@@ -57,7 +57,6 @@ export type ReportConfig = {
   packagingType: string;
   packagingMethod: string;
   attachmentMethod: string;
-  supportPoints: number;
   centerOfGravity: string;
   internalClearance: string;
   cushionMaterial: string;
@@ -254,7 +253,6 @@ function ConfigurationSummary({ config }: { config: ReportConfig }) {
     ["Packaging Type", config.packagingType],
     ["Packaging Method", config.packagingMethod],
     ["Attachment Method", config.attachmentMethod],
-    ["Support Points", config.supportPoints],
     ["Center of Gravity", config.centerOfGravity],
     ["Internal Clearance", config.internalClearance],
     ["Cushion Material", config.cushionMaterial],
@@ -514,6 +512,7 @@ function ProductPhotoSection({
           <KV label="Complexity" value={computedComplexity || "—"} />
           <KV label="Center of Gravity" value={computedCOG || "—"} />
           <KV label="Accessories Detected" value={accessories && accessories.length > 0 ? accessories.join(", ") : "None"} />
+          <KV label="ID" value={analysis?.id ? `#${analysis.id.split('-')[0].toUpperCase()}` : "—"} />
         </div>
       </CardContent>
     </Card>
@@ -524,7 +523,7 @@ function FinalRecommendationCard({ rec }: { rec: FinalRecommendation }) {
   return (
     <Card className="border-border/70 shadow-none overflow-hidden">
       <div className="bg-gradient-to-br from-background to-[color:var(--pink-soft)] p-6">
-        <SectionHeader index={5} icon={Sparkles} title="Final Packaging Recommendation" sub="The deployment-ready configuration produced by PackWise AI." />
+        <SectionHeader index={4} icon={Sparkles} title="Final Packaging Recommendation" sub="The deployment-ready configuration produced by PackWise AI." />
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-3">
           <KV label="Recommended Packaging" value={rec.packaging} />
           <KV label="Recommended Cushion" value={rec.cushion} />
@@ -554,7 +553,7 @@ function EngineeringNotes({
   return (
     <Card className="border-border/70 shadow-none">
       <CardContent className="pt-6">
-        <SectionHeader index={6} icon={Wrench} title="Engineering Notes" sub="Reviewer observations captured before export." />
+        <SectionHeader index={5} icon={Wrench} title="Engineering Notes" sub="Reviewer observations captured before export." />
         <Textarea
           value={value}
           onChange={(e) => onChange(e.target.value)}
@@ -584,7 +583,7 @@ function ExportCenter({
   return (
     <Card className="border-border/70 shadow-none">
       <CardContent className="pt-6">
-        <SectionHeader index={7} icon={Download} title="Export Center" sub="Distribute the report to engineering, QA, and manufacturing partners." />
+        <SectionHeader index={6} icon={Download} title="Export Center" sub="Distribute the report to engineering, QA, and manufacturing partners." />
         <div className="flex flex-col md:flex-row md:items-center gap-3">
           <Button
             onClick={onExportPdf}
@@ -622,7 +621,6 @@ function ExportCenter({
 function ReportMetadataFooter({ meta }: { meta: ReportMetadata }) {
   const items: [string, React.ReactNode][] = [
     ["Generated Time", meta.generatedAt],
-    ["Run ID", meta.runId],
     ["Model Version", meta.modelVersion],
     ["Rule Engine Version", meta.ruleEngineVersion],
     ["Knowledge Base Version", meta.knowledgeBaseVersion],
@@ -949,14 +947,13 @@ export default function SubmitPlanContent({ onDataLoaded }: { onDataLoaded?: (da
     packagingType: "Rigid Paperboard Window Box",
     packagingMethod: "Plastic-free Display Box",
     attachmentMethod: plan.recommendedMaterial || "Optimized Strapping",
-    supportPoints: plan.zones ? plan.zones.filter((z: any) => z.action !== 'Remove').length : 4,
     centerOfGravity: analysis.center_of_gravity || "Center",
     internalClearance: "5.0 mm",
     cushionMaterial: "EPE Foam / Molded Pulp",
     cushionThickness: "15 mm",
     istaStandard: "ISTA 3A",
     scenario: "Normal Shipping",
-    weight: `${analysis.product_weight_g || 120} g`,
+    weight: `${(analysis.product_weight_g || 120) + (analysis.accessory_weight_g || 0)} g`,
     dimensions: `${analysis.height_cm || 29.0} cm (H)`,
     accessoriesDetected: analysis.accessory_count || 1,
   };
@@ -1003,7 +1000,7 @@ export default function SubmitPlanContent({ onDataLoaded }: { onDataLoaded?: (da
 
   const metadata = {
     generatedAt: new Date().toLocaleString(),
-    runId: `PW-RUN-${Math.floor(Math.random()*9000)+1000}`,
+    runId: analysis?.id ? `#${analysis.id.split('-')[0].toUpperCase()}` : `PW-RUN-${Math.floor(Math.random()*9000)+1000}`,
     modelVersion: "YOLOv8 & XGBoost v1.0",
     ruleEngineVersion: "Rule Engine v2.5",
     knowledgeBaseVersion: "KB v19.1",
@@ -1094,7 +1091,7 @@ export default function SubmitPlanContent({ onDataLoaded }: { onDataLoaded?: (da
   .section { margin-bottom: 18px; page-break-inside: avoid; }
   .stitle { font-size: 9px; font-weight: 900; color: #ec4899; text-transform: uppercase; letter-spacing: 0.12em; padding-bottom: 4px; border-bottom: 1px solid #fbcfe8; margin-bottom: 10px; }
 
-  .kv { display: grid; grid-template-columns: repeat(6,1fr); gap: 6px; }
+  .kv { display: grid; grid-template-columns: repeat(7,1fr); gap: 6px; }
   .ki { padding: 6px 8px; background: #f8fafc; border: 1px solid #f1f5f9; border-radius: 6px; }
   .ki-lbl { font-size: 7.5px; text-transform: uppercase; letter-spacing: 0.07em; color: #94a3b8; font-weight: 700; margin-bottom: 2px; }
   .ki-val { font-size: 9.5px; font-weight: 600; color: #0f172a; }
@@ -1130,7 +1127,7 @@ export default function SubmitPlanContent({ onDataLoaded }: { onDataLoaded?: (da
       <p>${config.productName} &nbsp;&middot;&nbsp; ${metadata.generatedAt}</p>
     </div>
     <div class="header-meta">
-      <div>RUN ID: ${metadata.runId}</div>
+      <div>ID: ${metadata.runId}</div>
     </div>
   </div>
 
@@ -1171,6 +1168,7 @@ export default function SubmitPlanContent({ onDataLoaded }: { onDataLoaded?: (da
   <div class="section" style="margin-bottom: 0px;">
     <div class="stitle">Product Configuration Summary</div>
     <div class="kv">
+      <div class="ki"><div class="ki-lbl">ID</div><div class="ki-val">${metadata.runId}</div></div>
       <div class="ki"><div class="ki-lbl">Packaging Type</div><div class="ki-val">${config.packagingType}</div></div>
       <div class="ki"><div class="ki-lbl">Attachment Method</div><div class="ki-val">${config.attachmentMethod}</div></div>
       <div class="ki"><div class="ki-lbl">Cushion Material</div><div class="ki-val">${config.cushionMaterial}</div></div>
@@ -1349,7 +1347,6 @@ export default function SubmitPlanContent({ onDataLoaded }: { onDataLoaded?: (da
         />
         <ConfigurationSummary config={config} />
         <RiskDashboard m={metrics} />
-        <OptimizationSummary rows={optimization} />
         <FinalRecommendationCard rec={finalRecommendation} />
         <EngineeringNotes value={notes} onChange={setNotes} />
         <div className="print:hidden">

@@ -70,7 +70,7 @@ function SubmitApprovalPage() {
       ? (sessionStorage.getItem("packwise_annotated_image") || undefined)
       : undefined;
 
-    const reqId = `REQ-${Math.floor(Math.random() * 9000) + 1000}`;
+    const reqId = analysis?.id || `REQ-${Math.floor(Math.random() * 9000) + 1000}`;
     
     // Fallbacks if apiData is missing for some reason
     const finalRiskLevel = apiData?.overall_risk_level || (analysis && analysis.movementRiskScore > 60 ? "High" : analysis && analysis.movementRiskScore > 30 ? "Medium" : "Low");
