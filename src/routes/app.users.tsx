@@ -31,9 +31,11 @@ import {
   DialogTrigger,
 } from "@/components/ui/dialog";
 import { Label } from "@/components/ui/label";
-import { managedUsers, type ManagedUser } from "@/lib/mock-data";
+import { type ManagedUser } from "@/lib/mock-data";
 import { toast } from "sonner";
 import { createUserApi } from "@/lib/auth";
+import { supabase } from "@/lib/supabase";
+import { useEffect } from "react";
 
 export const Route = createFileRoute("/app/users")({
   head: () => ({ meta: [{ title: "User Management — PackWise AI" }] }),
@@ -54,12 +56,36 @@ function statusBadge(status: ManagedUser["status"]) {
 }
 
 function UsersPage() {
-  const [users, setUsers] = useState<ManagedUser[]>(managedUsers);
+  const [users, setUsers] = useState<ManagedUser[]>([]);
   const [q, setQ] = useState("");
   const [isInviteOpen, setIsInviteOpen] = useState(false);
   const [inviteLoading, setInviteLoading] = useState(false);
-  const [inviteData, setInviteData] = useState({ name: "", email: "", role: "Product Manager" });
+  const [inviteData, setInviteData] = useState({ name: "", email: "", role: "Packaging Engineer" });
   const [createdResult, setCreatedResult] = useState<any>(null);
+
+  const fetchUsers = async () => {
+    const { data, error } = await supabase
+      .from("app_user")
+      .select("*")
+      .order("name", { ascending: true });
+    if (data) {
+      setUsers(
+        data.map((u: any) => ({
+          id: u.user_id,
+          name: u.name || "Unknown",
+          email: u.email || "",
+          company: u.company || "PackWise Demo",
+          role: u.role === "admin" ? "admin" : u.role === "manager" ? "manager" : u.role === "engineer" ? "engineer" : "unassigned",
+          status: u.must_change_password ? "pending" : "active",
+          joined: u.created_at ? new Date(u.created_at).toLocaleDateString("en-US", { month: "short", day: "numeric" }) : "Jul 12",
+        }))
+      );
+    }
+  };
+
+  useEffect(() => {
+    fetchUsers();
+  }, []);
 
   const handleInvite = async (e: React.FormEvent) => {
     e.preventDefault();
@@ -74,9 +100,9 @@ function UsersPage() {
         name: res.name,
         email: res.email,
         company: "PackWise Demo",
-        role: res.role.includes("Manager") ? "manager" : res.role === "Packaging Engineer" ? "engineer" : "admin",
-        status: "active",
-        joined: new Date().toISOString()
+        role: res.role.includes("Manager") || res.role === "manager" ? "manager" : res.role === "Packaging Engineer" || res.role === "engineer" ? "engineer" : "admin",
+        status: "pending",
+        joined: new Date().toLocaleDateString("en-US", { month: "short", day: "numeric" })
       }, ...prev]);
     } catch (err: any) {
       toast.error(err.message || "Failed to create user");
@@ -89,21 +115,48 @@ function UsersPage() {
     [u.name, u.email, u.company].some((v) => v.toLowerCase().includes(q.toLowerCase())),
   );
 
-  const updateRole = (id: string, role: ManagedUser["role"]) => {
-    setUsers((prev) => prev.map((u) => (u.id === id ? { ...u, role } : u)));
-    toast.success("Role updated");
+  const updateRole = async (id: string, role: ManagedUser["role"]) => {
+    const { error } = await supabase
+      .from("app_user")
+      .update({ role })
+      .eq("user_id", id);
+
+    if (error) {
+      toast.error("Failed to update role in database");
+    } else {
+      setUsers((prev) => prev.map((u) => (u.id === id ? { ...u, role } : u)));
+      toast.success("Role updated");
+    }
   };
 
-  const approve = (id: string) => {
-    setUsers((prev) =>
-      prev.map((u) => (u.id === id ? { ...u, status: "active", role: u.role === "unassigned" ? "engineer" : u.role } : u)),
-    );
-    toast.success("User approved");
+  const approve = async (id: string) => {
+    const { error } = await supabase
+      .from("app_user")
+      .update({ must_change_password: false })
+      .eq("user_id", id);
+
+    if (error) {
+      toast.error("Failed to approve user");
+    } else {
+      setUsers((prev) =>
+        prev.map((u) => (u.id === id ? { ...u, status: "active", role: u.role === "unassigned" ? "engineer" : u.role } : u)),
+      );
+      toast.success("User approved");
+    }
   };
 
-  const reject = (id: string) => {
-    setUsers((prev) => prev.map((u) => (u.id === id ? { ...u, status: "rejected" } : u)));
-    toast.error("User rejected");
+  const reject = async (id: string) => {
+    const { error } = await supabase
+      .from("app_user")
+      .delete()
+      .eq("user_id", id);
+
+    if (error) {
+      toast.error("Failed to reject user");
+    } else {
+      setUsers((prev) => prev.filter((u) => u.id !== id));
+      toast.error("User rejected");
+    }
   };
 
   const pendingCount = users.filter((u) => u.status === "pending").length;
