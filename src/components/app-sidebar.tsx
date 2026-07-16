@@ -111,7 +111,7 @@ export function AppSidebar({ user }: { user: AuthUser }) {
   const navigate  = useNavigate();
   const items     = NAV[user.role];
 
-  const handleLogout = () => { logout(); navigate({ to: "/login" }); };
+  const handleLogout = async () => { await logout(); navigate({ to: "/login" }); };
 
   return (
     <Sidebar collapsible="icon">

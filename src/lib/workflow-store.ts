@@ -213,6 +213,7 @@ export interface ApprovalRequest {
   sustainability?: number;
   status: "Pending" | "Approved" | "Rejected";
   decidedAt?: string;
+  feedback?: string;
   // Snapshot of the report data embedded so manager can view it
   reportSnapshot?: {
     grade: string;
@@ -221,7 +222,7 @@ export interface ApprovalRequest {
     movementRisk: number;
     accessoryLoss: number;
     zones: Array<{ zone: string; recommendedMethod: string; action: string; cost: number; laborMins: number; sustainability: number }>;
-    finalRecommendation: { packaging: string; cushion: string; attachment: string; support: string; ista: string };
+    finalRecommendation: { packaging?: string; cushion?: string; attachment?: string; support?: string; ista?: string; status?: string };
     imageDataUrl?: string;
     annotatedImageDataUrl?: string;
     accessories?: string[];
@@ -250,13 +251,14 @@ export function loadApprovalRequests(): ApprovalRequest[] {
   } catch { return []; }
 }
 
-export function updateApprovalStatus(id: string, status: "Approved" | "Rejected") {
+export function updateApprovalStatus(id: string, status: "Approved" | "Rejected", feedback?: string) {
   try {
     const all = loadApprovalRequests();
     const idx = all.findIndex((r) => r.id === id);
     if (idx !== -1) {
       all[idx].status = status;
       all[idx].decidedAt = new Date().toLocaleString();
+      if (feedback !== undefined) all[idx].feedback = feedback;
       localStorage.setItem(APPROVALS_KEY, JSON.stringify(all));
     }
   } catch (e) { console.warn("updateApprovalStatus failed", e); }

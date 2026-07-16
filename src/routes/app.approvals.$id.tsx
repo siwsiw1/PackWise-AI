@@ -12,6 +12,57 @@ import { loadAnalysis, type AnalysisResult } from "@/lib/workflow-store";
 import { supabase } from "@/lib/supabase";
 import { toast } from "sonner";
 import { getUser } from "@/lib/auth";
+import {
+  Dialog,
+  DialogContent,
+  DialogHeader,
+  DialogTitle,
+  DialogDescription,
+} from "@/components/ui/dialog";
+import { Label } from "@/components/ui/label";
+import { Textarea } from "@/components/ui/textarea";
+
+// Feedback Modal Component
+function FeedbackModal({ mode, onConfirm, onCancel }: { mode: "Approved" | "Rejected", onConfirm: (fb: string) => void, onCancel: () => void }) {
+  const [feedback, setFeedback] = useState("");
+  const isReject = mode === "Rejected";
+
+  return (
+    <Dialog open onOpenChange={(open) => !open && onCancel()}>
+      <DialogContent>
+        <DialogHeader>
+          <DialogTitle>{isReject ? "Reject Plan" : "Approve Plan"}</DialogTitle>
+          <DialogDescription>
+            {isReject
+              ? "Please provide mandatory feedback explaining why this plan is rejected so the engineer can fix it."
+              : "Optional: Add any final comments or notes before approving this plan."}
+          </DialogDescription>
+        </DialogHeader>
+        <div className="space-y-4 py-4">
+          <div className="space-y-2">
+            <Label>Feedback {isReject ? "*" : "(Optional)"}</Label>
+            <Textarea
+              placeholder={isReject ? "e.g., The right wrist zone is too high risk, try using wire tie instead." : "Looks good, ready for production."}
+              value={feedback}
+              onChange={(e) => setFeedback(e.target.value)}
+              className="min-h-[100px]"
+            />
+          </div>
+        </div>
+        <div className="flex justify-end gap-2">
+          <Button variant="outline" onClick={onCancel}>Cancel</Button>
+          <Button
+            onClick={() => onConfirm(feedback)}
+            disabled={isReject && feedback.trim().length < 5}
+            className={isReject ? "bg-destructive text-white hover:bg-destructive/90" : "bg-[color:var(--success)] text-white hover:bg-[color:var(--success)]/90"}
+          >
+            Confirm {mode}
+          </Button>
+        </div>
+      </DialogContent>
+    </Dialog>
+  );
+}
 
 export const Route = createFileRoute("/app/approvals/$id")({
   head: () => ({ meta: [{ title: "Approval Details — PackWise AI" }] }),
@@ -101,8 +152,9 @@ function ApprovalDetailsPage() {
   const [analysis, setAnalysis] = useState<AnalysisResult | null>(null);
   const [selected, setSelected] = useState<string | null>(null);
   const [approvalReq, setApprovalReq] = useState<any | null>(null);
+  const [modalMode, setModalMode] = useState<"Approved" | "Rejected" | null>(null);
   const user = getUser();
-  const isApprover = user?.role === "manager" || user?.role === "Admin";
+  const isApprover = user?.role === "manager" || user?.role === "admin";
 
   useEffect(() => {
     async function fetchData() {
@@ -147,15 +199,12 @@ function ApprovalDetailsPage() {
   const imageUrl = analysis?.imageDataUrl ?? approvalReq?.reportSnapshot?.imageDataUrl;
   const sel = zones.find((z: any) => z.zone === selected);
 
-  const handleApprove = async () => {
-    await supabase.from('approval_requests').update({ status: 'Approved' }).eq('req_id', id);
-    toast.success(`Request ${id} approved successfully.`);
-    navigate({ to: "/app/approvals" });
-  };
-
-  const handleReject = async () => {
-    await supabase.from('approval_requests').update({ status: 'Rejected' }).eq('req_id', id);
-    toast.error(`Request ${id} rejected.`);
+  const handleDecision = (status: "Approved" | "Rejected", feedback: string) => {
+    updateApprovalStatus(id, status, feedback || undefined);
+    setModalMode(null);
+    toast[status === "Approved" ? "success" : "error"](
+      `Request ${id} ${status.toLowerCase()}.`
+    );
     navigate({ to: "/app/approvals" });
   };
 
@@ -166,6 +215,13 @@ function ApprovalDetailsPage() {
 
   return (
     <div className="space-y-6">
+      {modalMode && (
+        <FeedbackModal
+          mode={modalMode}
+          onConfirm={(fb) => handleDecision(modalMode, fb)}
+          onCancel={() => setModalMode(null)}
+        />
+      )}
       <PageHeader
         title={`Approval Request: ${id}`}
         description={`Reviewing attachment plan for ${productName}`}
@@ -325,10 +381,10 @@ function ApprovalDetailsPage() {
                 <p className="mt-0.5 text-sm text-muted-foreground">Approve this attachment plan to move it to production, or reject it back to the engineer.</p>
               </div>
               <div className="flex gap-3">
-                <Button variant="outline" className="text-destructive hover:bg-destructive/10 hover:text-destructive border-destructive/20" onClick={handleReject}>
+                <Button variant="outline" className="text-destructive hover:bg-destructive/10 hover:text-destructive border-destructive/20" onClick={() => setModalMode("Rejected")}>
                   <XCircle className="mr-2 h-4 w-4" /> Reject Plan
                 </Button>
-                <Button className="bg-[color:var(--success)] text-white hover:bg-[color:var(--success)]/90" onClick={handleApprove}>
+                <Button className="bg-[color:var(--success)] text-white hover:bg-[color:var(--success)]/90" onClick={() => setModalMode("Approved")}>
                   <CheckCircle2 className="mr-2 h-4 w-4" /> Approve Plan
                 </Button>
               </div>

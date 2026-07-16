@@ -1,4 +1,5 @@
 import { redirect } from "@tanstack/react-router";
+import { supabase } from "./supabase";
 
 export type Role = "engineer" | "manager" | "admin" | "Packaging Engineer" | "Operations Manager" | "Admin";
 
@@ -67,30 +68,30 @@ export function roleHome(role: Role): string {
 }
 
 export async function loginApi(email: string, password: string): Promise<AuthUser> {
-  const res = await fetch(`${API_BASE}/auth/login`, {
-    method: "POST",
-    headers: { "Content-Type": "application/json" },
-    body: JSON.stringify({ email, password }),
+  const { data, error } = await supabase.auth.signInWithPassword({
+    email,
+    password,
   });
   
-  if (!res.ok) {
-    const error = await res.json().catch(() => ({ detail: "Login failed" }));
-    throw new Error(error.detail || "Login failed");
+  if (error || !data.session) {
+    throw new Error(error?.message || "Login failed");
   }
 
-  const data = await res.json();
-  const token = data.access_token;
+  const token = data.session.access_token;
+  const user_id = data.user.id;
 
-  // Fetch full profile
-  const meRes = await fetch(`${API_BASE}/auth/me`, {
-    headers: { "Authorization": `Bearer ${token}` }
-  });
-  
-  if (!meRes.ok) {
+  // Fetch full profile from Supabase
+  const { data: profileData, error: profileError } = await supabase
+    .from('app_user')
+    .select('*')
+    .eq('user_id', user_id)
+    .single();
+    
+  if (profileError || !profileData) {
     throw new Error("Failed to fetch user profile");
   }
 
-  const profile = await meRes.json() as AuthUser;
+  const profile = profileData as AuthUser;
   
   if (profile && profile.role) {
     const r = profile.role.toLowerCase();
@@ -103,31 +104,24 @@ export async function loginApi(email: string, password: string): Promise<AuthUse
   return profile;
 }
 
-export function logout() {
+export async function logout() {
+  await supabase.auth.signOut();
   clearAuthData();
 }
 
 export async function changePasswordApi(new_password: string): Promise<void> {
-  const token = getToken();
-  if (!token) throw new Error("Not authenticated");
-
-  const res = await fetch(`${API_BASE}/auth/change-password`, {
-    method: "POST",
-    headers: { 
-      "Content-Type": "application/json",
-      "Authorization": `Bearer ${token}`
-    },
-    body: JSON.stringify({ new_password }),
-  });
-
-  if (!res.ok) {
-    const error = await res.json().catch(() => ({ detail: "Failed to change password" }));
-    throw new Error(error.detail || "Failed to change password");
+  const { error } = await supabase.auth.updateUser({ password: new_password });
+  
+  if (error) {
+    throw new Error(error.message || "Failed to change password");
   }
 
-  // Update local storage to reflect the change
   const user = getUser();
-  if (user) {
+  if (user && user.user_id) {
+    // update app_user table in supabase
+    await supabase.from('app_user').update({ must_change_password: false }).eq('user_id', user.user_id);
+    
+    // Update local storage to reflect the change
     user.must_change_password = false;
     localStorage.setItem(USER_KEY, JSON.stringify(user));
   }

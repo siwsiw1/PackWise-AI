@@ -1,13 +1,13 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
-import { CheckCircle2, XCircle, Clock, Search, FileText, Package } from "lucide-react";
+import { CheckCircle2, XCircle, Clock, Search, FileText, MessageSquare } from "lucide-react";
 import { Card, CardContent, CardHeader, CardTitle, CardDescription } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { PageHeader } from "@/components/page-header";
 import { useState, useEffect } from "react";
-import { type ApprovalRequest } from "@/lib/workflow-store";
-import { supabase } from "@/lib/supabase";
+import { loadApprovalRequests, type ApprovalRequest } from "@/lib/workflow-store";
+import { openReportInNewTab } from "@/lib/report-generator";
 
 export const Route = createFileRoute("/app/approvals/")({
   head: () => ({ meta: [{ title: "Approvals — PackWise AI" }] }),
@@ -71,6 +71,12 @@ function ApprovalCard({ req }: { req: ApprovalRequest }) {
                 {req.status === "Approved" ? "Approved" : "Rejected"} at {req.decidedAt}
               </p>
             )}
+            {req.feedback && (
+              <p className="mt-1 text-xs text-muted-foreground flex items-start gap-1">
+                <MessageSquare className="h-3 w-3 shrink-0 mt-0.5" />
+                <span className="truncate max-w-[280px]">{req.feedback}</span>
+              </p>
+            )}
           </div>
         </div>
 
@@ -98,9 +104,37 @@ function ApprovalCard({ req }: { req: ApprovalRequest }) {
                 <Link to="/app/approvals/$id" params={{ id: req.id }}>View & Decide</Link>
               </Button>
             ) : (
-              <Button size="sm" variant="outline" className="w-full sm:w-auto" asChild>
-                <Link to="/app/approvals/$id" params={{ id: req.id }}>View Report</Link>
-              </Button>
+              <>
+                <Button
+                  size="sm"
+                  className="gap-1.5"
+                  onClick={() => openReportInNewTab({
+                    reqId: req.id,
+                    sku: req.sku,
+                    engineer: req.engineer,
+                    date: req.date,
+                    feedback: req.feedback,
+                    status: req.status,
+                    grade: req.reportSnapshot?.grade,
+                    overallRisk: req.reportSnapshot?.overallRisk,
+                    dropSurvival: req.reportSnapshot?.dropSurvival,
+                    movementRisk: req.reportSnapshot?.movementRisk,
+                    accessoryLoss: req.reportSnapshot?.accessoryLoss,
+                    zones: req.reportSnapshot?.zones,
+                    finalRecommendation: req.reportSnapshot?.finalRecommendation,
+                    imageDataUrl: req.reportSnapshot?.imageDataUrl,
+                    annotatedImageDataUrl: req.reportSnapshot?.annotatedImageDataUrl,
+                    accessories: req.reportSnapshot?.accessories,
+                    detectedPoses: req.reportSnapshot?.detectedPoses,
+                  })}
+                >
+                  <FileText className="h-3.5 w-3.5" />
+                  View Report
+                </Button>
+                <Button size="sm" variant="outline" asChild>
+                  <Link to="/app/approvals/$id" params={{ id: req.id }}>Details</Link>
+                </Button>
+              </>
             )}
           </div>
         </div>

@@ -105,8 +105,8 @@ function ChangePasswordPage() {
               variant="ghost" 
               className="w-full mt-2" 
               onClick={() => {
-                import("@/lib/auth").then(({ logout }) => {
-                  logout();
+                import("@/lib/auth").then(async ({ logout }) => {
+                  await logout();
                   navigate({ to: "/login" });
                 });
               }}
