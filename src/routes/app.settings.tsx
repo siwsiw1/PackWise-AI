@@ -96,33 +96,37 @@ function SettingsPage() {
       />
 
       <div className="space-y-8">
-        {/* Profile Card (Stacked on top) */}
+        {/* Profile Card (Horizontal layout inside vertical stack) */}
         <Card className="border-border/70 shadow-md bg-card overflow-hidden">
           <div className="h-2 bg-gradient-to-r from-pink-500 to-primary"></div>
-          <CardHeader className="pb-4">
+          <CardHeader className="pb-2">
             <CardTitle className="text-lg flex items-center gap-2 font-semibold">
               <User className="h-5 w-5 text-primary" /> Profile Info
             </CardTitle>
             <CardDescription>Your account details & permissions</CardDescription>
           </CardHeader>
-          <CardContent className="grid gap-6 grid-cols-1 md:grid-cols-3 items-center">
-            {/* Avatar & Name Info (Left Column on medium+ screen) */}
-            <div className="flex flex-col items-center justify-center pb-6 md:pb-0 md:border-r border-border/60 pr-0 md:pr-6">
-              <div className="flex h-20 w-20 items-center justify-center rounded-full bg-[color:var(--primary-soft)] text-2xl font-bold text-primary mb-4 shadow-sm border border-primary/10">
+          <CardContent className="space-y-6 pt-2">
+            {/* Top row: Avatar + Name/Email (large and unconstrained horizontally) */}
+            <div className="flex flex-col sm:flex-row items-center gap-6 pb-6 border-b border-border/60">
+              <div className="flex h-20 w-20 shrink-0 items-center justify-center rounded-full bg-[color:var(--primary-soft)] text-2xl font-bold text-primary shadow-sm border border-primary/10">
                 {user.name.split(" ").map((n) => n[0]).slice(0, 2).join("")}
               </div>
-              <h3 className="font-bold text-lg text-foreground text-center break-words max-w-full px-2">
-                {user.name}
-              </h3>
-              <p className="text-xs font-semibold text-primary bg-[color:var(--primary-soft)] px-3 py-1 rounded-full mt-2 border border-primary/20">
-                {ROLE_LABEL[user.role] || user.role}
-              </p>
+              <div className="text-center sm:text-left space-y-1.5 min-w-0 flex-1">
+                <h3 className="font-bold text-2xl text-foreground break-all tracking-tight leading-tight">
+                  {user.name}
+                </h3>
+                <div className="flex flex-wrap gap-2 justify-center sm:justify-start">
+                  <span className="text-xs font-semibold text-primary bg-[color:var(--primary-soft)] px-3 py-1 rounded-full border border-primary/20">
+                    {ROLE_LABEL[user.role] || user.role}
+                  </span>
+                </div>
+              </div>
             </div>
             
-            {/* Account Details Inputs (Right Columns on medium+ screen) */}
-            <div className="md:col-span-2 space-y-4 text-sm pl-0 md:pl-6">
-              <div className="space-y-1">
-                <span className="text-xs font-medium text-muted-foreground flex items-center gap-1.5">
+            {/* Bottom row: Fields (2 Columns) */}
+            <div className="grid gap-6 grid-cols-1 md:grid-cols-2 text-sm">
+              <div className="space-y-1.5">
+                <span className="text-xs font-semibold text-muted-foreground flex items-center gap-1.5">
                   <Mail className="h-3.5 w-3.5" /> Email Address
                 </span>
                 <span className="text-foreground font-semibold block break-all bg-muted/30 p-2.5 rounded-lg border border-border/50">
@@ -130,8 +134,8 @@ function SettingsPage() {
                 </span>
               </div>
               
-              <div className="space-y-1">
-                <span className="text-xs font-medium text-muted-foreground flex items-center gap-1.5">
+              <div className="space-y-1.5">
+                <span className="text-xs font-semibold text-muted-foreground flex items-center gap-1.5">
                   <Shield className="h-3.5 w-3.5" /> Role Permissions
                 </span>
                 <span className="text-foreground font-semibold block capitalize bg-muted/30 p-2.5 rounded-lg border border-border/50">
@@ -140,8 +144,8 @@ function SettingsPage() {
               </div>
 
               {user.company && (
-                <div className="space-y-1">
-                  <span className="text-xs font-medium text-muted-foreground block">
+                <div className="space-y-1.5 md:col-span-2">
+                  <span className="text-xs font-semibold text-muted-foreground block">
                     Company
                   </span>
                   <span className="text-foreground font-semibold block bg-muted/30 p-2.5 rounded-lg border border-border/50">
@@ -153,7 +157,7 @@ function SettingsPage() {
           </CardContent>
         </Card>
 
-        {/* Security Settings (Stacked below) */}
+        {/* Security Settings */}
         <Card className="border-border/70 shadow-md bg-card">
           <CardHeader className="border-b border-border/50 pb-6">
             <CardTitle className="text-lg flex items-center gap-2 font-semibold">
