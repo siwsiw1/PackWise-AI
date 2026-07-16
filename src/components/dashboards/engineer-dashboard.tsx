@@ -1,14 +1,10 @@
 import { Link } from "@tanstack/react-router";
-import { Activity, Sparkles, ArrowRight, ShieldAlert, ScanLine, Link2, FileText } from "lucide-react";
-import {
-  Area, AreaChart, CartesianGrid, ResponsiveContainer, Tooltip, XAxis, YAxis,
-} from "recharts";
+import { Activity, Sparkles, ShieldAlert, ScanLine, Link2, FileText } from "lucide-react";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { KpiCard } from "@/components/kpi-card";
 import { PageHeader } from "@/components/page-header";
-import { performanceTrend, recommendations } from "@/lib/mock-data";
 import type { AuthUser } from "@/lib/auth";
 import { useState, useEffect } from "react";
 import { loadAnalysis, type ApprovalRequest } from "@/lib/workflow-store";
@@ -26,6 +22,7 @@ const statusStyles: Record<string, string> = {
 export function EngineerDashboard({ user }: { user: AuthUser }) {
   const [myApprovals, setMyApprovals] = useState<any[]>([]);
   const [lastAnalysisDate, setLastAnalysisDate] = useState<string>("—");
+  const [isLoading, setIsLoading] = useState(true);
   const analysis = loadAnalysis();
 
   useEffect(() => {
@@ -50,6 +47,7 @@ export function EngineerDashboard({ user }: { user: AuthUser }) {
       if (analyses && analyses.length > 0) {
         setLastAnalysisDate(new Date(analyses[0].created_at).toLocaleDateString());
       }
+      setIsLoading(false);
     }
     fetchData();
   }, [user.user_id]);
@@ -90,7 +88,12 @@ export function EngineerDashboard({ user }: { user: AuthUser }) {
           </Button>
         </CardHeader>
         <CardContent>
-          {myApprovals.length === 0 ? (
+          {isLoading ? (
+            <div className="flex flex-col items-center justify-center py-12 text-center">
+              <Sparkles className="h-6 w-6 animate-pulse text-primary mb-2" />
+              <p className="text-sm text-muted-foreground">Retrieving plans data...</p>
+            </div>
+          ) : myApprovals.length === 0 ? (
             <p className="text-sm text-muted-foreground text-center py-6">No plans submitted yet. Complete a workflow and submit for approval.</p>
           ) : (
             <div className="space-y-3">
@@ -139,69 +142,7 @@ export function EngineerDashboard({ user }: { user: AuthUser }) {
         </CardContent>
       </Card>
 
-      <div className="grid gap-6 lg:grid-cols-3">
-        {/* Trend Chart */}
-        <Card className="border-border/70 shadow-none lg:col-span-2">
-          <CardHeader className="flex flex-row items-start justify-between space-y-0">
-            <div>
-              <CardTitle className="text-base">Performance trend</CardTitle>
-              <CardDescription>Risk reduction, pose stability & sustainability — last 8 months.</CardDescription>
-            </div>
-            <Badge variant="outline" className="border-border/70 text-xs font-normal">Last 8 months</Badge>
-          </CardHeader>
-          <CardContent>
-            <div className="h-72 w-full">
-              <ResponsiveContainer width="100%" height="100%">
-                <AreaChart data={performanceTrend} margin={{ top: 8, right: 12, left: -16, bottom: 0 }}>
-                  <defs>
-                    <linearGradient id="g1" x1="0" y1="0" x2="0" y2="1">
-                      <stop offset="0%" stopColor="var(--color-chart-1)" stopOpacity={0.35} />
-                      <stop offset="100%" stopColor="var(--color-chart-1)" stopOpacity={0} />
-                    </linearGradient>
-                    <linearGradient id="g2" x1="0" y1="0" x2="0" y2="1">
-                      <stop offset="0%" stopColor="var(--color-chart-2)" stopOpacity={0.25} />
-                      <stop offset="100%" stopColor="var(--color-chart-2)" stopOpacity={0} />
-                    </linearGradient>
-                  </defs>
-                  <CartesianGrid strokeDasharray="3 3" stroke="var(--color-border)" vertical={false} />
-                  <XAxis dataKey="month" stroke="var(--color-muted-foreground)" fontSize={12} tickLine={false} axisLine={false} />
-                  <YAxis stroke="var(--color-muted-foreground)" fontSize={12} tickLine={false} axisLine={false} />
-                  <Tooltip contentStyle={{ borderRadius: 8, border: "1px solid var(--color-border)", background: "var(--color-card)", fontSize: 12 }} />
-                  <Area type="monotone" dataKey="riskReduction" name="Risk Reduction %" stroke="var(--color-chart-1)" strokeWidth={2} fill="url(#g1)" />
-                  <Area type="monotone" dataKey="poseStability" name="Pose Stability %" stroke="var(--color-chart-2)" strokeWidth={2} fill="url(#g2)" />
-                </AreaChart>
-              </ResponsiveContainer>
-            </div>
-          </CardContent>
-        </Card>
 
-        {/* AI Recommendations */}
-        <Card className="border-border/70 shadow-none">
-          <CardHeader>
-            <div className="flex items-center gap-2">
-              <div className="flex h-7 w-7 items-center justify-center rounded-md bg-[color:var(--primary-soft)] text-primary">
-                <Sparkles className="h-3.5 w-3.5" />
-              </div>
-              <CardTitle className="text-base">AI recommendations</CardTitle>
-            </div>
-            <CardDescription>Top opportunities across your active SKUs.</CardDescription>
-          </CardHeader>
-          <CardContent className="space-y-3">
-            {recommendations.map((r) => (
-              <div key={r.title} className="rounded-lg border border-border/70 p-3 transition hover:border-primary/40">
-                <div className="flex items-start justify-between gap-2">
-                  <p className="text-sm font-medium leading-tight">{r.title}</p>
-                  <Badge variant="secondary" className="bg-[color:var(--primary-soft)] text-primary text-[10px] font-medium">{r.tag}</Badge>
-                </div>
-                <p className="mt-1 text-xs text-muted-foreground">{r.impact}</p>
-              </div>
-            ))}
-            <Button variant="ghost" size="sm" className="w-full justify-between text-primary hover:text-primary" asChild>
-              <Link to="/app/packaging-planner">View attachment planner <ArrowRight className="h-4 w-4" /></Link>
-            </Button>
-          </CardContent>
-        </Card>
-      </div>
 
       {/* Workflow Progress */}
       {/* Workflow Pipeline */}

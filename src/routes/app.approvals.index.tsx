@@ -148,6 +148,7 @@ function ApprovalsPage() {
   const [all, setAll] = useState<ApprovalRequest[]>([]);
   const [search, setSearch] = useState("");
   const [tab, setTab] = useState<"pending" | "accepted">("pending");
+  const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
     async function fetchData() {
@@ -165,6 +166,7 @@ function ApprovalsPage() {
           decidedAt: undefined
         })));
       }
+      setIsLoading(false);
     }
     fetchData();
     const interval = setInterval(fetchData, 5000);
@@ -251,7 +253,12 @@ function ApprovalsPage() {
 
       {/* Content */}
       <div className="grid gap-4">
-        {tab === "pending" ? (
+        {isLoading ? (
+          <div className="flex flex-col items-center justify-center p-12 text-center">
+            <Clock className="h-8 w-8 animate-spin text-primary mb-2" />
+            <p className="text-sm text-muted-foreground">Retrieving data...</p>
+          </div>
+        ) : tab === "pending" ? (
           pending.length === 0 ? (
             <EmptyState tab="pending" />
           ) : (

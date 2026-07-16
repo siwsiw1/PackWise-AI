@@ -1,6 +1,6 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { useState } from "react";
-import { Check, X, Search } from "lucide-react";
+import { Check, X, Search, Clock } from "lucide-react";
 import { PageHeader } from "@/components/page-header";
 import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
@@ -62,6 +62,7 @@ function UsersPage() {
   const [inviteLoading, setInviteLoading] = useState(false);
   const [inviteData, setInviteData] = useState({ name: "", email: "", role: "Packaging Engineer" });
   const [createdResult, setCreatedResult] = useState<any>(null);
+  const [isLoading, setIsLoading] = useState(true);
 
   const fetchUsers = async () => {
     const { data, error } = await supabase
@@ -81,6 +82,7 @@ function UsersPage() {
         }))
       );
     }
+    setIsLoading(false);
   };
 
   useEffect(() => {
@@ -285,70 +287,78 @@ function UsersPage() {
               </TableRow>
             </TableHeader>
             <TableBody>
-              {filtered.map((u) => (
-                <TableRow key={u.id}>
-                  <TableCell>
-                    <div className="flex items-center gap-3">
-                      <div className="flex h-8 w-8 items-center justify-center rounded-full bg-[color:var(--primary-soft)] text-xs font-semibold text-primary">
-                        {u.name.split(" ").map((p) => p[0]).slice(0, 2).join("")}
-                      </div>
-                      <div className="min-w-0">
-                        <p className="truncate text-sm font-medium">{u.name}</p>
-                        <p className="truncate text-xs text-muted-foreground">{u.email}</p>
-                      </div>
-                    </div>
-                  </TableCell>
-                  <TableCell className="text-sm text-muted-foreground">{u.company}</TableCell>
-                  <TableCell>
-                    <Badge variant="outline" className={statusBadge(u.status) + " capitalize text-[10px]"}>
-                      {u.status}
-                    </Badge>
-                  </TableCell>
-                  <TableCell>
-                    <Select value={u.role} onValueChange={(v) => updateRole(u.id, v as ManagedUser["role"])}>
-                      <SelectTrigger className="h-8 w-36 text-xs">
-                        <SelectValue />
-                      </SelectTrigger>
-                      <SelectContent>
-                        {ROLE_OPTIONS.map((r) => (
-                          <SelectItem key={r.value} value={r.value} className="text-xs">{r.label}</SelectItem>
-                        ))}
-                      </SelectContent>
-                    </Select>
-                  </TableCell>
-                  <TableCell className="text-sm text-muted-foreground">{u.joined}</TableCell>
-                  <TableCell className="text-right">
-                    <div className="flex justify-end gap-1">
-                      <Button
-                        size="sm"
-                        variant="outline"
-                        onClick={() => approve(u.id)}
-                        disabled={u.status === "active"}
-                        className="h-8"
-                      >
-                        <Check className="h-3.5 w-3.5" />
-                        Approve
-                      </Button>
-                      <Button
-                        size="sm"
-                        variant="ghost"
-                        onClick={() => reject(u.id)}
-                        disabled={u.status === "rejected"}
-                        className="h-8 text-destructive hover:text-destructive"
-                      >
-                        <X className="h-3.5 w-3.5" />
-                        Reject
-                      </Button>
-                    </div>
+              {isLoading ? (
+                <TableRow>
+                  <TableCell colSpan={6} className="py-12 text-center text-sm text-muted-foreground">
+                    <Clock className="h-5 w-5 animate-spin mx-auto text-primary mb-2" />
+                    Retrieving users...
                   </TableCell>
                 </TableRow>
-              ))}
-              {filtered.length === 0 && (
+              ) : filtered.length === 0 ? (
                 <TableRow>
                   <TableCell colSpan={6} className="py-8 text-center text-sm text-muted-foreground">
                     No users match your search.
                   </TableCell>
                 </TableRow>
+              ) : (
+                filtered.map((u) => (
+                  <TableRow key={u.id}>
+                    <TableCell>
+                      <div className="flex items-center gap-3">
+                        <div className="flex h-8 w-8 items-center justify-center rounded-full bg-[color:var(--primary-soft)] text-xs font-semibold text-primary">
+                          {u.name.split(" ").map((p) => p[0]).slice(0, 2).join("")}
+                        </div>
+                        <div className="min-w-0 flex-1">
+                          <p className="truncate text-sm font-medium">{u.name}</p>
+                          <p className="truncate text-xs text-muted-foreground">{u.email}</p>
+                        </div>
+                      </div>
+                    </TableCell>
+                    <TableCell className="text-sm text-muted-foreground">{u.company}</TableCell>
+                    <TableCell>
+                      <Badge variant="outline" className={statusBadge(u.status) + " capitalize text-[10px]"}>
+                        {u.status}
+                      </Badge>
+                    </TableCell>
+                    <TableCell>
+                      <Select value={u.role} onValueChange={(v) => updateRole(u.id, v as ManagedUser["role"])}>
+                        <SelectTrigger className="h-8 w-36 text-xs">
+                          <SelectValue />
+                        </SelectTrigger>
+                        <SelectContent>
+                          {ROLE_OPTIONS.map((r) => (
+                            <SelectItem key={r.value} value={r.value} className="text-xs">{r.label}</SelectItem>
+                          ))}
+                        </SelectContent>
+                      </Select>
+                    </TableCell>
+                    <TableCell className="text-sm text-muted-foreground">{u.joined}</TableCell>
+                    <TableCell className="text-right">
+                      <div className="flex justify-end gap-1">
+                        <Button
+                          size="sm"
+                          variant="outline"
+                          onClick={() => approve(u.id)}
+                          disabled={u.status === "active"}
+                          className="h-8"
+                        >
+                          <Check className="h-3.5 w-3.5" />
+                          Approve
+                        </Button>
+                        <Button
+                          size="sm"
+                          variant="ghost"
+                          onClick={() => reject(u.id)}
+                          disabled={u.status === "rejected"}
+                          className="h-8 text-destructive hover:text-destructive"
+                        >
+                          <X className="h-3.5 w-3.5" />
+                          Reject
+                        </Button>
+                      </div>
+                    </TableCell>
+                  </TableRow>
+                ))
               )}
             </TableBody>
           </Table>

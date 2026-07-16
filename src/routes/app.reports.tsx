@@ -614,6 +614,7 @@ function ReportsPage() {
   const [reports, setReports] = useState<DerivedReport[]>([]);
   const [selected, setSelected] = useState<DerivedReport | null>(null);
   const [tab, setTab] = useState<"approved" | "rejected">("approved");
+  const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
     async function fetchData() {
@@ -625,6 +626,7 @@ function ReportsPage() {
       if (data) {
         setReports(data.map(toReport));
       }
+      setIsLoading(false);
     }
     fetchData();
   }, []);
@@ -689,7 +691,13 @@ function ReportsPage() {
       </div>
 
       {/* Report list */}
-      {displayed.length === 0 ? (
+      {isLoading ? (
+        <div className="flex flex-col items-center justify-center rounded-xl border border-dashed border-border/70 bg-muted/10 py-16 text-center">
+          <Clock className="h-10 w-10 text-primary mb-4 animate-spin" />
+          <p className="text-base font-medium text-foreground">Retrieving reports...</p>
+          <p className="mt-1 text-sm text-muted-foreground">Connecting to database, please wait.</p>
+        </div>
+      ) : displayed.length === 0 ? (
         <div className="flex flex-col items-center justify-center rounded-xl border border-dashed border-border/70 bg-muted/10 py-16 text-center">
           <FileText className="h-10 w-10 text-muted-foreground/40 mb-4" />
           <p className="text-base font-medium text-foreground">
