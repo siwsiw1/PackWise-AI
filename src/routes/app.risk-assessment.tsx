@@ -5,10 +5,15 @@ import { Button } from "@/components/ui/button";
 import { PageHeader } from "@/components/page-header";
 import { loadAnalysis, loadPlan } from "@/lib/workflow-store";
 import RiskAssessmentContent from "@/components/RiskAssessmentContent";
+import { getUser } from "@/lib/auth";
 
 export const Route = createFileRoute("/app/risk-assessment")({
   head: () => ({ meta: [{ title: "Risk Assessment — PackWise AI" }] }),
   beforeLoad: () => {
+    const user = getUser();
+    const isManagerOrAdmin = user?.role === "manager" || user?.role === "admin";
+    if (isManagerOrAdmin) return;
+
     const plan = loadPlan();
     if (!plan?.plan_id) {
       throw redirect({ to: "/app/packaging-planner" });

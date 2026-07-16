@@ -16,12 +16,32 @@ import {
   Table, TableBody, TableCell, TableHead, TableHeader, TableRow,
 } from "@/components/ui/table";
 import { PageHeader } from "@/components/page-header";
-import { loadAnalysis, loadPlan, type PlanResult, type PlanZoneRow } from "@/lib/workflow-store";
+import { loadAnalysis, loadPlan, DEMO_RESULT, type PlanResult, type PlanZoneRow } from "@/lib/workflow-store";
 import { toast } from "sonner";
+import { getUser } from "@/lib/auth";
+
+const DEMO_PLAN: PlanResult = {
+  plan_id: "plan-demo-1",
+  zones: [
+    { zone: "Hair", currentMethod: "None", recommendedMethod: "Elastic Strap", action: "Add", cvDetected: true, xgbRecommended: true, cost: 0.16, laborMins: 0.8, sustainability: 68, stability: 85, riskReduction: 40, quantity: 2 },
+    { zone: "Waist", currentMethod: "None", recommendedMethod: "PET Support", action: "Add", cvDetected: true, xgbRecommended: true, cost: 0.18, laborMins: 1.2, sustainability: 78, stability: 90, riskReduction: 50, quantity: 1 },
+    { zone: "Right Wrist", currentMethod: "None", recommendedMethod: "EVA Strap", action: "Add", cvDetected: true, xgbRecommended: true, cost: 0.12, laborMins: 0.5, sustainability: 82, stability: 75, riskReduction: 30, quantity: 1 },
+    { zone: "Left Foot", currentMethod: "None", recommendedMethod: "No Attachment Required", action: "Keep", cvDetected: false, xgbRecommended: false, cost: 0.00, laborMins: 0.0, sustainability: 100, stability: 95, riskReduction: 0, quantity: 1 },
+  ],
+  totalCost: 0.46,
+  avgStability: 86.25,
+  avgSustainability: 82.0,
+  recommendedMaterial: "Cardboard Support / PET Support",
+  totalLaborMins: 2.5
+};
 
 export const Route = createFileRoute("/app/cost-analysis")({
   head: () => ({ meta: [{ title: "Cost & Sustainability — PackWise AI" }] }),
   beforeLoad: () => {
+    const user = getUser();
+    const isManagerOrAdmin = user?.role === "manager" || user?.role === "admin";
+    if (isManagerOrAdmin) return;
+
     const plan = loadPlan();
     if (!plan?.plan_id) {
       throw redirect({ to: "/app/risk-assessment" });
@@ -92,15 +112,30 @@ function CostSustainabilityPage() {
   const [ready, setReady] = useState(false);
 
   useEffect(() => {
+    const user = getUser();
+    const isManagerOrAdmin = user?.role === "manager" || user?.role === "admin";
+
     const analysis = loadAnalysis();
     if (!analysis) {
+      if (isManagerOrAdmin) {
+        setProductName(DEMO_RESULT.productName);
+        setPlan(DEMO_PLAN);
+        setReady(true);
+        return;
+      }
       toast.error("Please complete Product Analysis first.");
       navigate({ to: "/app/product-analysis" });
       return;
     }
     setProductName(analysis.productName);
+
     const p = loadPlan();
     if (!p) {
+      if (isManagerOrAdmin) {
+        setPlan(DEMO_PLAN);
+        setReady(true);
+        return;
+      }
       toast.error("Please run the Packaging Planner before viewing Cost Analysis.");
       navigate({ to: "/app/packaging-planner" });
       return;
