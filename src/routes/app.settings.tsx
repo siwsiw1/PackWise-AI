@@ -89,15 +89,15 @@ function SettingsPage() {
   if (!user) return null;
 
   return (
-    <div className="space-y-8 max-w-5xl mx-auto px-4 sm:px-6">
+    <div className="space-y-8 max-w-4xl mx-auto px-4 sm:px-6">
       <PageHeader
         title="Account Settings"
         description="Manage your profile information and security credentials."
       />
 
-      <div className="grid gap-8 grid-cols-1 lg:grid-cols-3 items-start">
-        {/* Profile Card */}
-        <Card className="lg:col-span-1 border-border/70 shadow-md bg-card overflow-hidden">
+      <div className="space-y-8">
+        {/* Profile Card (Stacked on top) */}
+        <Card className="border-border/70 shadow-md bg-card overflow-hidden">
           <div className="h-2 bg-gradient-to-r from-pink-500 to-primary"></div>
           <CardHeader className="pb-4">
             <CardTitle className="text-lg flex items-center gap-2 font-semibold">
@@ -105,12 +105,13 @@ function SettingsPage() {
             </CardTitle>
             <CardDescription>Your account details & permissions</CardDescription>
           </CardHeader>
-          <CardContent className="space-y-6">
-            <div className="flex flex-col items-center justify-center pb-6 border-b border-border/60">
+          <CardContent className="grid gap-6 grid-cols-1 md:grid-cols-3 items-center">
+            {/* Avatar & Name Info (Left Column on medium+ screen) */}
+            <div className="flex flex-col items-center justify-center pb-6 md:pb-0 md:border-r border-border/60 pr-0 md:pr-6">
               <div className="flex h-20 w-20 items-center justify-center rounded-full bg-[color:var(--primary-soft)] text-2xl font-bold text-primary mb-4 shadow-sm border border-primary/10">
                 {user.name.split(" ").map((n) => n[0]).slice(0, 2).join("")}
               </div>
-              <h3 className="font-bold text-lg text-foreground text-center break-all max-w-full px-2">
+              <h3 className="font-bold text-lg text-foreground text-center break-words max-w-full px-2">
                 {user.name}
               </h3>
               <p className="text-xs font-semibold text-primary bg-[color:var(--primary-soft)] px-3 py-1 rounded-full mt-2 border border-primary/20">
@@ -118,7 +119,8 @@ function SettingsPage() {
               </p>
             </div>
             
-            <div className="space-y-4 pt-2 text-sm">
+            {/* Account Details Inputs (Right Columns on medium+ screen) */}
+            <div className="md:col-span-2 space-y-4 text-sm pl-0 md:pl-6">
               <div className="space-y-1">
                 <span className="text-xs font-medium text-muted-foreground flex items-center gap-1.5">
                   <Mail className="h-3.5 w-3.5" /> Email Address
@@ -151,8 +153,8 @@ function SettingsPage() {
           </CardContent>
         </Card>
 
-        {/* Security Settings */}
-        <Card className="lg:col-span-2 border-border/70 shadow-md bg-card">
+        {/* Security Settings (Stacked below) */}
+        <Card className="border-border/70 shadow-md bg-card">
           <CardHeader className="border-b border-border/50 pb-6">
             <CardTitle className="text-lg flex items-center gap-2 font-semibold">
               <Lock className="h-5 w-5 text-primary" /> Security Settings
