@@ -9,6 +9,7 @@ export interface AuthUser {
   name: string;
   role: Role;
   must_change_password?: boolean;
+  company?: string;
 }
 
 const USER_KEY = "packwise_user";
