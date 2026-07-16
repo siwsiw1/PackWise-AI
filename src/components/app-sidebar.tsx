@@ -58,6 +58,7 @@ const NAV: Record<Role, Item[]> = {
   admin: [
     { title: "Dashboard",             url: "/app/dashboard",           icon: LayoutDashboard },
     { title: "Pending Approvals",     url: "/app/approvals",           icon: CheckSquare     },
+    { title: "Reports",               url: "/app/reports",             icon: FileBarChart2   },
     { title: "User Management",       url: "/app/users",               icon: Users           },
     { title: "Role Assignment",       url: "/app/roles",               icon: ShieldCheck     },
     { title: "System Settings",       url: "/app/system-settings",     icon: Cog             },
@@ -84,6 +85,7 @@ const NAV: Record<Role, Item[]> = {
   Admin: [
     { title: "Dashboard",             url: "/app/dashboard",           icon: LayoutDashboard },
     { title: "Pending Approvals",     url: "/app/approvals",           icon: CheckSquare     },
+    { title: "Reports",               url: "/app/reports",             icon: FileBarChart2   },
     { title: "User Management",       url: "/app/users",               icon: Users           },
     { title: "Role Assignment",       url: "/app/roles",               icon: ShieldCheck     },
     { title: "System Settings",       url: "/app/system-settings",     icon: Cog             },
