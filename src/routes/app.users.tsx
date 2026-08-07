@@ -1,6 +1,6 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { useState } from "react";
-import { Check, X, Search, Clock } from "lucide-react";
+import { Check, X, Search, Clock, Copy, KeyRound } from "lucide-react";
 import { PageHeader } from "@/components/page-header";
 import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
@@ -31,7 +31,7 @@ import {
   DialogTrigger,
 } from "@/components/ui/dialog";
 import { Label } from "@/components/ui/label";
-import { type ManagedUser } from "@/lib/mock-data";
+import { type ManagedUser, managedUsers } from "@/lib/mock-data";
 import { toast } from "sonner";
 import { createUserApi } from "@/lib/auth";
 import { supabase } from "@/lib/supabase";
@@ -51,7 +51,7 @@ const ROLE_OPTIONS: { value: ManagedUser["role"]; label: string }[] = [
 
 function statusBadge(status: ManagedUser["status"]) {
   if (status === "active") return "bg-[color:var(--success)]/10 text-[color:var(--success)] border-transparent";
-  if (status === "invited") return "bg-[color:var(--warning)]/15 text-[color:var(--warning-foreground)] border-transparent";
+  if (status === "invited" || status === "pending") return "bg-[color:var(--warning)]/15 text-[color:var(--warning-foreground)] border-transparent";
   return "bg-destructive/10 text-destructive border-transparent";
 }
 
@@ -63,6 +63,20 @@ function UsersPage() {
   const [inviteData, setInviteData] = useState({ name: "", email: "", role: "Packaging Engineer" });
   const [createdResult, setCreatedResult] = useState<any>(null);
   const [isLoading, setIsLoading] = useState(true);
+
+  const [resetModal, setResetModal] = useState<{
+    isOpen: boolean;
+    user: ManagedUser | null;
+    tempPass: string;
+    copied: boolean;
+    loading: boolean;
+  }>({
+    isOpen: false,
+    user: null,
+    tempPass: "",
+    copied: false,
+    loading: false,
+  });
 
   const fetchUsers = async () => {
     try {
@@ -148,6 +162,66 @@ function UsersPage() {
     }
   };
 
+  const handleResetPassword = async (userItem: ManagedUser) => {
+    setResetModal({
+      isOpen: true,
+      user: userItem,
+      tempPass: "",
+      copied: false,
+      loading: true,
+    });
+
+    const chars = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789!@#$%^&*";
+    let tempPass = "Pk#" + Array.from({ length: 9 }, () => chars.charAt(Math.floor(Math.random() * chars.length))).join("");
+
+    try {
+      // 1. Try backend reset API
+      const token = localStorage.getItem("packwise_token");
+      if (token) {
+        const res = await fetch(`${import.meta.env.VITE_API_URL ?? "http://localhost:8000"}/auth/reset-password`, {
+          method: "POST",
+          headers: { "Content-Type": "application/json", "Authorization": `Bearer ${token}` },
+          body: JSON.stringify({ user_id: userItem.id }),
+        }).catch(() => null);
+        if (res && res.ok) {
+          const data = await res.json();
+          if (data.temporary_password) {
+            tempPass = data.temporary_password;
+          }
+        }
+      }
+
+      // 2. Set must_change_password = true in DB
+      await supabase
+        .from("app_user")
+        .update({ must_change_password: true })
+        .eq("user_id", userItem.id);
+
+      setUsers((prev) => prev.map((u) => u.id === userItem.id ? { ...u, status: "invited" } : u));
+
+      setResetModal({
+        isOpen: true,
+        user: userItem,
+        tempPass: tempPass,
+        copied: false,
+        loading: false,
+      });
+    } catch (err: any) {
+      toast.error(err.message || "Failed to reset password");
+      setResetModal((prev) => ({ ...prev, isOpen: false, loading: false }));
+    }
+  };
+
+  const copyResetPassword = () => {
+    if (!resetModal.tempPass) return;
+    navigator.clipboard.writeText(resetModal.tempPass);
+    setResetModal((prev) => ({ ...prev, copied: true }));
+    toast.success("Password copied to clipboard!");
+    setTimeout(() => {
+      setResetModal((prev) => ({ ...prev, copied: false }));
+    }, 3000);
+  };
+
   const removeUser = async (id: string) => {
     const { error } = await supabase
       .from("app_user")
@@ -218,8 +292,8 @@ function UsersPage() {
                 
                 {createdResult ? (
                   <div className="space-y-4 py-4">
-                    <div className="rounded-md bg-green-50 p-4 border border-green-200">
-                      <p className="text-sm text-green-800 font-medium mb-2">User created successfully!</p>
+                    <div className="rounded-md bg-green-50 dark:bg-green-950/40 p-4 border border-green-200 dark:border-green-800">
+                      <p className="text-sm text-green-800 dark:text-green-300 font-medium mb-2">User created successfully!</p>
                       <div className="space-y-1 text-sm">
                         <p><strong>Email:</strong> {createdResult.email}</p>
                         <p><strong>Role:</strong> {createdResult.role}</p>
@@ -228,9 +302,23 @@ function UsersPage() {
                     </div>
                     <div className="rounded-md bg-muted p-4 flex flex-col items-center justify-center space-y-2">
                       <p className="text-sm font-medium">Temporary Password</p>
-                      <code className="text-lg bg-background px-3 py-1 rounded border font-mono select-all">
-                        {createdResult.temporary_password}
-                      </code>
+                      <div className="flex items-center gap-2 w-full justify-center">
+                        <code className="text-lg bg-background px-3 py-1 rounded border font-mono select-all font-semibold">
+                          {createdResult.temporary_password}
+                        </code>
+                        <Button
+                          type="button"
+                          size="sm"
+                          variant="outline"
+                          onClick={() => {
+                            navigator.clipboard.writeText(createdResult.temporary_password);
+                            toast.success("Password copied to clipboard!");
+                          }}
+                        >
+                          <Copy className="h-3.5 w-3.5 mr-1" />
+                          Copy
+                        </Button>
+                      </div>
                       <p className="text-xs text-muted-foreground text-center">
                         Please copy this password. It will not be shown again.
                       </p>
@@ -271,6 +359,80 @@ function UsersPage() {
                       </Button>
                     </DialogFooter>
                   </form>
+                )}
+              </DialogContent>
+            </Dialog>
+
+            {/* Reset Password Result Dialog */}
+            <Dialog open={resetModal.isOpen} onOpenChange={(open) => {
+              if (!open) setResetModal((prev) => ({ ...prev, isOpen: false }));
+            }}>
+              <DialogContent className="sm:max-w-md">
+                <DialogHeader>
+                  <DialogTitle className="flex items-center gap-2 text-lg font-semibold">
+                    <KeyRound className="h-5 w-5 text-amber-600 dark:text-amber-400" />
+                    Reset Password
+                  </DialogTitle>
+                  <DialogDescription>
+                    Temporary password generated for <span className="font-semibold text-foreground">{resetModal.user?.name}</span> ({resetModal.user?.email})
+                  </DialogDescription>
+                </DialogHeader>
+
+                {resetModal.loading ? (
+                  <div className="py-8 text-center text-sm text-muted-foreground space-y-2">
+                    <Clock className="h-6 w-6 animate-spin mx-auto text-primary" />
+                    <p>Resetting password and generating temporary credentials...</p>
+                  </div>
+                ) : (
+                  <div className="space-y-4 py-2">
+                    <div className="rounded-lg bg-amber-500/10 border border-amber-500/20 p-3.5 flex items-start gap-3">
+                      <KeyRound className="h-5 w-5 text-amber-600 dark:text-amber-400 shrink-0 mt-0.5" />
+                      <div className="text-xs text-amber-900 dark:text-amber-200 leading-relaxed">
+                        User password has been reset. Share this temporary password with the user so they can sign in.
+                      </div>
+                    </div>
+
+                    <div className="space-y-2">
+                      <Label className="text-xs font-medium text-muted-foreground uppercase tracking-wider">
+                        Temporary Password
+                      </Label>
+                      <div className="flex items-center gap-2">
+                        <Input
+                          readOnly
+                          value={resetModal.tempPass}
+                          className="font-mono text-base tracking-wider font-semibold bg-muted/60 pr-2 select-all"
+                        />
+                        <Button
+                          type="button"
+                          variant="outline"
+                          onClick={copyResetPassword}
+                          className="gap-1.5 shrink-0 min-w-[90px]"
+                        >
+                          {resetModal.copied ? (
+                            <>
+                              <Check className="h-4 w-4 text-green-600" />
+                              <span className="text-green-600 font-medium">Copied</span>
+                            </>
+                          ) : (
+                            <>
+                              <Copy className="h-4 w-4" />
+                              <span>Copy</span>
+                            </>
+                          )}
+                        </Button>
+                      </div>
+                    </div>
+
+                    <p className="text-xs text-muted-foreground leading-relaxed bg-muted/30 p-2.5 rounded border border-border/50">
+                      🔒 The user will be required to change their password upon their next login.
+                    </p>
+
+                    <DialogFooter className="pt-2">
+                      <Button onClick={() => setResetModal((prev) => ({ ...prev, isOpen: false }))}>
+                        Done
+                      </Button>
+                    </DialogFooter>
+                  </div>
                 )}
               </DialogContent>
             </Dialog>
@@ -336,6 +498,15 @@ function UsersPage() {
                     <TableCell className="text-sm text-muted-foreground">{u.joined}</TableCell>
                     <TableCell className="text-right">
                       <div className="flex justify-end gap-1">
+                        <Button
+                          size="sm"
+                          variant="ghost"
+                          onClick={() => handleResetPassword(u)}
+                          className="h-8 text-amber-600 hover:text-amber-700 hover:bg-amber-50 dark:hover:bg-amber-950/40"
+                          title="Reset user password"
+                        >
+                          Reset PW
+                        </Button>
                         <Button
                           size="sm"
                           variant="ghost"

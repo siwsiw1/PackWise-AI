@@ -1,3 +1,4 @@
+import { findMatchingSKU } from "@/lib/dataset-matcher";
 import { useMemo, useState, useEffect } from "react";
 import { getToken } from "@/lib/auth";
 import { loadAnalysis, loadPlan } from "@/lib/workflow-store";
@@ -189,8 +190,30 @@ export default function RiskAssessmentContent() {
   const [apiData, setApiData] = useState<any>(null);
   const [analysisId, setAnalysisId] = useState("");
 
-  // Live dynamic prediction for Mattel Master Carton & SIOC drop test standards
+  // Live dynamic prediction matched against 50 SKU empirical validation dataset (Drop_Test_Validation_Dataset.xlsx)
+  const matchedDatasetItem = useMemo(() => {
+    return findMatchingSKU({
+      weight_g: product.weight_g,
+      height_cm: product.height_cm,
+      straps,
+      center_of_gravity: product.center_of_gravity,
+      hasSmallAccessories: product.hasSmallAccessories,
+    });
+  }, [product.weight_g, product.height_cm, product.center_of_gravity, product.hasSmallAccessories, straps]);
+
   const liveMattelDrops = useMemo(() => {
+    if (matchedDatasetItem) {
+      return {
+        skuId: matchedDatasetItem.sku_id,
+        matchedProduct: matchedDatasetItem.product_name,
+        masterCarton1Drop: matchedDatasetItem.results.master_carton_1_drop,
+        masterCarton10Drop: matchedDatasetItem.results.master_carton_10_drop,
+        sioc1Drop: matchedDatasetItem.results.sioc_1_drop,
+        sioc17Drop: matchedDatasetItem.results.sioc_17_drop,
+        failureDetails: matchedDatasetItem.failure_details,
+      };
+    }
+
     const mc1 = product.weight_g < 350 ? "Pass" : "Fail";
     const mc10 = (straps.head && straps.waist) ? "Pass" : "Fail";
     const sioc1 = product.height_cm < 40 ? "Pass" : "Fail";
@@ -206,13 +229,15 @@ export default function RiskAssessmentContent() {
     }
 
     return {
+      skuId: "SKU-BENCHMARK",
+      matchedProduct: "Benchmark Baseline",
       masterCarton1Drop: mc1,
       masterCarton10Drop: mc10,
       sioc1Drop: sioc1,
       sioc17Drop: sioc17,
       failureDetails: failure,
     };
-  }, [product.weight_g, product.height_cm, straps]);
+  }, [matchedDatasetItem, product.weight_g, product.height_cm, straps]);
 
   // Hydrate from real analysis data
   useEffect(() => {
@@ -730,8 +755,11 @@ export default function RiskAssessmentContent() {
                       <CardTitle className="text-[15px] font-semibold tracking-tight">
                         Mattel Lab Test Benchmark (Actual Data Record)
                       </CardTitle>
-                      <p className="text-[11.5px] text-muted-foreground">
-                        Official Mattel Lab Master Carton & SIOC Drop-Test Log (Excel Dataset Benchmark)
+                      <p className="text-[11.5px] text-muted-foreground flex items-center gap-1.5 mt-0.5">
+                        <span>Matched Benchmark SKU:</span>
+                        <span className="font-semibold text-foreground bg-muted px-1.5 py-0.5 rounded text-[11px] font-mono">
+                          {liveMattelDrops.skuId} — {liveMattelDrops.matchedProduct}
+                        </span>
                       </p>
                     </div>
                   </div>

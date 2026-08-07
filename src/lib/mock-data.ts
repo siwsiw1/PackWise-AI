@@ -78,7 +78,7 @@ export const sustainabilityMetrics = [
 export type ManagedUser = {
   id: string; name: string; email: string; company: string;
   role: "engineer" | "manager" | "admin" | "unassigned";
-  status: "active" | "pending" | "rejected";
+  status: "active" | "pending" | "rejected" | "invited";
   joined: string;
 };
 

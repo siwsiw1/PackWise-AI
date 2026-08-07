@@ -1,0 +1,1202 @@
+[
+  {
+    "sku_id": "SKU-1001",
+    "product_name": "Cyber Hero Action Figures - Model #1001",
+    "category": "Action Figure",
+    "weight_g": 256,
+    "height_cm": 22,
+    "pose_complexity": "Low",
+    "center_of_gravity": "Center",
+    "accessory_count": 1,
+    "has_small_accessories": false,
+    "straps": {
+      "head": false,
+      "waist": false,
+      "arm": false,
+      "leg": false
+    },
+    "results": {
+      "master_carton_1_drop": "Fail",
+      "master_carton_10_drop": "Fail",
+      "sioc_1_drop": "Fail",
+      "sioc_17_drop": "Fail"
+    },
+    "failure_details": "Zero attachment straps applied (0-Point Setup) \u2014 Toy shifted completely out of cavity on initial drop impact"
+  },
+  {
+    "sku_id": "SKU-1002",
+    "product_name": "Cyber Hero Action Figures - Model #1002",
+    "category": "Action Figure",
+    "weight_g": 423,
+    "height_cm": 26,
+    "pose_complexity": "Low",
+    "center_of_gravity": "Back-Heavy",
+    "accessory_count": 3,
+    "has_small_accessories": false,
+    "straps": {
+      "head": true,
+      "waist": false,
+      "arm": false,
+      "leg": false
+    },
+    "results": {
+      "master_carton_1_drop": "Pass",
+      "master_carton_10_drop": "Fail",
+      "sioc_1_drop": "Pass",
+      "sioc_17_drop": "Fail"
+    },
+    "failure_details": "Waist shifted out of tray cavity"
+  },
+  {
+    "sku_id": "SKU-1003",
+    "product_name": "Cyber Hero Action Figures - Model #1003",
+    "category": "Action Figure",
+    "weight_g": 305,
+    "height_cm": 21,
+    "pose_complexity": "High",
+    "center_of_gravity": "Back-Heavy",
+    "accessory_count": 0,
+    "has_small_accessories": false,
+    "straps": {
+      "head": false,
+      "waist": true,
+      "arm": false,
+      "leg": false
+    },
+    "results": {
+      "master_carton_1_drop": "Pass",
+      "master_carton_10_drop": "Fail",
+      "sioc_1_drop": "Pass",
+      "sioc_17_drop": "Fail"
+    },
+    "failure_details": "Extended limb rotated and scuffed plastic window"
+  },
+  {
+    "sku_id": "SKU-1004",
+    "product_name": "Mecha Defender Titan - Model #1004",
+    "category": "Heavy High-End Figure",
+    "weight_g": 866,
+    "height_cm": 38,
+    "pose_complexity": "High",
+    "center_of_gravity": "Back-Heavy",
+    "accessory_count": 3,
+    "has_small_accessories": false,
+    "straps": {
+      "head": false,
+      "waist": false,
+      "arm": true,
+      "leg": false
+    },
+    "results": {
+      "master_carton_1_drop": "Fail",
+      "master_carton_10_drop": "Fail",
+      "sioc_1_drop": "Fail",
+      "sioc_17_drop": "Fail"
+    },
+    "failure_details": "Missing both Head & Waist restraints \u2014 severe internal displacement under Master Carton 10-drop"
+  },
+  {
+    "sku_id": "SKU-1005",
+    "product_name": "Plush Pals Collector - Model #1005",
+    "category": "Plushie with Accessories",
+    "weight_g": 90,
+    "height_cm": 17,
+    "pose_complexity": "High",
+    "center_of_gravity": "Top-Heavy",
+    "accessory_count": 2,
+    "has_small_accessories": false,
+    "straps": {
+      "head": false,
+      "waist": false,
+      "arm": false,
+      "leg": true
+    },
+    "results": {
+      "master_carton_1_drop": "Pass",
+      "master_carton_10_drop": "Fail",
+      "sioc_1_drop": "Pass",
+      "sioc_17_drop": "Fail"
+    },
+    "failure_details": "Missing both Head & Waist restraints \u2014 severe internal displacement under Master Carton 10-drop"
+  },
+  {
+    "sku_id": "SKU-1006",
+    "product_name": "Mecha Defender Titan - Model #1006",
+    "category": "Heavy High-End Figure",
+    "weight_g": 890,
+    "height_cm": 33,
+    "pose_complexity": "Low",
+    "center_of_gravity": "Center",
+    "accessory_count": 3,
+    "has_small_accessories": false,
+    "straps": {
+      "head": true,
+      "waist": true,
+      "arm": false,
+      "leg": false
+    },
+    "results": {
+      "master_carton_1_drop": "Pass",
+      "master_carton_10_drop": "Pass",
+      "sioc_1_drop": "Pass",
+      "sioc_17_drop": "Fail"
+    },
+    "failure_details": "Tray distortion & displacement under repeated drops"
+  },
+  {
+    "sku_id": "SKU-1007",
+    "product_name": "Kingdom Knights - Model #1007",
+    "category": "Action Figure",
+    "weight_g": 354,
+    "height_cm": 24,
+    "pose_complexity": "Low",
+    "center_of_gravity": "Back-Heavy",
+    "accessory_count": 3,
+    "has_small_accessories": true,
+    "straps": {
+      "head": true,
+      "waist": false,
+      "arm": false,
+      "leg": true
+    },
+    "results": {
+      "master_carton_1_drop": "Pass",
+      "master_carton_10_drop": "Fail",
+      "sioc_1_drop": "Pass",
+      "sioc_17_drop": "Fail"
+    },
+    "failure_details": "Waist shifted out of tray cavity"
+  },
+  {
+    "sku_id": "SKU-1008",
+    "product_name": "Fantasy Princess Collection - Model #1008",
+    "category": "Fashion Doll",
+    "weight_g": 150,
+    "height_cm": 34,
+    "pose_complexity": "Medium",
+    "center_of_gravity": "Back-Heavy",
+    "accessory_count": 4,
+    "has_small_accessories": true,
+    "straps": {
+      "head": true,
+      "waist": false,
+      "arm": true,
+      "leg": false
+    },
+    "results": {
+      "master_carton_1_drop": "Pass",
+      "master_carton_10_drop": "Pass",
+      "sioc_1_drop": "Pass",
+      "sioc_17_drop": "Fail"
+    },
+    "failure_details": "Small accessory detached & loose in packaging window"
+  },
+  {
+    "sku_id": "SKU-1009",
+    "product_name": "Kingdom Knights - Model #1009",
+    "category": "Action Figure",
+    "weight_g": 347,
+    "height_cm": 23,
+    "pose_complexity": "High",
+    "center_of_gravity": "Center",
+    "accessory_count": 0,
+    "has_small_accessories": false,
+    "straps": {
+      "head": false,
+      "waist": true,
+      "arm": true,
+      "leg": false
+    },
+    "results": {
+      "master_carton_1_drop": "Pass",
+      "master_carton_10_drop": "Pass",
+      "sioc_1_drop": "Pass",
+      "sioc_17_drop": "Fail"
+    },
+    "failure_details": "Tray distortion & displacement under repeated drops"
+  },
+  {
+    "sku_id": "SKU-1010",
+    "product_name": "Mecha Defender Titan - Model #1010",
+    "category": "Heavy High-End Figure",
+    "weight_g": 895,
+    "height_cm": 32,
+    "pose_complexity": "Low",
+    "center_of_gravity": "Center",
+    "accessory_count": 0,
+    "has_small_accessories": false,
+    "straps": {
+      "head": false,
+      "waist": true,
+      "arm": false,
+      "leg": true
+    },
+    "results": {
+      "master_carton_1_drop": "Pass",
+      "master_carton_10_drop": "Pass",
+      "sioc_1_drop": "Pass",
+      "sioc_17_drop": "Fail"
+    },
+    "failure_details": "Tray distortion & displacement under repeated drops"
+  },
+  {
+    "sku_id": "SKU-1011",
+    "product_name": "Fantasy Princess Collection - Model #1011",
+    "category": "Fashion Doll",
+    "weight_g": 175,
+    "height_cm": 33,
+    "pose_complexity": "High",
+    "center_of_gravity": "Top-Heavy",
+    "accessory_count": 1,
+    "has_small_accessories": false,
+    "straps": {
+      "head": false,
+      "waist": false,
+      "arm": true,
+      "leg": true
+    },
+    "results": {
+      "master_carton_1_drop": "Pass",
+      "master_carton_10_drop": "Fail",
+      "sioc_1_drop": "Pass",
+      "sioc_17_drop": "Fail"
+    },
+    "failure_details": "Missing both Head & Waist restraints \u2014 severe internal displacement under Master Carton 10-drop"
+  },
+  {
+    "sku_id": "SKU-1012",
+    "product_name": "Kingdom Knights - Model #1012",
+    "category": "Action Figure",
+    "weight_g": 290,
+    "height_cm": 23,
+    "pose_complexity": "High",
+    "center_of_gravity": "Top-Heavy",
+    "accessory_count": 0,
+    "has_small_accessories": false,
+    "straps": {
+      "head": true,
+      "waist": true,
+      "arm": true,
+      "leg": false
+    },
+    "results": {
+      "master_carton_1_drop": "Pass",
+      "master_carton_10_drop": "Pass",
+      "sioc_1_drop": "Pass",
+      "sioc_17_drop": "Pass"
+    },
+    "failure_details": "-"
+  },
+  {
+    "sku_id": "SKU-1013",
+    "product_name": "Chibi Animals Playset - Model #1013",
+    "category": "Miniature Playset",
+    "weight_g": 128,
+    "height_cm": 15,
+    "pose_complexity": "Low",
+    "center_of_gravity": "Center",
+    "accessory_count": 3,
+    "has_small_accessories": true,
+    "straps": {
+      "head": true,
+      "waist": true,
+      "arm": false,
+      "leg": true
+    },
+    "results": {
+      "master_carton_1_drop": "Pass",
+      "master_carton_10_drop": "Pass",
+      "sioc_1_drop": "Pass",
+      "sioc_17_drop": "Pass"
+    },
+    "failure_details": "-"
+  },
+  {
+    "sku_id": "SKU-1014",
+    "product_name": "Mecha Defender Titan - Model #1014",
+    "category": "Heavy High-End Figure",
+    "weight_g": 850,
+    "height_cm": 33,
+    "pose_complexity": "Low",
+    "center_of_gravity": "Center",
+    "accessory_count": 0,
+    "has_small_accessories": false,
+    "straps": {
+      "head": false,
+      "waist": true,
+      "arm": true,
+      "leg": true
+    },
+    "results": {
+      "master_carton_1_drop": "Pass",
+      "master_carton_10_drop": "Pass",
+      "sioc_1_drop": "Pass",
+      "sioc_17_drop": "Pass"
+    },
+    "failure_details": "-"
+  },
+  {
+    "sku_id": "SKU-1015",
+    "product_name": "Kingdom Knights - Model #1015",
+    "category": "Action Figure",
+    "weight_g": 302,
+    "height_cm": 24,
+    "pose_complexity": "Low",
+    "center_of_gravity": "Center",
+    "accessory_count": 4,
+    "has_small_accessories": true,
+    "straps": {
+      "head": true,
+      "waist": true,
+      "arm": true,
+      "leg": true
+    },
+    "results": {
+      "master_carton_1_drop": "Pass",
+      "master_carton_10_drop": "Pass",
+      "sioc_1_drop": "Pass",
+      "sioc_17_drop": "Pass"
+    },
+    "failure_details": "-"
+  },
+  {
+    "sku_id": "SKU-1016",
+    "product_name": "Space Explorer Squad - Model #1016",
+    "category": "Miniature Playset",
+    "weight_g": 160,
+    "height_cm": 17,
+    "pose_complexity": "Medium",
+    "center_of_gravity": "Center",
+    "accessory_count": 2,
+    "has_small_accessories": false,
+    "straps": {
+      "head": false,
+      "waist": false,
+      "arm": false,
+      "leg": false
+    },
+    "results": {
+      "master_carton_1_drop": "Fail",
+      "master_carton_10_drop": "Fail",
+      "sioc_1_drop": "Fail",
+      "sioc_17_drop": "Fail"
+    },
+    "failure_details": "Zero attachment straps applied (0-Point Setup) \u2014 Toy shifted completely out of cavity on initial drop impact"
+  },
+  {
+    "sku_id": "SKU-1017",
+    "product_name": "Plush Pals Collector - Model #1017",
+    "category": "Plushie with Accessories",
+    "weight_g": 164,
+    "height_cm": 21,
+    "pose_complexity": "High",
+    "center_of_gravity": "Top-Heavy",
+    "accessory_count": 2,
+    "has_small_accessories": false,
+    "straps": {
+      "head": true,
+      "waist": false,
+      "arm": false,
+      "leg": false
+    },
+    "results": {
+      "master_carton_1_drop": "Pass",
+      "master_carton_10_drop": "Fail",
+      "sioc_1_drop": "Pass",
+      "sioc_17_drop": "Fail"
+    },
+    "failure_details": "Extended limb rotated and scuffed plastic window"
+  },
+  {
+    "sku_id": "SKU-1018",
+    "product_name": "Chibi Animals Playset - Model #1018",
+    "category": "Miniature Playset",
+    "weight_g": 125,
+    "height_cm": 13,
+    "pose_complexity": "Low",
+    "center_of_gravity": "Center",
+    "accessory_count": 0,
+    "has_small_accessories": false,
+    "straps": {
+      "head": false,
+      "waist": true,
+      "arm": false,
+      "leg": false
+    },
+    "results": {
+      "master_carton_1_drop": "Pass",
+      "master_carton_10_drop": "Pass",
+      "sioc_1_drop": "Pass",
+      "sioc_17_drop": "Pass"
+    },
+    "failure_details": "-"
+  },
+  {
+    "sku_id": "SKU-1019",
+    "product_name": "Chibi Animals Playset - Model #1019",
+    "category": "Miniature Playset",
+    "weight_g": 140,
+    "height_cm": 11,
+    "pose_complexity": "High",
+    "center_of_gravity": "Top-Heavy",
+    "accessory_count": 4,
+    "has_small_accessories": false,
+    "straps": {
+      "head": false,
+      "waist": false,
+      "arm": true,
+      "leg": false
+    },
+    "results": {
+      "master_carton_1_drop": "Pass",
+      "master_carton_10_drop": "Fail",
+      "sioc_1_drop": "Pass",
+      "sioc_17_drop": "Fail"
+    },
+    "failure_details": "Missing both Head & Waist restraints \u2014 severe internal displacement under Master Carton 10-drop"
+  },
+  {
+    "sku_id": "SKU-1020",
+    "product_name": "Fantasy Princess Collection - Model #1020",
+    "category": "Fashion Doll",
+    "weight_g": 216,
+    "height_cm": 33,
+    "pose_complexity": "High",
+    "center_of_gravity": "Top-Heavy",
+    "accessory_count": 4,
+    "has_small_accessories": true,
+    "straps": {
+      "head": false,
+      "waist": false,
+      "arm": false,
+      "leg": true
+    },
+    "results": {
+      "master_carton_1_drop": "Pass",
+      "master_carton_10_drop": "Fail",
+      "sioc_1_drop": "Pass",
+      "sioc_17_drop": "Fail"
+    },
+    "failure_details": "Missing both Head & Waist restraints \u2014 severe internal displacement under Master Carton 10-drop"
+  },
+  {
+    "sku_id": "SKU-1021",
+    "product_name": "Glamour Doll Series - Model #1021",
+    "category": "Fashion Doll",
+    "weight_g": 207,
+    "height_cm": 26,
+    "pose_complexity": "High",
+    "center_of_gravity": "Back-Heavy",
+    "accessory_count": 6,
+    "has_small_accessories": false,
+    "straps": {
+      "head": true,
+      "waist": true,
+      "arm": false,
+      "leg": false
+    },
+    "results": {
+      "master_carton_1_drop": "Pass",
+      "master_carton_10_drop": "Pass",
+      "sioc_1_drop": "Pass",
+      "sioc_17_drop": "Fail"
+    },
+    "failure_details": "Extended limb rotated and scuffed plastic window"
+  },
+  {
+    "sku_id": "SKU-1022",
+    "product_name": "Kingdom Knights - Model #1022",
+    "category": "Action Figure",
+    "weight_g": 228,
+    "height_cm": 24,
+    "pose_complexity": "Medium",
+    "center_of_gravity": "Center",
+    "accessory_count": 3,
+    "has_small_accessories": false,
+    "straps": {
+      "head": true,
+      "waist": false,
+      "arm": false,
+      "leg": true
+    },
+    "results": {
+      "master_carton_1_drop": "Pass",
+      "master_carton_10_drop": "Pass",
+      "sioc_1_drop": "Pass",
+      "sioc_17_drop": "Fail"
+    },
+    "failure_details": "Tray distortion & displacement under repeated drops"
+  },
+  {
+    "sku_id": "SKU-1023",
+    "product_name": "Plush Pals Collector - Model #1023",
+    "category": "Plushie with Accessories",
+    "weight_g": 154,
+    "height_cm": 17,
+    "pose_complexity": "High",
+    "center_of_gravity": "Center",
+    "accessory_count": 2,
+    "has_small_accessories": true,
+    "straps": {
+      "head": true,
+      "waist": false,
+      "arm": true,
+      "leg": false
+    },
+    "results": {
+      "master_carton_1_drop": "Pass",
+      "master_carton_10_drop": "Pass",
+      "sioc_1_drop": "Pass",
+      "sioc_17_drop": "Pass"
+    },
+    "failure_details": "-"
+  },
+  {
+    "sku_id": "SKU-1024",
+    "product_name": "Mecha Defender Titan - Model #1024",
+    "category": "Heavy High-End Figure",
+    "weight_g": 578,
+    "height_cm": 33,
+    "pose_complexity": "Low",
+    "center_of_gravity": "Back-Heavy",
+    "accessory_count": 4,
+    "has_small_accessories": true,
+    "straps": {
+      "head": false,
+      "waist": true,
+      "arm": true,
+      "leg": false
+    },
+    "results": {
+      "master_carton_1_drop": "Pass",
+      "master_carton_10_drop": "Pass",
+      "sioc_1_drop": "Pass",
+      "sioc_17_drop": "Fail"
+    },
+    "failure_details": "Small accessory detached & loose in packaging window"
+  },
+  {
+    "sku_id": "SKU-1025",
+    "product_name": "Kingdom Knights - Model #1025",
+    "category": "Action Figure",
+    "weight_g": 325,
+    "height_cm": 20,
+    "pose_complexity": "Low",
+    "center_of_gravity": "Top-Heavy",
+    "accessory_count": 2,
+    "has_small_accessories": false,
+    "straps": {
+      "head": false,
+      "waist": true,
+      "arm": false,
+      "leg": true
+    },
+    "results": {
+      "master_carton_1_drop": "Pass",
+      "master_carton_10_drop": "Fail",
+      "sioc_1_drop": "Pass",
+      "sioc_17_drop": "Fail"
+    },
+    "failure_details": "Head tilted > 20mm & neck joint stress observed during drops"
+  },
+  {
+    "sku_id": "SKU-1026",
+    "product_name": "Mecha Defender Titan - Model #1026",
+    "category": "Heavy High-End Figure",
+    "weight_g": 949,
+    "height_cm": 37,
+    "pose_complexity": "Low",
+    "center_of_gravity": "Center",
+    "accessory_count": 3,
+    "has_small_accessories": true,
+    "straps": {
+      "head": false,
+      "waist": false,
+      "arm": true,
+      "leg": true
+    },
+    "results": {
+      "master_carton_1_drop": "Pass",
+      "master_carton_10_drop": "Fail",
+      "sioc_1_drop": "Pass",
+      "sioc_17_drop": "Fail"
+    },
+    "failure_details": "Missing both Head & Waist restraints \u2014 severe internal displacement under Master Carton 10-drop"
+  },
+  {
+    "sku_id": "SKU-1027",
+    "product_name": "Chibi Animals Playset - Model #1027",
+    "category": "Miniature Playset",
+    "weight_g": 76,
+    "height_cm": 15,
+    "pose_complexity": "Medium",
+    "center_of_gravity": "Back-Heavy",
+    "accessory_count": 1,
+    "has_small_accessories": false,
+    "straps": {
+      "head": true,
+      "waist": true,
+      "arm": true,
+      "leg": false
+    },
+    "results": {
+      "master_carton_1_drop": "Pass",
+      "master_carton_10_drop": "Pass",
+      "sioc_1_drop": "Pass",
+      "sioc_17_drop": "Pass"
+    },
+    "failure_details": "-"
+  },
+  {
+    "sku_id": "SKU-1028",
+    "product_name": "Plush Pals Collector - Model #1028",
+    "category": "Plushie with Accessories",
+    "weight_g": 157,
+    "height_cm": 24,
+    "pose_complexity": "Medium",
+    "center_of_gravity": "Center",
+    "accessory_count": 1,
+    "has_small_accessories": false,
+    "straps": {
+      "head": true,
+      "waist": true,
+      "arm": false,
+      "leg": true
+    },
+    "results": {
+      "master_carton_1_drop": "Pass",
+      "master_carton_10_drop": "Pass",
+      "sioc_1_drop": "Pass",
+      "sioc_17_drop": "Pass"
+    },
+    "failure_details": "-"
+  },
+  {
+    "sku_id": "SKU-1029",
+    "product_name": "Plush Pals Collector - Model #1029",
+    "category": "Plushie with Accessories",
+    "weight_g": 141,
+    "height_cm": 20,
+    "pose_complexity": "Medium",
+    "center_of_gravity": "Back-Heavy",
+    "accessory_count": 3,
+    "has_small_accessories": false,
+    "straps": {
+      "head": false,
+      "waist": true,
+      "arm": true,
+      "leg": true
+    },
+    "results": {
+      "master_carton_1_drop": "Pass",
+      "master_carton_10_drop": "Pass",
+      "sioc_1_drop": "Pass",
+      "sioc_17_drop": "Fail"
+    },
+    "failure_details": "Tray distortion & displacement under repeated drops"
+  },
+  {
+    "sku_id": "SKU-1030",
+    "product_name": "Mecha Defender Titan - Model #1030",
+    "category": "Heavy High-End Figure",
+    "weight_g": 532,
+    "height_cm": 33,
+    "pose_complexity": "Low",
+    "center_of_gravity": "Back-Heavy",
+    "accessory_count": 4,
+    "has_small_accessories": false,
+    "straps": {
+      "head": true,
+      "waist": true,
+      "arm": true,
+      "leg": true
+    },
+    "results": {
+      "master_carton_1_drop": "Pass",
+      "master_carton_10_drop": "Pass",
+      "sioc_1_drop": "Pass",
+      "sioc_17_drop": "Pass"
+    },
+    "failure_details": "-"
+  },
+  {
+    "sku_id": "SKU-1031",
+    "product_name": "Mecha Defender Titan - Model #1031",
+    "category": "Heavy High-End Figure",
+    "weight_g": 503,
+    "height_cm": 29,
+    "pose_complexity": "High",
+    "center_of_gravity": "Back-Heavy",
+    "accessory_count": 0,
+    "has_small_accessories": false,
+    "straps": {
+      "head": false,
+      "waist": false,
+      "arm": false,
+      "leg": false
+    },
+    "results": {
+      "master_carton_1_drop": "Fail",
+      "master_carton_10_drop": "Fail",
+      "sioc_1_drop": "Fail",
+      "sioc_17_drop": "Fail"
+    },
+    "failure_details": "Zero attachment straps applied (0-Point Setup) \u2014 Toy shifted completely out of cavity on initial drop impact"
+  },
+  {
+    "sku_id": "SKU-1032",
+    "product_name": "Mecha Defender Titan - Model #1032",
+    "category": "Heavy High-End Figure",
+    "weight_g": 534,
+    "height_cm": 28,
+    "pose_complexity": "Medium",
+    "center_of_gravity": "Center",
+    "accessory_count": 4,
+    "has_small_accessories": false,
+    "straps": {
+      "head": true,
+      "waist": false,
+      "arm": false,
+      "leg": false
+    },
+    "results": {
+      "master_carton_1_drop": "Pass",
+      "master_carton_10_drop": "Fail",
+      "sioc_1_drop": "Pass",
+      "sioc_17_drop": "Fail"
+    },
+    "failure_details": "Waist shifted out of tray cavity"
+  },
+  {
+    "sku_id": "SKU-1033",
+    "product_name": "Space Explorer Squad - Model #1033",
+    "category": "Miniature Playset",
+    "weight_g": 137,
+    "height_cm": 16,
+    "pose_complexity": "Low",
+    "center_of_gravity": "Back-Heavy",
+    "accessory_count": 3,
+    "has_small_accessories": false,
+    "straps": {
+      "head": false,
+      "waist": true,
+      "arm": false,
+      "leg": false
+    },
+    "results": {
+      "master_carton_1_drop": "Pass",
+      "master_carton_10_drop": "Pass",
+      "sioc_1_drop": "Pass",
+      "sioc_17_drop": "Fail"
+    },
+    "failure_details": "Tray distortion & displacement under repeated drops"
+  },
+  {
+    "sku_id": "SKU-1034",
+    "product_name": "Space Explorer Squad - Model #1034",
+    "category": "Miniature Playset",
+    "weight_g": 162,
+    "height_cm": 13,
+    "pose_complexity": "Low",
+    "center_of_gravity": "Center",
+    "accessory_count": 3,
+    "has_small_accessories": true,
+    "straps": {
+      "head": false,
+      "waist": false,
+      "arm": true,
+      "leg": false
+    },
+    "results": {
+      "master_carton_1_drop": "Pass",
+      "master_carton_10_drop": "Fail",
+      "sioc_1_drop": "Pass",
+      "sioc_17_drop": "Fail"
+    },
+    "failure_details": "Missing both Head & Waist restraints \u2014 severe internal displacement under Master Carton 10-drop"
+  },
+  {
+    "sku_id": "SKU-1035",
+    "product_name": "Fantasy Princess Collection - Model #1035",
+    "category": "Fashion Doll",
+    "weight_g": 199,
+    "height_cm": 26,
+    "pose_complexity": "High",
+    "center_of_gravity": "Back-Heavy",
+    "accessory_count": 5,
+    "has_small_accessories": false,
+    "straps": {
+      "head": false,
+      "waist": false,
+      "arm": false,
+      "leg": true
+    },
+    "results": {
+      "master_carton_1_drop": "Pass",
+      "master_carton_10_drop": "Fail",
+      "sioc_1_drop": "Pass",
+      "sioc_17_drop": "Fail"
+    },
+    "failure_details": "Missing both Head & Waist restraints \u2014 severe internal displacement under Master Carton 10-drop"
+  },
+  {
+    "sku_id": "SKU-1036",
+    "product_name": "Fantasy Princess Collection - Model #1036",
+    "category": "Fashion Doll",
+    "weight_g": 233,
+    "height_cm": 31,
+    "pose_complexity": "Low",
+    "center_of_gravity": "Center",
+    "accessory_count": 1,
+    "has_small_accessories": false,
+    "straps": {
+      "head": true,
+      "waist": true,
+      "arm": false,
+      "leg": false
+    },
+    "results": {
+      "master_carton_1_drop": "Pass",
+      "master_carton_10_drop": "Pass",
+      "sioc_1_drop": "Pass",
+      "sioc_17_drop": "Fail"
+    },
+    "failure_details": "Tray distortion & displacement under repeated drops"
+  },
+  {
+    "sku_id": "SKU-1037",
+    "product_name": "Mecha Defender Titan - Model #1037",
+    "category": "Heavy High-End Figure",
+    "weight_g": 774,
+    "height_cm": 35,
+    "pose_complexity": "Low",
+    "center_of_gravity": "Top-Heavy",
+    "accessory_count": 1,
+    "has_small_accessories": false,
+    "straps": {
+      "head": true,
+      "waist": false,
+      "arm": false,
+      "leg": true
+    },
+    "results": {
+      "master_carton_1_drop": "Pass",
+      "master_carton_10_drop": "Fail",
+      "sioc_1_drop": "Pass",
+      "sioc_17_drop": "Fail"
+    },
+    "failure_details": "Waist shifted out of tray cavity"
+  },
+  {
+    "sku_id": "SKU-1038",
+    "product_name": "Plush Pals Collector - Model #1038",
+    "category": "Plushie with Accessories",
+    "weight_g": 149,
+    "height_cm": 18,
+    "pose_complexity": "Low",
+    "center_of_gravity": "Top-Heavy",
+    "accessory_count": 0,
+    "has_small_accessories": false,
+    "straps": {
+      "head": true,
+      "waist": false,
+      "arm": true,
+      "leg": false
+    },
+    "results": {
+      "master_carton_1_drop": "Pass",
+      "master_carton_10_drop": "Pass",
+      "sioc_1_drop": "Pass",
+      "sioc_17_drop": "Fail"
+    },
+    "failure_details": "Tray distortion & displacement under repeated drops"
+  },
+  {
+    "sku_id": "SKU-1039",
+    "product_name": "Glamour Doll Series - Model #1039",
+    "category": "Fashion Doll",
+    "weight_g": 203,
+    "height_cm": 25,
+    "pose_complexity": "Low",
+    "center_of_gravity": "Center",
+    "accessory_count": 1,
+    "has_small_accessories": false,
+    "straps": {
+      "head": false,
+      "waist": true,
+      "arm": true,
+      "leg": false
+    },
+    "results": {
+      "master_carton_1_drop": "Pass",
+      "master_carton_10_drop": "Pass",
+      "sioc_1_drop": "Pass",
+      "sioc_17_drop": "Fail"
+    },
+    "failure_details": "Tray distortion & displacement under repeated drops"
+  },
+  {
+    "sku_id": "SKU-1040",
+    "product_name": "Fantasy Princess Collection - Model #1040",
+    "category": "Fashion Doll",
+    "weight_g": 202,
+    "height_cm": 33,
+    "pose_complexity": "Low",
+    "center_of_gravity": "Top-Heavy",
+    "accessory_count": 0,
+    "has_small_accessories": false,
+    "straps": {
+      "head": false,
+      "waist": true,
+      "arm": false,
+      "leg": true
+    },
+    "results": {
+      "master_carton_1_drop": "Pass",
+      "master_carton_10_drop": "Fail",
+      "sioc_1_drop": "Pass",
+      "sioc_17_drop": "Fail"
+    },
+    "failure_details": "Head tilted > 20mm & neck joint stress observed during drops"
+  },
+  {
+    "sku_id": "SKU-1041",
+    "product_name": "Chibi Animals Playset - Model #1041",
+    "category": "Miniature Playset",
+    "weight_g": 108,
+    "height_cm": 10,
+    "pose_complexity": "Medium",
+    "center_of_gravity": "Top-Heavy",
+    "accessory_count": 3,
+    "has_small_accessories": false,
+    "straps": {
+      "head": false,
+      "waist": false,
+      "arm": true,
+      "leg": true
+    },
+    "results": {
+      "master_carton_1_drop": "Pass",
+      "master_carton_10_drop": "Fail",
+      "sioc_1_drop": "Pass",
+      "sioc_17_drop": "Fail"
+    },
+    "failure_details": "Missing both Head & Waist restraints \u2014 severe internal displacement under Master Carton 10-drop"
+  },
+  {
+    "sku_id": "SKU-1042",
+    "product_name": "Space Explorer Squad - Model #1042",
+    "category": "Miniature Playset",
+    "weight_g": 129,
+    "height_cm": 13,
+    "pose_complexity": "Medium",
+    "center_of_gravity": "Center",
+    "accessory_count": 0,
+    "has_small_accessories": false,
+    "straps": {
+      "head": true,
+      "waist": true,
+      "arm": true,
+      "leg": false
+    },
+    "results": {
+      "master_carton_1_drop": "Pass",
+      "master_carton_10_drop": "Pass",
+      "sioc_1_drop": "Pass",
+      "sioc_17_drop": "Pass"
+    },
+    "failure_details": "-"
+  },
+  {
+    "sku_id": "SKU-1043",
+    "product_name": "Glamour Doll Series - Model #1043",
+    "category": "Fashion Doll",
+    "weight_g": 215,
+    "height_cm": 30,
+    "pose_complexity": "Low",
+    "center_of_gravity": "Center",
+    "accessory_count": 4,
+    "has_small_accessories": true,
+    "straps": {
+      "head": true,
+      "waist": true,
+      "arm": false,
+      "leg": true
+    },
+    "results": {
+      "master_carton_1_drop": "Pass",
+      "master_carton_10_drop": "Pass",
+      "sioc_1_drop": "Pass",
+      "sioc_17_drop": "Fail"
+    },
+    "failure_details": "Small accessory detached & loose in packaging window"
+  },
+  {
+    "sku_id": "SKU-1044",
+    "product_name": "Chibi Animals Playset - Model #1044",
+    "category": "Miniature Playset",
+    "weight_g": 67,
+    "height_cm": 14,
+    "pose_complexity": "Low",
+    "center_of_gravity": "Center",
+    "accessory_count": 0,
+    "has_small_accessories": false,
+    "straps": {
+      "head": false,
+      "waist": true,
+      "arm": true,
+      "leg": true
+    },
+    "results": {
+      "master_carton_1_drop": "Pass",
+      "master_carton_10_drop": "Pass",
+      "sioc_1_drop": "Pass",
+      "sioc_17_drop": "Pass"
+    },
+    "failure_details": "-"
+  },
+  {
+    "sku_id": "SKU-1045",
+    "product_name": "Cyber Hero Action Figures - Model #1045",
+    "category": "Action Figure",
+    "weight_g": 422,
+    "height_cm": 21,
+    "pose_complexity": "Medium",
+    "center_of_gravity": "Center",
+    "accessory_count": 4,
+    "has_small_accessories": false,
+    "straps": {
+      "head": true,
+      "waist": true,
+      "arm": true,
+      "leg": true
+    },
+    "results": {
+      "master_carton_1_drop": "Pass",
+      "master_carton_10_drop": "Pass",
+      "sioc_1_drop": "Pass",
+      "sioc_17_drop": "Pass"
+    },
+    "failure_details": "-"
+  },
+  {
+    "sku_id": "SKU-1046",
+    "product_name": "Glamour Doll Series - Model #1046",
+    "category": "Fashion Doll",
+    "weight_g": 199,
+    "height_cm": 26,
+    "pose_complexity": "Medium",
+    "center_of_gravity": "Back-Heavy",
+    "accessory_count": 4,
+    "has_small_accessories": true,
+    "straps": {
+      "head": false,
+      "waist": false,
+      "arm": false,
+      "leg": false
+    },
+    "results": {
+      "master_carton_1_drop": "Fail",
+      "master_carton_10_drop": "Fail",
+      "sioc_1_drop": "Fail",
+      "sioc_17_drop": "Fail"
+    },
+    "failure_details": "Zero attachment straps applied (0-Point Setup) \u2014 Toy shifted completely out of cavity on initial drop impact"
+  },
+  {
+    "sku_id": "SKU-1047",
+    "product_name": "Kingdom Knights - Model #1047",
+    "category": "Action Figure",
+    "weight_g": 266,
+    "height_cm": 23,
+    "pose_complexity": "High",
+    "center_of_gravity": "Back-Heavy",
+    "accessory_count": 2,
+    "has_small_accessories": false,
+    "straps": {
+      "head": true,
+      "waist": false,
+      "arm": false,
+      "leg": false
+    },
+    "results": {
+      "master_carton_1_drop": "Pass",
+      "master_carton_10_drop": "Fail",
+      "sioc_1_drop": "Pass",
+      "sioc_17_drop": "Fail"
+    },
+    "failure_details": "Waist shifted out of tray cavity"
+  },
+  {
+    "sku_id": "SKU-1048",
+    "product_name": "Fantasy Princess Collection - Model #1048",
+    "category": "Fashion Doll",
+    "weight_g": 156,
+    "height_cm": 30,
+    "pose_complexity": "Medium",
+    "center_of_gravity": "Top-Heavy",
+    "accessory_count": 0,
+    "has_small_accessories": false,
+    "straps": {
+      "head": false,
+      "waist": true,
+      "arm": false,
+      "leg": false
+    },
+    "results": {
+      "master_carton_1_drop": "Pass",
+      "master_carton_10_drop": "Fail",
+      "sioc_1_drop": "Pass",
+      "sioc_17_drop": "Fail"
+    },
+    "failure_details": "Head tilted > 20mm & neck joint stress observed during drops"
+  },
+  {
+    "sku_id": "SKU-1049",
+    "product_name": "Glamour Doll Series - Model #1049",
+    "category": "Fashion Doll",
+    "weight_g": 178,
+    "height_cm": 26,
+    "pose_complexity": "Low",
+    "center_of_gravity": "Back-Heavy",
+    "accessory_count": 1,
+    "has_small_accessories": false,
+    "straps": {
+      "head": false,
+      "waist": false,
+      "arm": true,
+      "leg": false
+    },
+    "results": {
+      "master_carton_1_drop": "Pass",
+      "master_carton_10_drop": "Fail",
+      "sioc_1_drop": "Pass",
+      "sioc_17_drop": "Fail"
+    },
+    "failure_details": "Missing both Head & Waist restraints \u2014 severe internal displacement under Master Carton 10-drop"
+  },
+  {
+    "sku_id": "SKU-1050",
+    "product_name": "Plush Pals Collector - Model #1050",
+    "category": "Plushie with Accessories",
+    "weight_g": 106,
+    "height_cm": 20,
+    "pose_complexity": "Low",
+    "center_of_gravity": "Center",
+    "accessory_count": 2,
+    "has_small_accessories": false,
+    "straps": {
+      "head": false,
+      "waist": false,
+      "arm": false,
+      "leg": true
+    },
+    "results": {
+      "master_carton_1_drop": "Pass",
+      "master_carton_10_drop": "Fail",
+      "sioc_1_drop": "Pass",
+      "sioc_17_drop": "Fail"
+    },
+    "failure_details": "Missing both Head & Waist restraints \u2014 severe internal displacement under Master Carton 10-drop"
+  }
+]
